@@ -181,9 +181,29 @@
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     End Header
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-{% block content %}
-
-{% endblock %}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start 404
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="four-not-four-section bg_img" data-background="{% static 'images/trainer/catalin7.webp' %}">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-xl-6 col-lg-6 text-center">
+                <div class="four-not-four-content">
+                    <h1 class="title"></h1>
+                    <h2 class="sub-title">{% trans 'UNDERCONSTRUCTION' %}</h2>
+                    <p>{% trans 'The official webpage of the best FUDOKAN school in Brasov is underconstruction. Stay tunned because we will sound the horn when it is ready' %}</p>
+                    <div class="four-not-four-btn">
+                        <a href="#newsletter" class="btn--base">{% trans 'Subscribe our newsletter to stay in touch. Click here' %} <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End 404
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+{% include 'includes/newsletter.html' %}
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Start Footer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -209,7 +229,7 @@
 	            </div>
 	            <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
 	                <div class="footer-widget">
-	                    <h4 class="title">Opening Hours</h4>
+	                    <h4 class="title">{% trans 'Opening Hours' %}</h4>
 	                    <ul class="footer-list">
 	                        <li>Monday : 11am-7pm</li>
 	                        <li>Tuesday-Friday : 11am-8pm</li>
@@ -220,18 +240,18 @@
 	            </div>
 	            <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
 	                <div class="footer-widget">
-	                    <h4 class="title">Contact us</h4>
+	                    <h4 class="title">{% trans 'Contact us' %}</h4>
 	                    <ul class="footer-list">
-	                        <li>350 5th Ave, New York, NY 10118350</li>
-	                        <li>5th Ave, New York, NY 10118</li>
-	                        <li><span>Email :</span> example@email.com</li>
-	                        <li><span>Telephone :</span> +1 (800)-123-4567</li>
+	                        <li>{% trans 'Strada ....' %}'</li>
+	                        <li>.....</li>
+	                        <li><span>Email :</span> contact@energyfit.ro</li>
+	                        <li><span>{% trans 'Telephone' %} :</span> </li>
 	                    </ul>
 	                </div>
 	            </div>
 	            <div class="col-xl-2 col-lg-2 col-md-6 mb-30">
 	                <div class="footer-widget">
-	                    <h4 class="title">Gallery</h4>
+	                    <h4 class="title">{% trans 'Gallery' %}</h4>
 	                    <div class="footer-gallery-area">
 	                        <div class="footer-gallery-wrapper">
 	                            <div class="footer-gallery-thumb">
@@ -268,7 +288,7 @@
 	        <div class="row justify-content-center">
 	            <div class="col-xl-12 text-center">
 	                <div class="copyright-area">
-	                    <p>Copyright 2022 Sword. Designed By Theme IM</p>
+	                    <p>{% trans 'Copyright 2022 Energyfit Karate Brasov. Designed By' %} <a href="https:///ninjaweb.tech">NinjaWeb Tech</a></p>
 	                </div>
 	            </div>
 	        </div>

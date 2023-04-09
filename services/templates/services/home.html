@@ -16,7 +16,7 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="banner-section banner-section-two">
-                    <div class="banner-bg bg-overlay-black bg_img" data-background="{% static 'images/bg/bg-10.png' %}"></div>
+                    <div class="banner-bg bg-overlay-black bg_img" data-background="{% static 'images/backgrounds/catalin_karol2.webp' %}"></div>
                     <div class="container-fluid">
                         <div class="row justify-content-center align-items-end">
                             <div class="col-xl-12 col-lg-12 text-center ">
@@ -37,7 +37,7 @@
             </div>
             <div class="swiper-slide">
                 <div class="banner-section banner-section-two">
-                    <div class="banner-bg bg-overlay-black bg_img" data-background="{% static 'images/bg/bg-22.png' %}"></div>
+                    <div class="banner-bg bg-overlay-black bg_img" data-background="{% static 'images/backgrounds/miriam1.webp' %}"></div>
                     <div class="container-fluid">
                         <div class="row justify-content-center align-items-end mb-30-none">
                             <div class="col-xl-12 col-lg-12 text-center mb-30">
@@ -84,20 +84,21 @@
 		<div class="container">
 				<div class="service-area">
 						<div class="service-element">
+                <h2 class="text-center">{% trans 'What we offer' %}</h2>
 								<img src="{% static 'images/element/element-24.png' %}" alt="element">
 						</div>
 						<div class="row justify-content-center mb-10-none">
 								<div class="col-xl-12">
 										<div class="service-slider">
 												<div class="swiper-wrapper">
-                          {% for service in services %}
+                          {% for s in serv_cats %}
 														<div class="swiper-slide">
 																<div class="service-item">
 																		<div class="service-thumb">
-																				<img src="{% static 'images/service/service-1.png' %}" alt="service">
+																				<img src="{{ s.image.url }}" alt="service">
 																				<div class="service-overlay">
 																						<div class="service-overlay-content">
-																								<h3 class="title"><a href="training-details.html">PRESCHOOL MARTIAL ARTS</a></h3>
+																								<h3 class="title"><a href="#">{{ s.name|capfirst }}</a></h3>
 																						</div>
 																				</div>
 																		</div>
@@ -111,9 +112,11 @@
 						</div>
 				</div>
 		</div>
+    {% if user.is_authenticated %}
     <div class="add-content">
-      <a class="add-content-link" data-toggle="modal" data-target="#servicecategoryModal"><i class="fas fa-plus-circle" style="font-size:80px"></i></a>
+      <a class="" href="{% url 'admin:index' %}"><i class="fas fa-plus-circle" style="font-size:80px"></i></a>
     </div>
+    {% endif %}
 </section>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		End Service
@@ -134,7 +137,7 @@
 														<img src="{% static 'images/signature.png' %}" alt="signature">
 												</div>
 												<div class="signature-content">
-														<span class="title">DIRECTOR / INSTRUCTOR</span>
+														<span style="color:red">SENSEY</span>   <span class="title">CATALIN PETRE</span>
 												</div>
 										</div>
 										<div class="about-thumb-inner">
@@ -160,25 +163,43 @@
 								<div class="about-content-area" data-aos="fade-left" data-aos-duration="1200">
 										<div class="section-header white">
 												<h2 class="section-title">{% blocktranslate %}ABOUT <span>ENERGY FIT KARATE</span> BRASOV {% endblocktranslate %}</h2>
-												<p>{% blocktranslate %}Our school is the only karate school specialized in Fudokan martial arts in Brasov, since 1999 and has one of the most innovative and child friendly programs you can find{% endblocktranslate %}.</p>
+												<p>{% blocktranslate %}Our school is the only karate school in Brasov, that is specialized in Fudokan martial arts and functioning since 1999. It has one of the most innovative and child friendly training programs you can find, where the teacher motivates students by being humanistic and their friend, rather than harsh{% endblocktranslate %}.</p>
 										</div>
 										<div class="about-item-area">
-												<div class="about-item mb-30">
-														<div class="about-icon">
-																<img src="{% static 'images/icon/icon-1.png' %}" alt="icon">
-														</div>
-														<div class="about-content">
-																<h3 class="title">FREE FITNESS TRAINING</h3>
-																<p>We teach martial arts because we love it — not because we want to make money on you. Unlike other martial arts schools.</p>
-														</div>
-												</div>
 												<div class="about-item mb-30">
 														<div class="about-icon">
 																<img src="{% static 'images/icon/icon-2.png' %}" alt="icon">
 														</div>
 														<div class="about-content">
-																<h3 class="title">CARDIO AND STRENGTH</h3>
-																<p>We teach martial arts because we love it — not because we want to make money on you. Unlike other martial arts schools.</p>
+																<h3 class="title">{% trans 'FITNESS TRAINING' %}</h3>
+																<p>{% trans 'Each Fudokan training session includes cardio, strength & stretching exercises, all very important for a healthy body and a sharp mind' %}.</p>
+														</div>
+												</div>
+                        <div class="about-item mb-30">
+														<div class="about-icon">
+																<img src="{% static 'images/icon/icon-59.png' %}" alt="icon">
+														</div>
+														<div class="about-content">
+																<h3 class="title">{% trans 'FOCUS' %}</h3>
+																<p>{% trans 'The process of physical training and learning precise moves will also train you to focus your mental energy, a crucial skill that a lot of people overlook in life and it can make a difference in your career and relationships' %}.</p>
+														</div>
+												</div>
+												<div class="about-item mb-30">
+														<div class="about-icon">
+																<img src="{% static 'images/icon/icon-31.png' %}" alt="icon">
+														</div>
+														<div class="about-content">
+																<h3 class="title">{% trans 'SELF CONFIDENCE' %}</h3>
+																<p>{% trans 'As you advance through the specific training stages you gain self-confidence, because you get to know your body a lot better and obviously because you will be able to defend yourself in certain situations' %}.</p>
+														</div>
+												</div>
+                        <div class="about-item mb-30">
+														<div class="about-icon">
+																<img src="{% static 'images/icon/icon-12.png' %}" alt="icon">
+														</div>
+														<div class="about-content">
+																<h3 class="title">MOTIVATION</h3>
+																<p>{% trans 'If you stay long enough with us, you will start setting your own goals, participate into competitions and gain achievements, which in turn will model you to be a person that sets goals in life and can put the necessary work and skills to reach them' %}.</p>
 														</div>
 												</div>
 										</div>
@@ -194,7 +215,6 @@
 		End About
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		Start Feature
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -203,8 +223,8 @@
 				<div class="row justify-content-center">
 						<div class="col-xl-6 col-lg-8 text-center">
 								<div class="section-header" data-aos="fade-up" data-aos-duration="1200">
-										<h2 class="section-title">OUR <span>KARATE</span> FEATURES</h2>
-										<p>Fight School has specialized in martial arts since 1986 and has one of the most innovative programs in the nation.</p>
+										{% blocktranslate %}<h2 class="section-title">OUR <span>FUDOKAN KARATE</span> CHARACTERISTICS</h2>{% endblocktranslate %}
+										<p>{% trans '' %}.</p>
 								</div>
 						</div>
 				</div>
@@ -219,8 +239,8 @@
 																</div>
 														</div>
 														<div class="feature-content">
-																<h4 class="title">ALL SKILL LEVEL</h4>
-																<p>Fight School has specialized in martial arts since 1986 and has one of the most</p>
+																<h4 class="title">{% trans 'FIT FOR ANY AGE' %}</h4>
+																<p>{% trans 'It is never too late to start learning Fudokan' %}.</p>
 														</div>
 												</div>
 										</div>
@@ -232,17 +252,30 @@
 																</div>
 														</div>
 														<div class="feature-content">
-																<h4 class="title">GET FIT & HEALTHY</h4>
-																<p>Fight School has specialized in martial arts since 1986 and has one of the most</p>
+																<h4 class="title">{% trans 'IMPROVES YOUR FITNESS' %}</h4>
+																<p>{% trans 'Cardio and strength training, plus lots of stretching are all part of Fudokan' %}.</p>
+														</div>
+												</div>
+										</div>
+                    <div class="col-xl-12 col-lg-6 col-md-6">
+												<div class="feature-item mb-30" data-aos="zoom-in" data-aos-duration="1200">
+														<div class="feature-icon-area">
+																<div class="feature-icon">
+																		<img src="{% static 'images/icon/icon-11.png' %}" alt="icon">
+																</div>
+														</div>
+														<div class="feature-content">
+																<h4 class="title">{% trans 'TEACHES SELF-DEFENCE' %}</h4>
+																<p>{% trans 'When children are confronted by bullies, the Fudokan techniques helps them defend' %}.</p>
 														</div>
 												</div>
 										</div>
 								</div>
 						</div>
 						<div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 mb-30">
-								<div class="feature-thumb-area bg-img" style="background-image: url({% static 'images/element/element-14.png' %});">
+								<div class="feature-thumb-area bg-img" style="">
 										<div class="feature-thumb">
-												<img src="{% static 'images/element/element-16.png' %}" alt="element">
+												<img src="{% static 'images/gallery/miriam3.webp' %}" alt="element">
 										</div>
 								</div>
 						</div>
@@ -256,8 +289,8 @@
 																</div>
 														</div>
 														<div class="feature-content">
-																<h4 class="title">FULLY QUALIFIED</h4>
-																<p>Fight School has specialized in martial arts since 1986 and has one of the most</p>
+																<h4 class="title">{% trans 'DEVELOPS CHARACTER' %}</h4>
+																<p>{% trans 'Wearing upper level belts requires a demonstration of correct technique, achieved through effort and dedication' %}.</p>
 														</div>
 												</div>
 										</div>
@@ -269,8 +302,21 @@
 																</div>
 														</div>
 														<div class="feature-content">
-																<h4 class="title">TRADITIONAL KARATE</h4>
-																<p>Fight School has specialized in martial arts since 1986 and has one of the most</p>
+																<h4 class="title">{% trans 'ENCOURAGES SELF-DISCIPLINE' %}</h4>
+																<p>{% trans 'Martial arts is not a sport, it is rather a lifestyle' %}.</p>
+														</div>
+												</div>
+										</div>
+                    <div class="col-xl-12 col-lg-6 col-md-6">
+												<div class="feature-item mb-30" data-aos="zoom-in" data-aos-duration="1200">
+														<div class="feature-icon-area">
+																<div class="feature-icon">
+																		<img src="{% static 'images/icon/icon-13.png' %}" alt="icon">
+																</div>
+														</div>
+														<div class="feature-content">
+																<h4 class="title">{% trans 'HONES LEADERSHIP SKILLS' %}</h4>
+																<p>{% trans 'Leadership traits depend on both self-respect and respect for others' %}.</p>
 														</div>
 												</div>
 										</div>
@@ -292,11 +338,11 @@
 				<div class="row justify-content-center">
 						<div class="col-xl-7 col-lg-8 text-center">
 								<div class="call-to-action-content" data-aos="fade-up" data-aos-duration="1200">
-										<h2 class="title">JOIN THE CLUB</h2>
-										<h2 class="sub-title">#BE COME STRONGER</h2>
-										<p>Fight School has specialized in martial arts since 1986 and has one of the most innovative programs in the nation.</p>
+										<h2 class="title">{% trans 'JOIN OUR CLASSES' %}</h2>
+										<h2 class="sub-title">#BECOME A BETTER YOU</h2>
+										<p>{% trans 'You will become stronger, faster, more focused, more motivated to reach your goals and we are 100% commited to take you there' %}.</p>
 										<div class="call-to-action-btn">
-												<a href="contact.html" class="btn--base">Join Now <i class="fas fa-arrow-right ml-2"></i></a>
+												<a href="contact.html" class="btn--base">{% trans 'Join Now' %} <i class="fas fa-arrow-right ml-2"></i></a>
 										</div>
 								</div>
 						</div>
@@ -322,8 +368,8 @@
 				<div class="row justify-content-center">
 						<div class="col-xl-7 col-lg-8 text-center">
 								<div class="section-header" data-aos="fade-up" data-aos-duration="1200">
-										<h2 class="section-title">WE OFFER <span>KARATE</span> TRAINING</h2>
-										<p>Fight School has specialized in martial arts since 1986 and has one of the most innovative programs in the nation.</p>
+										<h2 class="section-title">{% blocktranslate %}MORE ABOUT WHAT<span> FUDOKAN</span> WILL TEACH YOU{% endblocktranslate %}</h2>
+										<p></p>
 								</div>
 						</div>
 				</div>
@@ -334,14 +380,14 @@
 												<img src="{% static 'images/icon/icon-14.png' %}" alt="icon">
 										</div>
 										<div class="training-content">
-												<h4 class="title"><a href="training-details.html">KARATE</a></h4>
+												<h4 class="title"><a href="training-details.html">BALANCE</a></h4>
 										</div>
 										<div class="training-overlay bg-overlay-base bg_img" data-background="{% static 'images/training/training-2.png' %}">
 												<div class="training-overlay-content">
 														<div class="training-overlay-icon">
 																<a href="training-details.html"><i class="fas fa-arrow-right"></i></a>
 														</div>
-														<h4 class="title"><a href="training-details.html">KARATE</a></h4>
+														<h4 class="title"><a href="training-details.html">PRECISE MOVES</a></h4>
 												</div>
 										</div>
 								</div>
@@ -352,14 +398,14 @@
 												<img src="{% static 'images/icon/icon-15.png' %}" alt="icon">
 										</div>
 										<div class="training-content">
-												<h4 class="title"><a href="training-details.html">JUDO</a></h4>
+												<h4 class="title"><a href="training-details.html">TAKEDOWNS</a></h4>
 										</div>
 										<div class="training-overlay bg-overlay-base bg_img" data-background="{% static 'images/training/training-2.png' %}">
 												<div class="training-overlay-content">
 														<div class="training-overlay-icon">
 																<a href="training-details.html"><i class="fas fa-arrow-right"></i></a>
 														</div>
-														<h4 class="title"><a href="training-details.html">JUDO</a></h4>
+														<h4 class="title"><a href="training-details.html">TEAM WORK</a></h4>
 												</div>
 										</div>
 								</div>
@@ -370,14 +416,14 @@
 												<img src="{% static 'images/icon/icon-16.png' %}" alt="icon">
 										</div>
 										<div class="training-content">
-												<h4 class="title"><a href="training-details.html">TAEKWONDO</a></h4>
+												<h4 class="title"><a href="training-details.html">USING WEAPONS</a></h4>
 										</div>
 										<div class="training-overlay bg-overlay-base bg_img" data-background="{% static 'images/training/training-2.png' %}">
 												<div class="training-overlay-content">
 														<div class="training-overlay-icon">
 																<a href="training-details.html"><i class="fas fa-arrow-right"></i></a>
 														</div>
-														<h4 class="title"><a href="training-details.html">TAEKWONDO</a></h4>
+														<h4 class="title"><a href="training-details.html">HIGH KICKS</a></h4>
 												</div>
 										</div>
 								</div>
@@ -388,14 +434,14 @@
 												<img src="{% static 'images/icon/icon-17.png' %}" alt="icon">
 										</div>
 										<div class="training-content">
-												<h4 class="title"><a href="training-details.html">KICK BOXING</a></h4>
+												<h4 class="title"><a href="training-details.html">LOW KICKS</a></h4>
 										</div>
 										<div class="training-overlay bg-overlay-base bg_img" data-background="{% static 'images/training/training-2.png' %}">
 												<div class="training-overlay-content">
 														<div class="training-overlay-icon">
 																<a href="training-details.html"><i class="fas fa-arrow-right"></i></a>
 														</div>
-														<h4 class="title"><a href="training-details.html">KICK BOXING</a></h4>
+														<h4 class="title"><a href="training-details.html">PUNCHING</a></h4>
 												</div>
 										</div>
 								</div>
@@ -406,14 +452,14 @@
 												<img src="{% static 'images/icon/icon-18.png' %}" alt="icon">
 										</div>
 										<div class="training-content">
-												<h4 class="title"><a href="training-details.html">MIXED MERTIAL ARTS</a></h4>
+												<h4 class="title"><a href="training-details.html">COMBO MOVES</a></h4>
 										</div>
 										<div class="training-overlay bg-overlay-base bg_img" data-background="{% static 'images/training/training-2.png' %}">
 												<div class="training-overlay-content">
 														<div class="training-overlay-icon">
 																<a href="training-details.html"><i class="fas fa-arrow-right"></i></a>
 														</div>
-														<h4 class="title"><a href="training-details.html">MIXED MERTIAL ARTS</a></h4>
+														<h4 class="title"><a href="training-details.html">ROLLING</a></h4>
 												</div>
 										</div>
 								</div>
@@ -495,8 +541,8 @@
 						<div class="col-xl-12">
 								<div class="section-header-wrapper">
 										<div class="section-header white" data-aos="fade-right" data-aos-duration="1200">
-												<h2 class="section-title">OUR <span>EXPERT</span> MASTERS</h2>
-												<p>Fight School has specialized in martial arts since 1986 and has one of the most innovative programs in the nation.</p>
+												<h2 class="section-title">{% blocktranslate %}OUR <span>EXPERT</span> MASTERS{% endblocktranslate %}</h2>
+												<p>{% trans 'Sensei Catalin Petre is the creator of this school and he teaches with the help of sensei Karol' %}.</p>
 										</div>
 										<div class="all-btn text-center" data-aos="fade-left" data-aos-duration="1200">
 												<a href="master.html" class="custom-btn">View All</a>
@@ -508,59 +554,25 @@
 						<div class="col-xl-12">
 								<div class="trainer-slider">
 										<div class="swiper-wrapper">
+                      {% for i in masters %}
 												<div class="swiper-slide">
+
 														<div class="trainer-item">
 																<div class="trainer-thumb">
-																		<img src="{% static 'images/trainer/trainer-5.png' %}" alt="trainer">
+																		<img src="{{ i.image.url }}" alt="trainer">
 																		<div class="trainer-overlay">
 																				<div class="trainer-content">
-																						<h3 class="title"><a href="master-details.html">Randall Schwartz</a></h3>
-																						<span class="sub-title">Women's Trainner</span>
+																						<h3 class="title"><a href="master-details.html">{{ i.name }}</a></h3>
+																						<span class="sub-title">{{ i.job }}</span>
 																				</div>
 																		</div>
 																</div>
 														</div>
+
 												</div>
-												<div class="swiper-slide">
-														<div class="trainer-item">
-																<div class="trainer-thumb">
-																		<img src="{% static 'images/trainer/trainer-6.png' %}" alt="trainer">
-																		<div class="trainer-overlay">
-																				<div class="trainer-content">
-																						<h3 class="title"><a href="master-details.html">Randall Schwartz</a></h3>
-																						<span class="sub-title">Women's Trainner</span>
-																				</div>
-																		</div>
-																</div>
-														</div>
-												</div>
-												<div class="swiper-slide">
-														<div class="trainer-item">
-																<div class="trainer-thumb">
-																		<img src="{% static 'images/trainer/trainer-7.png' %}" alt="trainer">
-																		<div class="trainer-overlay">
-																				<div class="trainer-content">
-																						<h3 class="title"><a href="master-details.html">Randall Schwartz</a></h3>
-																						<span class="sub-title">Women's Trainner</span>
-																				</div>
-																		</div>
-																</div>
-														</div>
-												</div>
-												<div class="swiper-slide">
-														<div class="trainer-item">
-																<div class="trainer-thumb">
-																		<img src="{% static 'images/trainer/trainer-8.png' %}" alt="trainer">
-																		<div class="trainer-overlay">
-																				<div class="trainer-content">
-																						<h3 class="title"><a href="master-details.html">Randall Schwartz</a></h3>
-																						<span class="sub-title">Women's Trainner</span>
-																				</div>
-																		</div>
-																</div>
-														</div>
-												</div>
+                      {% endfor %}
 										</div>
+
 										<div class="custom-pagination"></div>
 										<div class="slider-nav-area">
 												<div class="slider-prev">
@@ -588,7 +600,7 @@
 				<div class="row justify-content-center">
 						<div class="col-xl-6 col-lg-8 text-center">
 								<div class="section-header" data-aos="fade-up" data-aos-duration="1200">
-										<h2 class="section-title">OUR <span>KARATE</span> EVENTS</h2>
+										<h2 class="section-title">{% blocktranslate %}OUR <span>FUDOKAN</span> EVENTS{% endblocktranslate %}</h2>
 										<p>Fight School has specialized in martial arts since 1986 and has one of the most innovative programs in the nation.</p>
 								</div>
 						</div>
@@ -662,7 +674,7 @@
 						<div class="col-xl-12">
 								<div class="section-header-wrapper">
 										<div class="section-header white" data-aos="fade-right" data-aos-duration="1200">
-												<h2 class="section-title">OUR <span>STUDENT'S</span> TESTIMONIAL</h2>
+												<h2 class="section-title">{% blocktranslate %}OUR <span>STUDENTS</span> TESTIMONIAL{% endblocktranslate %}</h2>
 												<p>Fight School has specialized in martial arts since 1986 and has one of the most innovative programs in the nation.</p>
 										</div>
 										<div class="slider-nav-area" data-aos="fade-left" data-aos-duration="1200">
@@ -771,17 +783,17 @@
 				<div class="row justify-content-center">
 						<div class="col-xl-6 col-lg-8 text-center">
 								<div class="section-header" data-aos="fade-up" data-aos-duration="1200">
-										<h2 class="section-title">OUR <span>MEMBERSHIP</span> PLAN</h2>
-										<p>Fight School has specialized in martial arts since 1986 and has one of the most innovative programs in the nation.</p>
+										<h2 class="section-title">{% blocktranslate %}OUR <span>MEMBERSHIP</span> PLAN{% endblocktranslate %}</h2>
+										<p>{% trans 'We are trying to fit every situation and every pocket' %}.</p>
 								</div>
 						</div>
 				</div>
 				<div class="row">
 						<div class="col-xl-12">
 						<nav class="plan-tab" data-aos="fade-up" data-aos-duration="1200">
-								<span class="monthly_tab_title">Monthly</span>
+								<span class="monthly_tab_title">{% trans 'Monthly' %}</span>
 								<span class="plan-tab-switcher"></span>
-								<span class="annual_tab_title">Yearly</span>
+								<span class="annual_tab_title">{% trans 'Yearly' %}</span>
 						</nav>
 						</div>
 				</div>
@@ -792,12 +804,12 @@
 												<div class="plan-content">
 														<div class="plan-header">
 																<div class="plan-badge-area">
-																		<span class="plan-badge red">Basic</span>
+																		<span class="plan-badge red">{% trans 'Basic' %}</span>
 																</div>
-																<p>Access to all classes & membership</p>
+																<p>{% trans 'Access to all classes & membership' %}</p>
 														</div>
 														<div class="plan-price-area">
-																<h2 class="price-title"><sup>$</sup>39<sub>/month</sub></h2>
+																<h2 class="price-title"><sup>$</sup>39<sub>/{% trans 'month' %}</sub></h2>
 														</div>
 														<ul class="plan-list">
 																<li>Fifo – Fly In / Fly Out</li>
@@ -818,21 +830,21 @@
 								</div>
 								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 mb-30">
 										<div class="plan-item active" data-aos="zoom-in" data-aos-duration="1200">
-												<span class="plan-badge-top">POPULAR</span>
+												<span class="plan-badge-top">{% trans 'POPULAR' %}</span>
 												<div class="plan-content">
 														<div class="plan-header">
 																<div class="plan-badge-area">
 																		<span class="plan-badge red">Pro</span>
 																</div>
-																<p>Access to all classes & membership</p>
+																<p>{% trans 'Access to all classes & membership' %}</p>
 														</div>
 														<div class="plan-price-area">
 																<h2 class="price-title"><sup>$</sup>49<sub>/month</sub></h2>
 														</div>
 														<ul class="plan-list">
-																<li>Membership</li>
-																<li>Unlimited Training</li>
-																<li>Access to all classes</li>
+																<li>{% trans 'Membership' %}</li>
+																<li>{% trans 'Unlimited Training' %}</li>
+																<li>{% trans 'Access to all classes' %}</li>
 														</ul>
 												</div>
 												<div class="plan-footer">
@@ -984,8 +996,8 @@
 				<div class="row justify-content-center">
 						<div class="col-xl-4 col-lg-8 col-md-6 text-center">
 								<div class="section-header">
-										<h2 class="section-title">OUR <span>KARATE</span> TUTORIAL</h2>
-										<p>Fight School has specialized in martial arts since 1986 and has one of the most innovative programs in the nation.</p>
+										<h2 class="section-title">{% blocktranslate %}OUR <span>FUDOKAN</span> TUTORIALS{% endblocktranslate %}</h2>
+										<p>...</p>
 								</div>
 						</div>
 				</div>
@@ -1102,8 +1114,8 @@
 					<div class="row justify-content-center">
 							<div class="col-xl-7 text-center">
 									<div class="section-header" data-aos="fade-up" data-aos-duration="1200">
-											<h2 class="section-title">LATEST <span>NEWS</span> FORM SWORD</h2>
-											<p>Fight School has specialized in martial arts since 1986 and has one of the most innovative programs in the nation.</p>
+											<h2 class="section-title">{% blocktranslate %}LATEST <span>NEWS</span> FORM SWORD{% endblocktranslate %}</h2>
+											<p>....</p>
 									</div>
 							</div>
 					</div>

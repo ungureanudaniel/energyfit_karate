@@ -34,16 +34,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #------imported apps-------
     'modeltranslation',
     'debug_toolbar',
     'django.contrib.sitemaps',
     'ckeditor',
+    'hitcount',
     # 'crispy_forms',
     'captcha',
     'django.contrib.sites',
+    #---user created apps --------
     'users',
     'blog',
-    # 'tickets',
     'services',
 ]
 SITE_ID=1
@@ -91,24 +93,16 @@ CACHES = {
 }
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-if DEVELOPMENT == True:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT'),
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': os.getenv('DB_NAME'),
-            'USER': os.getenv('DB_USER'),
-            'PASSWORD': os.getenv('DB_PASSWORD'),
-            'HOST': os.getenv('DB_HOST'),
-            'PORT': os.getenv('DB_PORT'),
-        }
-    }
+}
 
 
 
@@ -173,7 +167,7 @@ EMAIL_PORT=os.getenv('EMAIL_PORT')
 EMAIL_HOST=os.getenv('EMAIL_HOST')
 EMAIL_USE_TLS=True
 EMAIL_USE_SSL=False
-EMAIL_HOST_USER='contact@bucegipark.ro'
+EMAIL_HOST_USER='contact@energyfit.ro'
 EMAIL_HOST_PASSWORD=os.getenv('EMAIL_HOST_PASSWORD')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

@@ -29,8 +29,9 @@ class ServiceCategory(models.Model):
     This class creates database tables for categories for each service in
     Energyfit Karate Brasov
     """
-    name = models.CharField(max_length=30)
+    name = models.CharField(max_length=100)
     image = ResizedImageField(size=[640,None], upload_to='servicecategory_images',)
+    rank = models.IntegerField()
     slug = models.SlugField(max_length=100, allow_unicode=True, blank=True)
 
     class Meta:
@@ -51,7 +52,7 @@ class Service(models.Model):
     will be automatically resized using a package : django-resized. Default settings in
     settings.py file.
     """
-    name = models.CharField(max_length=30)
+    name = models.CharField(max_length=100)
     image = ResizedImageField(size=[640,None], upload_to='service_images',)
     text = RichTextField()
     categ = models.ForeignKey(ServiceCategory, on_delete=models.CASCADE)
@@ -92,8 +93,8 @@ class Gallery(models.Model):
 #================Team model=====================================
 class Team(models.Model):
     """
-    This class creates database tables for each team member of natural park. The
-    images for attraction will be automatically resized using a package : django-resized.
+    This class creates database tables for each masters of energyfit karate. The
+    thumbnails will be automatically resized using a package : django-resized.
 
     """
     surname = models.CharField(max_length=30)
@@ -105,8 +106,8 @@ class Team(models.Model):
     hierarchy = models.IntegerField(default=0)
 
     class Meta:
-        verbose_name = 'Team Member'
-        verbose_name_plural = "Team Members"
+        verbose_name = 'Team member'
+        verbose_name_plural = "Team members"
 
     def __str__(self):
         return f"{self.surname}" + " " + f"{self.firstname}"

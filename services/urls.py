@@ -1,16 +1,15 @@
 from django.urls import path, include
 from django.conf import settings
-from .views import home
+from .views import home, apply_view, underconstruction
 #, gallery, add_testimonial, team, history, massmedia,\
- # contacts_view, underconstruction, page_not_found, coming_soon, public_docs,\
- # scraped_data, wildlife, flora, invalid_header, faq_view, video_view, gallery
-#, snippet_detail
+ # contacts_view, page_not_found, coming_soon,\
+ # faq_view, video_view, gallery
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.utils.translation import gettext_lazy as _
 from users.views import user_logout, user_login
 
-if settings.DEVELOPMENT == False:
+if settings.DEVELOPMENT == True:
     urlpatterns = [
         #-------Authentication----------------
         path('login/', user_login, name='login'),
@@ -18,6 +17,7 @@ if settings.DEVELOPMENT == False:
         #-------sitemap snippet link-----------
         # path('<slug:slug>', snippet_detail),
         #------ general urls-------------------
+        path('home', home, name="home"),
         path('', underconstruction, name="underconstruction"),
         # path('gallery', gallery, name="gallery"),
         # path('team', team, name="team"),
@@ -44,6 +44,7 @@ else:
         # path('<slug:slug>', snippet_detail),
         #------ general urls-------------------
         path('', home, name="home"),
+        path("_('apply-now')", apply_view, name="apply"),
         # path('gallery', gallery, name="gallery"),
         # path('team', team, name="team"),
         # path('mass-media', massmedia, name="mass-media"),

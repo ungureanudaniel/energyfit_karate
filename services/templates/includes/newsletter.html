@@ -1,27 +1,27 @@
 {% load static %}
 {% load i18n %}
-<section class="subscribe-section ptb-120">
+<section class="subscribe-section ptb-120" id="newsletter">
     <div class="container">
         <div class="subscribe-area">
             <div class="subscribe-element">
-                <img src="assets/images/element/element-22.png" alt="element">
+                <img src="{% static 'images/element/element-22.png' %}" alt="element">
             </div>
             <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-6">
                     <div class="subscribe-thumb" data-aos="fade-up" data-aos-duration="1200">
-                        <img src="assets/images/element/element-23.png" alt="element">
+                        <img src="{% static 'images/trainer/catalin4.webp' %}" alt="element">
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6">
                     <div class="subscribe-content" data-aos="fade-left" data-aos-duration="1200">
                         <div class="section-header white">
-                            <h2 class="section-title">SUBSCRIBE NOW</h2>
-                            <p>Fight School has specialized in martial arts since 1986 and has one of the most innovative programs in the nation.</p>
+                            <h2 class="section-title">{% trans 'SUBSCRIBE NOW' %}</h2>
+                            <p>{% trans 'To be up to date with offers and news' %}.</p>
                         </div>
                         <form class="subscribe-form">
                             <label class="subscribe-icon"><i class="las la-envelope"></i></label>
                             <input type="text" class="form--control" placeholder="Email Address">
-                            <button type="submit" class="btn--base">GET ALART</button>
+                            <button type="submit" class="btn--base">{% trans 'Subscribe' %}</button>
                         </form>
                     </div>
                 </div>

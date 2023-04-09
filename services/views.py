@@ -2,8 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.core.mail import BadHeaderError, send_mail
 from django.http import HttpResponseRedirect
 from django.contrib.auth import authenticate, login
-# from .models import Testimonial, Team, AttractionCategory, Contact,\
-# PublicCategory, Attraction, Gallery
+from .models import Testimonial, Team, ServiceCategory, Service, Contact
 from .forms import CaptchaForm
 # , ContactForm, GalleryForm
 from django.utils.text import slugify
@@ -26,12 +25,12 @@ def underconstruction(request):
     This view replaces the home page when website is under construction
     """
     template = 'services/underconstruction.html'
-    weather = weather_data()
+
     context = {
-        "weather": weather,
     }
     return render(request, template, context)
 #========================underconstruction home page=================================
+@gzip_page
 def home(request):
     """
     This view is the home page view
@@ -40,6 +39,16 @@ def home(request):
 
 
     context = {
+        "serv_cats": ServiceCategory.objects.all().order_by('rank'),
+        "masters": Team.objects.filter(job="Sensei")
+    }
+    return render(request, template, context)
+#=========================apply page================================
+def apply_view(request):
+    template = 'services/apply.html'
+    
+    context = {
+
     }
     return render(request, template, context)
 #========================about page================================
@@ -74,7 +83,7 @@ def contacts_view(request):
                     new_message = message_form.save(commit=False)
                     new_message.timestamp = datetime.datetime.now()
                     new_message.save()
-                    send_mail(message_subject, message, sender_email, ['contact@bucegipark.ro'], fail_silently=False)
+                    send_mail(message_subject, message, sender_email, ['contact@energyfit.ro'], fail_silently=False)
                     messages.success(request, _(f'Thank you for writting us {message_author}! We will answer as soon as possible.'))
                     return HttpResponseRedirect('/contact')
                     # except Exception as e:
@@ -82,10 +91,10 @@ def contacts_view(request):
                     #     return render(request, 'services/invalid_header.html',{})
                     # return HttpResponseRedirect('/contact')
                 else:
-                    messages.warning(request, "Failed! Please make sure your info is correct!")
+                    messages.warning(request, _("Failed! Please make sure your info is correct!"))
                     return HttpResponseRedirect('/contact')
             else:
-                messages.warning(request, "Failed! Please fill in the captcha field again!")
+                messages.warning(request, _("Failed! Please fill in the captcha field again!"))
                 return HttpResponseRedirect('/contact')
         except Exception as e:
             messages.warning(request, f"{e}")
@@ -107,7 +116,7 @@ def add_testimonial(request):
 
             password = request.POST.get('signin-password')
         except Exception as e:
-            messages.warning(request, f"Warning! {e}")
+            messages.warning(request, _(f"Warning! {e}"))
     return render(request, template, {})
 #======================== faq page================================
 def faq_view(request):
