@@ -1,0 +1,11 @@
+whitenoise
+python-dotenv>=0.19.1
+django-ckeditor==6.1.0
+django-resized
+django-simple-captcha==0.5.14
+django>=3.2
+requests
+python-memcached
+pymemcache
+django-modeltranslation
+django-debug-toolbar
