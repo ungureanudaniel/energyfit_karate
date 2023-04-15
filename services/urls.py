@@ -1,6 +1,6 @@
 from django.urls import path, include
 from django.conf import settings
-from .views import home, apply_view, underconstruction
+from .views import home, apply_view, underconstruction, contacts_view
 #, gallery, add_testimonial, team, history, massmedia,\
  # contacts_view, page_not_found, coming_soon,\
  # faq_view, video_view, gallery
@@ -24,7 +24,7 @@ if settings.DEVELOPMENT == True:
         # path('mass-media', massmedia, name="mass-media"),
         # path('_(frequently-asked-questions)', flora, name="flora"),
         # path('', home, name="home"),
-        # path('contact', contacts_view, name="contact"),
+        path('contact', contacts_view, name="contact"),
         # path('gallery', gallery, name="gallery"),
         # path('videos', video_view, name="video"),
         # path('coming-soon', coming_soon, name="coming-soon"),
@@ -49,7 +49,7 @@ else:
         # path('team', team, name="team"),
         # path('mass-media', massmedia, name="mass-media"),
         # path('_(frequently-asked-questions)', flora, name="flora"),
-        # path('contact', contacts_view, name="contact"),
+        path('contact', contacts_view, name="contact"),
         # path('gallery', gallery, name="gallery"),
         # path('videos', video_view, name="video"),
         # path('coming-soon', coming_soon, name="coming-soon"),

@@ -1,6 +1,8 @@
 from django.contrib import admin
-from .models import ServiceCategory, Testimonial, Contact, Service, Team
+from .models import ServiceCategory, Testimonial, Contact, Service, Team, Subscriber
 
+class SubscriberAdmin(admin.ModelAdmin):
+    fields = ['email', 'conf_num', 'timestamp', 'confirmed']
 class ServiceCategoryAdmin(admin.ModelAdmin):
     fields = ['rank', 'name', 'name_ro', 'name_de', 'image', 'slug']
     prepopulated_fields = {"slug": ("name",)}
@@ -12,3 +14,4 @@ class TeamAdmin(admin.ModelAdmin):
 admin.site.register(ServiceCategory, ServiceCategoryAdmin)
 admin.site.register(Service, ServiceAdmin)
 admin.site.register(Team, TeamAdmin)
+admin.site.register(Subscriber, SubscriberAdmin)

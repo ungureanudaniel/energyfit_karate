@@ -141,7 +141,7 @@
             <div class="container-fluid">
                 <div class="header-menu-content">
                     <nav class="navbar navbar-expand-xl p-0">
-                        <a class="site-logo site-title d-block d-xl-none" href="{% url 'home' %}"><img src="{% static 'images/logo-2.png' %}" alt="site-logo"></a>
+                        <a class="site-logo site-title d-block d-xl-none" href="{% url 'home' %}"><img src="{% static 'images/logo2.png' %}" alt="site-logo"></a>
                         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="fas fa-bars"></span>
@@ -162,14 +162,14 @@
                                         <li><a href="faq.html">FAQ</a></li>
                                     </ul>
                                 </li>
-                                <li><a class="site-logo site-title d-none d-xl-block" href="{% url 'home' %}"><img src="{% static 'images/logo-2.png' %}" alt="site-logo"></a></li>
+                                <li><a class="site-logo site-title d-none d-xl-block" href="{% url 'home' %}"><img style="height:100px;width:100px;" src="{% static 'images/logo2.png' %}" alt="site-logo"></a></li>
                                 <li class="">
                                     <a href="#0">{% trans 'MASTERS' %}</a>
                                 </li>
                                 <li class="">
                                     <a href="#0">{% trans 'NEWS' %}</a>
                                 </li>
-                                <li><a href="contact.html">{% trans 'CONTACT US' %}</a></li>
+                                <li><a href="#">{% trans 'CONTACT US' %}</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -196,7 +196,7 @@
 	            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
 	                <div class="footer-widget">
 	                    <div class="footer-logo">
-	                        <a class="site-logo site-title" href="{% url 'home' %}"><img src="{% static 'images/logo-white.png' %}" alt="site-logo"></a>
+	                        <a class="site-logo site-title" href="{% url 'home' %}"><img src="{% static 'images/logo2.png' %}" alt="site-logo"></a>
 	                    </div>
 	                    <p>Fight School has specialized in martial arts since 1986 and has one of the most innovative programs in the nation. Fight School has specialized in martial arts since 1986 and has one of the most</p>
 	                    <ul class="footer-social">
@@ -268,7 +268,7 @@
 	        <div class="row justify-content-center">
 	            <div class="col-xl-12 text-center">
 	                <div class="copyright-area">
-	                    <p>Copyright 2022 Sword. Designed By Theme IM</p>
+	                     <p>{% trans 'Copyright 2022 Energyfit Karate Brasov. Designed By' %} <a href="https:///ninjaweb.tech">NinjaWeb Tech</a></p>
 	                </div>
 	            </div>
 	        </div>

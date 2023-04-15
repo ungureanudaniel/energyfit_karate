@@ -16,12 +16,13 @@
                     <div class="subscribe-content" data-aos="fade-left" data-aos-duration="1200">
                         <div class="section-header white">
                             <h2 class="section-title">{% trans 'SUBSCRIBE NOW' %}</h2>
-                            <p>{% trans 'To be up to date with offers and news' %}.</p>
+                            <p>{% trans 'And stay up to date with offers and news' %}.</p>
                         </div>
-                        <form class="subscribe-form">
+                        <form class="subscribe-form" method="POST" action=".">
+                          {% csrf_token %}
                             <label class="subscribe-icon"><i class="las la-envelope"></i></label>
-                            <input type="text" class="form--control" placeholder="Email Address">
-                            <button type="submit" class="btn--base">{% trans 'Subscribe' %}</button>
+                            <input type="text" class="form--control" name="subscriber" placeholder="{% trans 'Email Address' %}">
+                            <button type="submit" name="form-type" value="subscribe" class="btn--base">{% trans 'Subscribe' %}</button>
                         </form>
                     </div>
                 </div>

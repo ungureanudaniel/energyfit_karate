@@ -2,7 +2,8 @@
 {% load i18n %}
 
 <!DOCTYPE html>
-<html lang="en">
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
 	<head>
 	    <meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -141,35 +142,48 @@
             <div class="container-fluid">
                 <div class="header-menu-content">
                     <nav class="navbar navbar-expand-xl p-0">
-                        <a class="site-logo site-title d-block d-xl-none" href="{% url 'home' %}"><img src="{% static 'images/logo-2.png' %}" alt="site-logo"></a>
+                        <a class="site-logo site-title d-block d-xl-none" href="{% url 'underconstruction' %}"><img style="height:100px;width:auto;" src="{% static 'images/logo2.png' %}" alt="site-logo"></a>
                         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="fas fa-bars"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav main-menu ml-auto mr-auto">
-                                <li><a href="{% url 'home' %}">{% trans 'HOME' %}</a></li>
+                                <li><a href="{% url 'underconstruction' %}">{% trans 'HOME' %}</a></li>
                                 <li><a href="#">{% trans 'ABOUT US' %}</a></li>
                                 <li class="">
-                                    <a href="#0">{% trans 'TRAINING' %}</a>
+                                    <a href="#">{% trans 'TRAINING' %}</a>
                                 </li>
                                 <li class="menu_has_children">
                                     <a href="#0">{% trans 'EXPLORE' %}</a>
                                     <ul class="sub-menu">
-																				<li><a href="gallery.html">{% trans 'GALLERY' %}</a></li>
-                                        <li><a href="event.html">{% trans 'EVENTS' %}</a></li>
-                                        <li><a href="plan.html">{% trans 'PRICING PLAN' %}</a></li>
-                                        <li><a href="faq.html">FAQ</a></li>
+																				<li><a href="#">{% trans 'GALLERY' %}</a></li>
+                                        <li><a href="#">{% trans 'EVENTS' %}</a></li>
+                                        <li><a href="#">{% trans 'PRICING PLAN' %}</a></li>
+                                        <li><a href="#">FAQ</a></li>
                                     </ul>
                                 </li>
-                                <li><a class="site-logo site-title d-none d-xl-block" href="{% url 'home' %}"><img src="{% static 'images/logo-2.png' %}" alt="site-logo"></a></li>
+                                <li><a class="site-logo site-title d-none d-xl-block" href="{% url 'underconstruction' %}"><img style="height:100px;width:auto;" src="{% static 'images/logo2.png' %}" alt="site-logo"></a></li>
                                 <li class="">
                                     <a href="#0">{% trans 'MASTERS' %}</a>
                                 </li>
                                 <li class="">
                                     <a href="#0">{% trans 'NEWS' %}</a>
                                 </li>
-                                <li><a href="contact.html">{% trans 'CONTACT US' %}</a></li>
+																<li class="menu_has_children">
+																	{% get_available_languages as LANGUAGES %}
+																	{% get_language_info_list for LANGUAGES as languages %}
+																	{% get_language_info for LANGUAGE_CODE as lang %}
+
+                                    <a href="#0">{% trans 'LANGUAGE' %}</a>
+                                    <ul class="sub-menu">
+																			{% for language in languages %}
+																				<li><a value="{{ language.name_local }}" href="/{{ language.code }}/ {{ request.get_full_path |slice:'4:'}}">{{ language.name_local }}</a></li>
+                                      {% endfor %}
+                                    </ul>
+                                </li>
+
+                                <li><a href="{% url 'contact' %}">{% trans 'CONTACT US' %}</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -182,11 +196,31 @@
     End Header
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Scrolltotop
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<a href="#" class="scrollToTop">
+    <img src="{% static 'images/element/arrow_up_icon.png' %}" style="width:80px;height:auto;color: red;" alt="element">
+    <div class="scrollToTop-icon">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+</a>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Scrolltotop
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Start 404
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <section class="four-not-four-section bg_img" data-background="{% static 'images/trainer/catalin7.webp' %}">
     <div class="container">
         <div class="row justify-content-center align-items-center">
+					{% if messages %}
+					<div id="error-section" class="pb-3 col-12 justify-content-center" style="justify-content:center">
+						{% include 'includes/messages.html' %}
+					</div>
+					{% else %}
+					<div id="error-section" class="pb-5 col-12 justify-content-center" style="justify-content:center">
+					</div>
+					{% endif %}
             <div class="col-xl-6 col-lg-6 text-center">
                 <div class="four-not-four-content">
                     <h1 class="title"></h1>
@@ -216,13 +250,13 @@
 	            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
 	                <div class="footer-widget">
 	                    <div class="footer-logo">
-	                        <a class="site-logo site-title" href="{% url 'home' %}"><img src="{% static 'images/logo-white.png' %}" alt="site-logo"></a>
+	                        <a class="site-logo site-title" href="{% url 'underconstruction' %}"><img style="height:100px;width:auto;" src="{% static 'images/logo2.png' %}" alt="site-logo"></a>
 	                    </div>
-	                    <p>Fight School has specialized in martial arts since 1986 and has one of the most innovative programs in the nation. Fight School has specialized in martial arts since 1986 and has one of the most</p>
+	                    <p>{% trans 'Energyfit Karate Brasov is the only Fudokan martial arts school in Brasov, a karate style that teaches modesty, focus and fighting for true human values. Our school has one of the most innovative and child friendly training programs you can find' %}.</p>
 	                    <ul class="footer-social">
-	                        <li><a href="#0"><i class="fab fa-facebook-f"></i></a></li>
-	                        <li><a href="#0"><i class="fab fa-twitter"></i></a></li>
-	                        <li><a href="#0"><i class="fab fa-google-plus-g"></i></a></li>
+	                        <li><a href="https://www.facebook.com/EnergyFitKarate"><i class="fab fa-facebook-f"></i></a></li>
+	                        <!-- <li><a href="#0"><i class="fab fa-twitter"></i></a></li> -->
+	                        <!-- <li><a href="#0"><i class="fab fa-google-plus-g"></i></a></li> -->
 	                        <li><a href="#0"><i class="fab fa-instagram"></i></a></li>
 	                    </ul>
 	                </div>
@@ -242,10 +276,10 @@
 	                <div class="footer-widget">
 	                    <h4 class="title">{% trans 'Contact us' %}</h4>
 	                    <ul class="footer-list">
-	                        <li>{% trans 'Strada ....' %}'</li>
-	                        <li>.....</li>
-	                        <li><span>Email :</span> contact@energyfit.ro</li>
-	                        <li><span>{% trans 'Telephone' %} :</span> </li>
+	                        <!-- <li>{% trans 'Strada ....' %}'</li> -->
+	                        <!-- <li>.....</li> -->
+	                        <li><span>Email :</span><a href="mailto:contact@energyfit.ro"> contact@energyfit.ro</a></li>
+	                        <li><span>{% trans 'Telephone' %} :</span> 0755 931 959</li>
 	                    </ul>
 	                </div>
 	            </div>
@@ -255,25 +289,25 @@
 	                    <div class="footer-gallery-area">
 	                        <div class="footer-gallery-wrapper">
 	                            <div class="footer-gallery-thumb">
-	                                <img src="{% static 'images/gallery/gallery-small-1.png' %}" alt="gallery">
+	                                <img src="{% static 'images/trainer/cata_weapon1.webp' %}" alt="gallery">
 	                                <div class="footer-gallery-overlay">
 	                                    <a href="#0"><i class="fab fa-instagram"></i></a>
 	                                </div>
 	                            </div>
 	                            <div class="footer-gallery-thumb">
-	                                <img src="{% static 'images/gallery/gallery-small-2.png' %}" alt="gallery">
+	                                <img src="{% static 'images/backgrounds/catalin2.webp' %}" alt="gallery">
 	                                <div class="footer-gallery-overlay">
 	                                    <a href="#0"><i class="fab fa-instagram"></i></a>
 	                                </div>
 	                            </div>
 	                            <div class="footer-gallery-thumb">
-	                                <img src="{% static 'images/gallery/gallery-small-2.png' %}" alt="gallery">
+	                                <img src="{% static 'images/backgrounds/miriam1.webp' %}" alt="gallery">
 	                                <div class="footer-gallery-overlay">
 	                                    <a href="#0"><i class="fab fa-instagram"></i></a>
 	                                </div>
 	                            </div>
 	                            <div class="footer-gallery-thumb">
-	                                <img src="{% static 'images/gallery/gallery-small-3.png' %}" alt="gallery">
+	                                <img src="{% static 'images/backgrounds/catalin3.webp' %}" alt="gallery">
 	                                <div class="footer-gallery-overlay">
 	                                    <a href="#0"><i class="fab fa-instagram"></i></a>
 	                                </div>
@@ -288,7 +322,7 @@
 	        <div class="row justify-content-center">
 	            <div class="col-xl-12 text-center">
 	                <div class="copyright-area">
-	                    <p>{% trans 'Copyright 2022 Energyfit Karate Brasov. Designed By' %} <a href="https:///ninjaweb.tech">NinjaWeb Tech</a></p>
+	                    <p>{% trans 'Copyright 2022 Energyfit Karate Brasov. Designed By' %} <a href="https://ninjaweb.tech">NinjaWeb Tech</a></p>
 	                </div>
 	            </div>
 	        </div>
