@@ -2,7 +2,8 @@ from django.contrib import admin
 from .models import ServiceCategory, Testimonial, Contact, Service, Team, Subscriber
 
 class SubscriberAdmin(admin.ModelAdmin):
-    fields = ['email', 'conf_num', 'timestamp', 'confirmed']
+    fields = ['email', 'conf_num', 'confirmed']
+    list_display = ['email', 'conf_num', 'confirmed']
 class ServiceCategoryAdmin(admin.ModelAdmin):
     fields = ['rank', 'name', 'name_ro', 'name_de', 'image', 'slug']
     prepopulated_fields = {"slug": ("name",)}

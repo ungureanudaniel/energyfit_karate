@@ -1,0 +1,78 @@
+{% extends 'services/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="banner-section banner-section-two inner-banner-section bg-overlay-red bg_img" data-background="{% static 'images/backgrounds/catalin_karol2.webp' %}">
+	{% if messages %}
+	<div id="error-section" class="pb-3 col-12 justify-content-center" style="justify-content:center">
+		{% include 'includes/messages.html' %}
+	</div>
+	{% else %}
+	<div id="error-section" class="pb-5 col-12 justify-content-center" style="justify-content:center">
+	</div>
+	{% endif %}
+    <div class="section-logo-text">
+        <span class="title">ENERGYFIT KARATE BRASOV</span>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-end mb-30-none">
+            <div class="col-xl-12 col-lg-12 text-center mb-30">
+                <div class="banner-content" data-aos="fade-up" data-aos-duration="1800">
+                    <h1 class="title">{% trans 'UNSUBSCRIPTION' %}<span></span></h1>
+										<p>{% trans 'If you are sure about this, below you can unsubscribe from our newsletter' %}</p>
+										<div class="banner-btn">
+												<a href="{% url 'apply' %}" class="btn--base">{% trans 'Enroll Now' %} <i class="fas fa-arrow-right ml-2"></i></a>
+												<a href="{% url 'home' %}" class="btn--base active">{% trans 'Home' %} <i class="fas fa-arrow-right ml-2"></i></a>
+										</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="account-section ptb-120">
+
+    <div class="container">
+        <div class="row justify-content-center mb-10-none">
+            <div class="col-xl-5 col-lg-6 col-md-8">
+                <div class="account-form-area">
+                    <h3 class="title"></h3>
+                    <form class="account-form" action="." method="POST">
+											{% csrf_token %}
+                        <div class="row justify-content-center mb-20-none">
+                            <div class="col-xl-12 form-group">
+                                <label>{% trans 'Write your email below to confirm' %}</label>
+                                <input type="email" class="form--control" name="unsub_email" placeholder="{% trans 'Type in your email' %}">
+                            </div>
+                            <div class="col-xl-12 form-group text-center">
+                                <button type="submit" class="btn--base">{% trans 'Confirm' %} <i class="fas fa-arrow-right ml-2"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<a href="#" class="scrollToTop">
+    <img src="{% static 'images/element/arrow_up_icon.png' %}" style="width:80px;height:auto;color: red;" alt="element">
+    <div class="scrollToTop-icon">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+</a>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+{% endblock %}

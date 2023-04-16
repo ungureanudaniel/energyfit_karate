@@ -50,7 +50,7 @@ def underconstruction(request):
                 sub_subject = _("Newsletter Energyfit Karate Brasov")
                 from_email='contact@energyfit.ro'
                 sub_message = ''
-                html_content=_("Thank you for subscribing to our newsletter! You can finalize the process by clicking on this <a style='padding:2px 1px;border:2px solid black' href='{}subscription-confirmation/?email={}&conf_num={}'> button</a>.".format('http://127.0.0.1/', sub.email, sub.conf_num))
+                html_content=_("Thank you for subscribing to our newsletter! You can finalize the process by clicking on this <a style='padding:2px 1px;border:2px solid black' href='{}subscription-confirmation/?email={}&conf_num={}'> button</a>.".format('http://127.0.0.1:8000/', sub.email, sub.conf_num))
                 try:
                     send_mail(sub_subject, sub_message, from_email, [sub], html_message=html_content)
                     messages.success(request, _("A confirmation link was sent to your email inbox. Please check!"))
@@ -75,6 +75,50 @@ def home(request):
         "masters": Team.objects.filter(job="Sensei")
     }
     return render(request, template, context)
+#--------------------------------------------------------------subscription_conf
+def subscription_conf_view(request):
+    template = 'services/subscription_conf.html'
+
+    try:
+        sub = Subscriber.objects.get(email=request.GET['email'])
+        if sub.conf_num == request.GET['conf_num']:
+            try:
+                sub.confirmed = True
+                sub.save()
+            except:
+                messages.warning(request, _("Error! Your email cannot be registered. Please contact our IT department at +40 758 039 784"))
+            return render(request, template, {'email': sub.email, 'action': 'confirmed'})
+        else:
+            return render(request, template, {'email': sub.email, 'action': 'denied'})
+    except Exception as e:
+        messages.warning(request, e)
+        return render(request, template, {})
+
+#---------------------------SUBS DELETION VIEW------------------------------
+def unsubscribe(request):
+    template = 'services/unsubscribe.html'
+    if request.method == "POST":
+        unsub_email = request.POST.get('unsub_email')
+        if unsub_email:
+            try:
+                sub = Subscriber.objects.get(email=unsub_email)
+                if sub:
+                    sub.delete()
+                    messages.success(request, _("Success! Unsubscribing was finalized. If you change your mind you can subscribe again anytime"))
+                    return render(request, template, {'email': sub.email, 'action': 'unsubscribed'})
+                else:
+                    messages.warning(request, _("Error! Unsubscribing failed. This email does not exist in our database"))
+                    return redirect('/')
+            except:
+                messages.warning(request, _("Error! Unsubscribing failed. Please contact our IT department at +40 758 039 784"))
+                return render(request, template, {'action': 'denied'})
+        else:
+            messages.warning(request, _("Error! Email incorrect."))
+            return render(request, template, {})
+    else:
+        return render(request, template, {})
+
+
 #=========================apply page================================
 def apply_view(request):
     template = 'services/apply.html'
@@ -116,7 +160,7 @@ def contacts_view(request):
                     new_message.timestamp = datetime.datetime.now()
                     new_message.save()
                     send_mail(message_subject, message, sender_email, ['contact@energyfit.ro'], fail_silently=False)
-                    messages.success(request, _(f'Thank you for writting us {message_author}! We will answer as soon as possible.'))
+                    messages.success(request, _(f'Thank you for writing us {message_author}! We will answer as soon as possible.'))
                     return HttpResponseRedirect('/contact')
                     # except Exception as e:
                     #     messages.warning(request, f'Error: {e}!')

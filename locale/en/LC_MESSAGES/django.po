@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-16 13:41+0000\n"
+"POT-Creation-Date: 2023-04-16 14:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -70,6 +70,83 @@ msgstr ""
 
 #: services/templates/services/addcategory.html:60
 msgid "Solve the "
+msgstr ""
+
+#: services/templates/services/apply.html:16
+msgid "<h1 class=\"title\">ENROLL <span>NOW</span></h1>"
+msgstr ""
+
+#: services/templates/services/apply.html:25
+#: services/templates/services/subscription_conf.html:28
+msgid "Home"
+msgstr ""
+
+#: services/templates/services/apply.html:26
+msgid "Enroll"
+msgstr ""
+
+#: services/templates/services/apply.html:60
+msgid ""
+"<h2 class=\"section-title\">To <span>Apply</span> Write Us <span>Today!</"
+"span></h2>  "
+msgstr ""
+
+#: services/templates/services/apply.html:61
+msgid "And we will reach back to you as soon as possible"
+msgstr ""
+
+#: services/templates/services/apply.html:68
+msgid "Enter Name"
+msgstr ""
+
+#: services/templates/services/apply.html:69
+msgid "Type in your name"
+msgstr ""
+
+#: services/templates/services/apply.html:72
+msgid "Email Adress"
+msgstr ""
+
+#: services/templates/services/apply.html:73
+msgid "Type in your email"
+msgstr ""
+
+#: services/templates/services/apply.html:76
+msgid "Phone Number"
+msgstr ""
+
+#: services/templates/services/apply.html:77
+msgid "Type in your phone number"
+msgstr ""
+
+#: services/templates/services/apply.html:80
+msgid "Select your desired class"
+msgstr ""
+
+#: services/templates/services/apply.html:90
+msgid "Write Message"
+msgstr ""
+
+#: services/templates/services/apply.html:91
+msgid "Start typing your message here"
+msgstr ""
+
+#: services/templates/services/apply.html:94
+msgid "Get Enrolled Now"
+msgstr ""
+
+#: services/templates/services/apply.html:122
+msgid ""
+"<h2 class=\"section-title\">We can provide you one of the <span>Best Fudokan "
+"Training Programs in Europe.</span></h2>"
+msgstr ""
+
+#: services/templates/services/apply.html:123
+msgid ""
+"Learn to practice and master Fudokan martial arts together with a beautiful "
+"team that may become a second family! This Karate style is proven to enhance "
+"self defence abilities, focus on tasks, self-awareness, improves balance in "
+"life and relieves stress, all while you build up fitness and health"
 msgstr ""
 
 #: services/templates/services/base.html:11
@@ -150,6 +227,13 @@ msgid "CONTACT US"
 msgstr ""
 
 #: services/templates/services/base.html:214
+#: services/templates/services/home.html:174
+#: services/templates/services/home.html:612
+#: services/templates/services/home.html:686
+#: services/templates/services/home.html:715
+#: services/templates/services/home.html:745
+#: services/templates/services/home.html:1145
+#: services/templates/services/home.html:1163
 #: services/templates/services/underconstruction.html:255
 msgid ""
 "Energyfit Karate Brasov is the only Fudokan martial arts school in Brasov, a "
@@ -183,7 +267,6 @@ msgid "Copyright 2022 Energyfit Karate Brasov. Designed By"
 msgstr ""
 
 #: services/templates/services/contact.html:396
-#: services/templates/services/home.html:174
 msgid ""
 "Our school is the only karate school in Brasov, that is specialized in "
 "Fudokan martial arts and functioning since 1999. It has one of the most "
@@ -220,6 +303,8 @@ msgid "FUDOKAN SCHOOL IN BRASOV"
 msgstr ""
 
 #: services/templates/services/home.html:37
+#: services/templates/services/home.html:58
+#: services/templates/services/subscription_conf.html:27
 msgid "Enroll Now"
 msgstr ""
 
@@ -384,57 +469,65 @@ msgstr ""
 msgid "OUR <span>STUDENTS</span> TESTIMONIAL"
 msgstr ""
 
-#: services/templates/services/home.html:794
+#: services/templates/services/home.html:793
 msgid "OUR <span>MEMBERSHIP</span> PLAN"
 msgstr ""
 
-#: services/templates/services/home.html:795
+#: services/templates/services/home.html:794
 msgid "We are trying to fit every situation and every pocket"
 msgstr ""
 
-#: services/templates/services/home.html:802
+#: services/templates/services/home.html:801
 msgid "Monthly"
 msgstr ""
 
-#: services/templates/services/home.html:804
+#: services/templates/services/home.html:803
 msgid "Yearly"
 msgstr ""
 
-#: services/templates/services/home.html:815
+#: services/templates/services/home.html:814
 msgid "Basic"
 msgstr ""
 
-#: services/templates/services/home.html:817
-#: services/templates/services/home.html:847
+#: services/templates/services/home.html:816
+#: services/templates/services/home.html:846
 msgid "Access to all classes & membership"
 msgstr ""
 
-#: services/templates/services/home.html:820
+#: services/templates/services/home.html:819
 msgid "month"
 msgstr ""
 
-#: services/templates/services/home.html:841
+#: services/templates/services/home.html:840
 msgid "POPULAR"
 msgstr ""
 
-#: services/templates/services/home.html:853
+#: services/templates/services/home.html:852
 msgid "Membership"
 msgstr ""
 
-#: services/templates/services/home.html:854
+#: services/templates/services/home.html:853
 msgid "Unlimited Training"
 msgstr ""
 
-#: services/templates/services/home.html:855
+#: services/templates/services/home.html:854
 msgid "Access to all classes"
 msgstr ""
 
-#: services/templates/services/home.html:1007
+#: services/templates/services/home.html:1006
 msgid "OUR <span>FUDOKAN</span> TUTORIALS"
 msgstr ""
 
-#: services/templates/services/home.html:1125
+#: services/templates/services/home.html:1124
 msgid "LATEST <span>NEWS</span> FROM ENERGYFIT KARATE BRASOV"
+msgstr ""
+
+#: services/templates/services/subscription_conf.html:24
+msgid "SUCCESS"
+msgstr ""
+
+#: services/templates/services/subscription_conf.html:25
+msgid "You have succesfully subscribed to our newsletter"
 msgstr ""
 
 #: services/templates/services/underconstruction.html:227
@@ -450,6 +543,33 @@ msgstr ""
 
 #: services/templates/services/underconstruction.html:230
 msgid "Subscribe our newsletter to stay in touch. Click here"
+msgstr ""
+
+#: services/templates/services/unsubscribe.html:13
+msgid "Bucegi Natural Park"
+msgstr ""
+
+#: services/templates/services/unsubscribe.html:14
+msgid "<span>Unsubscribe</span> <span></span>"
+msgstr ""
+
+#: services/templates/services/unsubscribe.html:34
+msgid ""
+"<h4 class='cta-block__title'>Unsubscribe <span>from Newsletter</span></h4>"
+msgstr ""
+
+#: services/templates/services/unsubscribe.html:35
+msgid ""
+"<p class='cta-block__text'>Are you sure you wish to cancel your "
+"subscription? If yes please type your email address in the box bellow</p>"
+msgstr ""
+
+#: services/templates/services/unsubscribe.html:40
+msgid "Your email"
+msgstr ""
+
+#: services/templates/services/unsubscribe.html:41
+msgid "Unsubscribe"
 msgstr ""
 
 #: services/views.py:42
@@ -471,22 +591,48 @@ msgstr ""
 msgid "A confirmation link was sent to your email inbox. Please check!"
 msgstr ""
 
-#: services/views.py:119
+#: services/views.py:89
+msgid ""
+"Error! Your email cannot be registered. Please contact our IT department at "
+"+40 758 039 784"
+msgstr ""
+
+#: services/views.py:109
+msgid ""
+"Success! Unsubscribing was finalized. If you change your mind you can "
+"subscribe again anytime"
+msgstr ""
+
+#: services/views.py:112
+msgid "Error! Unsubscribing failed. This email does not exist in our database"
+msgstr ""
+
+#: services/views.py:115
+msgid ""
+"Error! Unsubscribing failed. Please contact our IT department at +40 758 039 "
+"784"
+msgstr ""
+
+#: services/views.py:118
+msgid "Error! Email incorrec."
+msgstr ""
+
+#: services/views.py:165
 #, python-brace-format
 msgid ""
 "Thank you for writting us {message_author}! We will answer as soon as "
 "possible."
 msgstr ""
 
-#: services/views.py:126
+#: services/views.py:172
 msgid "Failed! Please make sure your info is correct!"
 msgstr ""
 
-#: services/views.py:129
+#: services/views.py:175
 msgid "Failed! Please fill in the captcha field again!"
 msgstr ""
 
-#: services/views.py:151
+#: services/views.py:197
 #, python-brace-format
 msgid "Warning! {e}"
 msgstr ""

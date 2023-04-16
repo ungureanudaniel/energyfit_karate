@@ -1,6 +1,7 @@
 from django.urls import path, include
 from django.conf import settings
-from .views import home, apply_view, underconstruction, contacts_view
+from .views import home, apply_view, underconstruction, contacts_view, subscription_conf_view,\
+unsubscribe
 #, gallery, add_testimonial, team, history, massmedia,\
  # contacts_view, page_not_found, coming_soon,\
  # faq_view, video_view, gallery
@@ -19,6 +20,9 @@ if settings.DEVELOPMENT == True:
         #------ general urls-------------------
         path('home', home, name="home"),
         path('', underconstruction, name="underconstruction"),
+        path('subscription-confirmation/', subscription_conf_view, name='subscription-confirmation'),
+        path('unsubscribe', unsubscribe, name='unsubscribe'),
+        path("apply-now", apply_view, name="apply"),
         # path('gallery', gallery, name="gallery"),
         # path('team', team, name="team"),
         # path('mass-media', massmedia, name="mass-media"),
@@ -44,7 +48,9 @@ else:
         # path('<slug:slug>', snippet_detail),
         #------ general urls-------------------
         path('', home, name="home"),
-        path("_('apply-now')", apply_view, name="apply"),
+        path('subscription-confirmation/', subscription_conf_view, name='subscription-confirmation'),
+        path('unsubscribe', unsubscribe, name='unsubscribe'),
+        path("apply-now", apply_view, name="apply"),
         # path('gallery', gallery, name="gallery"),
         # path('team', team, name="team"),
         # path('mass-media', massmedia, name="mass-media"),

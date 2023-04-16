@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-16 13:41+0000\n"
+"POT-Creation-Date: 2023-04-16 14:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,52 +26,118 @@ msgstr ""
 
 #: energyfit_main/settings.py:156
 msgid "English"
-msgstr ""
+msgstr "Engleză"
 
 #: energyfit_main/settings.py:157
 msgid "Deutsch"
-msgstr ""
+msgstr "Germană"
 
 #: services/forms.py:18
 msgid "Full name..."
-msgstr ""
+msgstr "Nume..."
 
 #: services/forms.py:20
 msgid "Phone number..."
-msgstr ""
+msgstr "Nr de telefon..."
 
 #: services/forms.py:21
 msgid "Subject..."
-msgstr ""
+msgstr "Subiect"
 
 #: services/forms.py:22
 msgid "Your message..."
-msgstr ""
+msgstr "Mesajul tău..."
 
 #: services/templates/includes/newsletter.html:18
 msgid "SUBSCRIBE NOW"
-msgstr ""
+msgstr "ABONAȚI-VĂ ACUM"
 
 #: services/templates/includes/newsletter.html:19
 msgid "And stay up to date with offers and news"
-msgstr ""
+msgstr "Și rămâneți la curent cu ofertele și noutățile"
 
+#: services/templates/services/apply.html:72,
 #: services/templates/includes/newsletter.html:24
 msgid "Email Address"
-msgstr ""
+msgstr "Adresa de e-mail"
 
 #: services/templates/includes/newsletter.html:25
 msgid "Subscribe"
-msgstr ""
+msgstr "ABONAȚI-VĂ"
 
 #: services/templates/services/addcategory.html:22
 #: services/templates/services/addservices.html:27
 msgid "Add a service category"
-msgstr ""
+msgstr "Adăugați o categorie de servicii"
 
 #: services/templates/services/addcategory.html:60
 msgid "Solve the "
-msgstr ""
+msgstr "Rezolvați "
+
+#: services/templates/services/apply.html:16
+msgid "<h1 class=\"title\">ENROLL <span>NOW</span></h1>"
+msgstr "<h1 class=\"title\">ÎNSCRIEȚI-VĂ <span>ACUM</span></h1>"
+
+#: services/templates/services/apply.html:25
+#: services/templates/services/subscription_conf.html:28
+msgid "Home"
+msgstr "Acasă"
+
+#: services/templates/services/apply.html:26
+msgid "Enroll"
+msgstr "Înscrieți-vă"
+
+#: services/templates/services/apply.html:60
+msgid "<h2 class='section-title'>To <span>Apply</span> Write Us <span>Today!</span></h2>"
+msgstr "<h2 class='section-title'>Pentru a <span>Aplica</span> Scrieți-ne <span>Astăzi!</span></h2>"
+
+#: services/templates/services/apply.html:61
+msgid "And we will reach back to you as soon as possible"
+msgstr "Și vă vom contacta în cel mai scurt timp posibil"
+
+#: services/templates/services/apply.html:68
+msgid "Enter Name"
+msgstr "Introduceți numele"
+
+#: services/templates/services/apply.html:69
+msgid "Type in your name"
+msgstr "Introduceți numele dvs"
+
+#: services/templates/services/apply.html:73
+msgid "Type in your email"
+msgstr "Introduceți e-mailul dvs"
+
+#: services/templates/services/apply.html:76
+msgid "Phone Number"
+msgstr "Nr de telefon"
+
+#: services/templates/services/apply.html:77
+msgid "Type in your phone number"
+msgstr "Introduceți numărul dvs de telefon"
+
+#: services/templates/services/apply.html:80
+msgid "Select your desired class"
+msgstr "Selectați clasa dorită"
+
+#: services/templates/services/apply.html:90
+msgid "Write Message"
+msgstr "Scrieți mesajul"
+
+#: services/templates/services/apply.html:91
+msgid "Start typing your message here"
+msgstr "Începeți să scrieți mesajul dvs. aici"
+
+#: services/templates/services/apply.html:94
+msgid "Get Enrolled Now"
+msgstr "Înscrieți-vă acum"
+
+#: services/templates/services/apply.html:122
+msgid "<h2 class='section-title'>We can provide you one of the <span>Best Fudokan Training Programs in Europe.</span></h2>"
+msgstr "<h2 class='section-title'>Vă putem oferi unul dintre <span>Cele mai bune programe de formare Fudokan din Europa.</span></h2>"
+
+#: services/templates/services/apply.html:123
+msgid "Learn to practice and master Fudokan martial arts together with a beautiful team that may become a second family! This Karate style is proven to enhance self defence abilities, focus on tasks, self awareness, improves balance in life and relieves stress, all while you build up fitness and health"
+msgstr "Învățați să practicați și să stăpâniți artele marțiale Fudokan împreună cu o echipă frumoasă care poate deveni o a doua familie! S-a dovedit că acest stil de karate îmbunătățește abilitățile de autoapărare, concentrarea asupra sarcinilor, conștientizarea sinelui, îmbunătățește echilibrul în viață și ameliorează stresul, toate acestea în timp ce vă construiți o formă fizică bună și sănătate"
 
 #: services/templates/services/base.html:11
 #: services/templates/services/contact.html:10
@@ -79,154 +145,161 @@ msgstr ""
 msgid "Energyfit"
 msgstr ""
 
+#: services/templates/services/underconstruction.html:11
+msgid "Monday"
+msgstr "Luni"
+
+#: services/templates/services/underconstruction.html:11
+msgid "Wednesday"
+msgstr "Miercuri"
+
+#: services/templates/services/underconstruction.html:11
+msgid "Saturday"
+msgstr "Sâmbătă"
+
 #: services/templates/services/base.html:13
 #: services/templates/services/contact.html:12
 #: services/templates/services/underconstruction.html:13
-msgid "Una dintre cele mai bune scoli de karate din Brasov"
-msgstr ""
+msgid "One of the best karate schools in Brașov"
+msgstr "Una dintre cele mai bune școli de karate din Brașov"
 
 #: services/templates/services/base.html:152
 #: services/templates/services/contact.html:151
 #: services/templates/services/underconstruction.html:152
 msgid "HOME"
-msgstr ""
+msgstr "ACASĂ"
 
 #: services/templates/services/base.html:153
 #: services/templates/services/contact.html:152
 #: services/templates/services/underconstruction.html:153
 msgid "ABOUT US"
-msgstr ""
+msgstr "DESPRE NOI"
 
 #: services/templates/services/base.html:155
 #: services/templates/services/contact.html:154
 #: services/templates/services/underconstruction.html:155
 msgid "TRAINING"
-msgstr ""
+msgstr "FORMARE"
 
 #: services/templates/services/base.html:158
 #: services/templates/services/contact.html:157
 #: services/templates/services/underconstruction.html:158
 msgid "EXPLORE"
-msgstr ""
+msgstr "EXPLORAȚI"
 
 #: services/templates/services/base.html:160
 #: services/templates/services/contact.html:159
 #: services/templates/services/underconstruction.html:160
 msgid "GALLERY"
-msgstr ""
+msgstr "GALERIE"
 
 #: services/templates/services/base.html:161
 #: services/templates/services/contact.html:160
 #: services/templates/services/underconstruction.html:161
 msgid "EVENTS"
-msgstr ""
+msgstr "EVENIMENTE"
 
 #: services/templates/services/base.html:162
 #: services/templates/services/contact.html:161
 #: services/templates/services/underconstruction.html:162
 msgid "PRICING PLAN"
-msgstr ""
+msgstr "PLAN DE PREȚURI"
 
 #: services/templates/services/base.html:168
 #: services/templates/services/contact.html:167
 #: services/templates/services/underconstruction.html:168
 msgid "MASTERS"
-msgstr ""
+msgstr "SENSEI"
 
 #: services/templates/services/base.html:171
 #: services/templates/services/contact.html:170
 #: services/templates/services/underconstruction.html:171
 msgid "NEWS"
-msgstr ""
+msgstr "ȘTIRI"
 
 #: services/templates/services/base.html:178
 #: services/templates/services/underconstruction.html:178
 msgid "LANGUAGE"
-msgstr ""
+msgstr "LIMBĂ"
 
 #: services/templates/services/base.html:185
 #: services/templates/services/contact.html:172
 #: services/templates/services/underconstruction.html:186
 msgid "CONTACT US"
-msgstr ""
+msgstr "CONTACT"
 
 #: services/templates/services/base.html:214
+#: services/templates/services/home.html:174
+#: services/templates/services/home.html:612
+#: services/templates/services/home.html:686
+#: services/templates/services/home.html:715
+#: services/templates/services/home.html:745
+#: services/templates/services/home.html:1145
+#: services/templates/services/home.html:1163
 #: services/templates/services/underconstruction.html:255
-msgid ""
-"Energyfit Karate Brasov is the only Fudokan martial arts school in Brasov, a "
-"karate style that teaches modesty, focus and fighting for true human values. "
-"Our school has one of the most innovative and child friendly training "
-"programs you can find"
-msgstr ""
+msgid "Energyfit Karate Brașov is the only Fudokan martial arts school in Brașov, a karate style that teaches modesty, focus and fighting for true human values. Our school has one of the most innovative and child friendly training programs you can find"
+msgstr "Energyfit Karate Brașov este singura școală de arte marțiale Fudokan din Brașov, un stil de karate care învață modestia, concentrarea și lupta pentru adevăratele valori umane. Școala noastră are unul dintre cele mai inovatoare și prietenoase programe de antrenament pentru copii pe care le puteți găsi"
 
 #: services/templates/services/base.html:238
 #: services/templates/services/contact.html:420
 #: services/templates/services/underconstruction.html:279
-msgid "Strada ...."
+msgid "Str."
 msgstr ""
 
 #: services/templates/services/base.html:241
 #: services/templates/services/contact.html:423
 #: services/templates/services/underconstruction.html:282
 msgid "Telephone"
-msgstr ""
+msgstr "Telefon"
 
 #: services/templates/services/base.html:247
 #: services/templates/services/contact.html:429
 #: services/templates/services/underconstruction.html:288
 msgid "Gallery"
-msgstr ""
+msgstr "Galerie"
 
 #: services/templates/services/base.html:284
 #: services/templates/services/contact.html:466
 #: services/templates/services/underconstruction.html:325
-msgid "Copyright 2022 Energyfit Karate Brasov. Designed By"
-msgstr ""
-
-#: services/templates/services/contact.html:396
-#: services/templates/services/home.html:174
-msgid ""
-"Our school is the only karate school in Brasov, that is specialized in "
-"Fudokan martial arts and functioning since 1999. It has one of the most "
-"innovative and child friendly training programs you can find, where the "
-"teacher motivates students by being humanistic and their friend, rather than "
-"harsh"
-msgstr ""
+msgid "Copyright 2022 Energyfit Karate Brașov. Designed By"
+msgstr "Copyright 2022 Energyfit Karate Brașov. Dezvoltat de"
 
 #: services/templates/services/contact.html:407
 #: services/templates/services/underconstruction.html:266
 msgid "Opening Hours"
-msgstr ""
+msgstr "Program de lucru"
 
 #: services/templates/services/contact.html:418
 #: services/templates/services/underconstruction.html:277
 msgid "Contact us"
-msgstr ""
+msgstr "Contact"
 
 #: services/templates/services/home.html:32
-msgid "#1 FUDOKAN MARTIAL ARTS SCHOOL IN BRASOV"
-msgstr ""
+msgid "#1 FUDOKAN MARTIAL ARTS SCHOOL IN BRAȘOV"
+msgstr "ȘCOALA #1 DE ARTE MARȚIALE FUDOKAN în BRAȘOV"
 
 #: services/templates/services/home.html:33
 msgid "BALANCE YOUR LIFE"
-msgstr ""
+msgstr "ECHILIBREAZĂ-ȚI VIAȚA"
 
 #: services/templates/services/home.html:34
 msgid "IMPROVE MIND, BODY & SPIRIT"
-msgstr ""
+msgstr "ÎMBUNĂTĂȚEȘTE MINTEA, CORPUL ȘI SPIRITUL"
 
 #: services/templates/services/home.html:35
 #: services/templates/services/home.html:56
-msgid "FUDOKAN SCHOOL IN BRASOV"
-msgstr ""
+msgid "FUDOKAN SCHOOL IN BRAȘOV"
+msgstr "ȘCOALA DE FUDOKAN în BRAȘOV"
 
 #: services/templates/services/home.html:37
+#: services/templates/services/home.html:58
+#: services/templates/services/subscription_conf.html:27
 msgid "Enroll Now"
-msgstr ""
+msgstr "Înscrieți-vă acum"
 
 #: services/templates/services/home.html:38
 msgid "Training Classes"
-msgstr ""
+msgstr "Antrenamente"
 
 #: services/templates/services/home.html:53
 msgid "FACT #2"
@@ -242,252 +315,280 @@ msgstr ""
 
 #: services/templates/services/home.html:95
 msgid "What we offer"
-msgstr ""
+msgstr "Ce oferim"
 
 #: services/templates/services/home.html:173
-msgid "ABOUT <span>ENERGY FIT KARATE</span> BRASOV "
-msgstr ""
+msgid "ABOUT <span>ENERGYFIT KARATE</span> BRAȘOV "
+msgstr "DESPRE <span>ENERGYFIT KARATE</span> BRAȘOV "
 
 #: services/templates/services/home.html:182
 msgid "FITNESS TRAINING"
-msgstr ""
+msgstr "ANTRENAMENT PENTRU FITNESS"
 
 #: services/templates/services/home.html:183
-msgid ""
-"Each Fudokan training session includes cardio, strength & stretching "
-"exercises, all very important for a healthy body and a sharp mind"
-msgstr ""
+msgid "Each Fudokan training session includes cardio, strength & stretching exercises, all very important for a healthy body and a sharp mind"
+msgstr "Fiecare sesiune de antrenament Fudokan include exerciții cardio, de forță și de întindere, toate foarte importante pentru un corp sănătos și o minte ascuțită"
 
 #: services/templates/services/home.html:191
 msgid "FOCUS"
-msgstr ""
+msgstr "FOCUS"
 
 #: services/templates/services/home.html:192
-msgid ""
-"The process of physical training and learning precise moves will also train "
-"you to focus your mental energy, a crucial skill that a lot of people "
-"overlook in life and it can make a difference in your career and "
-"relationships"
-msgstr ""
+msgid "The process of physical training and learning precise moves will also train one to focus his/her mental energy, a crucial skill that a lot of people overlook in life and it can make a difference in career and relationships"
+msgstr "Procesul de pregătire fizică și de învățare a unor mișcări precise va stimula de asemenea, studenții, să își concentreze energia mentală - focusare, o abilitate crucială pe care mulți oameni o trec cu vederea în viață și care poate face diferența în cariera și relațiile dvs"
 
 #: services/templates/services/home.html:200
 msgid "SELF CONFIDENCE"
-msgstr ""
+msgstr "ÎNCREDERE ÎN SINE"
 
 #: services/templates/services/home.html:201
-msgid ""
-"As you advance through the specific training stages you gain self-"
-"confidence, because you get to know your body a lot better and obviously "
-"because you will be able to defend yourself in certain situations"
-msgstr ""
+msgid "As one advance through the specific training stages, one gains self-confidence, because he/she gets to know his/her body a lot better and obviously because he/she will be able to defend his/herself in certain situations"
+msgstr "Pe măsură ce cursantul avasează prin etapele specifice de antrenament câștigă încredere în el, pentru că își cunoaște mult mai bine corpul și, evident, pentru că va fi capabil să se apere în anumite situații"
 
 #: services/templates/services/home.html:210
-msgid ""
-"If you stay long enough with us, you will start setting your own goals, "
-"participate into competitions and gain achievements, which in turn will "
-"model you to be a person that sets goals in life and can put the necessary "
-"work and skills to reach them"
-msgstr ""
+msgid "If one stay long enough with us, he will start setting their own goals, participate into competitions and gain achievements, which in turn will model them him to be persons that sets goals in life and can put the necessary work and skills to reach them"
+msgstr "Dacă studenții rămân suficient de mult timp cu noi, vor începe să își stabilească propriile obiective, să participe la competiții și să obțină rezultate, ceea ce îi va modela să în persoane care își stabilesc obiective în viață și care pot depune munca și abilitățile necesare pentru a le atinge"
 
 #: services/templates/services/home.html:234
-msgid ""
-"<h2 class=\"section-title\">OUR <span>FUDOKAN KARATE</span> CHARACTERISTICS</"
-"h2>"
-msgstr ""
+msgid "<h2 class='section-title'><span>FUDOKAN KARATE</span> CHARACTERISTICS</h2>"
+msgstr "<h2 class='section-title'> CARACTERISTICILE <span>FUDOKAN</span></h2>"
 
 #: services/templates/services/home.html:250
 msgid "FIT FOR ANY AGE"
-msgstr ""
+msgstr "POTRIVIT PENTRU ORICE VÂRSTĂ"
 
 #: services/templates/services/home.html:251
 msgid "It is never too late to start learning Fudokan"
-msgstr ""
+msgstr "Nu este niciodată prea târziu pentru a începe să înveți Fudokan"
 
 #: services/templates/services/home.html:263
 msgid "IMPROVES YOUR FITNESS"
-msgstr ""
+msgstr "ÎMBUNĂTĂȚEȘTE CONDIȚIA FIZICĂ"
 
 #: services/templates/services/home.html:264
-msgid ""
-"Cardio and strength training, plus lots of stretching are all part of Fudokan"
-msgstr ""
+msgid "Cardio and strength training, plus lots of stretching are all part of Fudokan"
+msgstr "Antrenament cardio și pentru forță, plus o mulțime de întinderi, toate fac parte din Fudokan."
 
 #: services/templates/services/home.html:276
 msgid "TEACHES SELF-DEFENCE"
-msgstr ""
+msgstr "ÎNVAȚĂ AUTOAPĂRARE"
 
 #: services/templates/services/home.html:277
-msgid ""
-"When children are confronted by bullies, the Fudokan techniques helps them "
-"defend"
-msgstr ""
+msgid "When children are confronted by bullies, the Fudokan techniques helps them defend"
+msgstr "Atunci când copiii se confruntă cu bullying, tehnicile Fudokan îi ajută să se apere"
 
 #: services/templates/services/home.html:300
 msgid "DEVELOPS CHARACTER"
-msgstr ""
+msgstr "DEZVOLTĂ CARACTERUL"
 
 #: services/templates/services/home.html:301
-msgid ""
-"Wearing upper level belts requires a demonstration of correct technique, "
-"achieved through effort and dedication"
-msgstr ""
+msgid "Wearing upper level belts requires a demonstration of correct technique, achieved through effort and dedication"
+msgstr "Purtarea centurilor de nivel superior necesită demonstrații de tehnică corectă, obținută prin efort și dedicare"
 
 #: services/templates/services/home.html:313
 msgid "ENCOURAGES SELF-DISCIPLINE"
-msgstr ""
+msgstr "ÎNCURAJEAZĂ AUTODISCIPLINA"
 
 #: services/templates/services/home.html:314
-msgid "Martial arts is not a sport, it is rather a lifestyle"
-msgstr ""
+msgid "Fudokan is more than a sport, it is rather a lifestyle"
+msgstr "Fudokan nu este doar un sport, ci mai degrabă un stil de viață"
 
 #: services/templates/services/home.html:326
 msgid "HONES LEADERSHIP SKILLS"
-msgstr ""
+msgstr "PERFECȚIONEAZĂ ABILITĂȚILE DE LIDER"
 
 #: services/templates/services/home.html:327
 msgid "Leadership traits depend on both self-respect and respect for others"
-msgstr ""
+msgstr "Trăsăturile de leader depind atât de respectul de sine, cât și de respectul pentru ceilalți"
 
 #: services/templates/services/home.html:349
 msgid "JOIN OUR CLASSES"
-msgstr ""
+msgstr "ÎNSCRIETE LA CURSURILE NOASTRE"
+
+#: services/templates/services/home.html:349
+msgid "BECOME A BETTER YOU"
+msgstr "DEVINO UN TU MAI BUN"
 
 #: services/templates/services/home.html:351
 #, python-format
-msgid ""
-"You will become stronger, faster, more focused, more motivated to reach your "
-"goals and we are 100%% commited to take you there"
-msgstr ""
+msgid "You will become stronger, faster, more focused, more motivated to reach your goals and we are committed to take you there"
+msgstr "Vei deveni mai puternic, mai rapid, mai concentrat, mai motivat să îți atingegi obiectivele, iar noi ne angajăm să te ducem acolo"
 
 #: services/templates/services/home.html:353
 msgid "Join Now"
-msgstr ""
+msgstr "Alăturăte acum"
 
 #: services/templates/services/home.html:379
 msgid "MORE ABOUT WHAT<span> FUDOKAN</span> WILL TEACH YOU"
-msgstr ""
+msgstr "MAI MULTE DESPRE CE<span> FUDOKAN</span> TE VA ÎNVĂȚA"
 
 #: services/templates/services/home.html:552
-msgid "OUR <span>EXPERT</span> MASTERS"
-msgstr ""
+msgid "OUR <span>SENSEIS</span>"
+msgstr "SENSEII <span>NOȘTRI</span>"
 
 #: services/templates/services/home.html:553
-msgid ""
-"Sensei Catalin Petre is the creator of this school and he teaches with the "
-"help of sensei Karol"
-msgstr ""
+msgid "Sensei Catalin Petre is the creator of this school and he teaches with the help of Sensei Karol"
+msgstr "Sensei Cătălin Petre este creatorul acestei școli și predă cu ajutorul lui Sensei Karol"
 
 #: services/templates/services/home.html:611
 msgid "OUR <span>FUDOKAN</span> EVENTS"
-msgstr ""
+msgstr "EVENIMENTELE NOASTRE <span>FUDOKAN</span>"
 
 #: services/templates/services/home.html:685
 msgid "OUR <span>STUDENTS</span> TESTIMONIAL"
-msgstr ""
+msgstr "PĂRERILE <span>Studenților</span>"
+
+#: services/templates/services/home.html:793
+msgid "OUR <span>MEMBERSHIP</span> PLAN"
+msgstr "PLANUL NOSTRU DE</span> ABONAMENTE"
 
 #: services/templates/services/home.html:794
-msgid "OUR <span>MEMBERSHIP</span> PLAN"
-msgstr ""
-
-#: services/templates/services/home.html:795
 msgid "We are trying to fit every situation and every pocket"
-msgstr ""
+msgstr "Încercăm să ne adaptăm la fiecare situație și la fiecare buzunar"
 
-#: services/templates/services/home.html:802
+#: services/templates/services/home.html:801
 msgid "Monthly"
-msgstr ""
+msgstr "Lunar"
 
-#: services/templates/services/home.html:804
-msgid "Yearly"
-msgstr ""
+#: services/templates/services/home.html:803
+msgid "Trimestral"
+msgstr "Trimestrial"
 
-#: services/templates/services/home.html:815
-msgid "Basic"
-msgstr ""
+#: services/templates/services/home.html:814
+msgid "Per Session"
+msgstr "Per Sesiune"
 
-#: services/templates/services/home.html:817
-#: services/templates/services/home.html:847
+#: services/templates/services/home.html:816
+#: services/templates/services/home.html:846
 msgid "Access to all classes & membership"
 msgstr ""
 
-#: services/templates/services/home.html:820
+#: services/templates/services/home.html:819
 msgid "month"
-msgstr ""
+msgstr "lună"
+
+#: services/templates/services/home.html:840
+msgid "POPULAR"
+msgstr "POPULAR"
 
 #: services/templates/services/home.html:841
-msgid "POPULAR"
-msgstr ""
+msgid "session"
+msgstr "sesiune"
+
+#: services/templates/services/home.html:841
+msgid "Monday and Wednesday every week"
+msgstr "Luni și Miercuri în fiecare săptămână"
+
+#: services/templates/services/home.html:852
+msgid "Membership"
+msgstr "Abonamente"
 
 #: services/templates/services/home.html:853
-msgid "Membership"
-msgstr ""
+msgid "Beginner"
+msgstr "Începători"
 
 #: services/templates/services/home.html:854
-msgid "Unlimited Training"
-msgstr ""
+msgid "Advanced"
+msgstr "Avansați"
 
-#: services/templates/services/home.html:855
-msgid "Access to all classes"
-msgstr ""
-
-#: services/templates/services/home.html:1007
+#: services/templates/services/home.html:1006
 msgid "OUR <span>FUDOKAN</span> TUTORIALS"
-msgstr ""
+msgstr "TUTORIALE <span>FUDOKAN</span>"
 
-#: services/templates/services/home.html:1125
-msgid "LATEST <span>NEWS</span> FROM ENERGYFIT KARATE BRASOV"
-msgstr ""
+#: services/templates/services/home.html:1124
+msgid "LATEST <span>NEWS</span> FROM ENERGYFIT KARATE BRAȘOV"
+msgstr "ULTIMELE <span>ȘTIRI</span> de la ENERGYFIT KARATE BRAȘOV"
+
+#: services/templates/services/subscription_conf.html:24
+msgid "SUCCESS"
+msgstr "SUCCES"
+
+#: services/templates/services/subscription_conf.html:25
+msgid "You have succesfully subscribed to our newsletter"
+msgstr "V-ați abonat cu succes la newsletter-ul nostru"
 
 #: services/templates/services/underconstruction.html:227
 msgid "UNDERCONSTRUCTION"
-msgstr ""
+msgstr "ÎN CONSTRUCȚIE"
 
 #: services/templates/services/underconstruction.html:228
-msgid ""
-"The official webpage of the best FUDOKAN school in Brasov is "
-"underconstruction. Stay tunned because we will sound the horn when it is "
-"ready"
-msgstr ""
+msgid "The official webpage of the best FUDOKAN school in Brașov is underconstruction. Stay tunned because we will sound the horn when it is ready"
+msgstr "Pagina oficială a celei mai bune școli FUDOKAN din Brașov este în construcție. Rămâneți pe fază pentru că vom suna din goarnă când va fi gata"
 
 #: services/templates/services/underconstruction.html:230
 msgid "Subscribe our newsletter to stay in touch. Click here"
-msgstr ""
+msgstr "Abonează-te la newsletter-ul nostru pentru a rămâne în contact. Click aici"
+
+#: services/templates/services/unsubscribe.html:14
+msgid "<span>Unsubscribe</span> <span></span>"
+msgstr "<span>Dezabonare</span> <span></span>"
+
+#: services/templates/services/unsubscribe.html:34
+msgid "<h4 class='cta-block__title'>Unsubscribe <span>from Newsletter</span></h4>"
+msgstr "<h4 class='cta-block__title'>Dezabonare <span>de la Newsletter</span></h4>"
+
+#: services/templates/services/unsubscribe.html:35
+msgid "<p class='cta-block__text'>Are you sure you wish to cancel your subscription? If yes please type your email address in the box bellow</p>"
+msgstr "<p class='cta-block__text'>Sunteți sigur că doriți să vă anulați abonarea? Dacă da, vă rugăm să introduceți adresa dvs. de e-mail în caseta de mai jos</p>."
+
+#: services/templates/services/unsubscribe.html:40
+msgid "Your email"
+msgstr "Emailul dvs"
+
+#: services/templates/services/unsubscribe.html:41
+msgid "Unsubscribe"
+msgstr "Dezabonare"
 
 #: services/views.py:42
 msgid "This email already exists in our database!"
-msgstr ""
+msgstr "Acest e-mail există deja în baza noastră de date!"
 
 #: services/views.py:50
-msgid "Newsletter Energyfit Karate Brasov"
-msgstr ""
+msgid "Newsletter Energyfit Karate Brașov"
+msgstr "Newsletter Energyfit Karate Brașov"
 
 #: services/views.py:53
-msgid ""
-"Thank you for subscribing to our newsletter! You can finalize the process by "
-"clicking on this <a style='padding:2px 1px;border:2px solid black' href='{}"
-"subscription-confirmation/?email={}&conf_num={}'> button</a>."
-msgstr ""
+msgid "Thank you for subscribing to our newsletter! You can finalize the process by clicking on this <a style='padding:2px 1px;border:2px solid black' href='{}subscription-confirmation/?email={}&conf_num={}'> button</a>."
+msgstr "Vă mulțumim că v-ați abonat la newsletter-ul nostru! Puteți finaliza procesul făcând clic pe acest buton <a style='padding:2px 1px;border:2px solid black' href='{}subscription-confirmation/?email={}&conf_num={}'></a>."
 
 #: services/views.py:56
 msgid "A confirmation link was sent to your email inbox. Please check!"
-msgstr ""
+msgstr "Un link de confirmare a fost trimis în căsuța dvs. de e-mail. Vă rugăm să verificați!"
 
-#: services/views.py:119
+#: services/views.py:89
+msgid "Error! Your email cannot be registered. Please contact our IT department at +40 758 039 784"
+msgstr "Eroare! E-mailul dvs. nu poate fi înregistrat. Vă rugăm să contactați departamentul nostru IT la +40 758 039 784"
+
+#: services/views.py:109
+msgid "Success! Unsubscribing was finalized. If you change your mind you can subscribe again anytime"
+msgstr "Succes! Dezabonarea a fost finalizată. Dacă te răzgândești, te poți abona din nou oricând"
+
+#: services/views.py:112
+msgid "Error! Unsubscribing failed. This email does not exist in our database"
+msgstr "Eroare! Dezabonarea nu a reușit. Acest e-mail nu există în baza noastră de date"
+
+#: services/views.py:115
+msgid "Error! Unsubscribing failed. Please contact our IT department at +40 758 039 784"
+msgstr "Eroare! Dezabonarea nu a reușit. Vă rugăm să contactați departamentul nostru IT la +40 758 039 784"
+
+#: services/views.py:118
+msgid "Error! Email incorrect."
+msgstr "Eroare! Email incorect."
+
+#: services/views.py:165
 #, python-brace-format
-msgid ""
-"Thank you for writting us {message_author}! We will answer as soon as "
-"possible."
-msgstr ""
+msgid "Thank you for writing us {message_author}! We will answer as soon as possible."
+msgstr "Vă mulțumim că ne-ați scris {message_author}! vom raspunde cat de curand posibil."
 
-#: services/views.py:126
+#: services/views.py:172
 msgid "Failed! Please make sure your info is correct!"
-msgstr ""
+msgstr "A eșuat! Vă rugăm să vă asigurați că informațiile dvs. sunt corecte!"
 
-#: services/views.py:129
+#: services/views.py:175
 msgid "Failed! Please fill in the captcha field again!"
-msgstr ""
+msgstr "A eșuat! Vă rugăm să completați din nou câmpul captcha!"
 
-#: services/views.py:151
+#: services/views.py:197
 #, python-brace-format
 msgid "Warning! {e}"
-msgstr ""
+msgstr "Avertizare! {e}"

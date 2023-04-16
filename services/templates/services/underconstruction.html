@@ -178,7 +178,7 @@
                                     <a href="#0">{% trans 'LANGUAGE' %}</a>
                                     <ul class="sub-menu">
 																			{% for language in languages %}
-																				<li><a value="{{ language.name_local }}" href="/{{ language.code }}/ {{ request.get_full_path |slice:'4:'}}">{{ language.name_local }}</a></li>
+																				<li><a value="{{ language.name_local }}" href="/{{ language.code }}/{{ request.get_full_path|slice:'4:'}}">{{ language.name_local }}</a></li>
                                       {% endfor %}
                                     </ul>
                                 </li>
@@ -252,9 +252,9 @@
 	                    <div class="footer-logo">
 	                        <a class="site-logo site-title" href="{% url 'underconstruction' %}"><img style="height:100px;width:auto;" src="{% static 'images/logo2.png' %}" alt="site-logo"></a>
 	                    </div>
-	                    <p>{% trans 'Energyfit Karate Brasov is the only Fudokan martial arts school in Brasov, a karate style that teaches modesty, focus and fighting for true human values. Our school has one of the most innovative and child friendly training programs you can find' %}.</p>
+	                    <p>{% trans 'Energyfit Karate Brașov is the only Fudokan martial arts school in Brașov, a karate style that teaches modesty, focus and fighting for true human values. Our school has one of the most innovative and child friendly training programs you can find' %}.</p>
 	                    <ul class="footer-social">
-	                        <li><a href="https://www.facebook.com/EnergyFitKarate"><i class="fab fa-facebook-f"></i></a></li>
+	                        <li><a target="_blank" href="https://www.facebook.com/EnergyFitKarate"><i class="fab fa-facebook-f"></i></a></li>
 	                        <!-- <li><a href="#0"><i class="fab fa-twitter"></i></a></li> -->
 	                        <!-- <li><a href="#0"><i class="fab fa-google-plus-g"></i></a></li> -->
 	                        <li><a href="#0"><i class="fab fa-instagram"></i></a></li>
@@ -263,12 +263,11 @@
 	            </div>
 	            <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
 	                <div class="footer-widget">
-	                    <h4 class="title">{% trans 'Opening Hours' %}</h4>
-	                    <ul class="footer-list">
-	                        <li>Monday : 11am-7pm</li>
-	                        <li>Tuesday-Friday : 11am-8pm</li>
-	                        <li>Saturday : 10am-6pm</li>
-	                        <li>Sunday : 11am-6pm</li>
+										<h4 class="title">{% trans 'Opening Hours' %}</h4>
+										<ul class="footer-list">
+												<li>{% trans 'Monday' %} : 3 a.m. - 7 p.m.</li>
+												<li>{% trans 'Wednesday' %} : 3 a.m. - 7 p.m.</li>
+												<li>{% trans 'Saturday' %} : 10:30 a.m.- 12:30 p.m.</li>
 	                    </ul>
 	                </div>
 	            </div>
@@ -276,8 +275,7 @@
 	                <div class="footer-widget">
 	                    <h4 class="title">{% trans 'Contact us' %}</h4>
 	                    <ul class="footer-list">
-	                        <!-- <li>{% trans 'Strada ....' %}'</li> -->
-	                        <!-- <li>.....</li> -->
+	                        <!-- <li>{% trans 'Str.' %}</li> -->
 	                        <li><span>Email :</span><a href="mailto:contact@energyfit.ro"> contact@energyfit.ro</a></li>
 	                        <li><span>{% trans 'Telephone' %} :</span> 0755 931 959</li>
 	                    </ul>
@@ -322,7 +320,8 @@
 	        <div class="row justify-content-center">
 	            <div class="col-xl-12 text-center">
 	                <div class="copyright-area">
-	                    <p>{% trans 'Copyright 2022 Energyfit Karate Brasov. Designed By' %} <a href="https://ninjaweb.tech">NinjaWeb Tech</a></p>
+										<p><a href="{% url 'unsubscribe' %}">&#x2022; {% trans 'Unsubscribe' %} &#x2022;</a></p>
+	                  <p>{% trans 'Copyright 2022 Energyfit Karate Brasov. Designed By' %} <a href="https://ninjaweb.tech">NinjaWeb Tech</a></p>
 	                </div>
 	            </div>
 	        </div>
