@@ -15,6 +15,14 @@
     <div class="banner-slider">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
+              {% if messages %}
+    					<div id="error-section" class="pb-3 col-12 justify-content-center" style="justify-content:center">
+    						{% include 'includes/messages.html' %}
+    					</div>
+    					{% else %}
+    					<div id="error-section" class="pb-5 col-12 justify-content-center" style="justify-content:center">
+    					</div>
+    					{% endif %}
                 <div class="banner-section banner-section-two">
                     <div class="banner-bg bg-overlay-black bg_img" data-background="{% static 'images/backgrounds/catalin_karol2.webp' %}"></div>
                     <div class="container-fluid">
@@ -1114,7 +1122,7 @@
 					<div class="row justify-content-center">
 							<div class="col-xl-7 text-center">
 									<div class="section-header" data-aos="fade-up" data-aos-duration="1200">
-											<h2 class="section-title">{% blocktranslate %}LATEST <span>NEWS</span> FORM SWORD{% endblocktranslate %}</h2>
+											<h2 class="section-title">{% blocktranslate %}LATEST <span>NEWS</span> FROM ENERGYFIT KARATE BRASOV{% endblocktranslate %}</h2>
 											<p>....</p>
 									</div>
 							</div>
@@ -1131,7 +1139,7 @@
 													</div>
 													<div class="blog-content">
 															<div class="blog-post-meta">
-																	<span class="user">By : Sword Joy</span>
+																	<span class="user">By : ENERGYFIT KARATE BRASOV Joy</span>
 																	<span class="category"><a href="blog.html">Karate</a></span>
 															</div>
 															<h3 class="title"><a href="blog-details.html">THE UPCOMING WBC CHAMPION SHIPS 2022 IN FEB</a></h3>
@@ -1149,7 +1157,7 @@
 													</div>
 													<div class="blog-content">
 															<div class="blog-post-meta">
-																	<span class="user">By : Sword Joy</span>
+																	<span class="user">By : ENERGYFIT KARATE BRASOV Joy</span>
 																	<span class="category"><a href="blog.html">Trendy</a></span>
 															</div>
 															<h3 class="title"><a href="blog-details.html">THE BEST BOXERS IN THEIR WEIGH TARGET CATEGORIES</a></h3>
@@ -1167,7 +1175,7 @@
 													</div>
 													<div class="blog-content">
 															<div class="blog-post-meta">
-																	<span class="user">By : Sword Joy</span>
+																	<span class="user">By : ENERGYFIT KARATE BRASOV Joy</span>
 																	<span class="category"><a href="blog.html">Boxing</a></span>
 															</div>
 															<h3 class="title"><a href="blog-details.html">EFFECTIVE STRATEGIES AND TIPS FROM THE BEST</a></h3>

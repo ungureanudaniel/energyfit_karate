@@ -2,7 +2,8 @@
 {% load i18n %}
 
 <!DOCTYPE html>
-<html lang="en">
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
 	<head>
 	    <meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -169,6 +170,18 @@
                                 <li class="">
                                     <a href="#0">{% trans 'NEWS' %}</a>
                                 </li>
+																<li class="menu_has_children">
+																	{% get_available_languages as LANGUAGES %}
+																	{% get_language_info_list for LANGUAGES as languages %}
+																	{% get_language_info for LANGUAGE_CODE as lang %}
+
+                                    <a href="#0">{% trans 'LANGUAGE' %}</a>
+                                    <ul class="sub-menu">
+																			{% for language in languages %}
+																				<li><a value="{{ language.name_local }}" href="/{{ language.code }}/ {{ request.get_full_path |slice:'4:'}}">{{ language.name_local }}</a></li>
+                                      {% endfor %}
+                                    </ul>
+                                </li>
                                 <li><a href="#">{% trans 'CONTACT US' %}</a></li>
                             </ul>
                         </div>
@@ -198,11 +211,11 @@
 	                    <div class="footer-logo">
 	                        <a class="site-logo site-title" href="{% url 'home' %}"><img src="{% static 'images/logo2.png' %}" alt="site-logo"></a>
 	                    </div>
-	                    <p>Fight School has specialized in martial arts since 1986 and has one of the most innovative programs in the nation. Fight School has specialized in martial arts since 1986 and has one of the most</p>
-	                    <ul class="footer-social">
-	                        <li><a href="#0"><i class="fab fa-facebook-f"></i></a></li>
-	                        <li><a href="#0"><i class="fab fa-twitter"></i></a></li>
-	                        <li><a href="#0"><i class="fab fa-google-plus-g"></i></a></li>
+											<p>{% trans 'Energyfit Karate Brasov is the only Fudokan martial arts school in Brasov, a karate style that teaches modesty, focus and fighting for true human values. Our school has one of the most innovative and child friendly training programs you can find' %}.</p>
+											<ul class="footer-social">
+	                        <li><a href="https://www.facebook.com/EnergyFitKarate"><i class="fab fa-facebook-f"></i></a></li>
+	                        <!-- <li><a href="#0"><i class="fab fa-twitter"></i></a></li> -->
+	                        <!-- <li><a href="#0"><i class="fab fa-google-plus-g"></i></a></li> -->
 	                        <li><a href="#0"><i class="fab fa-instagram"></i></a></li>
 	                    </ul>
 	                </div>
@@ -221,46 +234,46 @@
 	            <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
 	                <div class="footer-widget">
 	                    <h4 class="title">Contact us</h4>
-	                    <ul class="footer-list">
-	                        <li>350 5th Ave, New York, NY 10118350</li>
-	                        <li>5th Ave, New York, NY 10118</li>
-	                        <li><span>Email :</span> example@email.com</li>
-	                        <li><span>Telephone :</span> +1 (800)-123-4567</li>
+											<ul class="footer-list">
+	                        <!-- <li>{% trans 'Strada ....' %}'</li> -->
+	                        <!-- <li>.....</li> -->
+	                        <li><span>Email :</span><a href="mailto:contact@energyfit.ro"> contact@energyfit.ro</a></li>
+	                        <li><span>{% trans 'Telephone' %} :</span> 0755 931 959</li>
 	                    </ul>
 	                </div>
 	            </div>
 	            <div class="col-xl-2 col-lg-2 col-md-6 mb-30">
-	                <div class="footer-widget">
-	                    <h4 class="title">Gallery</h4>
-	                    <div class="footer-gallery-area">
-	                        <div class="footer-gallery-wrapper">
-	                            <div class="footer-gallery-thumb">
-	                                <img src="{% static 'images/gallery/gallery-small-1.png' %}" alt="gallery">
-	                                <div class="footer-gallery-overlay">
-	                                    <a href="#0"><i class="fab fa-instagram"></i></a>
-	                                </div>
-	                            </div>
-	                            <div class="footer-gallery-thumb">
-	                                <img src="{% static 'images/gallery/gallery-small-2.png' %}" alt="gallery">
-	                                <div class="footer-gallery-overlay">
-	                                    <a href="#0"><i class="fab fa-instagram"></i></a>
-	                                </div>
-	                            </div>
-	                            <div class="footer-gallery-thumb">
-	                                <img src="{% static 'images/gallery/gallery-small-2.png' %}" alt="gallery">
-	                                <div class="footer-gallery-overlay">
-	                                    <a href="#0"><i class="fab fa-instagram"></i></a>
-	                                </div>
-	                            </div>
-	                            <div class="footer-gallery-thumb">
-	                                <img src="{% static 'images/gallery/gallery-small-3.png' %}" alt="gallery">
-	                                <div class="footer-gallery-overlay">
-	                                    <a href="#0"><i class="fab fa-instagram"></i></a>
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </div>
+								<div class="footer-widget">
+										<h4 class="title">{% trans 'Gallery' %}</h4>
+										<div class="footer-gallery-area">
+												<div class="footer-gallery-wrapper">
+														<div class="footer-gallery-thumb">
+																<img src="{% static 'images/trainer/cata_weapon1.webp' %}" alt="gallery">
+																<div class="footer-gallery-overlay">
+																		<a href="#0"><i class="fab fa-instagram"></i></a>
+																</div>
+														</div>
+														<div class="footer-gallery-thumb">
+																<img src="{% static 'images/backgrounds/catalin2.webp' %}" alt="gallery">
+																<div class="footer-gallery-overlay">
+																		<a href="#0"><i class="fab fa-instagram"></i></a>
+																</div>
+														</div>
+														<div class="footer-gallery-thumb">
+																<img src="{% static 'images/backgrounds/miriam1.webp' %}" alt="gallery">
+																<div class="footer-gallery-overlay">
+																		<a href="#0"><i class="fab fa-instagram"></i></a>
+																</div>
+														</div>
+														<div class="footer-gallery-thumb">
+																<img src="{% static 'images/backgrounds/catalin3.webp' %}" alt="gallery">
+																<div class="footer-gallery-overlay">
+																		<a href="#0"><i class="fab fa-instagram"></i></a>
+																</div>
+														</div>
+												</div>
+										</div>
+								</div>
 	            </div>
 	        </div>
 	    </div>

@@ -1,0 +1,493 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: services/templates/services/home.html:235
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-16 13:41+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
+"2:1));\n"
+
+#: energyfit_main/settings.py:155
+msgid "Română"
+msgstr ""
+
+#: energyfit_main/settings.py:156
+msgid "English"
+msgstr ""
+
+#: energyfit_main/settings.py:157
+msgid "Deutsch"
+msgstr ""
+
+#: services/forms.py:18
+msgid "Full name..."
+msgstr ""
+
+#: services/forms.py:20
+msgid "Phone number..."
+msgstr ""
+
+#: services/forms.py:21
+msgid "Subject..."
+msgstr ""
+
+#: services/forms.py:22
+msgid "Your message..."
+msgstr ""
+
+#: services/templates/includes/newsletter.html:18
+msgid "SUBSCRIBE NOW"
+msgstr ""
+
+#: services/templates/includes/newsletter.html:19
+msgid "And stay up to date with offers and news"
+msgstr ""
+
+#: services/templates/includes/newsletter.html:24
+msgid "Email Address"
+msgstr ""
+
+#: services/templates/includes/newsletter.html:25
+msgid "Subscribe"
+msgstr ""
+
+#: services/templates/services/addcategory.html:22
+#: services/templates/services/addservices.html:27
+msgid "Add a service category"
+msgstr ""
+
+#: services/templates/services/addcategory.html:60
+msgid "Solve the "
+msgstr ""
+
+#: services/templates/services/base.html:11
+#: services/templates/services/contact.html:10
+#: services/templates/services/underconstruction.html:11
+msgid "Energyfit"
+msgstr ""
+
+#: services/templates/services/base.html:13
+#: services/templates/services/contact.html:12
+#: services/templates/services/underconstruction.html:13
+msgid "Una dintre cele mai bune scoli de karate din Brasov"
+msgstr ""
+
+#: services/templates/services/base.html:152
+#: services/templates/services/contact.html:151
+#: services/templates/services/underconstruction.html:152
+msgid "HOME"
+msgstr ""
+
+#: services/templates/services/base.html:153
+#: services/templates/services/contact.html:152
+#: services/templates/services/underconstruction.html:153
+msgid "ABOUT US"
+msgstr ""
+
+#: services/templates/services/base.html:155
+#: services/templates/services/contact.html:154
+#: services/templates/services/underconstruction.html:155
+msgid "TRAINING"
+msgstr ""
+
+#: services/templates/services/base.html:158
+#: services/templates/services/contact.html:157
+#: services/templates/services/underconstruction.html:158
+msgid "EXPLORE"
+msgstr ""
+
+#: services/templates/services/base.html:160
+#: services/templates/services/contact.html:159
+#: services/templates/services/underconstruction.html:160
+msgid "GALLERY"
+msgstr ""
+
+#: services/templates/services/base.html:161
+#: services/templates/services/contact.html:160
+#: services/templates/services/underconstruction.html:161
+msgid "EVENTS"
+msgstr ""
+
+#: services/templates/services/base.html:162
+#: services/templates/services/contact.html:161
+#: services/templates/services/underconstruction.html:162
+msgid "PRICING PLAN"
+msgstr ""
+
+#: services/templates/services/base.html:168
+#: services/templates/services/contact.html:167
+#: services/templates/services/underconstruction.html:168
+msgid "MASTERS"
+msgstr ""
+
+#: services/templates/services/base.html:171
+#: services/templates/services/contact.html:170
+#: services/templates/services/underconstruction.html:171
+msgid "NEWS"
+msgstr ""
+
+#: services/templates/services/base.html:178
+#: services/templates/services/underconstruction.html:178
+msgid "LANGUAGE"
+msgstr ""
+
+#: services/templates/services/base.html:185
+#: services/templates/services/contact.html:172
+#: services/templates/services/underconstruction.html:186
+msgid "CONTACT US"
+msgstr ""
+
+#: services/templates/services/base.html:214
+#: services/templates/services/underconstruction.html:255
+msgid ""
+"Energyfit Karate Brasov is the only Fudokan martial arts school in Brasov, a "
+"karate style that teaches modesty, focus and fighting for true human values. "
+"Our school has one of the most innovative and child friendly training "
+"programs you can find"
+msgstr ""
+
+#: services/templates/services/base.html:238
+#: services/templates/services/contact.html:420
+#: services/templates/services/underconstruction.html:279
+msgid "Strada ...."
+msgstr ""
+
+#: services/templates/services/base.html:241
+#: services/templates/services/contact.html:423
+#: services/templates/services/underconstruction.html:282
+msgid "Telephone"
+msgstr ""
+
+#: services/templates/services/base.html:247
+#: services/templates/services/contact.html:429
+#: services/templates/services/underconstruction.html:288
+msgid "Gallery"
+msgstr ""
+
+#: services/templates/services/base.html:284
+#: services/templates/services/contact.html:466
+#: services/templates/services/underconstruction.html:325
+msgid "Copyright 2022 Energyfit Karate Brasov. Designed By"
+msgstr ""
+
+#: services/templates/services/contact.html:396
+#: services/templates/services/home.html:174
+msgid ""
+"Our school is the only karate school in Brasov, that is specialized in "
+"Fudokan martial arts and functioning since 1999. It has one of the most "
+"innovative and child friendly training programs you can find, where the "
+"teacher motivates students by being humanistic and their friend, rather than "
+"harsh"
+msgstr ""
+
+#: services/templates/services/contact.html:407
+#: services/templates/services/underconstruction.html:266
+msgid "Opening Hours"
+msgstr ""
+
+#: services/templates/services/contact.html:418
+#: services/templates/services/underconstruction.html:277
+msgid "Contact us"
+msgstr ""
+
+#: services/templates/services/home.html:32
+msgid "#1 FUDOKAN MARTIAL ARTS SCHOOL IN BRASOV"
+msgstr ""
+
+#: services/templates/services/home.html:33
+msgid "BALANCE YOUR LIFE"
+msgstr ""
+
+#: services/templates/services/home.html:34
+msgid "IMPROVE MIND, BODY & SPIRIT"
+msgstr ""
+
+#: services/templates/services/home.html:35
+#: services/templates/services/home.html:56
+msgid "FUDOKAN SCHOOL IN BRASOV"
+msgstr ""
+
+#: services/templates/services/home.html:37
+msgid "Enroll Now"
+msgstr ""
+
+#: services/templates/services/home.html:38
+msgid "Training Classes"
+msgstr ""
+
+#: services/templates/services/home.html:53
+msgid "FACT #2"
+msgstr ""
+
+#: services/templates/services/home.html:54
+msgid "MOTTO #2"
+msgstr ""
+
+#: services/templates/services/home.html:55
+msgid "STATEMENT #2"
+msgstr ""
+
+#: services/templates/services/home.html:95
+msgid "What we offer"
+msgstr ""
+
+#: services/templates/services/home.html:173
+msgid "ABOUT <span>ENERGY FIT KARATE</span> BRASOV "
+msgstr ""
+
+#: services/templates/services/home.html:182
+msgid "FITNESS TRAINING"
+msgstr ""
+
+#: services/templates/services/home.html:183
+msgid ""
+"Each Fudokan training session includes cardio, strength & stretching "
+"exercises, all very important for a healthy body and a sharp mind"
+msgstr ""
+
+#: services/templates/services/home.html:191
+msgid "FOCUS"
+msgstr ""
+
+#: services/templates/services/home.html:192
+msgid ""
+"The process of physical training and learning precise moves will also train "
+"you to focus your mental energy, a crucial skill that a lot of people "
+"overlook in life and it can make a difference in your career and "
+"relationships"
+msgstr ""
+
+#: services/templates/services/home.html:200
+msgid "SELF CONFIDENCE"
+msgstr ""
+
+#: services/templates/services/home.html:201
+msgid ""
+"As you advance through the specific training stages you gain self-"
+"confidence, because you get to know your body a lot better and obviously "
+"because you will be able to defend yourself in certain situations"
+msgstr ""
+
+#: services/templates/services/home.html:210
+msgid ""
+"If you stay long enough with us, you will start setting your own goals, "
+"participate into competitions and gain achievements, which in turn will "
+"model you to be a person that sets goals in life and can put the necessary "
+"work and skills to reach them"
+msgstr ""
+
+#: services/templates/services/home.html:234
+msgid ""
+"<h2 class=\"section-title\">OUR <span>FUDOKAN KARATE</span> CHARACTERISTICS</"
+"h2>"
+msgstr ""
+
+#: services/templates/services/home.html:250
+msgid "FIT FOR ANY AGE"
+msgstr ""
+
+#: services/templates/services/home.html:251
+msgid "It is never too late to start learning Fudokan"
+msgstr ""
+
+#: services/templates/services/home.html:263
+msgid "IMPROVES YOUR FITNESS"
+msgstr ""
+
+#: services/templates/services/home.html:264
+msgid ""
+"Cardio and strength training, plus lots of stretching are all part of Fudokan"
+msgstr ""
+
+#: services/templates/services/home.html:276
+msgid "TEACHES SELF-DEFENCE"
+msgstr ""
+
+#: services/templates/services/home.html:277
+msgid ""
+"When children are confronted by bullies, the Fudokan techniques helps them "
+"defend"
+msgstr ""
+
+#: services/templates/services/home.html:300
+msgid "DEVELOPS CHARACTER"
+msgstr ""
+
+#: services/templates/services/home.html:301
+msgid ""
+"Wearing upper level belts requires a demonstration of correct technique, "
+"achieved through effort and dedication"
+msgstr ""
+
+#: services/templates/services/home.html:313
+msgid "ENCOURAGES SELF-DISCIPLINE"
+msgstr ""
+
+#: services/templates/services/home.html:314
+msgid "Martial arts is not a sport, it is rather a lifestyle"
+msgstr ""
+
+#: services/templates/services/home.html:326
+msgid "HONES LEADERSHIP SKILLS"
+msgstr ""
+
+#: services/templates/services/home.html:327
+msgid "Leadership traits depend on both self-respect and respect for others"
+msgstr ""
+
+#: services/templates/services/home.html:349
+msgid "JOIN OUR CLASSES"
+msgstr ""
+
+#: services/templates/services/home.html:351
+#, python-format
+msgid ""
+"You will become stronger, faster, more focused, more motivated to reach your "
+"goals and we are 100%% commited to take you there"
+msgstr ""
+
+#: services/templates/services/home.html:353
+msgid "Join Now"
+msgstr ""
+
+#: services/templates/services/home.html:379
+msgid "MORE ABOUT WHAT<span> FUDOKAN</span> WILL TEACH YOU"
+msgstr ""
+
+#: services/templates/services/home.html:552
+msgid "OUR <span>EXPERT</span> MASTERS"
+msgstr ""
+
+#: services/templates/services/home.html:553
+msgid ""
+"Sensei Catalin Petre is the creator of this school and he teaches with the "
+"help of sensei Karol"
+msgstr ""
+
+#: services/templates/services/home.html:611
+msgid "OUR <span>FUDOKAN</span> EVENTS"
+msgstr ""
+
+#: services/templates/services/home.html:685
+msgid "OUR <span>STUDENTS</span> TESTIMONIAL"
+msgstr ""
+
+#: services/templates/services/home.html:794
+msgid "OUR <span>MEMBERSHIP</span> PLAN"
+msgstr ""
+
+#: services/templates/services/home.html:795
+msgid "We are trying to fit every situation and every pocket"
+msgstr ""
+
+#: services/templates/services/home.html:802
+msgid "Monthly"
+msgstr ""
+
+#: services/templates/services/home.html:804
+msgid "Yearly"
+msgstr ""
+
+#: services/templates/services/home.html:815
+msgid "Basic"
+msgstr ""
+
+#: services/templates/services/home.html:817
+#: services/templates/services/home.html:847
+msgid "Access to all classes & membership"
+msgstr ""
+
+#: services/templates/services/home.html:820
+msgid "month"
+msgstr ""
+
+#: services/templates/services/home.html:841
+msgid "POPULAR"
+msgstr ""
+
+#: services/templates/services/home.html:853
+msgid "Membership"
+msgstr ""
+
+#: services/templates/services/home.html:854
+msgid "Unlimited Training"
+msgstr ""
+
+#: services/templates/services/home.html:855
+msgid "Access to all classes"
+msgstr ""
+
+#: services/templates/services/home.html:1007
+msgid "OUR <span>FUDOKAN</span> TUTORIALS"
+msgstr ""
+
+#: services/templates/services/home.html:1125
+msgid "LATEST <span>NEWS</span> FROM ENERGYFIT KARATE BRASOV"
+msgstr ""
+
+#: services/templates/services/underconstruction.html:227
+msgid "UNDERCONSTRUCTION"
+msgstr ""
+
+#: services/templates/services/underconstruction.html:228
+msgid ""
+"The official webpage of the best FUDOKAN school in Brasov is "
+"underconstruction. Stay tunned because we will sound the horn when it is "
+"ready"
+msgstr ""
+
+#: services/templates/services/underconstruction.html:230
+msgid "Subscribe our newsletter to stay in touch. Click here"
+msgstr ""
+
+#: services/views.py:42
+msgid "This email already exists in our database!"
+msgstr ""
+
+#: services/views.py:50
+msgid "Newsletter Energyfit Karate Brasov"
+msgstr ""
+
+#: services/views.py:53
+msgid ""
+"Thank you for subscribing to our newsletter! You can finalize the process by "
+"clicking on this <a style='padding:2px 1px;border:2px solid black' href='{}"
+"subscription-confirmation/?email={}&conf_num={}'> button</a>."
+msgstr ""
+
+#: services/views.py:56
+msgid "A confirmation link was sent to your email inbox. Please check!"
+msgstr ""
+
+#: services/views.py:119
+#, python-brace-format
+msgid ""
+"Thank you for writting us {message_author}! We will answer as soon as "
+"possible."
+msgstr ""
+
+#: services/views.py:126
+msgid "Failed! Please make sure your info is correct!"
+msgstr ""
+
+#: services/views.py:129
+msgid "Failed! Please fill in the captcha field again!"
+msgstr ""
+
+#: services/views.py:151
+#, python-brace-format
+msgid "Warning! {e}"
+msgstr ""
