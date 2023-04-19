@@ -108,7 +108,7 @@ def unsubscribe(request):
                     return render(request, template, {'email': sub.email, 'action': 'unsubscribed'})
                 else:
                     messages.warning(request, _("Error! Unsubscribing failed. This email does not exist in our database"))
-                    return redirect('/')
+                    return redirect('/unsubscribe')
             except:
                 messages.warning(request, _("Error! Unsubscribing failed. Please contact our IT department at +40 758 039 784"))
                 return render(request, template, {'action': 'denied'})

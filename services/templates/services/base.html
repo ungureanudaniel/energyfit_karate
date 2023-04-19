@@ -12,13 +12,13 @@
  			<link rel="shortcut icon" type="image/png" href="{% static 'images/logo2.png' %}">
 			<meta name="description" property="og:description" content="{% trans 'One of the best karate schools in Brasov' %}">
 		 	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-		 	<meta name="keywords" content="martial arts, karate, arte martiale">
+		 	<meta name="keywords" content="martial arts, karate, arte martiale, fudokan, sport">
 		 	<meta name="author" content="Energyfit">
 		 	<meta property="og:type" content="website">
 		 	<meta property="og:url" content="https://energyfit.ro/">
 		 	<meta property="og:site_name" content="Energyfit">
-		 	<meta property="og:title" content="{% trans 'Energyfit | Un Sanctuar al Artelor Martiale" />
-		 	<meta property="og:description" content="Iconic protected area, in the heart of Romania.">
+		 	<meta property="og:title" content="{% trans 'Energyfit | Un Sanctuar al Artelor Martiale' %}" />
+		 	<meta property="og:description" content="{% trans 'Un Sanctuar al Artelor Martiale' %}.">
 		 	<meta property="og:image" content="https://energyfit.ro/static/images/logo2.png">
 		 	<meta property="og:image:alt" content="Logo">
 	 		<link rel="canonical" href="https://energyfit.ro/">
@@ -176,7 +176,7 @@
                                     <a href="#0">{% trans 'LANGUAGE' %}</a>
                                     <ul class="sub-menu">
 																			{% for language in languages %}
-																				<li><a value="{{ language.name_local }}" href="/{{ language.code }}/ {{ request.get_full_path |slice:'4:'}}">{{ language.name_local }}</a></li>
+																				<li><a value="{{ language.name_local }}" href="/{{ language.code }}/{{ request.get_full_path |slice:'4:'}}">{{ language.name_local }}</a></li>
                                       {% endfor %}
                                     </ul>
                                 </li>
