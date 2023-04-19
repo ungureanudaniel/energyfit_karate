@@ -282,7 +282,8 @@
 	        <div class="row justify-content-center">
 	            <div class="col-xl-12 text-center">
 	                <div class="copyright-area">
-	                     <p>Copyright {% now "Y" %} Energyfit {% if user.is_authenticated %}Karate{% else%}<a href="{% url 'admin:index' %}">Karate</a>{% endif %} Brașov. {% trans 'Designed By' %} <a href="https:///ninjaweb.tech">NinjaWeb Tech</a></p>
+										<p><a href="{% url 'unsubscribe' %}">&#x2022; {% trans 'Unsubscribe' %} &#x2022;</a></p>
+										<p>Copyright {% now "Y" %} Energyfit {% if user.is_authenticated %}Karate{% else%}<a href="{% url 'admin:index' %}">Karate</a>{% endif %} Brașov. {% trans 'Designed By' %} <a href="https:///ninjaweb.tech">NinjaWeb Tech</a></p>
 	                </div>
 	            </div>
 	        </div>

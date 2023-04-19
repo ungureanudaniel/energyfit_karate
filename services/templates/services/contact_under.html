@@ -242,10 +242,10 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <section class="contact-item-section ptb-120">
     <div class="contact-element-one my-paroller" data-paroller-factor="0.2" data-paroller-type="foreground" data-paroller-direction="vertical">
-        <img src="{% static 'images/element/element-1.png' %}" alt="element">
+        <img src="{% static 'images/logo2.png' %}" alt="element">
     </div>
     <div class="contact-element-two my-paroller" data-paroller-factor="0.2" data-paroller-type="foreground" data-paroller-direction="vertical">
-        <img src="{% static 'images/element/element-2.png' %}" alt="element">
+        <img src="{% static 'images/logo2.png' %}" alt="element">
     </div>
     <div class="container">
         <div class="row justify-content-center">
@@ -313,14 +313,14 @@
             <div class="col-xl-6 col-lg-6 mb-60">
                 <div class="account-widget-left">
                     <div class="section-header">
-                        {% blocktranslate %}<h2 class="section-title">{% trans 'A burning Question? Feel Free to get directly in <span>Contact</span> with Us!</h2>{% endblocktranslate %}
+                        {% blocktranslate %}<h2 class="section-title">A burning Question? Feel Free to get directly in <span>Contact</span> with Us!</h2>{% endblocktranslate %}
                         <p>{% trans 'Using this form' %}. </p>
                     </div>
                     <div class="banner-widget">
                         <div class="banner-widget-wrapper">
                             <div class="banner-widget-left">
                                 <div class="banner-widget-thumb">
-                                    <img src="{% static 'images/element/element-9.png' %}" alt="element">
+                                    <img src="{% static 'images/backgrounds/catalin_karol1.webp' %}" alt="element">
                                 </div>
                             </div>
                             <div class="banner-widget-middle">
@@ -375,7 +375,7 @@
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Start Map
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<section class="map-section ptb-120">
+<!-- <section class="map-section ptb-120">
     <div class="container">
         <div class="row justify-content-center mb-5-none">
             <div class="col-xl-12">
@@ -385,7 +385,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     End Map
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -474,7 +474,8 @@
 	        <div class="row justify-content-center">
 	            <div class="col-xl-12 text-center">
 	                <div class="copyright-area">
-	                    <p>{% trans 'Copyright 2022 Energyfit Karate Brasov. Designed By' %} <a href="https:///ninjaweb.tech">NinjaWeb Tech</a></p>
+										<p><a href="{% url 'unsubscribe' %}">&#x2022; {% trans 'Unsubscribe' %} &#x2022;</a></p>
+										<p>Copyright {% now "Y" %} Energyfit {% if user.is_authenticated %}Karate{% else%}<a href="{% url 'admin:index' %}">Karate</a>{% endif %} Brașov. {% trans 'Designed By' %} <a href="https:///ninjaweb.tech">NinjaWeb Tech</a></p>
 	                </div>
 	            </div>
 	        </div>
