@@ -73,9 +73,26 @@ msgstr "Eine Dienstleistungskategorie hinzufügen"
 msgid "Solve the "
 msgstr "Lösen Sie die "
 
+#: services/templates/services/contact.html:172
+msgid "<h2 class='section-title'>A burning Question? Feel Free to get directly in <span>Contact</span> with Us!</h2>"
+msgstr "<h2 class='section-title'>Eine brennende Frage? Nehmen Sie direkt <span>Kontakt</span> mit Uns auf!</h2>"
+
 #: services/templates/services/apply.html:16
 msgid "<h1 class=\"title\">ENROLL <span>NOW</span></h1>"
 msgstr "<h1 class=\"title\">JETZT <span>ANMELDEN</span></h1>"
+
+
+#: services/templates/services/contact.html:172
+msgid "Using this form"
+msgstr "Mit diesem Formular"
+
+#: services/templates/services/contact.html:172
+msgid "Join over"
+msgstr "Verbinden über"
+
+#: services/templates/services/home.html:801
+msgid "students"
+msgstr "Schüler"
 
 #: services/templates/services/apply.html:25
 #: services/templates/services/subscription_conf.html:28
@@ -214,6 +231,23 @@ msgstr "SPRACHE"
 #: services/templates/services/underconstruction.html:186
 msgid "CONTACT US"
 msgstr "KONTAKT"
+
+#: services/templates/services/contact.html:418
+msgid "OFFICE ADDRESS"
+msgstr "KORRESPONDENZADRESSE"
+
+#: services/templates/services/contact.html:418
+msgid "TELEPHONE NUMBER"
+msgstr "TELEFONNUMMER"
+
+
+#: services/templates/services/contact.html:418
+msgid "call now"
+msgstr "jetzt anrufen"
+
+#: services/templates/services/contact.html:418
+msgid "By contacting us using one of the options below"
+msgstr "Nehmen Sie mit uns Kontakt auf, indem Sie eine der folgenden Möglichkeiten nutzen"
 
 #: services/templates/services/base.html:214
 #: services/templates/services/home.html:174
@@ -490,9 +524,26 @@ msgstr "Anfänger"
 msgid "Advanced"
 msgstr "Fortgeschrittene"
 
+#: services/templates/services/contact.html:172
+msgid "<h1 class='title'>CONTACT <span>US</span></h1>"
+msgstr "<h1 class='title'>KONTAKTIEREN SIE <span>UNS</span></h1>"
+
 #: services/templates/services/home.html:1006
 msgid "<span>FUDOKAN</span> TUTORIALS"
 msgstr "<span>FUDOKAN</span> TUTORIALE"
+
+#: services/templates/services/contact.html:172
+msgid "view on map"
+msgstr "auf Karte anzeigen"
+
+
+#: services/templates/services/contact.html:172
+msgid "SEND MAIL"
+msgstr "EMAIL SENDEN"
+
+#: services/templates/services/contact.html:172
+msgid "send now"
+msgstr "jetzt senden"
 
 #: services/templates/services/home.html:1124
 msgid "LATEST <span>NEWS</span> FROM ENERGYFIT KARATE BRAȘOV"

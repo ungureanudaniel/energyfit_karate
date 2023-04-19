@@ -8,7 +8,7 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 			<title>{% trans 'Energyfit' %}</title>
- 			<link rel="shortcut icon" type="image/png" href="{% static 'images/logo/logo.png' %}">
+ 			<link rel="shortcut icon" type="image/png" href="{% static 'images/logo2.png' %}">
 			<meta name="description" property="og:description" content="{% trans 'Una dintre cele mai bune scoli de karate din Brasov' %}">
 		 	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 		 	<meta name="keywords" content="martial arts, karate, arte martiale">
@@ -18,7 +18,7 @@
 		 	<meta property="og:site_name" content="Energyfit">
 		 	<meta property="og:title" content="{% trans 'Energyfit | Un Sanctuar al Artelor Martiale" />
 		 	<meta property="og:description" content="Iconic protected area, in the heart of Romania.">
-		 	<meta property="og:image" content="https://energyfit.ro/static/images/logo/logo.png">
+		 	<meta property="og:image" content="https://energyfit.ro/static/images/logo2.png">
 		 	<meta property="og:image:alt" content="Logo">
 	 		<link rel="canonical" href="https://energyfit.ro/">
 	    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,7 +51,6 @@
 	    <!-- main style css link -->
 	    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 			<!-- preloader style css link -->
-			<link rel="stylesheet" href="{% static 'css/preloader.css' %}">
 
 	</head>
 <body>
@@ -141,7 +140,7 @@
             <div class="container-fluid">
                 <div class="header-menu-content">
                     <nav class="navbar navbar-expand-xl p-0">
-                        <a class="site-logo site-title d-block d-xl-none" href="{% url 'underconstruction' %}"><img src="{% static 'images/logo.jpg' %}" alt="site-logo"></a>
+                        <a class="site-logo site-title d-block d-xl-none" href="{% url 'underconstruction' %}"><img style="height:100px;width:auto;" src="{% static 'images/logo2.png' %}" alt="site-logo"></a>
                         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="fas fa-bars"></span>
@@ -162,13 +161,26 @@
                                         <li><a href="#">FAQ</a></li>
                                     </ul>
                                 </li>
-                                <li><a class="site-logo site-title d-none d-xl-block" href="{% url 'underconstruction' %}"><img src="{% static 'images/logo.jpg' %}" alt="site-logo"></a></li>
+                                <li><a class="site-logo site-title d-none d-xl-block" href="{% url 'underconstruction' %}"><img style="height:100px;width:auto;" src="{% static 'images/logo2.png' %}" alt="site-logo"></a></li>
                                 <li class="">
                                     <a href="#0">{% trans 'MASTERS' %}</a>
                                 </li>
                                 <li class="">
                                     <a href="#0">{% trans 'NEWS' %}</a>
                                 </li>
+																<li class="menu_has_children">
+																	{% get_available_languages as LANGUAGES %}
+																	{% get_language_info_list for LANGUAGES as languages %}
+																	{% get_language_info for LANGUAGE_CODE as lang %}
+
+                                    <a href="#0">{% trans 'LANGUAGE' %}</a>
+                                    <ul class="sub-menu">
+																			{% for language in languages %}
+																				<li><a value="{{ language.name_local }}" href="/{{ language.code }}/{{ request.get_full_path|slice:'4:'}}">{{ language.name_local }}</a></li>
+                                      {% endfor %}
+                                    </ul>
+                                </li>
+
                                 <li><a href="{% url 'contact' %}">{% trans 'CONTACT US' %}</a></li>
                             </ul>
                         </div>
@@ -184,7 +196,7 @@
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Start Banner
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<section class="banner-section banner-section-two inner-banner-section bg-overlay-red bg_img" data-background="{% static 'images/bg/bg-12.png' %}">
+<section class="banner-section banner-section-two inner-banner-section bg-overlay-red bg_img" data-background="{% static 'images/backgrounds/catalin_karol2.webp' %}">
     <div class="section-logo-text">
         <span class="title">Energyfit Karate Brasov</span>
     </div>
@@ -192,7 +204,7 @@
         <div class="row justify-content-center align-items-end mb-30-none">
             <div class="col-xl-12 col-lg-12 text-center mb-30">
                 <div class="banner-content" data-aos="fade-up" data-aos-duration="1800">
-                    <h1 class="title">CONTACT <span>US</span></h1>
+                    {% blocktranslate %}<h1 class='title'>CONTACT <span>US</span></h1>{% endblocktranslate %}
                 </div>
             </div>
         </div>
@@ -201,8 +213,8 @@
 <div class="breadcrumb-area">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+        <li class="breadcrumb-item"><a href="index.html">{% trans 'Home' %}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{% trans 'Contact Us' %}</li>
         </ol>
     </nav>
 </div>
@@ -239,8 +251,8 @@
         <div class="row justify-content-center">
             <div class="col-xl-10 col-lg-12 text-center">
                 <div class="section-header">
-                    <h2 class="section-title">Ready to Get More <span>Information</span></h2>
-                    <p>There were twelve rules in all, and they specified that fights should be "a fair stand-up boxing match" in a 24-foot-square or similar ring. Rounds were three minutes with one-minute rest.</p>
+                    {% blocktranslate %}<h2 class="section-title">Get More <span>Information</span></h2>{% endblocktranslate %}
+                    <p>{% trans 'By contacting us using one of the options below' %}.</p>
                 </div>
             </div>
         </div>
@@ -253,8 +265,8 @@
                         </div>
                     </div>
                     <div class="contact-content">
-                        <h4 class="title">OFFICE ADRESS</h4>
-                        <p>350 5th Ave, New York, NY 10118350 <br> <a href="https://www.google.com/maps/@23.7745978,90.4219535,15z" target="_blank">view map</a> </p>
+                        <h4 class="title">{% trans 'OFFICE ADDRESS' %}</h4>
+                        <p>Str. Avram Iancu Nr. 32, Cam. Nr. 1, Brașov <br> <a href="https://goo.gl/maps/eUpdbgLurJBWbRe1A" target="_blank">{% trans 'view on map' %}</a> </p>
                     </div>
                 </div>
             </div>
@@ -266,8 +278,8 @@
                         </div>
                     </div>
                     <div class="contact-content">
-                        <h4 class="title">TELEPHONE NUMBER</h4>
-                        <p>+1 (800)-123-4567 <br> <a href="tel:11234567">call now</a> </p>
+                        <h4 class="title">{% trans 'TELEPHONE NUMBER' %}</h4>
+                        <p>+40 0755 931 959 <br> <a href="tel:11234567">{% trans 'call now' %}</a> </p>
                     </div>
                 </div>
             </div>
@@ -279,8 +291,8 @@
                         </div>
                     </div>
                     <div class="contact-content">
-                        <h4 class="title">SEND MAIL</h4>
-                        <p>example@email.com <br> <a href="mailto:">send now</a> </p>
+											<h4 class="title">{% trans 'SEND MAIL' %}</h4>
+                        <p>contact@energyfit.ro <br> <a href="mailto:contact@energyfit.ro">{% trans 'send now' %}</a> </p>
                     </div>
                 </div>
             </div>
@@ -301,9 +313,8 @@
             <div class="col-xl-6 col-lg-6 mb-60">
                 <div class="account-widget-left">
                     <div class="section-header">
-                        <h2 class="section-title">Any Question? Feel
-                            Free to get in <span>Contact</span> with Us!</h2>
-                        <p>If you have any questions or need more information, please use the form below to send us a message There were twelve rules in all, and they specified that fights should be "a fair stand-up boxing match" in a 24-foot-square or similar ring. </p>
+                        {% blocktranslate %}<h2 class="section-title">{% trans 'A burning Question? Feel Free to get directly in <span>Contact</span> with Us!</h2>{% endblocktranslate %}
+                        <p>{% trans 'Using this form' %}. </p>
                     </div>
                     <div class="banner-widget">
                         <div class="banner-widget-wrapper">
@@ -314,13 +325,13 @@
                             </div>
                             <div class="banner-widget-middle">
                                 <div class="banner-widget-content">
-                                    <p>Join over <span>4,000+</span> students</p>
+                                    <p>{% trans 'Join over' %} <span>30</span> {% trans 'students' %}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="contact-social-area">
-                        <span>FOLLOW US -</span>
+                        <span>{% trans 'FOLLOW US' %} -</span>
                         <ul class="contact-social">
                             <li><a href="#0"><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href="#0"><i class="fab fa-twitter"></i></a></li>
@@ -384,14 +395,14 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 	<footer class="footer-section footer-section-two pt-120">
 	    <div class="footer-bg">
-	        <img src="{% static 'images/bg/bg-4.png' %}" alt="bg">
+	        <img src="{% static 'images/backgrounds/bg-4.png' %}" alt="bg">
 	    </div>
 	    <div class="container">
 	        <div class="row mb-30-none">
 	            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
 	                <div class="footer-widget">
 	                    <div class="footer-logo">
-	                        <a class="site-logo site-title" href="{% url 'underconstruction' %}"><img src="{% static 'images/logo.jpg' %}" alt="site-logo"></a>
+	                        <a class="site-logo site-title" href="{% url 'underconstruction' %}"><img style="height:100px;width:100px;" src="{% static 'images/logo2.png' %}" alt="site-logo"></a>
 	                    </div>
 	                    <p>{% trans 'Energyfit Karate Brasov is the only Fudokan martial arts school in Brasov, a karate style that teaches modesty, focus and fighting for true human values. Our school has one of the most innovative and child friendly training programs you can find' %}</p>
 	                    <ul class="footer-social">

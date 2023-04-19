@@ -9,7 +9,7 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 			<title>{% trans 'Energyfit' %}</title>
- 			<link rel="shortcut icon" type="image/png" href="{% static 'images/logo/logo.png' %}">
+ 			<link rel="shortcut icon" type="image/png" href="{% static 'images/logo2.png' %}">
 			<meta name="description" property="og:description" content="{% trans 'One of the best karate schools in Brasov' %}">
 		 	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 		 	<meta name="keywords" content="martial arts, karate, arte martiale">
@@ -19,7 +19,7 @@
 		 	<meta property="og:site_name" content="Energyfit">
 		 	<meta property="og:title" content="{% trans 'Energyfit | Un Sanctuar al Artelor Martiale" />
 		 	<meta property="og:description" content="Iconic protected area, in the heart of Romania.">
-		 	<meta property="og:image" content="https://energyfit.ro/static/images/logo/logo.png">
+		 	<meta property="og:image" content="https://energyfit.ro/static/images/logo2.png">
 		 	<meta property="og:image:alt" content="Logo">
 	 		<link rel="canonical" href="https://energyfit.ro/">
 	    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,8 +52,6 @@
 	    <!-- main style css link -->
 	    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 			<!-- preloader style css link -->
-			<link rel="stylesheet" href="{% static 'css/preloader.css' %}">
-
 	</head>
 <body>
 
@@ -157,18 +155,18 @@
                                 <li class="menu_has_children">
                                     <a href="#0">{% trans 'EXPLORE' %}</a>
                                     <ul class="sub-menu">
-																				<li><a href="gallery.html">{% trans 'GALLERY' %}</a></li>
-                                        <li><a href="event.html">{% trans 'EVENTS' %}</a></li>
-                                        <li><a href="plan.html">{% trans 'PRICING PLAN' %}</a></li>
-                                        <li><a href="faq.html">FAQ</a></li>
+																				<li><a href="#">{% trans 'GALLERY' %}</a></li>
+                                        <li><a href="#">{% trans 'EVENTS' %}</a></li>
+                                        <li><a href="#">{% trans 'PRICING PLAN' %}</a></li>
+                                        <li><a href="#">FAQ</a></li>
                                     </ul>
                                 </li>
                                 <li><a class="site-logo site-title d-none d-xl-block" href="{% url 'home' %}"><img style="height:100px;width:100px;" src="{% static 'images/logo2.png' %}" alt="site-logo"></a></li>
                                 <li class="">
-                                    <a href="#0">{% trans 'MASTERS' %}</a>
+                                    <a href="#">{% trans 'MASTERS' %}</a>
                                 </li>
                                 <li class="">
-                                    <a href="#0">{% trans 'NEWS' %}</a>
+                                    <a href="#">{% trans 'NEWS' %}</a>
                                 </li>
 																<li class="menu_has_children">
 																	{% get_available_languages as LANGUAGES %}
@@ -202,7 +200,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 	<footer class="footer-section footer-section-two pt-120">
 	    <div class="footer-bg">
-	        <img src="{% static 'images/bg/bg-4.png' %}" alt="bg">
+	        <img src="{% static 'images/backgrounds/bg-4.png' %}" alt="bg">
 	    </div>
 	    <div class="container">
 	        <div class="row mb-30-none">

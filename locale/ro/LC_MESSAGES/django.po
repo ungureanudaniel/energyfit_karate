@@ -227,6 +227,34 @@ msgstr "LIMBĂ"
 #: services/templates/services/underconstruction.html:186
 msgid "CONTACT US"
 msgstr "CONTACT"
+#: services/templates/services/contact.html:172
+msgid "<h1 class='title'>CONTACT <span>US</span></h1>"
+msgstr "<h1 class='title'>CONTACTAȚI-NE <span></span></h1>"
+
+#: services/templates/services/contact.html:172
+msgid "view on map"
+msgstr "vezi pe hartă"
+
+#: services/templates/services/contact.html:172
+msgid "SEND MAIL"
+msgstr "SCRIEȚI UN EMAIL"
+
+#: services/templates/services/contact.html:172
+msgid "send now"
+msgstr "trimiteți acum"
+
+#: services/templates/services/contact.html:172
+msgid "<h2 class='section-title'>A burning Question? Feel Free to get directly in <span>Contact</span> with Us!</h2>"
+msgstr "<h2 class='section-title'>O întrebare arzătoare? Nu ezitați să luați rapid <span>Legătura</span> cu noi!</h2>"
+
+#: services/templates/services/contact.html:172
+msgid "Using this form"
+msgstr "Folosind acest formular"
+
+#: services/templates/services/contact.html:172
+msgid "Join over"
+msgstr "Alăturați-vă celor peste"
+
 
 #: services/templates/services/base.html:214
 #: services/templates/services/home.html:174
@@ -273,6 +301,22 @@ msgstr "Program de lucru"
 #: services/templates/services/underconstruction.html:277
 msgid "Contact us"
 msgstr "Contact"
+
+#: services/templates/services/contact.html:418
+msgid "OFFICE ADDRESS"
+msgstr "ADRESĂ DE CORESPONDENȚĂ"
+
+#: services/templates/services/contact.html:418
+msgid "TELEPHONE NUMBER"
+msgstr "NUMĂR DE TELEFON"
+
+#: services/templates/services/contact.html:418
+msgid "call now"
+msgstr "sunați acum"
+
+#: services/templates/services/contact.html:418
+msgid "By contacting us using one of the options below"
+msgstr "Contactându-ne folosind una dintre opțiunile de mai jos"
 
 #: services/templates/services/home.html:32
 msgid "#1 FUDOKAN MARTIAL ARTS SCHOOL IN BRAȘOV"
@@ -449,6 +493,10 @@ msgstr "Încercăm să ne adaptăm la fiecare situație și la fiecare buzunar"
 #: services/templates/services/home.html:801
 msgid "Monthly"
 msgstr "Lunar"
+
+#: services/templates/services/home.html:801
+msgid "students"
+msgstr "studenți"
 
 #: services/templates/services/home.html:803
 msgid "Trimestral"
