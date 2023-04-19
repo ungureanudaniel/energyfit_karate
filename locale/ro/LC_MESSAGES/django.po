@@ -565,7 +565,7 @@ msgstr "Pagina oficială a celei mai bune școli FUDOKAN din Brașov este în co
 
 #: services/templates/services/underconstruction.html:230
 msgid "Subscribe our newsletter to stay in touch. Click here"
-msgstr "Abonează-te la newsletter-ul nostru pentru a rămâne în contact. Click aici"
+msgstr "Abonați-vă la newsletter-ul nostru pentru a rămâne în contact. Click aici"
 
 #: services/templates/services/unsubscribe.html:14
 msgid "<span>Unsubscribe</span> <span></span>"
