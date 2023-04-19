@@ -67,9 +67,35 @@ def home(request):
     """
     This view is the home page view
     """
-    template = 'services/home.html'
+    if settings.DEVELOPMENT == True:
+        template = 'services/underconstruction.html'
+    else:
+        template = 'services/home.html'
+    if request.POST.get('form-type') == "subscribe":
+        newsletter_email = request.POST.get('subscriber')
+        if newsletter_email:
+            try:
+                duplicate = Subscriber.objects.get(email=newsletter_email)
+                if duplicate:
+                    messages.warning(request, _("This email already exists in our database!"))
+                    return redirect('/')
+            except:
+                #-----------------------SAVE IN DATABASE----------------
+                sub = Subscriber(email=newsletter_email, conf_num=random_digits(), timestamp=timezone.now())
+                sub.save()
 
-
+                #---------------------send confirmation email settings------
+                sub_subject = _("Newsletter Energyfit Karate Brasov")
+                from_email='contact@energyfit.ro'
+                sub_message = ''
+                html_content=_("Thank you for subscribing to our newsletter! You can finalize the process by clicking on this <a style='padding:2px 1px;border:2px solid black' href='{}subscription-confirmation/?email={}&conf_num={}'> button</a>.".format('http://127.0.0.1:8000/', sub.email, sub.conf_num))
+                try:
+                    send_mail(sub_subject, sub_message, from_email, [sub], html_message=html_content)
+                    messages.success(request, _("A confirmation link was sent to your email inbox. Please check!"))
+                    return redirect('/')
+                except Exception as e:
+                    messages.warning(request, e)
+                    return redirect('/')
     context = {
         "serv_cats": ServiceCategory.objects.all().order_by('rank'),
         "masters": Team.objects.filter(job="Sensei")
@@ -143,37 +169,41 @@ def massmedia(request):
     return render(request, template, {})
 #==========contact======================================================
 def contacts_view(request):
-    template_name = 'services/contact.html'
+    if settings.DEVELOPMENT == True:
+        template_name = 'services/contact_under.html'
+    else:
+        template_name = 'services/contact.html'
+
     if request.method == "POST":
         message_form = ContactForm(request.POST or None)
         form = CaptchaForm(request.POST)
         try:
             if form.is_valid():
                 if message_form.is_valid():
-                    message_subject = message_form.cleaned_data.get('subject')
+                    message_phone = message_form.cleaned_data.get('phone')
                     message_author = message_form.cleaned_data.get('author')
                     sender_email = message_form.cleaned_data.get('email')
-                    message = message_form.cleaned_data.get('text')
+                    message = message_form.cleaned_data.get('message')
                     #=======send email=======
-                    print(f"{message_subject},{message_author},{sender_email}")
                     new_message = message_form.save(commit=False)
                     new_message.timestamp = datetime.datetime.now()
                     new_message.save()
-                    send_mail(message_subject, message, sender_email, ['contact@energyfit.ro'], fail_silently=False)
+                    send_mail("", message, sender_email, ['contact@energyfit.ro'], fail_silently=False)
                     messages.success(request, _(f'Thank you for writing us {message_author}! We will answer as soon as possible.'))
-                    return HttpResponseRedirect('/contact')
+                    return redirect('/contact')
                     # except Exception as e:
                     #     messages.warning(request, f'Error: {e}!')
                     #     return render(request, 'services/invalid_header.html',{})
                     # return HttpResponseRedirect('/contact')
                 else:
                     messages.warning(request, _("Failed! Please make sure your info is correct!"))
-                    return HttpResponseRedirect('/contact')
+                    return redirect('/contact')
             else:
                 messages.warning(request, _("Failed! Please fill in the captcha field again!"))
-                return HttpResponseRedirect('/contact')
+                return redirect('/contact')
         except Exception as e:
-            messages.warning(request, f"{e}")
+            messages.warning(request, _(f"Forward this error to the page developer: {e}"))
+            return redirect('/contact')
     else:
         message_form = ContactForm()
         form = CaptchaForm()

@@ -289,8 +289,8 @@ msgstr "Galerie"
 #: services/templates/services/base.html:284
 #: services/templates/services/contact.html:466
 #: services/templates/services/underconstruction.html:325
-msgid "Copyright 2022 Energyfit Karate Brașov. Designed By"
-msgstr "Copyright 2022 Energyfit Karate Brașov. Dezvoltat de"
+msgid "Designed By"
+msgstr "Dezvoltat de"
 
 #: services/templates/services/contact.html:407
 #: services/templates/services/underconstruction.html:266

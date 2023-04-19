@@ -180,7 +180,11 @@
                                       {% endfor %}
                                     </ul>
                                 </li>
-                                <li><a href="#">{% trans 'CONTACT US' %}</a></li>
+                                <li><a href="{% url 'contact' %}">{% trans 'CONTACT US' %}</a></li>
+																{% if user.is_authenticated %}
+																<li><a style="color:red;" href="{% url 'logout' %}">{% trans 'LOGOUT' %}</a></li>
+																{% endif %}
+
                             </ul>
                         </div>
                     </nav>
@@ -278,7 +282,7 @@
 	        <div class="row justify-content-center">
 	            <div class="col-xl-12 text-center">
 	                <div class="copyright-area">
-	                     <p>{% trans 'Copyright 2022 Energyfit Karate Brasov. Designed By' %} <a href="https:///ninjaweb.tech">NinjaWeb Tech</a></p>
+	                     <p>Copyright {% now "Y" %} Energyfit {% if user.is_authenticated %}Karate{% else%}<a href="{% url 'admin:index' %}">Karate</a>{% endif %} Brașov. {% trans 'Designed By' %} <a href="https:///ninjaweb.tech">NinjaWeb Tech</a></p>
 	                </div>
 	            </div>
 	        </div>
