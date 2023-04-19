@@ -8,7 +8,6 @@ from django.conf.urls.i18n import i18n_patterns
 from django.utils.translation import gettext_lazy as _
 from django.contrib.sitemaps.views import sitemap
 from services.sitemaps import StaticViewSitemap
-from django.conf.urls import handler500
 
 
 sitemaps = {
@@ -31,4 +30,3 @@ urlpatterns += i18n_patterns(
 )
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-handler500 = 'services.views.handler500'
