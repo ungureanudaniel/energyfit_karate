@@ -3971,11 +3971,11 @@ section {
   transform: translateY(130px);
 }
 .inner-banner-section .section-logo-text span {
-  font-size: 280px;
+  font-size: 230px;
   font-family: "Kanit", sans-serif;
   font-weight: 700;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
+  -webkit-text-stroke: 3px rgba(255, 255, 255, 0.19);
   font-style: italic;
 }
 @media only screen and (max-width: 1199px) {
@@ -5273,7 +5273,7 @@ div[class*="col"]:nth-of-type(4n + 4) .trainer-item:hover {
   font-size: 181px;
   font-family: "Kanit", sans-serif;
   font-weight: 700;
-  color: transparent;
+  color: red;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
   font-style: italic;
 }

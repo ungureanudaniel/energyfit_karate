@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.core.mail import send_mail
 from django.contrib.auth import authenticate, login
-from .models import Testimonial, Team, ServiceCategory, Service, Contact, Subscriber
+from .models import Testimonial, Trainer, ServiceCategory, Service, Contact, Subscriber, TeamRole,\
+Training, About, FAQ
 from .forms import CaptchaForm, ContactForm
 # , GalleryForm
 from django.utils.text import slugify
@@ -98,7 +99,7 @@ def home(request):
                     return redirect('/')
     context = {
         "serv_cats": ServiceCategory.objects.all().order_by('rank'),
-        "masters": Team.objects.filter(job="Sensei")
+        "trainers": Trainer.objects.filter(role=1),
     }
     return render(request, template, context)
 #--------------------------------------------------------------subscription_conf
@@ -153,16 +154,91 @@ def apply_view(request):
 
     }
     return render(request, template, context)
-#========================about page================================
-def team(request):
-    template = 'services/team.html'
+#=========================apply page================================
+def training_view(request):
+    template = 'services/training.html'
 
     context = {
-        'dir_members': Team.objects.filter(hierarchy=0),
-        'adm_members': Team.objects.filter(hierarchy=1).order_by("surname"),
-        'field_members': Team.objects.filter(job__exact="Ranger").order_by("surname"),
+        't_programs': Training.objects.filter(active=True),
+        'about': About.objects.all()[0],
+        'faqs': FAQ.objects.all(),
     }
     return render(request, template, context)
+#======================== wildlife detail page================================
+class TrainingDetailView(DetailView):
+    model = Training
+    template_name = 'services/training-details.html'
+    context_object_name = 'training'
+    slug_field = 'slug'
+
+    def get_context_data(self, **kwargs):
+        context = super(TrainingDetailView, self).get_context_data(**kwargs)
+
+        context.update({
+        # ----------- training programs -------------------------------------------
+        't_programs': Training.objects.filter(active=True),
+        'form_captcha': CaptchaForm()
+        })
+        return context
+    def form_valid(self, form):
+        # This method is called when valid form data has been POSTed.
+        # It should return an HttpResponse.
+        form.save()
+        return super().form_valid(form)
+    def training(self, request, *args, **kwargs):
+
+        if request.method == "POST":
+            form = CaptchaForm(request.POST)
+            try:
+                if form.is_valid():
+                    message_phone = request.GET.get("phone")
+                    message_author = request.GET.get("name")
+                    sender_email = request.GET.get("email")
+                    message = request.GET.get("message")
+                    training_type = request.GET.get("training_type")
+                    message_subject = f"Registration for {training_type}"
+                    #=======send email=======
+                    new_message = Contact(message_author, message_phone, sender_email, message_subject, message, timestamp=timezone.now())
+
+                    send_mail("", message, sender_email, ['contact@energyfit.ro'], fail_silently=False)
+                    messages.success(request, _(f'Thank you for writing us {message_author}! We will answer as soon as possible.'))
+                    return redirect('/')
+                    # except Exception as e:
+                    #     messages.warning(request, f'Error: {e}!')
+                    #     return render(request, 'services/invalid_header.html',{})
+                    # return HttpResponseRedirect('/contact')
+                else:
+                    messages.warning(request, _("Failed! Please fill in the captcha field again!"))
+                    return redirect('/contact')
+            except Exception as e:
+                messages.warning(request, _(f"Forward this error to the page developer: {e}"))
+                return redirect('/contact')
+        else:
+            form = CaptchaForm()
+
+        return self.get(request, *args, **kwargs)
+
+#========================about page================================
+def about_view(request):
+    template = 'services/about.html'
+    context = {
+        'trainers': Trainer.objects.filter(role=1),
+        'testimonials': Testimonial.objects.all(),
+        'about': About.objects.all()[0],
+    }
+    return render(request, template, context)
+#========================mass-media page================================
+def trainers_view(request):
+    template = 'services/trainers.html'
+    return render(request, template, {'trainers':Trainer.objects.all(), 'roles':TeamRole.objects.all()})
+#======================== wildlife detail page================================
+class TrainersDetailView(DetailView):
+    model = Trainer
+    template_name = 'services/trainers-details.html'
+    context_object_name = 'trainers'
+    slug_field = 'slug'
+
+
 #========================mass-media page================================
 def massmedia(request):
     template = 'services/mass-media.html'
@@ -297,4 +373,21 @@ def invalid_header(request):
 #======================== page not found page================================
 def coming_soon(request):
     template = 'services/coming-soon.html'
+    return render(request, template, {})
+#======================== page not found page================================
+def page_not_found(request, exception=None):
+    template = 'services/404.html'
+
+    return render(request, 'services/home.html', {})
+#======================== page not found page================================
+def server_error(request):
+    template = 'services/500.html'
+    return render(request, template, {})
+#======================== privacy page================================
+def privacy_view(request):
+    template = 'services/privacy.html'
+    return render(request, template, {})
+#======================== terms page================================
+def terms_view(request):
+    template = 'services/terms.html'
     return render(request, template, {})

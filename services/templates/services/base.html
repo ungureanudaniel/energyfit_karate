@@ -147,42 +147,42 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav main-menu ml-auto mr-auto">
-                                <li><a href="{% url 'home' %}">{% trans 'HOME' %}</a></li>
-                                <li><a href="#">{% trans 'ABOUT US' %}</a></li>
+                                <li><a class="text-uppercase" href="{% url 'home' %}">{% trans 'Home' %}</a></li>
+                                <li><a class="text-uppercase" href="{% url 'about' %}">{% trans 'About us' %}</a></li>
                                 <li class="">
-                                    <a href="#0">{% trans 'TRAINING' %}</a>
+                                    <a class="text-uppercase" href="{% url 'training' %}">{% trans 'Training' %}</a>
                                 </li>
                                 <li class="menu_has_children">
-                                    <a href="#0">{% trans 'EXPLORE' %}</a>
+                                    <a class="text-uppercase" href="#0">{% trans 'Explore' %}</a>
                                     <ul class="sub-menu">
-																				<li><a href="#">{% trans 'GALLERY' %}</a></li>
-                                        <li><a href="#">{% trans 'EVENTS' %}</a></li>
-                                        <li><a href="#">{% trans 'PRICING PLAN' %}</a></li>
-                                        <li><a href="#">FAQ</a></li>
+																				<li><a class="text-uppercase" href="#">{% trans 'Gallery' %}</a></li>
+                                        <li><a class="text-uppercase" href="#">{% trans 'Events' %}</a></li>
+                                        <li><a class="text-uppercase" href="#">{% trans 'Pricing plan' %}</a></li>
+                                        <li><a class="text-uppercase" href="#">FAQ</a></li>
                                     </ul>
                                 </li>
                                 <li><a class="site-logo site-title d-none d-xl-block" href="{% url 'home' %}"><img style="height:100px;width:100px;" src="{% static 'images/logo2.png' %}" alt="site-logo"></a></li>
                                 <li class="">
-                                    <a href="#">{% trans 'MASTERS' %}</a>
+                                    <a class="text-uppercase" href="{% url 'trainers' %}">{% trans 'Trainers' %}</a>
                                 </li>
                                 <li class="">
-                                    <a href="#">{% trans 'NEWS' %}</a>
+                                    <a class="text-uppercase" href="#">{% trans 'News' %}</a>
                                 </li>
 																<li class="menu_has_children">
 																	{% get_available_languages as LANGUAGES %}
 																	{% get_language_info_list for LANGUAGES as languages %}
 																	{% get_language_info for LANGUAGE_CODE as lang %}
 
-                                    <a href="#0">{% trans 'LANGUAGE' %}</a>
+                                    <a class="text-uppercase" href="#0">{% trans 'Language' %}</a>
                                     <ul class="sub-menu">
 																			{% for language in languages %}
-																				<li><a value="{{ language.name_local }}" href="/{{ language.code }}/{{ request.get_full_path |slice:'4:'}}">{{ language.name_local }}</a></li>
+																				<li><a class="text-uppercase" value="{{ language.name_local }}" href="/{{ language.code }}/{{ request.get_full_path |slice:'4:'}}">{{ language.name_local }}</a></li>
                                       {% endfor %}
                                     </ul>
                                 </li>
-                                <li><a href="{% url 'contact' %}">{% trans 'CONTACT US' %}</a></li>
+                                <li><a class="text-uppercase" href="{% url 'contact' %}">{% trans 'Contact us' %}</a></li>
 																{% if user.is_authenticated %}
-																<li><a style="color:red;" href="{% url 'logout' %}">{% trans 'LOGOUT' %}</a></li>
+																<li><a style="color:red;" class="text-uppercase" href="{% url 'logout' %}">{% trans 'Logout' %}</a></li>
 																{% endif %}
 
                             </ul>

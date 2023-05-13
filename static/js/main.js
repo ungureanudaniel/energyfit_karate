@@ -59,7 +59,7 @@ $(window).on('scroll', function () {
 // header-fixed
 var fixed_top = $(".header-section");
 $(window).on("scroll", function(){
-    if( $(window).scrollTop() > 500){  
+    if( $(window).scrollTop() > 500){
         fixed_top.addClass("animated fadeInDown header-fixed");
     }
     else{
@@ -244,42 +244,52 @@ var swiper = new Swiper('.training-slider', {
     },
   }
 });
+let loop_slider = true;
+const num_of_slides = 4;
+let swiper_sliders = document.querySelectorAll(".trainer-slider");
 
-var swiper = new Swiper('.trainer-slider', {
-  slidesPerView: 4,
-  spaceBetween: 0,
-  loop: true,
-  navigation: {
-    nextEl: '.slider-next',
-    prevEl: '.slider-prev',
-  },
-  pagination: {
-    el: '.custom-pagination',
-    type: 'progressbar',
-  },
-  autoplay: {
-    speeds: 2000,
-    delay: 4000,
-  },
-  speed: 1000,
-  breakpoints: {
-    1199: {
-      slidesPerView: 3,
-    },
-    991: {
-      slidesPerView: 2,
-    },
-    767: {
-      slidesPerView: 2,
-    },
-    575: {
-      slidesPerView: 1,
-    },
+for (const this_slider of swiper_sliders){
+  //work as per usual
+  let num_of_slides_before_init = this_slider.querySelectorAll(".swiper-slide").length;
+  if(num_of_slides_before_init < num_of_slides){
+    loop_slider = false;
   }
-});
 
+  var swiper = new Swiper('.trainer-slider', {
+    slidesPerView: num_of_slides_before_init,
+    spaceBetween: 0,
+    loop: loop_slider,
+    navigation: {
+      nextEl: '.slider-next',
+      prevEl: '.slider-prev',
+    },
+    pagination: {
+      el: '.custom-pagination',
+      type: 'progressbar',
+    },
+    autoplay: {
+      speeds: 2000,
+      delay: 4000,
+    },
+    speed: 1000,
+    breakpoints: {
+      1199: {
+        slidesPerView: num_of_slides_before_init,
+      },
+      991: {
+        slidesPerView: 2,
+      },
+      767: {
+        slidesPerView: 2,
+      },
+      575: {
+        slidesPerView: 1,
+      },
+    }
+  });
+};
 var swiper = new Swiper('.trainer-slider-two', {
-  slidesPerView: 4,
+  slidesPerView: 2,
   spaceBetween: 30,
   loop: true,
   pagination: {
@@ -470,7 +480,7 @@ $(function () {
       } else {
         newVal = 1;
       }
-    } 
+    }
     $button.parent().find("input").val(newVal);
   });
 });
@@ -552,7 +562,7 @@ var $grid = $('.grid').isotope({
     }
 });
 var $gallery = $(".grid").isotope({
-      
+
 });
 // filter items on button click
 $('.filter-btn-group').on( 'click', 'button', function() {
@@ -595,6 +605,6 @@ function galleryMasonaryTwo(){
     });
   });
   }
-  
+
 
 })(jQuery);

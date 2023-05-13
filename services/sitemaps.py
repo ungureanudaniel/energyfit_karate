@@ -1,5 +1,5 @@
 from django.contrib.sitemaps import Sitemap
-from .models import Service, Team, Gallery
+from .models import Service, Trainer, Gallery
 from django.shortcuts import reverse
 # from .models import Snippet
 
@@ -13,7 +13,7 @@ class ServicesSitemap(Sitemap):
 
     def location(self,obj):
         return '/%s' % (obj.slug)
-class TeamSitemap(Sitemap):
+class TrainerSitemap(Sitemap):
     changefreq = "monthly"
     priority = 0.8
     protocol = 'http'

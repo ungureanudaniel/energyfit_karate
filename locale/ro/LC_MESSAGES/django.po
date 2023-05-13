@@ -78,11 +78,6 @@ msgstr "Rezolvați "
 msgid "<h1 class=\"title\">ENROLL <span>NOW</span></h1>"
 msgstr "<h1 class=\"title\">ÎNSCRIEȚI-VĂ <span>ACUM</span></h1>"
 
-#: services/templates/services/apply.html:25
-#: services/templates/services/subscription_conf.html:28
-msgid "Home"
-msgstr "Acasă"
-
 #: services/templates/services/apply.html:26
 msgid "Enroll"
 msgstr "Înscrieți-vă"
@@ -94,6 +89,73 @@ msgstr "<h2 class='section-title'>Pentru a <span>Aplica</span> Scrieți-ne <span
 #: services/templates/services/apply.html:61
 msgid "And we will reach back to you as soon as possible"
 msgstr "Și vă vom contacta în cel mai scurt timp posibil"
+
+#: services/templates/services/training.html:61
+msgid "<h2 class='section-title'>OUR <span>OFFERING</span></h2>"
+msgstr "<h2 class='section-title'>CE <span>OFERIM</span></h2>"
+
+#: services/templates/services/training.html:61
+msgid "<h2 class='section-title'>FREQUENTLY ASKED <span>QUESTIONS</span></h2>"
+msgstr "<h2 class='section-title'>ÎNTREBĂRI <span>FRECVENTE</span></h2>"
+
+#: services/templates/services/training-details.html:61
+msgid "Register Now"
+msgstr "Înregistrați-vă acum"
+
+#: services/templates/services/training-details.html:61
+msgid "<h2 class='widget-title'>Key Benefits of OUR <span>Fudokan Training</span></h2>"
+msgstr "<h2 class='widget-title'>Principalele beneficii ale antrenamentelor noastre în<span>Fudokan</span></h2>"
+
+#: services/templates/services/training-details.html:61
+msgid "<h2 class='widget-title'>What you Learn from this <span>Training</span></h2>"
+msgstr "<h2 class='widget-title'>Ce veți învăța din aceste <span>Antrenamente</span></h2>"
+
+#: services/templates/services/training-details.html:61
+msgid "EXPERIENCED TRAINERS"
+msgstr "FORMATORI CU EXPERIENȚĂ"
+
+#: services/templates/services/training-details.html:61
+msgid "GET IN SHAPE"
+msgstr "PUNEȚI-VĂ ÎN FORMĂ"
+#: services/templates/services/training-details.html:61
+msgid "DEFEND YOURSELF"
+msgstr "APĂRAȚI-VĂ"
+#: services/templates/services/training-details.html:61
+msgid "GAIN CONFIDENCE"
+msgstr "CÂȘTIGAȚI ÎNCREDEREA ÎN SINE"
+#: services/templates/services/training-details.html:61
+msgid "SET GOALS"
+msgstr "STABILIȚI OBIECTIVE"
+#: services/templates/services/training-details.html:61
+msgid "BE PART OF A FAMILY"
+msgstr "FACEȚI PARTE DINTR-O FAMILIE"
+#: services/templates/services/training-details.html:61
+msgid "Our Senseis are the best you can find the area, warm, calm and armed with enough patience to guide through building a better you"
+msgstr "Senseii noștri sunt cei mai buni pe care îi puteți găsi în zonă, calzi, calmi și înarmați cu suficientă răbdare pentru a vă ghida în construirea unei sine mai bun"
+
+#: services/templates/services/training-details.html:61
+msgid "We will take children and adults on a building strength journey first"
+msgstr "Vom lua copiii și adulții, în primul rând, într-o călătorie de îmbunătățire a fitness-ului"
+
+#: services/templates/services/training-details.html:61
+msgid "They will learn defensive moves and the importance of using what they learn only in defence"
+msgstr "Vor învăța mișcări defensive și importanța de a folosi ceea ce învață doar în apărare"
+
+#: services/templates/services/training-details.html:61
+msgid "<h2 class='widget-title'>Who is this <span>Training</span> for</h2>"
+msgstr "<h2 class='widget-title'>Pentru cine sunt aceste <span>Antrenamente</span></h2>"
+
+#: services/templates/services/training.html:61
+msgid "If you cannot find an answer to your question in this section below, then please white us an email"
+msgstr "Dacă nu găsiți un răspuns la întrebarea dvs. în această secțiune de mai jos, vă rugăm să ne trimiteți un e-mail"
+
+#: services/templates/services/training-details.html:61
+msgid "<h1 class='title'>TRAINING <span>DETAILS</span></h1>"
+msgstr "<h1 class='title'>DETALII DESPRE <span>FORMARE</span></h1>"
+
+#: services/templates/services/training-details.html:61
+msgid "Training Details"
+msgstr "Detalii despre antrenamente"
 
 #: services/templates/services/apply.html:68
 msgid "Enter Name"
@@ -114,6 +176,11 @@ msgstr "Nr de telefon"
 #: services/templates/services/apply.html:77
 msgid "Type in your phone number"
 msgstr "Introduceți numărul dvs de telefon"
+
+
+#: services/templates/services/apply.html:77
+msgid "<h1 class='title'>ABOUT <span>US</span></h1>"
+msgstr "<h1 class='title'>DESPRE <span>NOI</span></h1>"
 
 #: services/templates/services/apply.html:80
 msgid "Select your desired class"
@@ -166,67 +233,71 @@ msgstr "Una dintre cele mai bune școli de karate din Brașov"
 #: services/templates/services/base.html:152
 #: services/templates/services/contact.html:151
 #: services/templates/services/underconstruction.html:152
-msgid "HOME"
-msgstr "ACASĂ"
+#: services/templates/services/apply.html:25
+#: services/templates/services/subscription_conf.html:28
+#: services/templates/services/trainers.html:61
+msgid "Home"
+msgstr "Acasă"
 
 #: services/templates/services/base.html:153
 #: services/templates/services/contact.html:152
 #: services/templates/services/underconstruction.html:153
-msgid "ABOUT US"
-msgstr "DESPRE NOI"
+msgid "About us"
+msgstr "Despre noi"
 
 #: services/templates/services/base.html:155
 #: services/templates/services/contact.html:154
 #: services/templates/services/underconstruction.html:155
-msgid "TRAINING"
-msgstr "FORMARE"
+msgid "Training"
+msgstr "Formare"
 
 #: services/templates/services/base.html:158
 #: services/templates/services/contact.html:157
 #: services/templates/services/underconstruction.html:158
-msgid "EXPLORE"
-msgstr "EXPLORAȚI"
+msgid "Explore"
+msgstr "Explorați"
 
 #: services/templates/services/base.html:160
 #: services/templates/services/contact.html:159
 #: services/templates/services/underconstruction.html:160
-msgid "GALLERY"
-msgstr "GALERIE"
+msgid "Gallery"
+msgstr "Galerie"
 
 #: services/templates/services/base.html:161
 #: services/templates/services/contact.html:160
 #: services/templates/services/underconstruction.html:161
-msgid "EVENTS"
-msgstr "EVENIMENTE"
+msgid "Events"
+msgstr "Evenimente"
 
 #: services/templates/services/base.html:162
 #: services/templates/services/contact.html:161
 #: services/templates/services/underconstruction.html:162
-msgid "PRICING PLAN"
-msgstr "PLAN DE PREȚURI"
+msgid "Pricing plan"
+msgstr "Plan de prețuri"
 
 #: services/templates/services/base.html:168
 #: services/templates/services/contact.html:167
 #: services/templates/services/underconstruction.html:168
-msgid "MASTERS"
-msgstr "SENSEI"
+#: services/templates/services/trainers.html:61
+msgid "Trainers"
+msgstr "Antrenori"
 
 #: services/templates/services/base.html:171
 #: services/templates/services/contact.html:170
 #: services/templates/services/underconstruction.html:171
-msgid "NEWS"
-msgstr "ȘTIRI"
+msgid "News"
+msgstr "Știri"
 
 #: services/templates/services/base.html:178
 #: services/templates/services/underconstruction.html:178
-msgid "LANGUAGE"
-msgstr "LIMBĂ"
+msgid "Language"
+msgstr "Limbă"
 
 #: services/templates/services/base.html:185
 #: services/templates/services/contact.html:172
 #: services/templates/services/underconstruction.html:186
-msgid "CONTACT US"
-msgstr "CONTACT"
+msgid "Contact us"
+msgstr "Contact"
 #: services/templates/services/contact.html:172
 msgid "<h1 class='title'>CONTACT <span>US</span></h1>"
 msgstr "<h1 class='title'>CONTACTAȚI-NE <span></span></h1>"
@@ -280,12 +351,6 @@ msgstr ""
 msgid "Telephone"
 msgstr "Telefon"
 
-#: services/templates/services/base.html:247
-#: services/templates/services/contact.html:429
-#: services/templates/services/underconstruction.html:288
-msgid "Gallery"
-msgstr "Galerie"
-
 #: services/templates/services/base.html:284
 #: services/templates/services/contact.html:466
 #: services/templates/services/underconstruction.html:325
@@ -296,11 +361,6 @@ msgstr "Dezvoltat de"
 #: services/templates/services/underconstruction.html:266
 msgid "Opening Hours"
 msgstr "Program de lucru"
-
-#: services/templates/services/contact.html:418
-#: services/templates/services/underconstruction.html:277
-msgid "Contact us"
-msgstr "Contact"
 
 #: services/templates/services/contact.html:418
 msgid "OFFICE ADDRESS"
@@ -470,6 +530,10 @@ msgstr "MAI MULTE DESPRE CE<span> FUDOKAN</span> TE VA ÎNVĂȚA"
 msgid "OUR <span>SENSEIS</span>"
 msgstr "SENSEII <span>NOȘTRI</span>"
 
+#: services/templates/services/home.html:552
+msgid "More"
+msgstr "Mehr"
+
 #: services/templates/services/home.html:553
 msgid "Sensei Catalin Petre is the creator of this school and he teaches with the help of Sensei Karol"
 msgstr "Sensei Cătălin Petre este creatorul acestei școli și predă cu ajutorul lui Sensei Karol"
@@ -479,8 +543,8 @@ msgid "OUR <span>FUDOKAN</span> EVENTS"
 msgstr "EVENIMENTELE NOASTRE <span>FUDOKAN</span>"
 
 #: services/templates/services/home.html:685
-msgid "OUR <span>STUDENTS</span> TESTIMONIAL"
-msgstr "PĂRERILE <span>Studenților</span>"
+msgid "OUR <span></span> TESTIMONIALS"
+msgstr "TESTIMONIALELE <span>NOASTRE</span>"
 
 #: services/templates/services/home.html:793
 msgid "OUR <span>MEMBERSHIP</span> PLAN"
@@ -640,3 +704,23 @@ msgstr "A eșuat! Vă rugăm să completați din nou câmpul captcha!"
 #, python-brace-format
 msgid "Warning! {e}"
 msgstr "Avertizare! {e}"
+
+#: services/templates/services/trainers.html:162
+msgid "See our video"
+msgstr "Vezi video"
+
+#: services/templates/services/trainers.html:162
+msgid "Hours Training"
+msgstr "Ore de antrenament"
+
+#: services/templates/services/trainers.html:162
+msgid "Competitions"
+msgstr "Ore de antrenament"
+
+#: services/templates/services/trainers.html:162
+msgid "Students"
+msgstr "Studenți"
+
+#: services/templates/services/trainers.html:162
+msgid "At Energyfit Karate we envision a community where people of all ages, backgrounds, abilities, and genders feel safe, valued, and inspired to work towards building a better self, both physically and mentally"
+msgstr "La Energyfit Karate ne imaginăm o comunitate în care oamenii de toate vârstele, mediile, abilitățile și genurile se simt în siguranță, apreciați și inspirați să lucreze pentru a construi un sine mai bun, atât fizic cât și mental"

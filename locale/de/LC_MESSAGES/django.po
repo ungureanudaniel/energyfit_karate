@@ -94,11 +94,6 @@ msgstr "Verbinden über"
 msgid "students"
 msgstr "Schüler"
 
-#: services/templates/services/apply.html:25
-#: services/templates/services/subscription_conf.html:28
-msgid "Home"
-msgstr "Startseite"
-
 #: services/templates/services/apply.html:26
 msgid "Enroll"
 msgstr "Anmelden"
@@ -170,67 +165,70 @@ msgstr "Eine der besten Karateschulen in Brașov"
 #: services/templates/services/base.html:152
 #: services/templates/services/contact.html:151
 #: services/templates/services/underconstruction.html:152
-msgid "HOME"
-msgstr "STARTSEITE"
+#: services/templates/services/apply.html:25
+#: services/templates/services/subscription_conf.html:28
+#: services/templates/services/trainers.html:61
+msgid "Home"
+msgstr "Startseite"
 
 #: services/templates/services/base.html:153
 #: services/templates/services/contact.html:152
 #: services/templates/services/underconstruction.html:153
-msgid "ABOUT US"
-msgstr "ÜBER UNS"
+msgid "About us"
+msgstr "Über uns"
 
 #: services/templates/services/base.html:155
 #: services/templates/services/contact.html:154
 #: services/templates/services/underconstruction.html:155
-msgid "TRAINING"
-msgstr "AUSBILDUNG"
+msgid "Training"
+msgstr "Ausbildung"
 
 #: services/templates/services/base.html:158
 #: services/templates/services/contact.html:157
 #: services/templates/services/underconstruction.html:158
-msgid "EXPLORE"
-msgstr "ERKUNDEN SIE"
+msgid "Explore"
+msgstr "Erkunden Sie"
 
 #: services/templates/services/base.html:160
 #: services/templates/services/contact.html:159
 #: services/templates/services/underconstruction.html:160
-msgid "GALLERY"
-msgstr "GALERIE"
+msgid "Gallery"
+msgstr "Galerie"
 
 #: services/templates/services/base.html:161
 #: services/templates/services/contact.html:160
 #: services/templates/services/underconstruction.html:161
-msgid "EVENTS"
-msgstr "VERANSTALTUNGEN"
+msgid "Events"
+msgstr "Veranstaltungen"
 
 #: services/templates/services/base.html:162
 #: services/templates/services/contact.html:161
 #: services/templates/services/underconstruction.html:162
-msgid "PRICING PLAN"
-msgstr "PREISPLAN"
+msgid "Pricing plan"
+msgstr "Preisplan"
 
 #: services/templates/services/base.html:168
 #: services/templates/services/contact.html:167
 #: services/templates/services/underconstruction.html:168
-msgid "MASTERS"
-msgstr "SENSEI"
+msgid "Trainers"
+msgstr "Trainers"
 
 #: services/templates/services/base.html:171
 #: services/templates/services/contact.html:170
 #: services/templates/services/underconstruction.html:171
-msgid "NEWS"
-msgstr "AKTUELLES"
+msgid "News"
+msgstr "Aktuelles"
 
 #: services/templates/services/base.html:178
 #: services/templates/services/underconstruction.html:178
-msgid "LANGUAGE"
-msgstr "SPRACHE"
+msgid "Language"
+msgstr "Sprache"
 
 #: services/templates/services/base.html:185
 #: services/templates/services/contact.html:172
 #: services/templates/services/underconstruction.html:186
-msgid "CONTACT US"
-msgstr "KONTAKT"
+msgid "Contact us"
+msgstr "Kontakt"
 
 #: services/templates/services/contact.html:418
 msgid "OFFICE ADDRESS"
@@ -244,6 +242,73 @@ msgstr "TELEFONNUMMER"
 #: services/templates/services/contact.html:418
 msgid "call now"
 msgstr "jetzt anrufen"
+
+#: services/templates/services/training.html:61
+msgid "<h2 class='section-title'>OUR <span>OFFERING</span></h2>"
+msgstr "<h2 class='section-title'>UNSER <span>ANGEBOT</span></h2>"
+
+#: services/templates/services/training.html:61
+msgid "<h2 class='section-title'>FREQUENTLY ASKED <span>QUESTIONS</span></h2>"
+msgstr "<h2 class='section-title'>HÄUFIG GESTELLTE <span>FRAGEN</span></h2>"
+
+#: services/templates/services/training.html:61
+msgid "If you cannot find an answer to your question in this section below, then please white us an email"
+msgstr "Wenn Sie in diesem Abschnitt keine Antwort auf Ihre Frage finden, schicken Sie uns bitte eine E-Mail"
+
+#: services/templates/services/training-details.html:61
+msgid "Training Details"
+msgstr "Details zur Ausbildung"
+
+#: services/templates/services/training-details.html:61
+msgid "Register Now"
+msgstr "Jetzt registrieren"
+
+#: services/templates/services/training-details.html:61
+msgid "EXPERIENCED TRAINERS"
+msgstr "ERFAHRENE TRAINER"
+
+#: services/templates/services/training-details.html:61
+msgid "GET IN SHAPE"
+msgstr "IN FORM KOMMEN"
+#: services/templates/services/training-details.html:61
+msgid "DEFEND YOURSELF"
+msgstr "SICH VERTEIDIGEN"
+#: services/templates/services/training-details.html:61
+msgid "GAIN CONFIDENCE"
+msgstr "SELBSTVERTRAUEN GEWINNEN"
+#: services/templates/services/training-details.html:61
+msgid "SET GOALS"
+msgstr "ZIELE SETZEN"
+#: services/templates/services/training-details.html:61
+msgid "BE PART OF A FAMILY"
+msgstr "TEIL EINER FAMILIE SEIN"
+
+#: services/templates/services/training-details.html:61
+msgid "Our Senseis are the best you can find the area, warm, calm and armed with enough patience to guide through building a better you"
+msgstr "Unsere Senseis sind die besten, die Sie in der Gegend finden können, warmherzig, ruhig und mit genügend Geduld ausgestattet, um Sie durch den Aufbau eines besseren Selbst zu führen."
+
+#: services/templates/services/training-details.html:61
+msgid "We will take children and adults on a building strength journey first"
+msgstr "Zunächst nehmen wir Kinder und Erwachsene mit auf eine Reise zur Stärkung der Körperkraft"
+
+#: services/templates/services/training-details.html:61
+msgid "They will learn defensive moves and the importance of using what they learn only in defence"
+msgstr "Sie werden lernen, wie man sich verteidigt und wie wichtig es ist, das Gelernte nur in der Verteidigung anzuwenden"
+
+#: services/templates/services/training-details.html:61
+msgid "<h2 class='widget-title'>Who is this <span>Training</span> for</h2>"
+msgstr "<h2 class='widget-title'>Für wen ist dieses <span>Training</span> gedacht</h2>"
+
+#: services/templates/services/training-details.html:61
+msgid "<h2 class='widget-title'>Key Benefits of OUR <span>Fudokan Training</span></h2>"
+msgstr "<h2 class='widget-title'>Die wichtigsten Vorteile unseres <span>Fudokan Trainings</span></h2>"
+#: services/templates/services/training-details.html:61
+msgid "<h2 class='widget-title'>What you Learn from this <span>Training</span></h2>"
+msgstr "<h2 class='widget-title'>Was Sie bei dieser <span>Schulung lernen werden</span></h2>"
+
+#: services/templates/services/training.html:61
+msgid "<h1 class='title'>TRAINING <span>DETAILS</span></h1>"
+msgstr "<h1 class='title'>DETAILS ZUR <span>AUSBILDUNG</span></h1>"
 
 #: services/templates/services/contact.html:418
 msgid "By contacting us using one of the options below"
@@ -265,7 +330,7 @@ msgstr "Energyfit Karate Brașov ist die einzige Fudokan-Kampfkunstschule in Bra
 #: services/templates/services/contact.html:420
 #: services/templates/services/underconstruction.html:279
 msgid "Str."
-msgstr ""
+msgstr "Str."
 
 #: services/templates/services/underconstruction.html:11
 msgid "Monday"
@@ -285,12 +350,6 @@ msgstr "Samstag"
 msgid "Telephone"
 msgstr "Telefon"
 
-#: services/templates/services/base.html:247
-#: services/templates/services/contact.html:429
-#: services/templates/services/underconstruction.html:288
-msgid "Gallery"
-msgstr "Galerie"
-
 #: services/templates/services/base.html:284
 #: services/templates/services/contact.html:466
 #: services/templates/services/underconstruction.html:325
@@ -301,11 +360,6 @@ msgstr "Entworfen von"
 #: services/templates/services/underconstruction.html:266
 msgid "Opening Hours"
 msgstr "Öffnungszeit"
-
-#: services/templates/services/contact.html:418
-#: services/templates/services/underconstruction.html:277
-msgid "Contact us"
-msgstr "Kontakt"
 
 #: services/templates/services/home.html:32
 msgid "#1 FUDOKAN MARTIAL ARTS SCHOOL IN BRAȘOV"
@@ -459,6 +513,7 @@ msgstr "MEHR ÜBER DAS, WAS<span> FUDOKAN</span> SIE LEHREN WIRD"
 msgid "OUR <span>SENSEIS</span>"
 msgstr "UNSERE <span>SENSEIS</span>"
 
+
 #: services/templates/services/home.html:553
 msgid "Sensei Catalin Petre is the creator of this school and he teaches with the help of sensei Karol"
 msgstr "Sensei Catalin Petre ist der Gründer dieser Schule und er unterrichtet mit der Hilfe von Sensei Karol"
@@ -468,8 +523,8 @@ msgid "OUR <span>FUDOKAN</span> EVENTS"
 msgstr "UNSERE <span>FUDOKAN</span> VERANSTALTUNGEN"
 
 #: services/templates/services/home.html:685
-msgid "OUR <span>STUDENTS</span> TESTIMONIAL"
-msgstr "UNSERE <span>STUDENTEN</span> TESTIMONIALE"
+msgid "OUR <span></span> TESTIMONIALS"
+msgstr "UNSERE <span></span> TESTIMONIALE"
 
 #: services/templates/services/home.html:793
 msgid "OUR <span>MEMBERSHIP</span> PLAN"
@@ -642,3 +697,7 @@ msgstr "Fehlgeschlagen! Bitte füllen Sie das Captcha-Feld erneut aus!"
 #, python-brace-format
 msgid "Warning! {e}"
 msgstr "Warnung! {e}"
+
+#: services/templates/services/trainers.html:162
+msgid "At Energyfit Karate we envision a community where people of all ages, backgrounds, abilities, and genders feel safe, valued, and inspired to work towards building a better self, both physically and mentally"
+msgstr "Bei Energyfit Karate stellen wir uns eine Gemeinschaft vor, in der sich Menschen aller Altersgruppen, Hintergründe, Fähigkeiten und Geschlechter sicher und wertgeschätzt fühlen und inspiriert werden, auf ein besseres Selbst hinzuarbeiten, sowohl körperlich als auch geistig"

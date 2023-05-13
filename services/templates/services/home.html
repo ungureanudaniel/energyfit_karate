@@ -56,7 +56,7 @@
                                     <p>{% trans 'FUDOKAN SCHOOL IN BRASOV' %}</p>
                                     <div class="banner-btn">
                                         <a href="apply.html" class="btn--base">{% trans 'Enroll Now' %} <i class="fas fa-arrow-right ml-2"></i></a>
-                                        <a href="training.html" class="btn--base active">Training Classes <i class="fas fa-arrow-right ml-2"></i></a>
+                                        <a href="training.html" class="btn--base active">{% trans 'Training Classes' %} <i class="fas fa-arrow-right ml-2"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -92,7 +92,7 @@
 		<div class="container">
 				<div class="service-area">
 						<div class="service-element">
-                <h2 class="text-center">{% trans 'What we offer' %}</h2>
+                <h2 class="text-center">{% trans 'OUR OFFERING' %}</h2>
 								<img src="{% static 'images/element/element-24.png' %}" alt="element">
 						</div>
 						<div class="row justify-content-center mb-10-none">
@@ -206,7 +206,7 @@
 																<img src="{% static 'images/icon/icon-12.png' %}" alt="icon">
 														</div>
 														<div class="about-content">
-																<h3 class="title">MOTIVATION</h3>
+																<h3 class="title">{% trans 'MOTIVATION' %}</h3>
 																<p>{% trans 'If one stay long enough with us, he will start setting their own goals, participate into competitions and gain achievements, which in turn will model them him to be persons that sets goals in life and can put the necessary work and skills to reach them' %}.</p>
 														</div>
 												</div>
@@ -232,7 +232,7 @@
 						<div class="col-xl-6 col-lg-8 text-center">
 								<div class="section-header" data-aos="fade-up" data-aos-duration="1200">
 										{% blocktranslate %}<h2 class='section-title'><span>FUDOKAN KARATE</span> CHARACTERISTICS</h2>{% endblocktranslate %}
-										<p>{% trans '' %}.</p>
+										<p></p>
 								</div>
 						</div>
 				</div>
@@ -550,10 +550,10 @@
 								<div class="section-header-wrapper">
 										<div class="section-header white" data-aos="fade-right" data-aos-duration="1200">
 												<h2 class="section-title">{% blocktranslate %}OUR <span>SENSEIS</span>{% endblocktranslate %}</h2>
-												<p>{% trans 'Sensei Catalin Petre is the creator of this school and he teaches with the help of Sensei Karol' %}.</p>
+												<p>{% trans 'Introduction...' %}.</p>
 										</div>
 										<div class="all-btn text-center" data-aos="fade-left" data-aos-duration="1200">
-												<a href="master.html" class="custom-btn">View All</a>
+												<a href="{% url 'trainers' %}" class="custom-btn">{% trans 'More' %}</a>
 										</div>
 								</div>
 						</div>
@@ -562,25 +562,24 @@
 						<div class="col-xl-12">
 								<div class="trainer-slider">
 										<div class="swiper-wrapper">
-                      {% for i in masters %}
+                      {% for i in trainers %}
 												<div class="swiper-slide">
-
+                          <a href="{% url 'trainers-details' i.slug %}">
 														<div class="trainer-item">
 																<div class="trainer-thumb">
 																		<img src="{{ i.image.url }}" alt="trainer">
 																		<div class="trainer-overlay">
 																				<div class="trainer-content">
-																						<h3 class="title"><a href="master-details.html">{{ i.name }}</a></h3>
+																						<h3 class="title">{{ i.firstname }} {{ i.surname }}</h3>
 																						<span class="sub-title">{{ i.job }}</span>
 																				</div>
 																		</div>
 																</div>
 														</div>
-
+                            </a>
 												</div>
-                      {% endfor %}
+                        {% endfor %}
 										</div>
-
 										<div class="custom-pagination"></div>
 										<div class="slider-nav-area">
 												<div class="slider-prev">
@@ -682,7 +681,7 @@
 						<div class="col-xl-12">
 								<div class="section-header-wrapper">
 										<div class="section-header white" data-aos="fade-right" data-aos-duration="1200">
-												<h2 class="section-title">{% blocktranslate %}OUR <span>STUDENTS</span> TESTIMONIAL{% endblocktranslate %}</h2>
+												<h2 class="section-title">{% blocktranslate %}OUR <span></span> TESTIMONIALS{% endblocktranslate %}</h2>
 												<p>{% trans 'Energyfit Karate Brasov is the only Fudokan martial arts school in Brasov, a karate style that teaches modesty, focus and fighting for true human values. Our school has one of the most innovative and child friendly training programs you can find' %}.</p>
 										</div>
 										<div class="slider-nav-area" data-aos="fade-left" data-aos-duration="1200">
