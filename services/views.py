@@ -391,3 +391,7 @@ def privacy_view(request):
 def terms_view(request):
     template = 'services/terms.html'
     return render(request, template, {})
+#======================== terms page================================
+def events_view(request):
+    template = 'services/event.html'
+    return render(request, template, {})

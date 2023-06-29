@@ -2,7 +2,8 @@ from django.urls import path, include
 from django.conf import settings
 from django.views.generic.base import TemplateView
 from .views import home, apply_view, underconstruction, contacts_view, subscription_conf_view,\
-unsubscribe, about_view, TrainersDetailView, trainers_view, training_view, TrainingDetailView
+unsubscribe, about_view, TrainersDetailView, trainers_view, training_view, TrainingDetailView,\
+events_view
 #, gallery, add_testimonial, team, history, massmedia,\
  # contacts_view, page_not_found, coming_soon,\
  # faq_view, video_view, gallery
@@ -24,7 +25,7 @@ if settings.DEVELOPMENT == True:
         path('subscription-confirmation/', subscription_conf_view, name='subscription-confirmation'),
         path('unsubscribe', unsubscribe, name='unsubscribe'),
         path("apply-now", apply_view, name="apply"),
-        path('trainer-details/<slug:slug>/', TrainerDetailView.as_view(), name='trainer-details'),
+        path('trainer-details/<slug:slug>/', TrainersDetailView.as_view(), name='trainer-details'),
         path("trainers", trainers_view, name="trainers"),
 
         # path('gallery', gallery, name="gallery"),
@@ -64,6 +65,8 @@ else:
         # path('mass-media', massmedia, name="mass-media"),
         # path('_(frequently-asked-questions)', flora, name="flora"),
         path('contact', contacts_view, name="contact"),
+        path('events', events_view, name="events"),
+
         # path('gallery', gallery, name="gallery"),
         # path('videos', video_view, name="video"),
         # path('coming-soon', coming_soon, name="coming-soon"),

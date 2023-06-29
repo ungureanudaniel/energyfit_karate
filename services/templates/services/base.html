@@ -140,7 +140,7 @@
             <div class="container-fluid">
                 <div class="header-menu-content">
                     <nav class="navbar navbar-expand-xl p-0">
-                        <a class="site-logo site-title d-block d-xl-none" href="{% url 'home' %}"><img src="{% static 'images/logo2.png' %}" alt="site-logo"></a>
+                        <a class="site-logo site-title d-block d-xl-none" href="{% url 'home' %}"><img src="{% static 'images\logo2.png' %}" alt="site-logo"></a>
                         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="fas fa-bars"></span>
@@ -156,7 +156,7 @@
                                     <a class="text-uppercase" href="#0">{% trans 'Explore' %}</a>
                                     <ul class="sub-menu">
 																				<li><a class="text-uppercase" href="#">{% trans 'Gallery' %}</a></li>
-                                        <li><a class="text-uppercase" href="#">{% trans 'Events' %}</a></li>
+                                        <li><a class="text-uppercase" href="{% url 'events' %}">{% trans 'Events' %}</a></li>
                                         <li><a class="text-uppercase" href="#">{% trans 'Pricing plan' %}</a></li>
                                         <li><a class="text-uppercase" href="#">FAQ</a></li>
                                     </ul>
