@@ -1,0 +1,188 @@
+{% extends 'services/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="banner-section banner-section-two inner-banner-section bg-overlay-red bg_img" data-background="{% static 'images/backgrounds/bg-7.png' %}">
+    <div class="section-logo-text">
+        <span class="title">ENERGYFIT</span>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-end mb-30-none">
+            <div class="col-xl-12 col-lg-12 text-center mb-30">
+                <div class="banner-content" data-aos="fade-up" data-aos-duration="1800">
+                    <h1 class="title">{{ trainers.job }} <span></span></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="breadcrumb-area">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'Home' %}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ trainers.firstname }} {{ trainers.surname }}</li>
+        </ol>
+    </nav>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<a href="#" class="scrollToTop">
+    <img src="{% static 'images/element/arrow_up_icon.png' %}" style="width:80px;height:auto;color: red;" alt="element">
+    <div class="scrollToTop-icon">
+    </div>
+</a>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Trainer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="trainer-section trainer-details-section ptb-120">
+    <div class="trainer-details-element-one my-paroller" data-paroller-factor="0.2" data-paroller-type="foreground" data-paroller-direction="vertical">
+    </div>
+    <div class="trainer-details-element-two my-paroller" data-paroller-factor="0.2" data-paroller-type="foreground" data-paroller-direction="vertical">
+    </div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center mb-30-none">
+            <div class="col-xl-6 col-lg-6 mb-30">
+                <div class="about-thumb">
+                    <img src="{{ trainers.image.url }}" alt="about">
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 mb-30">
+                <div class="trainer-about-content-area">
+                    <div class="trainer-about-header">
+                        <h2 class="title">{{ trainers.firstname }} {{ trainers.surname }}</h2>
+                        <span class="sub-title">{{ trainers.job }}</span>
+                    </div>
+                    <div class="trainer-about-body">
+                        <p>{{ trainers.intro|safe|capfirst }}.</p>
+                    </div>
+                    <div class="trainer-about-footer">
+                        <ul class="trainer-about-list">
+                            <li>
+                                <img src="{% static 'images/icon/icon-42.png' %}" alt="icon">
+                                <span>{{ trainers.phone }}</span>
+                            </li>
+                            <li>
+                                <img src="{% static 'images/icon/icon-43.png' %}" alt="icon">
+                                <span>{{ trainers.email }}</span>
+                            </li>
+                        </ul>
+                        <div class="trainer-about-social-area">
+                            <ul class="trainer-about-social">
+                                <li><a href="#0"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#0"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#0"><i class="fab fa-google-plus-g"></i></a></li>
+                                <li><a href="#0"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-widget-area">
+            <h3 class="widget-title">{% trans 'ABOUT ME' %}</h3>
+            <p>{{ trainers.text|safe|capfirst }}.</p>
+
+            <div class="about-widget-thumb">
+                <img src="{% static 'images/backgrounds/bg-7.png' %}" alt="bg">
+                <div class="about-widget-video">
+                    <div class="video-main">
+                        <div class="promo-video">
+                            <div class="waves-block">
+                                <div class="waves wave-1"></div>
+                                <div class="waves wave-2"></div>
+                                <div class="waves wave-3"></div>
+                            </div>
+                        </div>
+                        <a class="video-icon" data-rel="lightcase:myCollection" href="https://www.youtube.com/embed/YDErI8Lphho">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="skill-widget-area">
+            <h3 class="widget-title">{% trans 'BEST SKILLS' %}</h3>
+            <div class="row justify-content-center mb-30-none">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                    <div class="choose-item">
+                        <div class="chart" data-percent="{{ trainers.skill1_level }}"><span>{{ trainers.skill1_level }}%</span></div>
+                        <h4 class="title">{{ trainers.skill1|upper }}</h4>
+                        <p>{{ trainers.skill1_descr|safe }}.</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                    <div class="choose-item">
+                      <div class="chart" data-percent="{{ trainers.skill2_level }}"><span>{{ trainers.skill2_level }}%</span></div>
+                      <h4 class="title">{{ trainers.skill2|upper }}</h4>
+                      <p>{{ trainers.skill2_descr|safe }}.</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                    <div class="choose-item">
+                      <div class="chart" data-percent="{{ trainers.skill1_level }}"><span>{{ trainers.skill3_level }}%</span></div>
+                      <h4 class="title">{{ trainers.skill3|upper }}</h4>
+                      <p>{{ trainers.skill3_descr|safe }}.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="experience-widget-area">
+            <h3 class="widget-title">{% trans 'EXPERIENCE' %}</h3>
+            <p>{{ trainers.experience|safe }}</p>
+            <div class="statistics-area">
+                <div class="row justify-content-center mt-20-none mb-30-none">
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-30">
+                        <div class="statistics-item">
+                            <div class="statistics-content">
+                                <div class="odo-area">
+                                    <h3 class="odo-title odometer" data-odometer-final="{{ trainers.nr_students }}">0</h3>
+                                    <h3 class="title">+</h3>
+                                </div>
+                                <p>{% trans 'Fact 1' %}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-30">
+                        <div class="statistics-item">
+                            <div class="statistics-content">
+                                <div class="odo-area">
+                                    <h3 class="odo-title odometer" data-odometer-final="{{ trainers.training_hours }}">0</h3>
+                                    <h3 class="title">+</h3>
+                                </div>
+                                <p>{% trans 'Hours of Training' %}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-30">
+                        <div class="statistics-item">
+                            <div class="statistics-content">
+                                <div class="odo-area">
+                                    <h3 class="odo-title odometer" data-odometer-final="{{ trainers.competitions }}">0</h3>
+                                    <h3 class="title">+</h3>
+                                </div>
+                                <p>{% trans 'Competitions' %}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Trainer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+{% endblock %}

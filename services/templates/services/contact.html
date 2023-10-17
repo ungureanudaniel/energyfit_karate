@@ -1,0 +1,205 @@
+{% extends 'services/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="banner-section banner-section-two inner-banner-section bg-overlay-red bg_img" data-background="{% static 'images/backgrounds/bg-7.png' %}">
+    <div class="section-logo-text">
+        <span class="title">ENERGYFIT</span>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-end mb-30-none">
+            <div class="col-xl-12 col-lg-12 text-center mb-30">
+                <div class="banner-content" data-aos="fade-up" data-aos-duration="1800">
+                    {% blocktranslate %}<h1 class='title'>CONTACT <span>US</span></h1>{% endblocktranslate %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="breadcrumb-area">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'Home' %}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{% trans 'Contact Us' %}</li>
+        </ol>
+    </nav>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<a href="#" class="scrollToTop">
+    <img src="{% static 'images/element/arrow_up_icon.png' %}" style="width:80px;height:auto;color: red;" alt="element">
+    <div class="scrollToTop-icon">
+    </div>
+</a>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Contact-item
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="contact-item-section ptb-120">
+    <div class="contact-element-one my-paroller" data-paroller-factor="0.2" data-paroller-type="foreground" data-paroller-direction="vertical">
+        <img src="{% static 'images/logo/logo-energyfit-cerc.png' %}" alt="element">
+    </div>
+    <div class="contact-element-two my-paroller" data-paroller-factor="0.2" data-paroller-type="foreground" data-paroller-direction="vertical">
+        <img src="{% static 'images/logo/logo-energyfit-cerc.png' %}" alt="element">
+    </div>
+		{% if messages %}
+		<div id="error-section" class="pb-3 col-12 justify-content-center" style="justify-content:center">
+			{% include 'includes/messages.html' %}
+		</div>
+		{% else %}
+		<div id="error-section" class="pb-5 col-12 justify-content-center" style="justify-content:center">
+		</div>
+		{% endif %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12 text-center">
+                <div class="section-header">
+                    {% blocktranslate %}<h2 class='section-title'>Get More <span>Information</span></h2>{% endblocktranslate %}
+                    <p>{% trans 'By contacting us using one of the options below' %}.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mb-30-none">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                <div class="contact-item">
+                    <div class="contact-icon-area">
+                        <div class="contact-icon">
+                            <img src="{% static 'images/icon/icon-64.png' %}" alt="icon">
+                        </div>
+                    </div>
+                    <div class="contact-content">
+                        <h4 class="title">{% trans 'OFFICE ADDRESS' %}</h4>
+                        <p>Str. Poarta Schei 39, Brașov 500020, Romania <br> <a href="https://goo.gl/maps/eUpdbgLurJBWbRe1A" target="_blank">{% trans 'view on map' %}</a> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                <div class="contact-item">
+                    <div class="contact-icon-area">
+                        <div class="contact-icon">
+                            <img src="{% static 'images/icon/icon-65.png' %}" alt="icon">
+                        </div>
+                    </div>
+                    <div class="contact-content">
+                        <h4 class="title">{% trans 'TELEPHONE NUMBER' %}</h4>
+                        <p>+40 0755 931 959 <br> <a href="tel:11234567">{% trans 'call now' %}</a> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                <div class="contact-item">
+                    <div class="contact-icon-area">
+                        <div class="contact-icon">
+                            <img src="{% static 'images/icon/icon-66.png' %}" alt="icon">
+                        </div>
+                    </div>
+                    <div class="contact-content">
+											<h4 class="title">{% trans 'SEND MAIL' %}</h4>
+                        <p>contact@energyfit.ro <br> <a href="mailto:contact@energyfit.ro">{% trans 'send now' %}</a> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Contact-item
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Account widget
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="account-widget-section account-widget-section-two account-widget-section--style ptb-120">
+    <div class="container">
+        <div class="row justify-content-center align-items-center mb-60-none">
+            <div class="col-xl-6 col-lg-6 mb-60">
+                <div class="account-widget-left">
+                    <div class="section-header">
+                        <h2 class="section-title">{% blocktranslate %}A burning Question? Feel Free to get directly in <span>Contact</span> with Us!{% endblocktranslate %}</h2>
+                        <p>{% trans 'Using this form' %}. </p>
+                    </div>
+                    <div class="banner-widget">
+                        <div class="banner-widget-wrapper">
+                            <div class="banner-widget-left">
+                                <div class="banner-widget-thumb">
+                                    <img src="{% static 'images/backgrounds/catalin_karol1.webp' %}" alt="element">
+                                </div>
+                            </div>
+                            <div class="banner-widget-middle">
+                                <div class="banner-widget-content">
+                                    <p>{% trans 'Join over' %} <span>60</span> {% trans 'students' %}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-social-area">
+                        <span>{% trans 'FOLLOW US' %}</span>
+                        <ul class="contact-social">
+                            <li><a href="https://www.facebook.com/EnergyFitKarate"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#0"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 mb-60">
+                <div class="account-widget-form-area">
+                    <form class="account-widget-form">
+                        <div class="row justify-content-center mb-25-none">
+                            <div class="col-xl-12 form-group">
+                                <input type="text" class="form--control" name="author" placeholder="{% trans 'Your Name' %}*">
+                            </div>
+                            <div class="col-xl-12 form-group">
+                                <input type="email" class="form--control" name="email" placeholder="{% trans 'Your Email' %}*">
+                            </div>
+                            <div class="col-xl-12 form-group">
+                                <input type="text" class="form--control" name="phone"  placeholder="{% trans 'Your Phone' %}*">
+                            </div>
+                            <div class="col-xl-12 form-group">
+                                <textarea class="form--control" name="message" placeholder="{% trans 'Your Message' %}*"></textarea>
+                            </div>
+                            <div class="col-xl-12 form-group">
+                                <button type="submit" class="btn--base">{% trans 'Send Now' %} <i class="fas fa-arrow-right ml-2"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Account widget
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Map
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!-- <section class="map-section ptb-120">
+    <div class="container">
+        <div class="row justify-content-center mb-5-none">
+            <div class="col-xl-12">
+                <div class="map-area">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3070.1899657893728!2d90.42380431666383!3d23.779746865573756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7499f257eab%3A0xe6b4b9eacea70f4a!2sManama+Tower!5e0!3m2!1sen!2sbd!4v1561542597668!5m2!1sen!2sbd" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Map
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+{% endblock %}

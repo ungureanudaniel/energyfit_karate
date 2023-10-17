@@ -1,0 +1,250 @@
+
+{% extends 'services/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="banner-section banner-section-two inner-banner-section bg-overlay-red bg_img" data-background="{% static 'images/backgrounds/bg-7.png' %}">
+    <div class="section-logo-text">
+        <span class="title">ENERGYFIT</span>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-end mb-30-none">
+            <div class="col-xl-12 col-lg-12 text-center mb-30">
+                <div class="banner-content" data-aos="fade-up" data-aos-duration="1800">
+                    {% blocktranslate %}<h1 class='title'>OUR <span>PRICING PLANS</span></h1>{% endblocktranslate %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="breadcrumb-area">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'Home' %}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{% trans 'Pricing Plan' %}</li>
+        </ol>
+    </nav>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<a href="#" class="scrollToTop">
+    <img src="{% static 'images/element/arrow_up_icon.png' %}" style="width:80px;height:auto;color: red;" alt="element">
+    <div class="scrollToTop-icon">
+    </div>
+</a>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Start Plan
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="plan-section pt-120 pb-100">
+    <div class="container">
+            <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-8 text-center">
+                            <div class="section-header" data-aos="fade-up" data-aos-duration="1200">
+                                    <h2 class="section-title">{% blocktranslate %}OUR <span>MEMBERSHIP</span> PLAN{% endblocktranslate %}</h2>
+                                    <p>{% trans 'We are trying to fit every situation and every pocket' %}.</p>
+                            </div>
+                    </div>
+            </div>
+            <div class="row">
+                    <div class="col-xl-12">
+                    <nav class="plan-tab" data-aos="fade-up" data-aos-duration="1200">
+                            <span class="monthly_tab_title">{% trans 'Beginner' %}</span>
+                            <span class="plan-tab-switcher"></span>
+                            <span class="annual_tab_title">{% trans 'Advanced' %}</span>
+                    </nav>
+                    </div>
+            </div>
+            <div class="plan-area change-subs-duration">
+                    <div class="row justify-content-center mb-30-none">
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 mb-30">
+                                    <div class="plan-item" data-aos="zoom-in" data-aos-duration="1200">
+                                            <div class="plan-content">
+                                                    <div class="plan-header">
+                                                            <div class="plan-badge-area">
+                                                                    <span class="plan-badge red">{% trans 'Per Session' %}</span>
+                                                            </div>
+                                                    </div>
+                                                    <div class="plan-price-area">
+                                                            <h2 class="price-title"><sup>RON</sup>35<sub>/{% trans 'session' %}</sub></h2>
+                                                    </div>
+                                                    <ul class="plan-list">
+                          <li>{% trans 'Monday and Wednesday every week' %}</li>
+                          <li>{% trans 'Saturday training 2 weeks before a competition' %}</li>
+                          <li>{% trans 'Students who represent the club at competitions receive a uniform with our logo' %}</li>
+                                                    </ul>
+                                            </div>
+                                            <div class="plan-footer">
+                                                    <a href="#0">
+                                                            <h3 class="title">{% trans 'Enroll Now' %}</h3>
+                                                            <div class="plan-btn"><i class="fas fa-angle-right"></i></div>
+                                                    </a>
+                                            </div>
+                                            <div class="plan-overlay">
+                      <img src="{% static 'images/logo_cut.webp' %}" alt="element">
+                                            </div>
+                                    </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 mb-30">
+                                    <div class="plan-item active" data-aos="zoom-in" data-aos-duration="1200">
+                                            <span class="plan-badge-top">{% trans 'Popular' %}</span>
+                                            <div class="plan-content">
+                                                    <div class="plan-header">
+                                                            <div class="plan-badge-area">
+                                                                    <span class="plan-badge red">{% trans 'Monthly' %}</span>
+                                                            </div>
+                                                    </div>
+                                                    <div class="plan-price-area">
+                                                            <h2 class="price-title"><sup>RON</sup>200<sub>/{% trans 'month' %}</sub></h2>
+                                                    </div>
+                                                    <ul class="plan-list">
+                                                            <li>{% trans 'Monday and Wednesday every week' %}</li>
+                                                            <li>{% trans 'Saturday training included, 2 weeks before a competition' %}</li>
+                                                            <li>{% trans 'Students who represent the club at competitions receive a uniform with our logo' %}</li>
+                                                    </ul>
+                                            </div>
+                                            <div class="plan-footer">
+                                                    <a href="#0">
+                                                            <h3 class="title">{% trans 'Enroll Now' %}</h3>
+                                                            <div class="plan-btn"><i class="fas fa-angle-right"></i></div>
+                                                    </a>
+                                            </div>
+                                            <div class="plan-overlay">
+                      <img src="{% static 'images/logo_cut.webp' %}" alt="element">
+                                            </div>
+                                    </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 mb-30">
+                                    <div class="plan-item" data-aos="zoom-in" data-aos-duration="1200">
+                                            <div class="plan-content">
+                                                    <div class="plan-header">
+                                                            <div class="plan-badge-area">
+                                                                    <span class="plan-badge red">{% trans 'Half month' %}</span>
+                                                            </div>
+                                                    </div>
+                                                    <div class="plan-price-area">
+                                                            <h2 class="price-title"><sup>RON</sup>135<sub>/{% trans 'half-month' %}</sub></h2>
+                                                    </div>
+                                                    <ul class="plan-list">
+                          <li>{% trans 'Monday and Wednesday every week' %}</li>
+                          <li>{% trans 'Saturday training included, 2 weeks before a competition' %}</li>
+                          <li>{% trans 'Students who represent the club at competitions receive a uniform with our logo' %}</li>
+                                                    </ul>
+                                            </div>
+                                            <div class="plan-footer">
+                                                    <a href="#0">
+                                                            <h3 class="title">{% trans 'Enroll Now' %}</h3>
+                                                            <div class="plan-btn"><i class="fas fa-angle-right"></i></div>
+                                                    </a>
+                                            </div>
+                                            <div class="plan-overlay">
+                      <img src="{% static 'images/logo_cut.webp' %}" alt="element">
+                                            </div>
+                                    </div>
+                            </div>
+                    </div>
+            </div>
+            <div class="plan-area">
+                    <div class="row justify-content-center mb-30-none">
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 mb-30">
+                                    <div class="plan-item" data-aos="zoom-in" data-aos-duration="1200">
+                                            <div class="plan-content">
+                                                    <div class="plan-header">
+                                                            <div class="plan-badge-area">
+                                                                    <span class="plan-badge red">{% trans 'Per Session' %}</span>
+                                                            </div>
+                                                    </div>
+                                                    <div class="plan-price-area">
+                                                            <h2 class="price-title"><sup>RON</sup>35<sub>/{% trans 'session' %}</sub></h2>
+                                                    </div>
+                                                    <ul class="plan-list">
+                          <li>{% trans 'Monday and Wednesday every week' %}</li>
+                          <li>{% trans 'Every Saturday training included' %}</li>
+                          <li>{% trans 'Students who represent the club at competitions receive a uniform with our logo' %}</li>
+                                                    </ul>
+                                            </div>
+                                            <div class="plan-footer">
+                                                    <a href="#0">
+                                                            <h3 class="title">{% trans 'Enroll Now' %}</h3>
+                                                            <div class="plan-btn"><i class="fas fa-angle-right"></i></div>
+                                                    </a>
+                                            </div>
+                                            <div class="plan-overlay">
+                      <img src="{% static 'images/logo_cut.webp' %}" alt="element">
+                                            </div>
+                                    </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 mb-30">
+                                    <div class="plan-item active" data-aos="zoom-in" data-aos-duration="1200">
+                                            <span class="plan-badge-top">{% trans 'Popular' %}</span>
+                                            <div class="plan-content">
+                                                    <div class="plan-header">
+                                                            <div class="plan-badge-area">
+                                                                    <span class="plan-badge red">{% trans 'Monthly' %}</span>
+                                                            </div>
+                                                    </div>
+                                                    <div class="plan-price-area">
+                                                            <h2 class="price-title"><sup>RON</sup>250<sub>/{% trans 'month' %}</sub></h2>
+                                                    </div>
+                                                    <ul class="plan-list">
+                          <li>{% trans 'Monday and Wednesday every week' %}</li>
+                          <li>{% trans 'Every Saturday training included' %}</li>
+                          <li>{% trans 'Students who represent the club at competitions receive a uniform with our logo' %}</li>
+                                                    </ul>
+                                            </div>
+                                            <div class="plan-footer">
+                                                    <a href="#0">
+                                                            <h3 class="title">{% trans 'Enroll Now' %}</h3>
+                                                            <div class="plan-btn"><i class="fas fa-angle-right"></i></div>
+                                                    </a>
+                                            </div>
+                                            <div class="plan-overlay">
+                      <img src="{% static 'images/logo2.png' %}" alt="element">
+                                            </div>
+                                    </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 mb-30">
+                                    <div class="plan-item" data-aos="zoom-in" data-aos-duration="1200">
+                                            <div class="plan-content">
+                                                    <div class="plan-header">
+                                                            <div class="plan-badge-area">
+                                                                    <span class="plan-badge red">{% trans 'Half month' %}</span>
+                                                            </div>
+                                                    </div>
+                                                    <div class="plan-price-area">
+                                                            <h2 class="price-title"><sup>RON</sup>135<sub>/{% trans 'month' %}</sub></h2>
+                                                    </div>
+                                                    <ul class="plan-list">
+                            <li>{% trans 'Monday and Wednesday every week' %}</li>
+                            <li>{% trans 'Every Saturday training included' %}</li>
+                            <li>{% trans 'Students who represent the club at competitions receive a uniform with our logo' %}</li>
+                                                    </ul>
+                                            </div>
+                                            <div class="plan-footer">
+                                                    <a href="#0">
+                                                            <h3 class="title">GO ELITE</h3>
+                                                            <div class="plan-btn"><i class="fas fa-angle-right"></i></div>
+                                                    </a>
+                                            </div>
+                                            <div class="plan-overlay">
+                                                    <img src="{% static 'images/logo2.png' %}" alt="element">
+                                            </div>
+                                    </div>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Plan
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+{% endblock %}

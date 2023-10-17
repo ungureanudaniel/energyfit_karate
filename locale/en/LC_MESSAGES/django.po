@@ -1,0 +1,1540 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: .\services\templates\services\coming-soon.html:25
+#: .\services\templates\services\training-details.html:152
+#: .\services\templates\services\training-details.html:165
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-17 22:59+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\energyfit_main\settings.py:158
+msgid "Română"
+msgstr ""
+
+#: .\energyfit_main\settings.py:159
+msgid "English"
+msgstr ""
+
+#: .\services\forms.py:18
+msgid "Full name..."
+msgstr ""
+
+#: .\services\forms.py:20
+msgid "Phone number..."
+msgstr ""
+
+#: .\services\forms.py:21
+msgid "Subject..."
+msgstr ""
+
+#: .\services\forms.py:22
+msgid "Your message..."
+msgstr ""
+
+#: .\services\models.py:172
+msgid "training"
+msgstr ""
+
+#: .\services\models.py:173
+msgid "competitions"
+msgstr ""
+
+#: .\services\models.py:174
+msgid "other"
+msgstr ""
+
+#: .\services\templates\includes\newsletter.html:18
+msgid "SUBSCRIBE NOW"
+msgstr ""
+
+#: .\services\templates\includes\newsletter.html:19
+msgid "And stay up to date with offers and news"
+msgstr ""
+
+#: .\services\templates\includes\newsletter.html:24
+#: .\services\templates\services\apply.html:69
+msgid "Email Address"
+msgstr ""
+
+#: .\services\templates\includes\newsletter.html:25
+msgid "Subscribe"
+msgstr ""
+
+#: .\services\templates\services\404.html:28
+msgid "PAGE NOT FOUND"
+msgstr ""
+
+#: .\services\templates\services\about.html:16
+msgid "<h1 class='title'>ABOUT <span>US</span></h1>"
+msgstr ""
+
+#: .\services\templates\services\about.html:25
+#: .\services\templates\services\apply.html:25
+#: .\services\templates\services\base.html:151
+#: .\services\templates\services\blog-classic.html:25
+#: .\services\templates\services\blog-details.html:26
+#: .\services\templates\services\blog.html:33
+#: .\services\templates\services\coming-soon.html:34
+#: .\services\templates\services\contact.html:25
+#: .\services\templates\services\contact_under.html:219
+#: .\services\templates\services\event-details.html:26
+#: .\services\templates\services\event.html:33
+#: .\services\templates\services\faq.html:25
+#: .\services\templates\services\gallery.html:25
+#: .\services\templates\services\media.html:33
+#: .\services\templates\services\media_bk.html:25
+#: .\services\templates\services\news-details.html:26
+#: .\services\templates\services\news.html:25
+#: .\services\templates\services\pricing-plan.html:26
+#: .\services\templates\services\subscription_conf.html:28
+#: .\services\templates\services\trainers-details.html:25
+#: .\services\templates\services\trainers.html:25
+#: .\services\templates\services\training-details.html:26
+#: .\services\templates\services\training.html:25
+#: .\services\templates\services\underconstruction.html:160
+#: .\services\templates\services\unsubscribe.html:219
+msgid "Home"
+msgstr ""
+
+#: .\services\templates\services\about.html:26
+#: .\services\templates\services\base.html:152
+#: .\services\templates\services\underconstruction.html:161
+msgid "About us"
+msgstr ""
+
+#: .\services\templates\services\about.html:63
+msgid "<h4 class=\"title\">INTERNATIONAL FUDOKAN AWARDS</h4>"
+msgstr ""
+
+#: .\services\templates\services\about.html:70
+#: .\services\templates\services\home.html:170
+msgid "ABOUT <span>ENERGYFIT KARATE</span> BRASOV "
+msgstr ""
+
+#: .\services\templates\services\about.html:71
+msgid ""
+"EnergyFit Karate Brasov Sports Club was founded in 2017 by Petre Cătălin "
+"sensei (3 dan - fudokan). From 2014 until now the club has gone through "
+"several stages that have shaped this sports structure. EnergyFit started "
+"from the passion for martial arts of sensei Petre Cătălin who started this "
+"path since 2004 at C.S. Petrom Ploiești. Trained by the two sensei Apostol "
+"Liviu and Ileana, Cătălin developed a passion for this martial arts path "
+"since primary school, and in 2009 he consolidated this path through the "
+"Faculty of Physical Education and Sport at Transilvania University of "
+"Brașov. His curiosity for the academic and pedagogical environment continued "
+"in 2014 by pursuing master studies in the same university on a detailed "
+"specialization, Psychomotor Diagnosis and Prognosis - Research in "
+"Performance Sport. Cătălin's passion for karate was also noticed by the "
+"professors of Transylvania University who decided to give him the "
+"opportunity to teach the Combat and Self-Defense courses in the Faculty of "
+"Physical Education and Mountain Sports. Also in 2014, the sports club "
+"EnergyFit Karate Brașov was founded out of the desire to apply what was "
+"learnt at Transylvania University. Sensei Petre Cătălin strengthened the "
+"passion for karate with scientific training, the group of athletes allowed "
+"research through various scientific studies that later blossomed into "
+"competitive results and professionalism of students who go through the "
+"program applied in the club EnergyFit Karate Brașov. Currently the club is "
+"organizationally made up of the President, Vice President and Secretary and "
+"consists of:"
+msgstr ""
+
+#: .\services\templates\services\about.html:73
+msgid "Over 50 athletes"
+msgstr ""
+
+#: .\services\templates\services\about.html:74
+msgid "Four groups"
+msgstr ""
+
+#: .\services\templates\services\about.html:75
+msgid "Two sensei - Petre Cătălin - 3 dan, Czoguly Karoly - 1 dan"
+msgstr ""
+
+#: .\services\templates\services\about.html:76
+msgid "Four Fudokan licensed referees"
+msgstr ""
+
+#: .\services\templates\services\about.html:77
+msgid "An official partner - Patronage of Family Doctors Brasov"
+msgstr ""
+
+#: .\services\templates\services\about.html:78
+msgid "Two media partners - Info1Tv, Radio Romania Brasov FM"
+msgstr ""
+
+#: .\services\templates\services\about.html:79
+msgid "A partnership with Johannes Honterus National College"
+msgstr ""
+
+#: .\services\templates\services\about.html:81
+msgid ""
+"We enjoy the support of over 1600 followers who we make proud every year "
+"with our intense competitive activity. From 6 medals in 2016 we manage to "
+"boast over 200 medals in 2023 of which half are international"
+msgstr ""
+
+#: .\services\templates\services\about.html:90
+msgid "Founder"
+msgstr ""
+
+#: .\services\templates\services\about.html:108
+msgid "Initiation into Fudokan karate"
+msgstr ""
+
+#: .\services\templates\services\about.html:109
+msgid ""
+"We initiate anyone into Fudokan starting at the age of 6. Each student "
+"learns by his own rythm"
+msgstr ""
+
+#: .\services\templates\services\about.html:119
+msgid "Performance career guidance"
+msgstr ""
+
+#: .\services\templates\services\about.html:120
+msgid ""
+"For those need professional counseling into Fudokan we are always here to "
+"help"
+msgstr ""
+
+#: .\services\templates\services\about.html:130
+msgid "Initiation into Kobudo"
+msgstr ""
+
+#: .\services\templates\services\about.html:131
+msgid ""
+"Kobudo is a traditional specific weapon fighting style, useful for self-"
+"defence in different situations"
+msgstr ""
+
+#: .\services\templates\services\about.html:142
+msgid "General physical training"
+msgstr ""
+
+#: .\services\templates\services\about.html:143
+msgid ""
+"If your wish is just to get fit, Fudokan also comprises that and we will "
+"help you to get strength, elasticity and endurance"
+msgstr ""
+
+#: .\services\templates\services\about.html:161
+msgid "SEE OUR VIDEO"
+msgstr ""
+
+#: .\services\templates\services\about.html:217
+#: .\services\templates\services\trainers.html:153
+msgid "Students"
+msgstr ""
+
+#: .\services\templates\services\about.html:228
+msgid "Hours on the Tatami"
+msgstr ""
+
+#: .\services\templates\services\about.html:239
+#: .\services\templates\services\gallery.html:70
+#: .\services\templates\services\trainers-details.html:175
+#: .\services\templates\services\trainers.html:164
+#: .\services\templates\services\trainers.html:175
+msgid "Competitions"
+msgstr ""
+
+#: .\services\templates\services\about.html:250
+#: .\services\templates\services\trainers.html:186
+msgid "Medals"
+msgstr ""
+
+#: .\services\templates\services\about.html:273
+msgid "<h2 class=\"section-title\">OUR <span></span> FEATURES</h2>"
+msgstr ""
+
+#: .\services\templates\services\about.html:274
+#: .\services\templates\services\about.html:422
+#: .\services\templates\services\base.html:221
+#: .\services\templates\services\contact_under.html:410
+#: .\services\templates\services\faq.html:175
+#: .\services\templates\services\faq.html:204
+#: .\services\templates\services\faq.html:234
+#: .\services\templates\services\home.html:171
+#: .\services\templates\services\home.html:475
+#: .\services\templates\services\home.html:523
+#: .\services\templates\services\home.html:552
+#: .\services\templates\services\home.html:582
+#: .\services\templates\services\home.html:977
+#: .\services\templates\services\training.html:152
+#: .\services\templates\services\underconstruction.html:257
+#: .\services\templates\services\unsubscribe.html:281
+msgid ""
+"Energyfit Karate Brasov is the only Fudokan martial arts school in Brasov, a "
+"karate style that teaches modesty, focus and fighting for true human values. "
+"Our school has one of the most innovative and child friendly training "
+"programs you can find"
+msgstr ""
+
+#: .\services\templates\services\about.html:290
+msgid "FREE ADVICE"
+msgstr ""
+
+#: .\services\templates\services\about.html:291
+msgid "We will offer any info you need before deciding to join us"
+msgstr ""
+
+#: .\services\templates\services\about.html:303
+msgid "MODERN TEACHING"
+msgstr ""
+
+#: .\services\templates\services\about.html:304
+msgid "Innovative and child friendly training programs"
+msgstr ""
+
+#: .\services\templates\services\about.html:316
+msgid "BEST TRAINERS"
+msgstr ""
+
+#: .\services\templates\services\about.html:317
+msgid ""
+"Our teachers have high achievements and most important, patience and kindness"
+msgstr ""
+
+#: .\services\templates\services\about.html:329
+msgid "FLEXIBLE FEES"
+msgstr ""
+
+#: .\services\templates\services\about.html:330
+msgid "Our training fees plans are flexible to help anyone experience Fudokan"
+msgstr ""
+
+#: .\services\templates\services\about.html:367
+#: .\services\templates\services\home.html:416
+#: .\services\templates\services\trainers.html:61
+msgid "OUR <span>SENSEIS</span>"
+msgstr ""
+
+#: .\services\templates\services\about.html:368
+#: .\services\templates\services\home.html:417
+#: .\services\templates\services\trainers.html:62
+msgid "Introduction..."
+msgstr ""
+
+#: .\services\templates\services\about.html:421
+#: .\services\templates\services\faq.html:174
+#: .\services\templates\services\home.html:522
+msgid "OUR <span></span> TESTIMONIALS"
+msgstr ""
+
+#: .\services\templates\services\addcategory.html:22
+#: .\services\templates\services\addservices.html:27
+msgid "Add a service category"
+msgstr ""
+
+#: .\services\templates\services\addcategory.html:60
+msgid "Solve the "
+msgstr ""
+
+#: .\services\templates\services\apply.html:16
+#: .\services\templates\services\blog-classic.html:16
+msgid "<h1 class='title'>ENROLL <span>NOW</span></h1>"
+msgstr ""
+
+#: .\services\templates\services\apply.html:26
+#: .\services\templates\services\blog-classic.html:26
+msgid "Enroll"
+msgstr ""
+
+#: .\services\templates\services\apply.html:57
+msgid ""
+"<h2 class='section-title'>To <span>Apply</span> Write Us <span>Today!</"
+"span></h2>"
+msgstr ""
+
+#: .\services\templates\services\apply.html:58
+msgid "And we will reach back to you as soon as possible"
+msgstr ""
+
+#: .\services\templates\services\apply.html:65
+msgid "Enter Name"
+msgstr ""
+
+#: .\services\templates\services\apply.html:66
+msgid "Type in your name"
+msgstr ""
+
+#: .\services\templates\services\apply.html:70
+#: .\services\templates\services\unsubscribe.html:242
+msgid "Type in your email"
+msgstr ""
+
+#: .\services\templates\services\apply.html:73
+msgid "Phone Number"
+msgstr ""
+
+#: .\services\templates\services\apply.html:74
+msgid "Type in your phone number"
+msgstr ""
+
+#: .\services\templates\services\apply.html:77
+msgid "Select your desired class"
+msgstr ""
+
+#: .\services\templates\services\apply.html:87
+msgid "Write Message"
+msgstr ""
+
+#: .\services\templates\services\apply.html:88
+msgid "Start typing your message here"
+msgstr ""
+
+#: .\services\templates\services\apply.html:91
+msgid "Get Enrolled Now"
+msgstr ""
+
+#: .\services\templates\services\apply.html:119
+msgid ""
+"<h2 class=\"section-title\">We can provide you one of the <span>Best Fudokan "
+"Training Programs in Europe.</span></h2>"
+msgstr ""
+
+#: .\services\templates\services\apply.html:120
+msgid ""
+"Learn to practice and master Fudokan martial arts together with a beautiful "
+"team that may become a second family! This Karate style is proven to enhance "
+"self defence abilities, focus on tasks, self-awareness, improves balance in "
+"life and relieves stress, all while you build up fitness and health"
+msgstr ""
+
+#: .\services\templates\services\base.html:12
+#: .\services\templates\services\contact_under.html:10
+#: .\services\templates\services\underconstruction.html:11
+#: .\services\templates\services\unsubscribe.html:10
+msgid "Energyfit"
+msgstr ""
+
+#: .\services\templates\services\base.html:14
+#: .\services\templates\services\underconstruction.html:13
+msgid "One of the best karate schools in Brasov"
+msgstr ""
+
+#: .\services\templates\services\base.html:21
+#: .\services\templates\services\underconstruction.html:20
+msgid "Energyfit | Un Sanctuar al Artelor Martiale"
+msgstr ""
+
+#: .\services\templates\services\base.html:22
+#: .\services\templates\services\underconstruction.html:21
+msgid "Un Sanctuar al Artelor Martiale"
+msgstr ""
+
+#: .\services\templates\services\base.html:154
+#: .\services\templates\services\gallery.html:69
+#: .\services\templates\services\training.html:16
+#: .\services\templates\services\training.html:26
+#: .\services\templates\services\underconstruction.html:163
+msgid "Training"
+msgstr ""
+
+#: .\services\templates\services\base.html:157
+#: .\services\templates\services\underconstruction.html:166
+msgid "Explore"
+msgstr ""
+
+#: .\services\templates\services\base.html:159
+#: .\services\templates\services\base.html:278
+#: .\services\templates\services\contact_under.html:443
+#: .\services\templates\services\gallery.html:26
+#: .\services\templates\services\underconstruction.html:168
+#: .\services\templates\services\underconstruction.html:313
+#: .\services\templates\services\unsubscribe.html:314
+msgid "Gallery"
+msgstr ""
+
+#: .\services\templates\services\base.html:160
+#: .\services\templates\services\media.html:34
+#: .\services\templates\services\media_bk.html:26
+msgid "Media"
+msgstr ""
+
+#: .\services\templates\services\base.html:161
+#: .\services\templates\services\blog.html:34
+#: .\services\templates\services\event.html:34
+#: .\services\templates\services\faq.html:26
+#: .\services\templates\services\underconstruction.html:169
+msgid "Events"
+msgstr ""
+
+#: .\services\templates\services\base.html:162
+#: .\services\templates\services\underconstruction.html:170
+msgid "Pricing plan"
+msgstr ""
+
+#: .\services\templates\services\base.html:163
+#: .\services\templates\services\underconstruction.html:171
+msgid "Calendar"
+msgstr ""
+
+#: .\services\templates\services\base.html:172
+#: .\services\templates\services\trainers.html:16
+#: .\services\templates\services\trainers.html:26
+#: .\services\templates\services\underconstruction.html:180
+msgid "Trainers"
+msgstr ""
+
+#: .\services\templates\services\base.html:175
+#: .\services\templates\services\news.html:26
+#: .\services\templates\services\underconstruction.html:183
+msgid "News"
+msgstr ""
+
+#: .\services\templates\services\base.html:181
+#: .\services\templates\services\underconstruction.html:189
+msgid "Language"
+msgstr ""
+
+#: .\services\templates\services\base.html:188
+#: .\services\templates\services\base.html:267
+#: .\services\templates\services\contact_under.html:432
+#: .\services\templates\services\underconstruction.html:196
+#: .\services\templates\services\underconstruction.html:302
+#: .\services\templates\services\unsubscribe.html:303
+msgid "Contact us"
+msgstr ""
+
+#: .\services\templates\services\base.html:190
+#: .\services\templates\services\underconstruction.html:198
+msgid "Logout"
+msgstr ""
+
+#: .\services\templates\services\base.html:232
+#: .\services\templates\services\underconstruction.html:268
+msgid "Program"
+msgstr ""
+
+#: .\services\templates\services\base.html:234
+#: .\services\templates\services\underconstruction.html:270
+msgid "Monday"
+msgstr ""
+
+#: .\services\templates\services\base.html:236
+#: .\services\templates\services\base.html:247
+#: .\services\templates\services\underconstruction.html:272
+#: .\services\templates\services\underconstruction.html:283
+msgid "Beginners, +10 years old"
+msgstr ""
+
+#: .\services\templates\services\base.html:237
+#: .\services\templates\services\base.html:248
+#: .\services\templates\services\underconstruction.html:273
+#: .\services\templates\services\underconstruction.html:284
+msgid "Intermediate, +10 years old"
+msgstr ""
+
+#: .\services\templates\services\base.html:238
+#: .\services\templates\services\base.html:249
+#: .\services\templates\services\underconstruction.html:274
+#: .\services\templates\services\underconstruction.html:285
+msgid "+16 years old"
+msgstr ""
+
+#: .\services\templates\services\base.html:240
+#: .\services\templates\services\underconstruction.html:276
+msgid "Tuesday"
+msgstr ""
+
+#: .\services\templates\services\base.html:242
+#: .\services\templates\services\base.html:253
+#: .\services\templates\services\underconstruction.html:278
+#: .\services\templates\services\underconstruction.html:289
+msgid "Beginners, +6 years old"
+msgstr ""
+
+#: .\services\templates\services\base.html:243
+#: .\services\templates\services\base.html:254
+#: .\services\templates\services\base.html:259
+#: .\services\templates\services\home.html:640
+#: .\services\templates\services\pricing-plan.html:63
+#: .\services\templates\services\underconstruction.html:279
+#: .\services\templates\services\underconstruction.html:290
+#: .\services\templates\services\underconstruction.html:295
+msgid "Advanced"
+msgstr ""
+
+#: .\services\templates\services\base.html:245
+#: .\services\templates\services\underconstruction.html:281
+msgid "Wednesday"
+msgstr ""
+
+#: .\services\templates\services\base.html:251
+#: .\services\templates\services\underconstruction.html:287
+msgid "Thursday"
+msgstr ""
+
+#: .\services\templates\services\base.html:256
+#: .\services\templates\services\underconstruction.html:292
+msgid "Friday"
+msgstr ""
+
+#: .\services\templates\services\base.html:258
+#: .\services\templates\services\underconstruction.html:294
+msgid "Club Sportiv Honterus"
+msgstr ""
+
+#: .\services\templates\services\base.html:269
+#: .\services\templates\services\contact_under.html:434
+#: .\services\templates\services\underconstruction.html:304
+#: .\services\templates\services\unsubscribe.html:305
+msgid "Strada ...."
+msgstr ""
+
+#: .\services\templates\services\base.html:272
+#: .\services\templates\services\contact_under.html:437
+#: .\services\templates\services\underconstruction.html:307
+#: .\services\templates\services\unsubscribe.html:308
+msgid "Telephone"
+msgstr ""
+
+#: .\services\templates\services\base.html:315
+#: .\services\templates\services\contact_under.html:480
+#: .\services\templates\services\underconstruction.html:350
+msgid "Unsubscribe"
+msgstr ""
+
+#: .\services\templates\services\base.html:316
+#: .\services\templates\services\contact_under.html:481
+#: .\services\templates\services\underconstruction.html:351
+msgid "Designed By"
+msgstr ""
+
+#: .\services\templates\services\blog.html:24
+#: .\services\templates\services\event.html:24
+#: .\services\templates\services\faq.html:16
+msgid "<h1 class='title'>OUR <span>EVENTS</span></h1>"
+msgstr ""
+
+#: .\services\templates\services\coming-soon.html:50
+msgid "COMING SOON"
+msgstr ""
+
+#: .\services\templates\services\coming-soon.html:51
+msgid ""
+"We are sorry, but the page you are looking for is temporarily unavailable. "
+"Please come back later"
+msgstr ""
+
+#: .\services\templates\services\coming-soon.html:53
+msgid "Go Back Home"
+msgstr ""
+
+#: .\services\templates\services\contact.html:16
+#: .\services\templates\services\contact_under.html:210
+msgid "<h1 class='title'>CONTACT <span>US</span></h1>"
+msgstr ""
+
+#: .\services\templates\services\contact.html:26
+#: .\services\templates\services\contact_under.html:220
+msgid "Contact Us"
+msgstr ""
+
+#: .\services\templates\services\contact.html:68
+msgid "<h2 class='section-title'>Get More <span>Information</span></h2>"
+msgstr ""
+
+#: .\services\templates\services\contact.html:69
+#: .\services\templates\services\contact_under.html:258
+msgid "By contacting us using one of the options below"
+msgstr ""
+
+#: .\services\templates\services\contact.html:82
+#: .\services\templates\services\contact_under.html:271
+msgid "OFFICE ADDRESS"
+msgstr ""
+
+#: .\services\templates\services\contact.html:83
+#: .\services\templates\services\contact_under.html:272
+msgid "view on map"
+msgstr ""
+
+#: .\services\templates\services\contact.html:95
+#: .\services\templates\services\contact_under.html:284
+msgid "TELEPHONE NUMBER"
+msgstr ""
+
+#: .\services\templates\services\contact.html:96
+#: .\services\templates\services\contact_under.html:285
+msgid "call now"
+msgstr ""
+
+#: .\services\templates\services\contact.html:108
+#: .\services\templates\services\contact_under.html:297
+msgid "SEND MAIL"
+msgstr ""
+
+#: .\services\templates\services\contact.html:109
+#: .\services\templates\services\contact_under.html:298
+msgid "send now"
+msgstr ""
+
+#: .\services\templates\services\contact.html:130
+msgid ""
+"A burning Question? Feel Free to get directly in <span>Contact</span> with "
+"Us!"
+msgstr ""
+
+#: .\services\templates\services\contact.html:131
+#: .\services\templates\services\contact_under.html:320
+msgid "Using this form"
+msgstr ""
+
+#: .\services\templates\services\contact.html:142
+#: .\services\templates\services\contact_under.html:331
+#: .\services\templates\services\training.html:189
+msgid "Join over"
+msgstr ""
+
+#: .\services\templates\services\contact.html:142
+#: .\services\templates\services\contact_under.html:331
+#: .\services\templates\services\training.html:189
+msgid "students"
+msgstr ""
+
+#: .\services\templates\services\contact.html:148
+#: .\services\templates\services\contact_under.html:337
+msgid "FOLLOW US"
+msgstr ""
+
+#: .\services\templates\services\contact.html:161
+msgid "Your Name"
+msgstr ""
+
+#: .\services\templates\services\contact.html:164
+msgid "Your Email"
+msgstr ""
+
+#: .\services\templates\services\contact.html:167
+msgid "Your Phone"
+msgstr ""
+
+#: .\services\templates\services\contact.html:170
+msgid "Your Message"
+msgstr ""
+
+#: .\services\templates\services\contact.html:173
+msgid "Send Now"
+msgstr ""
+
+#: .\services\templates\services\contact_under.html:12
+#: .\services\templates\services\unsubscribe.html:12
+msgid "Una dintre cele mai bune scoli de karate din Brasov"
+msgstr ""
+
+#: .\services\templates\services\contact_under.html:150
+#: .\services\templates\services\unsubscribe.html:150
+msgid "HOME"
+msgstr ""
+
+#: .\services\templates\services\contact_under.html:151
+#: .\services\templates\services\unsubscribe.html:151
+msgid "ABOUT US"
+msgstr ""
+
+#: .\services\templates\services\contact_under.html:153
+#: .\services\templates\services\unsubscribe.html:153
+msgid "TRAINING"
+msgstr ""
+
+#: .\services\templates\services\contact_under.html:156
+#: .\services\templates\services\unsubscribe.html:156
+msgid "EXPLORE"
+msgstr ""
+
+#: .\services\templates\services\contact_under.html:158
+#: .\services\templates\services\unsubscribe.html:158
+msgid "GALLERY"
+msgstr ""
+
+#: .\services\templates\services\contact_under.html:159
+#: .\services\templates\services\unsubscribe.html:159
+msgid "EVENTS"
+msgstr ""
+
+#: .\services\templates\services\contact_under.html:160
+#: .\services\templates\services\unsubscribe.html:160
+msgid "PRICING PLAN"
+msgstr ""
+
+#: .\services\templates\services\contact_under.html:166
+#: .\services\templates\services\unsubscribe.html:166
+msgid "MASTERS"
+msgstr ""
+
+#: .\services\templates\services\contact_under.html:169
+#: .\services\templates\services\unsubscribe.html:169
+msgid "NEWS"
+msgstr ""
+
+#: .\services\templates\services\contact_under.html:176
+#: .\services\templates\services\unsubscribe.html:176
+msgid "LANGUAGE"
+msgstr ""
+
+#: .\services\templates\services\contact_under.html:184
+#: .\services\templates\services\unsubscribe.html:184
+msgid "CONTACT US"
+msgstr ""
+
+#: .\services\templates\services\contact_under.html:186
+msgid "LOGOUT"
+msgstr ""
+
+#: .\services\templates\services\contact_under.html:257
+msgid "<h2 class=\"section-title\">Get More <span>Information</span></h2>"
+msgstr ""
+
+#: .\services\templates\services\contact_under.html:319
+msgid ""
+"<h2 class=\"section-title\">A burning Question? Feel Free to get directly in "
+"<span>Contact</span> with Us!</h2>"
+msgstr ""
+
+#: .\services\templates\services\contact_under.html:421
+#: .\services\templates\services\unsubscribe.html:292
+msgid "Opening Hours"
+msgstr ""
+
+#: .\services\templates\services\event.html:72
+#: .\services\templates\services\home.html:203
+#: .\services\templates\services\media.html:66
+#: .\services\templates\services\media_bk.html:70
+#: .\services\templates\services\news.html:70
+msgid "Read More"
+msgstr ""
+
+#: .\services\templates\services\faq.html:55
+#: .\services\templates\services\training.html:248
+msgid "<h2 class='section-title'>FREQUENTLY ASKED <span>QUESTIONS</span></h2>"
+msgstr ""
+
+#: .\services\templates\services\faq.html:56
+#: .\services\templates\services\training.html:249
+msgid ""
+"If you cannot find an answer to your question in this section below, then "
+"please white us an email"
+msgstr ""
+
+#: .\services\templates\services\faq.html:64
+#: .\services\templates\services\training.html:257
+msgid "Belt colors in Fudokan"
+msgstr ""
+
+#: .\services\templates\services\faq.html:66
+#: .\services\templates\services\training.html:259
+msgid ""
+"The progress system is according to the two styles Shotokan and Fudokan. The "
+"grading is from 9 kyu (white belt) to 1 kyu (brown belt) and from 1 to 10 "
+"dan (black belt). A practitioner starts from the rank of 9 kyu - white belt, "
+"followed by the 3 red stripes on the white belt (8-6kyu) in order to reach "
+"the next belt color - yellow. According to the WFF periodization the "
+"examination is done according to well defined criteria following a period of "
+"training. During this examination, aspects related to technique, self-"
+"control, emotional balance, physical preparation plus other aspects are "
+"followed depending on the degree for which the examination is taken"
+msgstr ""
+
+#: .\services\templates\services\faq.html:68
+#: .\services\templates\services\training.html:261
+msgid "Fudokan belts"
+msgstr ""
+
+#: .\services\templates\services\faq.html:70
+#: .\services\templates\services\training.html:263
+msgid "White"
+msgstr ""
+
+#: .\services\templates\services\faq.html:71
+#: .\services\templates\services\training.html:264
+msgid "White + 1 red stripe"
+msgstr ""
+
+#: .\services\templates\services\faq.html:72
+#: .\services\templates\services\training.html:265
+msgid "White + 2 red stripes"
+msgstr ""
+
+#: .\services\templates\services\faq.html:73
+#: .\services\templates\services\training.html:266
+msgid "White + 3 red stripes"
+msgstr ""
+
+#: .\services\templates\services\faq.html:74
+#: .\services\templates\services\training.html:267
+msgid "Yellow"
+msgstr ""
+
+#: .\services\templates\services\faq.html:75
+#: .\services\templates\services\training.html:268
+msgid "Orange"
+msgstr ""
+
+#: .\services\templates\services\faq.html:76
+#: .\services\templates\services\training.html:269
+msgid "Green"
+msgstr ""
+
+#: .\services\templates\services\faq.html:77
+#: .\services\templates\services\training.html:270
+msgid "Blue"
+msgstr ""
+
+#: .\services\templates\services\faq.html:78
+#: .\services\templates\services\training.html:271
+msgid "Brown"
+msgstr ""
+
+#: .\services\templates\services\faq.html:79
+#: .\services\templates\services\training.html:272
+msgid "Black"
+msgstr ""
+
+#: .\services\templates\services\gallery.html:16
+msgid "<h1 class='title'>GALLERY</h1>"
+msgstr ""
+
+#: .\services\templates\services\gallery.html:56
+msgid "SEE OUR <span>GALLERY"
+msgstr ""
+
+#: .\services\templates\services\gallery.html:57
+msgid "Pictures of our day to day Fudokan martial arts training and events"
+msgstr ""
+
+#: .\services\templates\services\gallery.html:71
+msgid "Other"
+msgstr ""
+
+#: .\services\templates\services\home.html:32
+#: .\services\templates\services\home.html:53
+msgid "#1 FUDOKAN MARTIAL ARTS SCHOOL IN BRASOV"
+msgstr ""
+
+#: .\services\templates\services\home.html:33
+msgid "BALANCE YOUR LIFE"
+msgstr ""
+
+#: .\services\templates\services\home.html:34
+msgid "IMPROVE MIND, BODY & SPIRIT"
+msgstr ""
+
+#: .\services\templates\services\home.html:35
+#: .\services\templates\services\home.html:56
+msgid "FUDOKAN SCHOOL IN BRASOV"
+msgstr ""
+
+#: .\services\templates\services\home.html:37
+#: .\services\templates\services\home.html:58
+#: .\services\templates\services\home.html:665
+#: .\services\templates\services\home.html:694
+#: .\services\templates\services\home.html:722
+#: .\services\templates\services\home.html:754
+#: .\services\templates\services\home.html:783
+#: .\services\templates\services\pricing-plan.html:88
+#: .\services\templates\services\pricing-plan.html:117
+#: .\services\templates\services\pricing-plan.html:145
+#: .\services\templates\services\pricing-plan.html:177
+#: .\services\templates\services\pricing-plan.html:206
+#: .\services\templates\services\subscription_conf.html:27
+#: .\services\templates\services\unsubscribe.html:218
+msgid "Enroll Now"
+msgstr ""
+
+#: .\services\templates\services\home.html:38
+#: .\services\templates\services\home.html:59
+msgid "Training Classes"
+msgstr ""
+
+#: .\services\templates\services\home.html:54
+msgid "STAY FIT"
+msgstr ""
+
+#: .\services\templates\services\home.html:55
+msgid "GAIN SPEED, FOCUS AND STRENGTH"
+msgstr ""
+
+#: .\services\templates\services\home.html:94
+msgid "OUR OFFERING"
+msgstr ""
+
+#: .\services\templates\services\home.html:179
+msgid "FITNESS TRAINING"
+msgstr ""
+
+#: .\services\templates\services\home.html:180
+msgid ""
+"Each Fudokan training session includes cardio, strength & stretching "
+"exercises, for a healthy body and a sharp mind"
+msgstr ""
+
+#: .\services\templates\services\home.html:188
+msgid "FOCUS"
+msgstr ""
+
+#: .\services\templates\services\home.html:189
+msgid ""
+"The process of physical training and learning precise moves will also train "
+"one to focus mental energy"
+msgstr ""
+
+#: .\services\templates\services\home.html:197
+msgid "SELF CONFIDENCE"
+msgstr ""
+
+#: .\services\templates\services\home.html:198
+msgid ""
+"Advancing through the various training stages, improves self-confidence and "
+"mastering self-defence"
+msgstr ""
+
+#: .\services\templates\services\home.html:222
+msgid ""
+"<h2 class='section-title'><span>FUDOKAN KARATE</span> CHARACTERISTICS</h2>"
+msgstr ""
+
+#: .\services\templates\services\home.html:238
+msgid "FIT FOR ANY AGE"
+msgstr ""
+
+#: .\services\templates\services\home.html:239
+msgid "It is never too late to start learning Fudokan"
+msgstr ""
+
+#: .\services\templates\services\home.html:251
+msgid "IMPROVES YOUR FITNESS"
+msgstr ""
+
+#: .\services\templates\services\home.html:252
+msgid "Fudokan develops endurance, strength and mobility"
+msgstr ""
+
+#: .\services\templates\services\home.html:264
+msgid "TEACHES SELF-DEFENCE"
+msgstr ""
+
+#: .\services\templates\services\home.html:265
+msgid "Martial artists deal with bullying in a less violent way"
+msgstr ""
+
+#: .\services\templates\services\home.html:288
+msgid "DEVELOPS CHARACTER"
+msgstr ""
+
+#: .\services\templates\services\home.html:289
+msgid "Fudokan karate means harmony with society"
+msgstr ""
+
+#: .\services\templates\services\home.html:301
+msgid "ENCOURAGES SELF-DISCIPLINE"
+msgstr ""
+
+#: .\services\templates\services\home.html:302
+msgid "Fudokan is more than a sport, it is a lifestyle"
+msgstr ""
+
+#: .\services\templates\services\home.html:314
+msgid "HONES LEADERSHIP SKILLS"
+msgstr ""
+
+#: .\services\templates\services\home.html:315
+msgid "Fudokan teaches leadership traits through respect"
+msgstr ""
+
+#: .\services\templates\services\home.html:337
+msgid "JOIN OUR CLASSES"
+msgstr ""
+
+#: .\services\templates\services\home.html:338
+msgid "BECOME A BETTER YOU"
+msgstr ""
+
+#: .\services\templates\services\home.html:339
+msgid ""
+"You will become stronger, faster, more focused, more motivated to reach your "
+"goals and we are committed to take you there"
+msgstr ""
+
+#: .\services\templates\services\home.html:341
+msgid "Join Now"
+msgstr ""
+
+#: .\services\templates\services\home.html:367
+msgid "MORE ABOUT WHAT<span> YOU</span> WILL LEARN HERE"
+msgstr ""
+
+#: .\services\templates\services\home.html:420
+msgid "More"
+msgstr ""
+
+#: .\services\templates\services\home.html:474
+msgid "OUR <span>FUDOKAN</span> EVENTS"
+msgstr ""
+
+#: .\services\templates\services\home.html:630
+#: .\services\templates\services\pricing-plan.html:53
+msgid "OUR <span>MEMBERSHIP</span> PLAN"
+msgstr ""
+
+#: .\services\templates\services\home.html:631
+#: .\services\templates\services\pricing-plan.html:54
+msgid "We are trying to fit every situation and every pocket"
+msgstr ""
+
+#: .\services\templates\services\home.html:638
+#: .\services\templates\services\pricing-plan.html:61
+msgid "Beginner"
+msgstr ""
+
+#: .\services\templates\services\home.html:651
+#: .\services\templates\services\home.html:740
+#: .\services\templates\services\pricing-plan.html:74
+#: .\services\templates\services\pricing-plan.html:163
+msgid "Per Session"
+msgstr ""
+
+#: .\services\templates\services\home.html:655
+#: .\services\templates\services\home.html:744
+#: .\services\templates\services\pricing-plan.html:78
+#: .\services\templates\services\pricing-plan.html:167
+msgid "session"
+msgstr ""
+
+#: .\services\templates\services\home.html:658
+#: .\services\templates\services\home.html:687
+#: .\services\templates\services\home.html:715
+#: .\services\templates\services\home.html:747
+#: .\services\templates\services\home.html:776
+#: .\services\templates\services\home.html:804
+#: .\services\templates\services\pricing-plan.html:81
+#: .\services\templates\services\pricing-plan.html:110
+#: .\services\templates\services\pricing-plan.html:138
+#: .\services\templates\services\pricing-plan.html:170
+#: .\services\templates\services\pricing-plan.html:199
+#: .\services\templates\services\pricing-plan.html:227
+msgid "Monday and Wednesday every week"
+msgstr ""
+
+#: .\services\templates\services\home.html:659
+#: .\services\templates\services\pricing-plan.html:82
+msgid "Saturday training 2 weeks before a competition"
+msgstr ""
+
+#: .\services\templates\services\home.html:660
+#: .\services\templates\services\home.html:689
+#: .\services\templates\services\home.html:717
+#: .\services\templates\services\home.html:749
+#: .\services\templates\services\home.html:778
+#: .\services\templates\services\home.html:806
+#: .\services\templates\services\pricing-plan.html:83
+#: .\services\templates\services\pricing-plan.html:112
+#: .\services\templates\services\pricing-plan.html:140
+#: .\services\templates\services\pricing-plan.html:172
+#: .\services\templates\services\pricing-plan.html:201
+#: .\services\templates\services\pricing-plan.html:229
+msgid ""
+"Students who represent the club at competitions receive a uniform with our "
+"logo"
+msgstr ""
+
+#: .\services\templates\services\home.html:676
+#: .\services\templates\services\home.html:765
+#: .\services\templates\services\pricing-plan.html:99
+#: .\services\templates\services\pricing-plan.html:188
+msgid "Popular"
+msgstr ""
+
+#: .\services\templates\services\home.html:680
+#: .\services\templates\services\home.html:769
+#: .\services\templates\services\pricing-plan.html:103
+#: .\services\templates\services\pricing-plan.html:192
+msgid "Monthly"
+msgstr ""
+
+#: .\services\templates\services\home.html:684
+#: .\services\templates\services\home.html:773
+#: .\services\templates\services\home.html:801
+#: .\services\templates\services\pricing-plan.html:107
+#: .\services\templates\services\pricing-plan.html:196
+#: .\services\templates\services\pricing-plan.html:224
+msgid "month"
+msgstr ""
+
+#: .\services\templates\services\home.html:688
+#: .\services\templates\services\home.html:716
+#: .\services\templates\services\pricing-plan.html:111
+#: .\services\templates\services\pricing-plan.html:139
+msgid "Saturday training included, 2 weeks before a competition"
+msgstr ""
+
+#: .\services\templates\services\home.html:708
+#: .\services\templates\services\home.html:797
+#: .\services\templates\services\pricing-plan.html:131
+#: .\services\templates\services\pricing-plan.html:220
+msgid "Half month"
+msgstr ""
+
+#: .\services\templates\services\home.html:712
+#: .\services\templates\services\pricing-plan.html:135
+msgid "half-month"
+msgstr ""
+
+#: .\services\templates\services\home.html:748
+#: .\services\templates\services\home.html:777
+#: .\services\templates\services\home.html:805
+#: .\services\templates\services\pricing-plan.html:171
+#: .\services\templates\services\pricing-plan.html:200
+#: .\services\templates\services\pricing-plan.html:228
+msgid "Every Saturday training included"
+msgstr ""
+
+#: .\services\templates\services\home.html:837
+msgid "<span>FUDOKAN</span> TUTORIALS"
+msgstr ""
+
+#: .\services\templates\services\home.html:955
+msgid "LATEST <span>NEWS</span> FROM ENERGYFIT KARATE BRASOV"
+msgstr ""
+
+#: .\services\templates\services\media.html:24
+msgid "<h1 class='title'>OUR PRESENCE IN THE <span>MEDIA</span></h1>"
+msgstr ""
+
+#: .\services\templates\services\media_bk.html:16
+msgid "<h1 class='title'>MEDIA <span></span></h1>"
+msgstr ""
+
+#: .\services\templates\services\news-details.html:86
+msgid "TOP RELATED POST"
+msgstr ""
+
+#: .\services\templates\services\news.html:16
+msgid "<h1 class='title'>OUR <span>NEWS</span></h1>"
+msgstr ""
+
+#: .\services\templates\services\pricing-plan.html:17
+msgid "<h1 class='title'>OUR <span>PRICING PLANS</span></h1>"
+msgstr ""
+
+#: .\services\templates\services\pricing-plan.html:27
+msgid "Pricing Plan"
+msgstr ""
+
+#: .\services\templates\services\subscription_conf.html:24
+msgid "SUCCESS"
+msgstr ""
+
+#: .\services\templates\services\subscription_conf.html:25
+msgid "You have successfully subscribed to our newsletter"
+msgstr ""
+
+#: .\services\templates\services\trainers-details.html:94
+msgid "ABOUT ME"
+msgstr ""
+
+#: .\services\templates\services\trainers-details.html:116
+msgid "BEST SKILLS"
+msgstr ""
+
+#: .\services\templates\services\trainers-details.html:142
+msgid "EXPERIENCE"
+msgstr ""
+
+#: .\services\templates\services\trainers-details.html:153
+msgid "Fact 1"
+msgstr ""
+
+#: .\services\templates\services\trainers-details.html:164
+msgid "Hours of Training"
+msgstr ""
+
+#: .\services\templates\services\trainers.html:111
+msgid "See our video"
+msgstr ""
+
+#: .\services\templates\services\trainers.html:216
+msgid "OUR MISSION"
+msgstr ""
+
+#: .\services\templates\services\trainers.html:217
+msgid ""
+"Energyfit Karate Brașov is a nonprofit community gym offering Fudokan "
+"martial arts classes for all ages focused on self-actualization, total body "
+"healing, and strength. Our goal is to help people tap into their potential, "
+"seeking balance and grace through movement, while establishing a strong "
+"foundation of integrity and self-discipline that will facilitate personal "
+"and professional success"
+msgstr ""
+
+#: .\services\templates\services\trainers.html:233
+msgid "OUR VISION"
+msgstr ""
+
+#: .\services\templates\services\trainers.html:234
+msgid ""
+"At Energyfit Karate we envision a community where people of all ages, "
+"backgrounds, abilities, and genders feel safe, valued, and inspired to work "
+"towards building a better self, both physically and mentally"
+msgstr ""
+
+#: .\services\templates\services\trainers.html:249
+msgid "OUR HISTORY"
+msgstr ""
+
+#: .\services\templates\services\trainers.html:250
+msgid "The first Energyfit Karate dojo opened its doors ..."
+msgstr ""
+
+#: .\services\templates\services\training-details.html:17
+msgid "<h1 class='title'>TRAINING <span>DETAILS</span></h1>"
+msgstr ""
+
+#: .\services\templates\services\training-details.html:27
+msgid "Training Details"
+msgstr ""
+
+#: .\services\templates\services\training-details.html:71
+msgid "Register Now"
+msgstr ""
+
+#: .\services\templates\services\training-details.html:86
+msgid ""
+"<h2 class='widget-title'>Key Benefits of OUR <span>Fudokan Training</span></"
+"h2>"
+msgstr ""
+
+#: .\services\templates\services\training-details.html:99
+msgid "EXPERIENCED TRAINERS"
+msgstr ""
+
+#: .\services\templates\services\training-details.html:100
+msgid ""
+"Our Senseis are the best you can find the area, warm, calm and armed with "
+"enough patience to guide through building a better you"
+msgstr ""
+
+#: .\services\templates\services\training-details.html:112
+msgid "GET IN SHAPE"
+msgstr ""
+
+#: .\services\templates\services\training-details.html:113
+msgid "We will take children and adults on a building strength journey first"
+msgstr ""
+
+#: .\services\templates\services\training-details.html:125
+msgid "DEFEND YOURSELF"
+msgstr ""
+
+#: .\services\templates\services\training-details.html:126
+msgid ""
+"They will learn defensive moves and the importance of using what they learn "
+"only in defence"
+msgstr ""
+
+#: .\services\templates\services\training-details.html:138
+msgid "GAIN CONFIDENCE"
+msgstr ""
+
+#: .\services\templates\services\training-details.html:139
+msgid "..."
+msgstr ""
+
+#: .\services\templates\services\training-details.html:151
+msgid "SET GOALS"
+msgstr ""
+
+#: .\services\templates\services\training-details.html:164
+msgid "BE PART OF A FAMILY"
+msgstr ""
+
+#: .\services\templates\services\training-details.html:175
+msgid ""
+"<h2 class='widget-title'>What you Learn from this <span>Training</span></h2>"
+msgstr ""
+
+#: .\services\templates\services\training-details.html:225
+msgid "<h2 class='widget-title'>Who is this <span>Training</span> for</h2>"
+msgstr ""
+
+#: .\services\templates\services\training-details.html:226
+msgid ""
+"This training is for ...<span class=\"text--base\">....</span>, & ..... You "
+"will find that this is one of the most challenging yet <span class=\"text--"
+"base\">martial arts </span> thing that you will ever do. Fudokan martial "
+"arts will teach you to rely on yourself, to value the input of others, and "
+"most importantly to respect both your own skills and those of others"
+msgstr ""
+
+#: .\services\templates\services\training-details.html:247
+msgid ""
+"<h2 class=\"section-title\">Send us a <span>Message</span> to Register for "
+"this <span>training</span></h2>"
+msgstr ""
+
+#: .\services\templates\services\training-details.html:268
+#: .\services\templates\services\training.html:212
+msgid "Choose"
+msgstr ""
+
+#: .\services\templates\services\training.html:56
+msgid "<h2 class='section-title'>OUR <span>OFFERING</span></h2>"
+msgstr ""
+
+#: .\services\templates\services\training.html:57
+msgid "Energyfit Karate Brașov offers the commitment to take you to your goals"
+msgstr ""
+
+#: .\services\templates\services\training.html:102
+msgid "<h2 class='section-title'>WHY CHOOSE OUR <span>TRAINING</span></h2>"
+msgstr ""
+
+#: .\services\templates\services\training.html:103
+msgid ""
+"Because we are fully committed to help you become a better you, in all areas"
+msgstr ""
+
+#: .\services\templates\services\training.html:111
+msgid "Training Experience"
+msgstr ""
+
+#: .\services\templates\services\training.html:117
+msgid "Professional Trainers"
+msgstr ""
+
+#: .\services\templates\services\training.html:123
+msgid "Modern Karate Style"
+msgstr ""
+
+#: .\services\templates\services\training.html:129
+msgid "Prices for Every Pocket"
+msgstr ""
+
+#: .\services\templates\services\training.html:151
+msgid "Find your place in our team <span>Now"
+msgstr ""
+
+#: .\services\templates\services\training.html:223
+msgid "Send"
+msgstr ""
+
+#: .\services\templates\services\underconstruction.html:229
+msgid "UNDERCONSTRUCTION"
+msgstr ""
+
+#: .\services\templates\services\underconstruction.html:230
+msgid ""
+"The official webpage of the best FUDOKAN school in Brașov is "
+"underconstruction. Stay tunned because we will sound the horn when it is "
+"ready"
+msgstr ""
+
+#: .\services\templates\services\underconstruction.html:232
+msgid "Subscribe our newsletter to stay in touch. Click here"
+msgstr ""
+
+#: .\services\templates\services\unsubscribe.html:215
+msgid "UNSUBSCRIPTION"
+msgstr ""
+
+#: .\services\templates\services\unsubscribe.html:216
+msgid ""
+"If you are sure about this, below you can unsubscribe from our newsletter"
+msgstr ""
+
+#: .\services\templates\services\unsubscribe.html:241
+msgid "Write your email below to confirm"
+msgstr ""
+
+#: .\services\templates\services\unsubscribe.html:245
+msgid "Confirm"
+msgstr ""
+
+#: .\services\templates\services\unsubscribe.html:351
+msgid "Copyright 2022 Energyfit Karate Brasov. Designed By"
+msgstr ""
+
+#: .\services\views.py:47 .\services\views.py:85
+msgid "This email already exists in our database!"
+msgstr ""
+
+#: .\services\views.py:55 .\services\views.py:93
+msgid "Newsletter Energyfit Karate Brasov"
+msgstr ""
+
+#: .\services\views.py:58 .\services\views.py:96
+msgid ""
+"Thank you for subscribing to our newsletter! You can finalize the process by "
+"clicking on this <a style='padding:2px 1px;border:2px solid black' href='{}"
+"subscription-confirmation/?email={}&conf_num={}'> button</a>."
+msgstr ""
+
+#: .\services\views.py:61 .\services\views.py:99
+msgid "A confirmation link was sent to your email inbox. Please check!"
+msgstr ""
+
+#: .\services\views.py:122
+msgid ""
+"Error! Your email cannot be registered. Please contact our IT department at "
+"+40 758 039 784"
+msgstr ""
+
+#: .\services\views.py:140
+msgid ""
+"Success! Unsubscribing was finalized. If you change your mind you can "
+"subscribe again anytime"
+msgstr ""
+
+#: .\services\views.py:143
+msgid "Error! Unsubscribing failed. This email does not exist in our database"
+msgstr ""
+
+#: .\services\views.py:146
+msgid ""
+"Error! Unsubscribing failed. Please contact our IT department at +40 758 039 "
+"784"
+msgstr ""
+
+#: .\services\views.py:149
+msgid "Error! Email incorrect."
+msgstr ""
+
+#: .\services\views.py:189 .\services\views.py:334
+#, python-brace-format
+msgid ""
+"Thank you for writing us {message_author}! We will answer as soon as "
+"possible."
+msgstr ""
+
+#: .\services\views.py:196 .\services\views.py:344
+msgid "Failed! Please fill in the captcha field again!"
+msgstr ""
+
+#: .\services\views.py:199 .\services\views.py:347
+#, python-brace-format
+msgid "Forward this error to the page developer: {e}"
+msgstr ""
+
+#: .\services\views.py:341
+msgid "Failed! Please make sure your info is correct!"
+msgstr ""
+
+#: .\services\views.py:367
+#, python-brace-format
+msgid "Warning! {e}"
+msgstr ""

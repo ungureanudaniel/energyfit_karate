@@ -1,0 +1,356 @@
+{% extends 'services/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="banner-section banner-section-two inner-banner-section bg-overlay-red bg_img" data-background="{% static 'images/backgrounds/bg-7.png' %}">
+    <div class="section-logo-text">
+        <span class="title">ENERGYFIT</span>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-end mb-30-none">
+            <div class="col-xl-12 col-lg-12 text-center mb-30">
+                <div class="banner-content" data-aos="fade-up" data-aos-duration="1800">
+                    <h1 class="title text-uppercase">{% trans 'Training' %}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="breadcrumb-area">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'Home' %}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{% trans 'Training' %}</li>
+        </ol>
+    </nav>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<a href="#" class="scrollToTop">
+    <img src="{% static 'images/element/arrow_up_icon.png' %}" style="width:80px;height:auto;color: red;" alt="element">
+    <div class="scrollToTop-icon">
+    </div>
+</a>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Training
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="training-section training-section--style ptb-120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-6 text-center">
+                <div class="section-header" data-aos="fade-up" data-aos-duration="1200">
+                    {% blocktranslate %}<h2 class='section-title'>OUR <span>OFFERING</span></h2>{% endblocktranslate %}
+                    <p>{% trans 'Energyfit Karate Brașov offers the commitment to take you to your goals' %}.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mb-30-none">
+          {% for i in teachings %}
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                <div class="training-item" data-aos="zoom-in" data-aos-duration="1200">
+                    <div class="training-thumb">
+                        <img src="{{ i.image.url }}" alt="training">
+                    </div>
+                    <div class="training-content">
+                        <div class="training-icon-area">
+                            <!-- <div class="training-icon"> -->
+                                <!-- <img src="{{ i.icon.url }}" alt="icon"> -->
+                            <!-- </div> -->
+                        </div>
+                        <h3 class="title"><a href="#">{{ i.title|upper }}</a></h3>
+                        <p>{{ i.text|safe|lower|capfirst }}.</p>
+                        <div class="training-footer-area">
+                            <div class="training-price">
+                            </div>
+                            <!-- <div class="training-footer-btn">
+                                <a href="#"><i class="fas fa-arrow-right"></i></a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+          {% endfor %}
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Training
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Choose
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="choose-section ptb-120 bg-overlay-black bg_img" data-background="{% static 'images/backgrounds/bg-7.png' %}">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-8 text-center">
+                <div class="section-header white" data-aos="fade-up" data-aos-duration="1200">
+                    {% blocktranslate %}<h2 class='section-title'>WHY CHOOSE OUR <span>TRAINING</span></h2>{% endblocktranslate %}
+                    <p>{% trans 'Because we are fully committed to help you become a better you, in all areas' %}.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-30 mb-60-none" data-aos="fade-up" data-aos-duration="1200">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-60">
+                <div class="choose-item">
+                    <div class="chart" data-percent="100"><span>100%</span></div>
+                    <h3 class="title">{% trans 'Training Experience' %}</h3>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-60">
+                <div class="choose-item">
+                    <div class="chart" data-percent="100"><span>100%</span></div>
+                    <h3 class="title">{% trans 'Professional Trainers' %}</h3>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-60">
+                <div class="choose-item">
+                    <div class="chart" data-percent="100"><span>100%</span></div>
+                    <h3 class="title">{% trans 'Modern Karate Style' %}</h3>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-60">
+                <div class="choose-item">
+                    <div class="chart" data-percent="100"><span>100%</span></div>
+                    <h3 class="title">{% trans 'Prices for Every Pocket' %}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Choose
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Account widget
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="account-widget-section ptb-120">
+    <div class="account-widget-element">
+    </div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center mb-30-none">
+            <div class="col-xl-6 col-lg-6 mb-30" data-aos="fade-right" data-aos-duration="1200">
+                <div class="account-widget-left">
+                    <div class="section-header">
+                        <h2 class="section-title">{% blocktranslate %}Find your place in our team <span>Now{% endblocktranslate %}</span></h2>
+                        <p>{% trans 'Energyfit Karate Brasov is the only Fudokan martial arts school in Brasov, a karate style that teaches modesty, focus and fighting for true human values. Our school has one of the most innovative and child friendly training programs you can find' %}.</p>
+                    </div>
+                    <ul class="account-widget-list">
+                        <li>
+                            <div class="account-widget-list-icon-area">
+                                <div class="acoount-widget-list-icon">
+                                    <img src="{% static 'images/icon/icon-64.png' %}" alt="icon">
+                                </div>
+                            </div>
+                            <span>Str. Poarta Schei 39, Brașov 500020, Romania</span>
+                        </li>
+                        <li>
+                            <div class="account-widget-list-icon-area">
+                                <div class="acoount-widget-list-icon">
+                                    <img src="{% static 'images/icon/icon-65.png' %}" alt="icon">
+                                </div>
+                            </div>
+                            <span>+40 755 931 949</span>
+                        </li>
+                        <li>
+                            <div class="account-widget-list-icon-area">
+                                <div class="acoount-widget-list-icon">
+                                    <img src="{% static 'images/icon/icon-66.png' %}" alt="icon">
+                                </div>
+                            </div>
+                            <span>contact@energyfit.ro</span>
+                        </li>
+                    </ul>
+                    <div class="banner-widget">
+                        <div class="banner-widget-wrapper">
+                            <div class="banner-widget-left">
+                                <div class="banner-widget-thumb">
+                                    <!-- <img src="{% static 'images/element/element-9.png' %}" alt="element"> -->
+                                </div>
+                            </div>
+                            <div class="banner-widget-middle">
+                                <div class="banner-widget-content">
+                                    <p class='text-white'>{% trans 'Join over' %} <span>60</span> {% trans 'students' %}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 mb-30" data-aos="fade-left" data-aos-duration="1200">
+                <div class="account-widget-form-area bg_img" data-background="{% static 'images/backgrounds/bg-16.png' %}">
+                    <form class="account-widget-form">
+                        <div class="row justify-content-center mb-20-none">
+                            <div class="col-xl-12 form-group">
+                                <input type="text" class="form--control" name="name" placeholder="Your Name*">
+                            </div>
+                            <div class="col-xl-12 form-group">
+                                <input type="email" class="form--control" name="email" placeholder="Your Email*">
+                            </div>
+                            <div class="col-xl-12 form-group">
+                                <input type="number" class="form--control" name="phone" placeholder="Your Phone*">
+                            </div>
+                            <div class="col-xl-12 form-group">
+                                <div class="account-widget-select">
+                                    <select class="form--control">
+                                      <option value="1">{% trans 'Choose' %}</option>
+                                      {% for t in t_programs %}
+                                      <option name="training_type" value="{{ t.slug }}">{{ t.title }}</option>
+                                      {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 form-group">
+                                <textarea class="form--control" name="message" placeholder="Your Message*"></textarea>
+                            </div>
+                            <div class="col-xl-12 form-group">
+                                <button type="submit" class="btn--base">{% trans 'Send' %} <i class="fas fa-arrow-right ml-2"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Account widget
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Faq
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="faq-section bg--gray ptb-120">
+    <div class="faq-element">
+        <img src="{% static 'images/element/element-31.png' %}" alt="element">
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-8 text-center">
+                <div class="section-header">
+                    {% blocktranslate %}<h2 class='section-title'>FREQUENTLY ASKED <span>QUESTIONS</span></h2>{% endblocktranslate %}
+                    <p>{% trans 'If you cannot find an answer to your question in this section below, then please white us an email' %}.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12">
+                <div class="faq-wrapper">
+                    <div class="faq-item active open">
+                        <h3 class="faq-title"><span class="title">{% trans 'Belt colors in Fudokan' %}?</span><span class="right-icon"></span></h3>
+                        <div class="faq-content">
+                            <p>{% trans 'The progress system is according to the two styles Shotokan and Fudokan. The grading is from 9 kyu (white belt) to 1 kyu (brown belt) and from 1 to 10 dan (black belt). A practitioner starts from the rank of 9 kyu - white belt, followed by the 3 red stripes on the white belt (8-6kyu) in order to reach the next belt color - yellow. According to the WFF periodization the examination is done according to well defined criteria following a period of training. During this examination, aspects related to technique, self-control, emotional balance, physical preparation plus other aspects are followed depending on the degree for which the examination is taken' %}.</p>
+                            <div class="faq-list-area">
+                                <h4 class="title">{% trans 'Fudokan belts' %}:</h4>
+                                <ul class="faq-list">
+                                    <li>{% trans 'White' %}</li>
+                                    <li>{% trans 'White + 1 red stripe' %}</li>
+                                    <li>{% trans 'White + 2 red stripes' %}</li>
+                                    <li>{% trans 'White + 3 red stripes' %}</li>
+                                    <li>{% trans 'Yellow' %}</li>
+                                    <li>{% trans 'Orange' %}</li>
+                                    <li>{% trans 'Green' %}</li>
+                                    <li>{% trans 'Blue' %}</li>
+                                    <li>{% trans 'Brown' %}</li>
+                                    <li>{% trans 'Black' %}</li>
+                                </ul>
+                            </div>
+                            <div class="faq-inner-thumb-area">
+                                <div class="row justify-content-center mb-30-none">
+                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
+                                        <div class="faq-inner-thumb">
+                                            <img src="{% static 'images/training/training-6.webp' %}" alt="faq">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
+                                        <div class="faq-inner-thumb">
+                                            <img src="{% static 'images/training/training-4.webp' %}" alt="faq">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
+                                        <div class="faq-inner-thumb">
+                                            <img src="{% static 'images/training/training-14.webp' %}" alt="faq">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
+                                        <div class="faq-inner-thumb">
+                                            <img src="{% static 'images/training/training-15.webp' %}" alt="faq">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% for i in faqs %}
+                    <div class="faq-item active open">
+                        <h3 class="faq-title"><span class="title">{{ i.question|safe|capfirst }}</span><span class="right-icon"></span></h3>
+                        <div class="faq-content">
+                            <p>{{ i.main_explanation|safe }}</p>
+                            <div class="faq-list-area">
+                                <h4 class="title">{{ i.subtitle|safe|capfirst }}</h4>
+                                <ul class="faq-list">
+                                    <li>{{ i.second_text|safe }}</li>
+                                </ul>
+                            </div>
+                            <div class="faq-inner-thumb-area">
+                                <div class="row justify-content-center mb-30-none">
+                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
+                                        <div class="faq-inner-thumb">
+                                            <img src="{{ i.image1.url }}" alt="faq">
+                                        </div>
+                                    </div>
+                                    {% if i.image2 %}
+                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
+                                        <div class="faq-inner-thumb">
+                                            <img src="{{ i.image2.url }}" alt="faq">
+                                        </div>
+                                    </div>
+                                    {% else%}
+                                    {% endif %}
+                                    {% if i.image3 %}
+                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
+                                        <div class="faq-inner-thumb">
+                                            <img src="{{ i.image3.url }}" alt="faq">
+                                        </div>
+                                    </div>
+                                    {% else %}
+                                    {% endif %}
+                                    {% if i.image4 %}
+                                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
+                                        <div class="faq-inner-thumb">
+                                            <img src="{{ i.image4.url }}" alt="faq">
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Faq
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+{% endblock %}

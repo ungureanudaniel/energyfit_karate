@@ -1,0 +1,32 @@
+{% load static %}
+{% load i18n %}
+<section class="subscribe-section ptb-120" id="newsletter">
+    <div class="container">
+        <div class="subscribe-area">
+            <div class="subscribe-element">
+                <img src="{% static 'images/element/element-22.png' %}" alt="element">
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-6">
+                    <div class="subscribe-thumb" data-aos="fade-up" data-aos-duration="1200">
+                        <img src="{% static 'images/trainer/catalin4.webp' %}" alt="element">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                    <div class="subscribe-content" data-aos="fade-left" data-aos-duration="1200">
+                        <div class="section-header white">
+                            <h2 class="section-title">{% trans 'SUBSCRIBE NOW' %}</h2>
+                            <p>{% trans 'And stay up to date with offers and news' %}.</p>
+                        </div>
+                        <form class="subscribe-form" method="POST" action=".">
+                          {% csrf_token %}
+                            <label class="subscribe-icon"><i class="las la-envelope"></i></label>
+                            <input type="text" class="form--control" name="subscriber" placeholder="{% trans 'Email Address' %}">
+                            <button type="submit" name="form-type" value="subscribe" class="btn--base">{% trans 'Subscribe' %}</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

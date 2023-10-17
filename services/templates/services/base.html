@@ -1,0 +1,364 @@
+{% load static %}
+
+{% load i18n %}
+
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+			<title>{% trans 'Energyfit' %}</title>
+ 			<link rel="shortcut icon" type="image/png" href="{% static 'images/logo/logo-energyfit-cerc.png' %}">
+			<meta name="description" property="og:description" content="{% trans 'One of the best karate schools in Brasov' %}">
+		 	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+		 	<meta name="keywords" content="martial arts, karate, arte martiale, fudokan, sport">
+		 	<meta name="author" content="Energyfit">
+		 	<meta property="og:type" content="website">
+		 	<meta property="og:url" content="https://energyfit.ro/">
+		 	<meta property="og:site_name" content="Energyfit">
+		 	<meta property="og:title" content="{% trans 'Energyfit | Un Sanctuar al Artelor Martiale' %}" />
+		 	<meta property="og:description" content="{% trans 'Un Sanctuar al Artelor Martiale' %}.">
+		 	<meta property="og:image" content="https://energyfit.ro/static/images/logo/logo-energyfit-cerc.png">
+		 	<meta property="og:image:alt" content="Logo">
+	 		<link rel="canonical" href="https://energyfit.ro/">
+	    <link rel="preconnect" href="https://fonts.googleapis.com">
+	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+		<!-- fontawesome css link -->
+	    <link rel="stylesheet" href="{% static 'css/fontawesome-all.min.css' %}">
+	    <!-- bootstrap css link -->
+	    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	    <!-- favicon -->
+	    <link rel="shortcut icon" href="{% static 'images/fav.png' %}" type="image/x-icon">
+	    <!-- swipper css link -->
+	    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+	    <!-- lightcase css links -->
+	    <link rel="stylesheet" href="{% static 'css/lightcase.css' %}">
+	    <!-- odometer css link -->
+	    <link rel="stylesheet" href="{% static 'css/odometer.css' %}">
+	    <!-- line-awesome-icon css -->
+	    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+	    <!-- line-awesome-icon css -->
+	    <link rel="stylesheet" href="{% static 'css/line-awesome.min.css' %}">
+	    <!-- animate.css' %} -->
+	    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+	    <!-- aos.css -->
+	    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+	    <!-- nice select css -->
+	    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+	    <!-- flipclock css -->
+	    <link rel="stylesheet" href="{% static 'css/flipclock.css' %}">
+	    <!-- main style css link -->
+	    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+			<!-- preloader style css link -->
+	</head>
+<body>
+
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Preloader
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div class="preloader">
+    <div class="loader">
+        <div class="loader-thumb">
+					<svg viewBox="-1500 -1500 3000 3000">
+						<style type="text/css">
+							<![CDATA[
+							svg {
+							  width: 30vmin;
+							  height: 30vmin;
+							  border-radius: 50%;
+							  background: white;
+							  animation: r 2s linear infinite;
+							}
+
+							@keyframes r {
+							  to {
+							    transform: rotate(1turn);
+							  }
+							}
+							path {
+							  d: path("M-1500 0A1500 1500 0 0 1 1500 0A375 375 0 0 1 750 0A1125 1125 0 0 0 -1500 0");
+							  animation: m 1s ease-in-out infinite alternate;
+							}
+
+							circle {
+							  r: 125;
+							  transform: translate(1125px);
+							  animation: s 1s ease-in-out infinite alternate;
+							  animation-name: s, x;
+								fill: white;
+
+							}
+							circle:nth-child(2) {
+							  fill: white;
+							}
+							circle:nth-child(3) {
+							  cx: -1500;
+							  animation-delay: -1s, 0s;
+								fill: black;
+
+							}
+
+							@keyframes m {
+							  to {
+							    d: path("M-1500 0A1500 1500 0 0 1 1500 0A1125 1125 0 0 1 -750 0A375 375 0 0 0 -1500 0");
+							  }
+							}
+							@keyframes s {
+							  to {
+							    r: 375;
+							  }
+							}
+							@keyframes x {
+							  to {
+							    transform: translate(375px);
+							  }
+							}
+							]]>
+						</style>
+					  <path></path>
+					  <circle></circle>
+					  <circle></circle>
+					</svg>
+        </div>
+    </div>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Preloader
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Header
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<header class="header-section header-section-two">
+    <div class="header">
+        <div class="header-bottom-area">
+            <div class="container-fluid">
+                <div class="header-menu-content">
+                    <nav class="navbar navbar-expand-xl p-0">
+                        <!-- <a class="site-logo site-title d-block d-xl-none" href="{% url 'home' %}"><img src="{% static 'images/logo/logo-energyfit-cerc.png' %}" alt="site-logo"></a> -->
+                        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="fas fa-bars"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav main-menu ml-auto mr-auto">
+                                <li><a class="text-uppercase" href="{% url 'home' %}">{% trans 'Home' %}</a></li>
+                                <li><a class="text-uppercase" href="{% url 'about' %}">{% trans 'About us' %}</a></li>
+                                <li class="">
+                                    <a class="text-uppercase" href="{% url 'training' %}">{% trans 'Training' %}</a>
+                                </li>
+                                <li class="menu_has_children">
+                                    <a class="text-uppercase" href="#0">{% trans 'Explore' %}</a>
+                                    <ul class="sub-menu">
+										<li><a class="text-uppercase" href="{% url 'gallery' %}">{% trans 'Gallery' %}</a></li>
+										<li><a class="text-uppercase" href="{% url 'media' %}">{% trans 'Media' %}</a></li>
+                                        <li><a class="text-uppercase" href="{% url 'events' %}">{% trans 'Events' %}</a></li>
+                                        <li><a class="text-uppercase" href="{% url 'pricing' %}">{% trans 'Pricing plan' %}</a></li>
+                                        <li><a class="text-uppercase" href="{% url 'coming-soon' %}">{% trans 'Calendar' %}</a></li>
+                                        <li><a class="text-uppercase" href="{% url 'faqs' %}">FAQ</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="site-logo site-title d-none d-xl-block bg-white" style="border-radius: 50px;" href="{% url 'home' %}">
+									<img style="height:100px;width:100px;" src="{% static 'images/logo/logo-energyfit-cerc.png' %}" alt="site-logo">
+									</a>
+								</li>
+                                <li class="">
+                                    <a class="text-uppercase" href="{% url 'trainers' %}">{% trans 'Trainers' %}</a>
+                                </li>
+                                <li class="">
+                                    <a class="text-uppercase" href="{% url 'news' %}">{% trans 'News' %}</a>
+                                </li>
+								<li class="menu_has_children">
+									{% get_available_languages as LANGUAGES %}
+									{% get_language_info_list for LANGUAGES as languages %}
+									{% get_language_info for LANGUAGE_CODE as lang %}
+                                    <a class="text-uppercase" href="#0">{% trans 'Language' %}</a>
+                                    <ul class="sub-menu">
+										{% for language in languages %}
+										<li><a class="text-uppercase" value="{{ language.name_local }}" href="/{{ language.code }}/{{ request.get_full_path |slice:'4:'}}">{{ language.name_local }}</a></li>
+                                      {% endfor %}
+                                    </ul>
+                                </li>
+                                <li><a class="text-uppercase" href="{% url 'contact' %}">{% trans 'Contact us' %}</a></li>
+									{% if user.is_authenticated %}
+									<li><a style="color:red;" class="text-uppercase" href="{% url 'logout' %}">{% trans 'Logout' %}</a></li>
+									{% endif %}
+
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Header
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+{% block content %}
+
+{% endblock %}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Footer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+	<footer class="footer-section footer-section-two pt-120">
+	    <div class="footer-bg">
+	        <img src="{% static 'images/backgrounds/bg-4.png' %}" alt="bg">
+	    </div>
+	    <div class="container">
+	        <div class="row mb-30-none">
+	            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+	                <div class="footer-widget">
+	                    <div class="footer-logo">
+	                        <a class="site-logo site-title" href="{% url 'home' %}"><img src="{% static 'images/logo/logo-energyfit-cerc.png' %}" alt="site-logo"></a>
+	                    </div>
+											<p>{% trans 'Energyfit Karate Brasov is the only Fudokan martial arts school in Brasov, a karate style that teaches modesty, focus and fighting for true human values. Our school has one of the most innovative and child friendly training programs you can find' %}.</p>
+											<ul class="footer-social">
+	                        <li><a target="_blank" href="https://www.facebook.com/EnergyFitKarate"><i class="fab fa-facebook-f"></i></a></li>
+	                        <!-- <li><a href="#0"><i class="fab fa-twitter"></i></a></li> -->
+	                        <!-- <li><a href="#0"><i class="fab fa-google-plus-g"></i></a></li> -->
+	                        <li><a href="#0"><i class="fab fa-instagram"></i></a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	            <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
+	                <div class="footer-widget">
+	                    <h4 class="title">{% trans 'Program' %}</h4>
+	                    <ul class="footer-list">
+							<li style="border-top:1px solid white;">{% trans 'Monday' %} : </li>
+							<ul class="footer-list ml-3">
+								<li>5:00 a.m. - 6:00 p.m. ({% trans 'Beginners, +10 years old' %})</li>
+								<li>6:00 a.m. - 7:00 p.m. ({% trans 'Intermediate, +10 years old' %})</li>
+								<li>7:00 a.m. - 8:00 p.m. ({% trans '+16 years old' %})</li>
+							</ul>
+							<li style="border-top:1px solid white;">{% trans 'Tuesday' %} :</li>
+							<ul class="footer-list ml-3">
+								<li>5:30 a.m. - 6:30 p.m. ({% trans 'Beginners, +6 years old' %})</li>
+								<li>6:30 a.m. - 7:30 p.m. ({% trans 'Advanced' %})</li>
+							</ul>
+							<li style="border-top:1px solid white;">{% trans 'Wednesday' %} : </li>
+							<ul class="footer-list ml-3">
+								<li>5:00 a.m. - 6:00 p.m. ({% trans 'Beginners, +10 years old' %})</li>
+								<li>6:00 a.m. - 7:00 p.m. ({% trans 'Intermediate, +10 years old' %})</li>
+								<li>7:00 a.m. - 8:00 p.m. ({% trans '+16 years old' %})</li>
+							</ul>
+							<li style="border-top:1px solid white;">{% trans 'Thursday' %} :</li>
+							<ul class="footer-list ml-3">
+								<li>5:30 a.m. - 6:30 p.m. ({% trans 'Beginners, +6 years old' %})</li>
+								<li>6:30 a.m. - 7:30 p.m. ({% trans 'Advanced' %})</li>
+							</ul>
+							<li style="border-top:1px solid white;">{% trans 'Friday' %} :</li>
+							<ul class="footer-list ml-3">
+								<li>5:00 a.m. - 6:00 p.m. ({% trans 'Club Sportiv Honterus' %})</li>
+								<li>6:00 a.m. - 7:00 p.m. ({% trans 'Advanced' %})</li>
+							</ul>
+							
+	                    </ul>
+	                </div>
+	            </div>
+	            <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
+	                <div class="footer-widget">
+	                    <h4 class="title">{% trans 'Contact us' %}</h4>
+											<ul class="footer-list">
+	                        <!-- <li>{% trans 'Strada ....' %}'</li> -->
+	                        <!-- <li>.....</li> -->
+	                        <li><span>Email :</span> contact@energyfit.ro</li>
+	                        <li><span>{% trans 'Telephone' %} :</span> 0755 931 959</li>
+	                    </ul>
+	                </div>
+	            </div>
+	            <div class="col-xl-2 col-lg-2 col-md-6 mb-30">
+								<div class="footer-widget">
+										<h4 class="title">{% trans 'Gallery' %}</h4>
+										<div class="footer-gallery-area">
+												<div class="footer-gallery-wrapper">
+														<div class="footer-gallery-thumb">
+																<img src="{% static 'images/trainer/cata_weapon1.webp' %}" alt="gallery">
+																<div class="footer-gallery-overlay">
+																		<a href="#0"><i class="fab fa-instagram"></i></a>
+																</div>
+														</div>
+														<div class="footer-gallery-thumb">
+																<img src="{% static 'images/backgrounds/catalin2.webp' %}" alt="gallery">
+																<div class="footer-gallery-overlay">
+																		<a href="#0"><i class="fab fa-instagram"></i></a>
+																</div>
+														</div>
+														<div class="footer-gallery-thumb">
+																<img src="{% static 'images/backgrounds/miriam1.webp' %}" alt="gallery">
+																<div class="footer-gallery-overlay">
+																		<a href="#0"><i class="fab fa-instagram"></i></a>
+																</div>
+														</div>
+														<div class="footer-gallery-thumb">
+																<img src="{% static 'images/backgrounds/catalin3.webp' %}" alt="gallery">
+																<div class="footer-gallery-overlay">
+																		<a href="#0"><i class="fab fa-instagram"></i></a>
+																</div>
+														</div>
+												</div>
+										</div>
+								</div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="copyright-wrapper">
+	        <div class="row justify-content-center">
+	            <div class="col-xl-12 text-center">
+	                <div class="copyright-area">
+										<p><a href="{% url 'unsubscribe' %}">&#x2022; {% trans 'Unsubscribe' %} &#x2022;</a></p>
+										<p>Copyright {% now "Y" %} Energyfit {% if user.is_authenticated %}Karate{% else%}<a href="{% url 'admin:index' %}">Karate</a>{% endif %} Brașov. {% trans 'Designed By' %} <a href="https:///ninjaweb.tech">NinjaWeb Tech</a></p>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</footer>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Footer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+
+
+	<!-- jquery -->
+	<script src="{% static 'js/jquery.js' %}"></script>
+	<!-- bootstrap js -->
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<!-- swipper js -->
+	<script src="{% static 'js/swiper.min.js' %}"></script>
+	<!-- lightcase js-->
+	<script src="{% static 'js/lightcase.js' %}"></script>
+	<!-- odometer js -->
+	<script src="{% static 'js/odometer.min.js' %}"></script>
+	<!-- viewport js -->
+	<script src="{% static 'js/viewport.jquery.js' %}"></script>
+	<!-- progress js -->
+	<script src="{% static 'js/circle-progress.min.js' %}"></script>
+	<!-- aos js file -->
+	<script src="{% static 'js/aos.js' %}"></script>
+	<!-- nice select js -->
+	<script src="{% static 'js/jquery.nice-select.js' %}"></script>
+	<!-- paroller js -->
+	<script src="{% static 'js/jquery.paroller.min.js' %}"></script>
+	<!-- flipclock js -->
+	<script src="{% static 'js/flipclock.min.js' %}"></script>
+	<!-- countdown js -->
+	<script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+	<!-- easypiechart js -->
+	<script src="{% static 'js/jquery.easypiechart.js' %}"></script>
+	<!-- isotope js -->
+	<script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+	<!-- preloader js -->
+	<script src="{% static 'js\preloader.js' %}"></script>
+	<!-- main -->
+	<script src="{% static 'js/main.js' %}"></script>
+
+
+	</body>
+</html>

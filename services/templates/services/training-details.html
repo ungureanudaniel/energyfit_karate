@@ -1,0 +1,300 @@
+{% extends 'services/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="banner-section banner-section-two inner-banner-section bg-overlay-red bg_img" data-background="{% static 'images/bakgrounds/bg-7.png' %}">
+    <div class="section-logo-text">
+        <span class="title">ENERGYFIT</span>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-end mb-30-none">
+            <div class="col-xl-12 col-lg-12 text-center mb-30">
+                <div class="banner-content" data-aos="fade-up" data-aos-duration="1800">
+                    {% blocktranslate %}<h1 class='title'>TRAINING <span>DETAILS</span></h1>{% endblocktranslate %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="breadcrumb-area">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'Home' %}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{% trans 'Training Details' %}</li>
+        </ol>
+    </nav>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<a href="#" class="scrollToTop">
+    <img src="{% static 'images/element/arrow_up_icon.png' %}" style="width:80px;height:auto;color: red;" alt="element">
+    <div class="scrollToTop-icon">
+    </div>
+</a>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Training
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="training-section training-section--style training-details-section ptb-120">
+    <div class="container">
+        <div class="row justify-content-center mb-10-none" data-aos="fade-up" data-aos-duration="1200">
+            <div class="col-xl-12">
+                <div class="training-item">
+                    <div class="training-thumb">
+                        <img src="{{ training.image.url }}" alt="bg">
+                    </div>
+                    <div class="training-content">
+                        <div class="training-content-header">
+                            <h2 class="title">{{ training.title }}</h2>
+                            <div class="training-price">
+                                <!-- <h4 class="title">$50.00</h4> -->
+                            </div>
+                        </div>
+                        <p>{{ training.text|safe }}</p>
+                        <div class="timer-widget-area">
+                            <div class="training-element-one">
+                                <img src="{% static 'images/training/training-2.webp' %}" alt="training">
+                            </div>
+                            <div class="button-part">
+                                <a href="register.html" class="btn--base">{% trans 'Register Now' %} <i class="fas fa-arrow-right ml-2"></i></a>
+                            </div>
+                        </div>
+                        <p>{{ training.second_text|safe }}</p>
+                        <blockquote class="bg_img" data-background="{% static 'images/training/training-11.webp' %}">
+                            <div class="quote-area">
+                                <div class="quote-icon">
+                                    <img src="{% static 'images/element/element-29.png' %}" alt="element">
+                                </div>
+                                <div class="quote-content-area">
+                                    <p class="quote-content">"It is not what you do for your children, but what you teach them to do for themselves, that will make them succesful human beings."</p>
+                                </div>
+                            </div>
+                        </blockquote>
+                        <div class="feature-widget-area feature-section-two feature-section--style feature-section--style-two mt-60">
+                            {% blocktranslate %}<h2 class='widget-title'>Key Benefits of OUR <span>Fudokan Training</span></h2>{% endblocktranslate %}
+                            <div class="row justify-content-center">
+                                <div class="col-xl-12 col-lg-12">
+                                    <div class="feature-item-area">
+                                        <div class="row justify-content-center mb-30-none">
+                                          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                                              <div class="feature-item">
+                                                  <div class="feature-icon-area">
+                                                      <div class="feature-icon">
+                                                          <img src="{% static 'images/icon/icon-61.png' %}" alt="icon">
+                                                      </div>
+                                                  </div>
+                                                  <div class="feature-content">
+                                                      <h4 class="title"><span>06.</span> {% trans 'EXPERIENCED TRAINERS' %}!</h4>
+                                                      <p>{% trans 'Our Senseis are the best you can find the area, warm, calm and armed with enough patience to guide through building a better you' %}</p>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                                                <div class="feature-item">
+                                                    <div class="feature-icon-area">
+                                                        <div class="feature-icon">
+                                                            <img src="{% static 'images/icon/icon-56.png' %}" alt="icon">
+                                                        </div>
+                                                    </div>
+                                                    <div class="feature-content">
+                                                        <h4 class="title"><span>01.</span> {% trans 'GET IN SHAPE' %}!</h4>
+                                                        <p>{% trans 'We will take children and adults on a building strength journey first' %}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                                                <div class="feature-item">
+                                                    <div class="feature-icon-area">
+                                                        <div class="feature-icon">
+                                                            <img src="{% static 'images/icon/icon-57.png' %}" alt="icon">
+                                                        </div>
+                                                    </div>
+                                                    <div class="feature-content">
+                                                        <h4 class="title"><span>02.</span> {% trans 'DEFEND YOURSELF' %}!</h4>
+                                                        <p>{% trans 'They will learn defensive moves and the importance of using what they learn only in defence' %}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                                                <div class="feature-item">
+                                                    <div class="feature-icon-area">
+                                                        <div class="feature-icon">
+                                                            <img src="{% static 'images/icon/icon-58.png' %}" alt="icon">
+                                                        </div>
+                                                    </div>
+                                                    <div class="feature-content">
+                                                        <h4 class="title"><span>03.</span> {% trans 'GAIN CONFIDENCE' %}!</h4>
+                                                        <p>{% trans '...' %}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                                                <div class="feature-item">
+                                                    <div class="feature-icon-area">
+                                                        <div class="feature-icon">
+                                                            <img src="{% static 'images/icon/icon-59.png' %}" alt="icon">
+                                                        </div>
+                                                    </div>
+                                                    <div class="feature-content">
+                                                        <h4 class="title"><span>04.</span> {% trans 'SET GOALS' %}!</h4>
+                                                        <p>{% trans '' %}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                                                <div class="feature-item">
+                                                    <div class="feature-icon-area">
+                                                        <div class="feature-icon">
+                                                            <img src="{% static 'images/icon/icon-60.png' %}" alt="icon">
+                                                        </div>
+                                                    </div>
+                                                    <div class="feature-content">
+                                                        <h4 class="title"><span>05.</span> {% trans 'BE PART OF A FAMILY' %}!</h4>
+                                                        <p>{% trans '' %}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="learn-widget-area mt-60">
+                            {% blocktranslate %}<h2 class='widget-title'>What you Learn from this <span>Training</span></h2>{% endblocktranslate %}
+                            <div class="learn-widget-wrapper">
+                                <div class="learn-widget-element">
+                                    <img src="{% static 'images/element/element-1.png' %}" alt="element">
+                                </div>
+                                <div class="row justify-content-center mb-30-none">
+                                    <div class="col-xl-6 col-lg-6 mb-30">
+                                        <div class="learn-widget-item">
+                                            <div class="learn-widget-content">
+                                                <h5 class="title">Skill 1</h5>
+                                                <p>...</p>
+                                            </div>
+                                        </div>
+                                        <div class="learn-widget-item">
+                                            <div class="learn-widget-content">
+                                                <h5 class="title">Skill 2</h5>
+                                                <p>...</p>
+                                            </div>
+                                        </div>
+                                        <div class="learn-widget-item">
+                                            <div class="learn-widget-content">
+                                                <h5 class="title">Skill 3</h5>
+                                                <p>...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 mb-30">
+                                        <div class="learn-widget-item">
+                                            <div class="learn-widget-content">
+                                                <h5 class="title">Skill 3</h5>
+                                                <p>...</p>
+                                            </div>
+                                        </div>
+                                        <div class="learn-widget-item">
+                                            <div class="learn-widget-content">
+                                                <h5 class="title">Skill 4</h5>
+                                                <p>...</p>
+                                            </div>
+                                        </div>
+                                        <div class="learn-widget-item">
+                                            <div class="learn-widget-content">
+                                                <h5 class="title">Skill 5</h5>
+                                                <p>...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="training-widget-footer mt-60">
+                            {% blocktranslate %}<h2 class='widget-title'>Who is this <span>Training</span> for</h2>{% endblocktranslate %}
+                            <p>{% trans 'This training is for ...<span class="text--base">....</span>, & ..... You will find that this is one of the most challenging yet <span class="text--base">martial arts </span> thing that you will ever do. Fudokan martial arts will teach you to rely on yourself, to value the input of others, and most importantly to respect both your own skills and those of others' %}.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Training
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Account widget
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="account-widget-section account-widget-section-two ptb-120 bg-overlay-black bg_img" data-background="{% static 'images/backgrounds/bg-19.png' %}">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-8 text-center">
+                <div class="section-header white">
+                    {% blocktranslate %}<h2 class="section-title">Send us a <span>Message</span> to Register for this <span>training</span></h2>{% endblocktranslate %}
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center mb-30-none">
+            <div class="col-xl-8 col-lg-12 mb-30">
+                <div class="account-widget-form-area">
+                    <form class="account-widget-form">
+                        <div class="row justify-content-center mb-20-none">
+                            <div class="col-xl-12 form-group">
+                                <input type="text" class="form--control" name="name" placeholder="Your Name*">
+                            </div>
+                            <div class="col-xl-12 form-group">
+                                <input type="email" class="form--control" name="email" placeholder="Your Email*">
+                            </div>
+                            <div class="col-xl-12 form-group">
+                                <input type="number" class="form--control" name="phone" placeholder="Your Phone*">
+                            </div>
+                            <div class="col-xl-12 form-group">
+                                <div class="account-widget-select">
+                                    <select class="form--control">
+                                      <option value="1">{% trans 'Choose' %}</option>
+                                      {% for t in t_programs %}
+                                      <option name="training_type" value="{{ t.slug }}">{{ t.title }}</option>
+                                      {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 form-group">
+                                <textarea class="form--control" name="message" placeholder="Your Message*"></textarea>
+                            </div>
+                            <div class="col-xl-12 form-group">
+                                <button type="submit" class="btn--base">Send Now <i class="fas fa-arrow-right ml-2"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Account widget
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Training
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Training
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+{% endblock %}

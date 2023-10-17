@@ -1,0 +1,42 @@
+{% extends 'services/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<a href="#" class="scrollToTop">
+    <img src="{% static 'images/element/arrow_up_icon.png' %}" style="width:80px;height:auto;color: red;" alt="element">
+    <div class="scrollToTop-icon">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+</a>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start 404
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="four-not-four-section bg_img" data-background="assets/images/backgrounds/bg-7.png">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-xl-6 col-lg-6 text-center">
+                <div class="four-not-four-content">
+                    <h1 class="title">404</h1>
+                    <h2 class="sub-title">{% trans 'PAGE NOT FOUND' %}</h2>
+                    <p>The page you are looking for might have been removed had its name changed or is temporarily unavailable</p>
+                    <div class="four-not-four-btn">
+                        <a href="index.html" class="btn--base">Go Back Home <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End 404
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+{% endblock %}

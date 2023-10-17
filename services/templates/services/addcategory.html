@@ -1,0 +1,83 @@
+{% load static %}
+{% load i18n %}
+<!-- Add  new attraction form: Vertical  -->
+<div class="modal fade" id="servicecategoryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="card">
+
+        <!-- Close -->
+        <button type="button" class="btn-close close text-left" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <!-- Image -->
+        <img class="add-content-icon" src="{% static 'images\icon\icon-5.png' %}" alt="..." class="card-img-top">
+
+        <!-- Shape -->
+        <!-- Body -->
+        <div class="card-body">
+
+          <!-- Heading -->
+          <h2 class="mb-0 fw-bold text-center" id="modalSignin">
+            {% trans 'Add a service category' %}
+          </h2>
+
+          <!-- Text -->
+          <p class="mb-6 text-center text-muted">
+          </p>
+          <!-- <div class="container error-container mt-n5">
+            <div class="alert" id="form_message" role="alert"></div>
+                  {% if messages %}
+                    {% for message in messages %}
+                    <div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                      {{ message.message }}
+                    </div>
+                    {% endfor %}
+                  {% endif %}
+          </div> -->
+          {% include 'includes/messages.html' %}
+          <!-- Form -->
+          <form class="mb-6" method="POST" action=".">
+            {% csrf_token %}
+            <!-- Email -->
+            <div class="form-group">
+              <label class="visually-hidden" for="modalSigninName">
+                Add service category name
+              </label>
+              {{ cat_form.name }}
+            </div>
+            <div class="form-group">
+              <label class="visually-hidden" for="modalSigninName">
+                Add an image
+              </label>
+              {{ cat_form.image }}
+              {{ cat_form.media }}
+
+            </div>
+
+            <div class="form-group">
+              <label class="visually-hidden" for="modalSigninName">
+                {% trans 'Solve the ' %}
+              </label>
+              {{ form }}
+              {{ form.error }}
+            </div>
+
+            <div>
+            {% for field, errors in form.errors.items %}
+              {% for error in errors %}
+              <p>{{ error }}</p>
+              {% endfor %}
+            {% endfor %}
+            </div>
+            <!-- Submit -->
+            <button class="btn w-100" name="form-type" value="add_category-form" type="submit">
+              Save
+            </button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

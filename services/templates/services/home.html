@@ -1,0 +1,992 @@
+{% extends 'services/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="banner">
+    <div class="slider-prev">
+        <i class="fas fa-chevron-left"></i>
+    </div>
+    <div class="slider-next">
+        <i class="fas fa-chevron-right"></i>
+    </div>
+    <div class="banner-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              {% if messages %}
+    					<div id="error-section" class="pb-3 col-12 justify-content-center" style="justify-content:center">
+    						{% include 'includes/messages.html' %}
+    					</div>
+    					{% else %}
+    					<div id="error-section" class="pb-5 col-12 justify-content-center" style="justify-content:center">
+    					</div>
+    					{% endif %}
+                <div class="banner-section banner-section-two">
+                    <div class="banner-bg bg-overlay-black bg_img" data-background="{% static 'images/backgrounds/catalin_karol2.webp' %}"></div>
+                    <div class="container-fluid">
+                        <div class="row justify-content-center align-items-end">
+                            <div class="col-xl-12 col-lg-12 text-center ">
+                                <div class="banner-content" data-aos="fade-up" data-aos-duration="1800">
+                                    <span class="sub-title">{% trans '#1 FUDOKAN MARTIAL ARTS SCHOOL IN BRASOV' %}</span>
+                                    <h1 class="title">{% trans 'BALANCE YOUR LIFE' %}</h1>
+                                    <h3 class="inner-title">{% trans 'IMPROVE MIND, BODY & SPIRIT' %}</h3>
+                                    <p>{% trans 'FUDOKAN SCHOOL IN BRASOV' %}</p>
+                                    <div class="banner-btn">
+                                        <a href="{% url 'apply' %}" class="btn--base">{% trans 'Enroll Now' %} <i class="fas fa-arrow-right ml-2"></i></a>
+                                        <a href="{% url 'training' %}" class="btn--base active">{% trans 'Training Classes' %} <i class="fas fa-arrow-right ml-2"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="banner-section banner-section-two">
+                    <div class="banner-bg bg-overlay-black bg_img" data-background="{% static 'images/backgrounds/miriam1.webp' %}"></div>
+                    <div class="container-fluid">
+                        <div class="row justify-content-center align-items-end mb-30-none">
+                            <div class="col-xl-12 col-lg-12 text-center mb-30">
+                                <div class="banner-content" data-aos="fade-up" data-aos-duration="1800">
+                                    <span class="sub-title">{% trans '#1 FUDOKAN MARTIAL ARTS SCHOOL IN BRASOV' %}</span>
+                                    <h1 class="title">{% trans 'STAY FIT' %}</h1>
+                                    <h3 class="inner-title">{% trans 'GAIN SPEED, FOCUS AND STRENGTH' %}</h3>
+                                    <p>{% trans 'FUDOKAN SCHOOL IN BRASOV' %}</p>
+                                    <div class="banner-btn">
+                                        <a href="{% url 'apply' %}" class="btn--base">{% trans 'Enroll Now' %} <i class="fas fa-arrow-right ml-2"></i></a>
+                                        <a href="{% url 'training' %}" class="btn--base active">{% trans 'Training Classes' %} <i class="fas fa-arrow-right ml-2"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<a href="#" class="scrollToTop">
+    <img src="{% static 'images/element/arrow_up_icon.png' %}" style="width:80px;height:auto;color: red;" alt="element">
+    <div class="scrollToTop-icon">
+    </div>
+</a>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Start Service
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="service-section ptb-120">
+		<div class="container">
+				<div class="service-area">
+						<div class="service-element">
+                <h2 class="text-center">{% trans 'OUR OFFERING' %}</h2>
+								<img src="{% static 'images/element/element-24.png' %}" alt="element">
+						</div>
+						<div class="row justify-content-center mb-10-none">
+								<div class="col-xl-12">
+										<div class="service-slider">
+												<div class="swiper-wrapper">
+                          {% for s in serv_cats %}
+														<div class="swiper-slide">
+																<div class="service-item">
+																		<div class="service-thumb">
+																				<img src="{{ s.image.url }}" alt="service">
+																				<div class="service-overlay">
+																						<div class="service-overlay-content">
+																								<h3 class="title"><a href="#">{{ s.name|capfirst }}</a></h3>
+																						</div>
+																				</div>
+																		</div>
+																</div>
+														</div>
+                            {% endfor %}
+												</div>
+												<div class="swiper-pagination"></div>
+										</div>
+								</div>
+						</div>
+				</div>
+		</div>
+    {% if user.is_authenticated %}
+    <div class="add-content">
+      <a class="" target="_blank" href="{% url 'admin:index' %}services/servicecategory"><i class="fas fa-plus-circle" style="font-size:80px"></i></a>
+    </div>
+    {% endif %}
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		End Service
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Start About
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="about-section about-section-two bg_img" data-background="{% static 'images/backgrounds/bg-6.png' %}">
+		<div class="container">
+				<div class="row justify-content-center align-items-center mb-30-none">
+						<div class="col-xl-6 col-lg-6 mb-30">
+								<div class="about-thumb" data-aos="fade-up" data-aos-duration="1200">
+										<img src="{% static 'images/training/cup2-crop-dark.jpg' %}" alt="element">
+										<div class="about-thumb-content mt">
+												<div class="signature-thumb">
+														<img src="{% static 'images/signature.png' %}" alt="signature">
+												</div>
+												<div class="signature-content">
+														<span style="color:red">SENSEI</span>   <span class="title">CĂTĂLIN PETRE</span>
+												</div>
+										</div>
+										<div class="about-thumb-inner">
+												<img style="width:350px;height:auto;" src="{% static 'images/trainer/catalin_head.webp' %}" alt="element">
+												<div class="about-thumb-video">
+														<div class="video-main">
+																<div class="promo-video">
+																		<div class="waves-block">
+																				<div class="waves wave-1"></div>
+																				<div class="waves wave-2"></div>
+																				<div class="waves wave-3"></div>
+																		</div>
+																</div>
+																<a class="video-icon" data-rel="lightcase:myCollection" href="https://www.youtube.com/embed/HZkvujBp2Tk">
+																		<i class="fas fa-play"></i>
+																</a>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+						<div class="col-xl-6 col-lg-6 mb-30">
+								<div class="about-content-area" data-aos="fade-left" data-aos-duration="1200">
+										<div class="section-header white">
+												<h2 class="section-title">{% blocktranslate %}ABOUT <span>ENERGYFIT KARATE</span> BRASOV {% endblocktranslate %}</h2>
+												<p>{% blocktranslate %}Energyfit Karate Brasov is the only Fudokan martial arts school in Brasov, a karate style that teaches modesty, focus and fighting for true human values. Our school has one of the most innovative and child friendly training programs you can find{% endblocktranslate %}.</p>
+										</div>
+										<div class="about-item-area">
+												<div class="about-item mb-30">
+														<div class="about-icon">
+																<img src="{% static 'images/icon/icon-2.png' %}" alt="icon">
+														</div>
+														<div class="about-content">
+																<h3 class="title">{% trans 'FITNESS TRAINING' %}</h3>
+																<p>{% trans 'Each Fudokan training session includes cardio, strength & stretching exercises, for a healthy body and a sharp mind' %}.</p>
+														</div>
+												</div>
+                        <div class="about-item mb-30">
+														<div class="about-icon">
+																<img src="{% static 'images/icon/icon-59.png' %}" alt="icon">
+														</div>
+														<div class="about-content">
+																<h3 class="title">{% trans 'FOCUS' %}</h3>
+																<p>{% trans 'The process of physical training and learning precise moves will also train one to focus mental energy' %}.</p>
+														</div>
+												</div>
+												<div class="about-item mb-30">
+														<div class="about-icon">
+																<img src="{% static 'images/icon/icon-31.png' %}" alt="icon">
+														</div>
+														<div class="about-content">
+																<h3 class="title">{% trans 'SELF CONFIDENCE' %}</h3>
+																<p>{% trans 'Advancing through the various training stages, improves self-confidence and mastering self-defence' %}.</p>
+														</div>
+												</div>
+										</div>
+										<div class="about-btn">
+												<a href="{% url 'about' %}" class="btn--base">{% trans 'Read More' %} <i class="fas fa-arrow-right ml-2"></i></a>
+										</div>
+								</div>
+						</div>
+				</div>
+		</div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		End About
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Start Feature
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="feature-section feature-section-two ptb-120">
+		<div class="container">
+				<div class="row justify-content-center">
+						<div class="col-xl-6 col-lg-8 text-center">
+								<div class="section-header" data-aos="fade-up" data-aos-duration="1200">
+										{% blocktranslate %}<h2 class='section-title'><span>FUDOKAN KARATE</span> CHARACTERISTICS</h2>{% endblocktranslate %}
+										<p></p>
+								</div>
+						</div>
+				</div>
+				<div class="row justify-content-center align-items-end mb-30-none">
+						<div class="col-xl-3 col-lg-12 col-md-12 col-sm-12">
+								<div class="row">
+										<div class="col-xl-12 col-lg-6 col-md-6">
+												<div class="feature-item mb-30" data-aos="zoom-in" data-aos-duration="1200">
+														<div class="feature-icon-area">
+																<div class="feature-icon">
+																		<img src="{% static 'images/icon/icon-10.png' %}" alt="icon">
+																</div>
+														</div>
+														<div class="feature-content">
+																<h4 class="title">{% trans 'FIT FOR ANY AGE' %}</h4>
+																<p>{% trans 'It is never too late to start learning Fudokan' %}.</p>
+														</div>
+												</div>
+										</div>
+										<div class="col-xl-12 col-lg-6 col-md-6">
+												<div class="feature-item mb-30" data-aos="zoom-in" data-aos-duration="1200">
+														<div class="feature-icon-area">
+																<div class="feature-icon">
+																		<img src="{% static 'images/icon/icon-11.png' %}" alt="icon">
+																</div>
+														</div>
+														<div class="feature-content">
+																<h4 class="title">{% trans 'IMPROVES YOUR FITNESS' %}</h4>
+																<p>{% trans 'Fudokan develops endurance, strength and mobility' %}.</p>
+														</div>
+												</div>
+										</div>
+                    <div class="col-xl-12 col-lg-6 col-md-6">
+												<div class="feature-item mb-30" data-aos="zoom-in" data-aos-duration="1200">
+														<div class="feature-icon-area">
+																<div class="feature-icon">
+																		<img src="{% static 'images/icon/icon-11.png' %}" alt="icon">
+																</div>
+														</div>
+														<div class="feature-content">
+																<h4 class="title">{% trans 'TEACHES SELF-DEFENCE' %}</h4>
+																<p>{% trans 'Martial artists deal with bullying in a less violent way' %}.</p>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+						<div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 mb-30">
+								<div class="feature-thumb-area bg-img" style="">
+										<div class="feature-thumb">
+												<img src="{% static 'images/gallery/miriam3.webp' %}" alt="element">
+										</div>
+								</div>
+						</div>
+						<div class="col-xl-3 col-lg-12 col-md-12 col-sm-12">
+								<div class="row">
+										<div class="col-xl-12 col-lg-6 col-md-6">
+												<div class="feature-item mb-30" data-aos="zoom-in" data-aos-duration="1200">
+														<div class="feature-icon-area">
+																<div class="feature-icon">
+																		<img src="{% static 'images/icon/icon-12.png' %}" alt="icon">
+																</div>
+														</div>
+														<div class="feature-content">
+																<h4 class="title">{% trans 'DEVELOPS CHARACTER' %}</h4>
+																<p>{% trans 'Fudokan karate means harmony with society' %}.</p>
+														</div>
+												</div>
+										</div>
+										<div class="col-xl-12 col-lg-6 col-md-6">
+												<div class="feature-item mb-30" data-aos="zoom-in" data-aos-duration="1200">
+														<div class="feature-icon-area">
+																<div class="feature-icon">
+																		<img src="{% static 'images/icon/icon-13.png' %}" alt="icon">
+																</div>
+														</div>
+														<div class="feature-content">
+																<h4 class="title">{% trans 'ENCOURAGES SELF-DISCIPLINE' %}</h4>
+																<p>{% trans 'Fudokan is more than a sport, it is a lifestyle' %}.</p>
+														</div>
+												</div>
+										</div>
+                    <div class="col-xl-12 col-lg-6 col-md-6">
+												<div class="feature-item mb-30" data-aos="zoom-in" data-aos-duration="1200">
+														<div class="feature-icon-area">
+																<div class="feature-icon">
+																		<img src="{% static 'images/icon/icon-13.png' %}" alt="icon">
+																</div>
+														</div>
+														<div class="feature-content">
+																<h4 class="title">{% trans 'HONES LEADERSHIP SKILLS' %}</h4>
+																<p>{% trans 'Fudokan teaches leadership traits through respect' %}.</p>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+		</div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		End Feature
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Start Call-to-action
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="call-to-action-section ptb-120 bg-overlay-black bg_img" data-background="{% static 'images/backgrounds/bg-7.png' %}">
+		<div class="container">
+				<div class="row justify-content-center">
+						<div class="col-xl-7 col-lg-8 text-center">
+								<div class="call-to-action-content" data-aos="fade-up" data-aos-duration="1200">
+										<h2 class="title">{% trans 'JOIN OUR CLASSES' %}</h2>
+										<h2 class="sub-title">#{% trans 'BECOME A BETTER YOU' %}</h2>
+										<p>{% trans 'You will become stronger, faster, more focused, more motivated to reach your goals and we are committed to take you there' %}.</p>
+										<div class="call-to-action-btn">
+												<a href="{% url 'contact' %}" class="btn--base">{% trans 'Join Now' %} <i class="fas fa-arrow-right ml-2"></i></a>
+										</div>
+								</div>
+						</div>
+				</div>
+		</div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		End Call-to-action
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Start Training
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="training-section training-section-two ptb-120">
+		<div class="training-element-one" data-aos="fade-right" data-aos-duration="1200">
+				<img src="{% static 'images/element/element-17.png' %}" alt="element">
+		</div>
+		<div class="training-element-two" data-aos="fade-left" data-aos-duration="1200">
+				<img src="{% static 'images/element/element-18.png' %}" alt="element">
+		</div>
+		<div class="container">
+				<div class="row justify-content-center">
+						<div class="col-xl-7 col-lg-8 text-center">
+								<div class="section-header" data-aos="fade-up" data-aos-duration="1200">
+										<h2 class="section-title">{% blocktranslate %}MORE ABOUT WHAT<span> YOU</span> WILL LEARN HERE{% endblocktranslate %}</h2>
+										<p></p>
+								</div>
+						</div>
+				</div>
+				<div class="row justify-content-center mb-30-none" data-aos="fade-up" data-aos-duration="1200">
+					{% for i in teachings %}	
+					<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xxs-6 mb-30">
+						<div class="training-item text-center" data-aos="zoom-in" data-aos-duration="1200">
+										<div class="training-icon">
+												<img src="{{ i.icon.url }}" alt="icon">
+										</div>
+										<div class="training-content">
+												<h4 class="title"><a href="#">{{ i.title }}</a></h4>
+										</div>
+										<div class="training-overlay bg-overlay-base bg_img" data-background="{{ i.image.url }}">
+												<div class="training-overlay-content">
+														<div class="training-overlay-icon">
+																<a href="#"><i class="fas fa-arrow-right"></i></a>
+														</div>
+														<h4 class="title"><a href="#">{{ i.text }}</a></h4>
+												</div>
+										</div>
+							</div>
+					</div>
+					{% endfor %}
+				</div>
+		</div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		End Training
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Start Trainer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="trainer-section trainer-section-two ptb-120 section--bg">
+		<div class="trainer-element-one">
+				<img src="{% static 'images/element/element-19.png' %}" alt="element">
+		</div>
+		<div class="trainer-element-two">
+				<img src="{% static 'images/element/element-20.png' %}" alt="element">
+		</div>
+		<div class="container">
+				<div class="row">
+						<div class="col-xl-12">
+								<div class="section-header-wrapper">
+										<div class="section-header white" data-aos="fade-right" data-aos-duration="1200">
+												<h2 class="section-title">{% blocktranslate %}OUR <span>SENSEIS</span>{% endblocktranslate %}</h2>
+												<p>{% trans 'Introduction...' %}.</p>
+										</div>
+										<div class="all-btn text-center" data-aos="fade-left" data-aos-duration="1200">
+												<a href="{% url 'trainers' %}" class="custom-btn">{% trans 'More' %}</a>
+										</div>
+								</div>
+						</div>
+				</div>
+				<div class="row justify-content-center mb-30" data-aos="fade-up" data-aos-duration="1200">
+						<div class="col-xl-12">
+								<div class="trainer-slider">
+										<div class="swiper-wrapper">
+                      {% for i in trainers %}
+												<div class="swiper-slide">
+                          <a href="{% url 'trainers-details' i.slug %}">
+														<div class="trainer-item">
+																<div class="trainer-thumb">
+																		<img src="{{ i.image.url }}" alt="trainer">
+																		<div class="trainer-overlay">
+																				<div class="trainer-content">
+																						<h3 class="title">{{ i.firstname }} {{ i.surname }}</h3>
+																						<span class="sub-title">{{ i.job }}</span>
+																				</div>
+																		</div>
+																</div>
+														</div>
+                            </a>
+												</div>
+                        {% endfor %}
+										</div>
+										<div class="custom-pagination"></div>
+										<div class="slider-nav-area">
+												<div class="slider-prev">
+														<i class="fas fa-chevron-left"></i>
+												</div>
+												<div class="slider-next">
+														<i class="fas fa-chevron-right"></i>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+		</div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		End Trainer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Start Event
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="event-section ptb-120">
+		<div class="container">
+				<div class="row justify-content-center">
+						<div class="col-xl-6 col-lg-8 text-center">
+								<div class="section-header" data-aos="fade-up" data-aos-duration="1200">
+										<h2 class="section-title">{% blocktranslate %}OUR <span>FUDOKAN</span> EVENTS{% endblocktranslate %}</h2>
+										<p>{% trans 'Energyfit Karate Brasov is the only Fudokan martial arts school in Brasov, a karate style that teaches modesty, focus and fighting for true human values. Our school has one of the most innovative and child friendly training programs you can find' %}.</p>
+								</div>
+						</div>
+				</div>
+				<div class="row justify-content-center mb-30-none">
+						<div class="col-xl-6 col-lg-6 mb-30">
+								<div class="event-thumb" data-aos="fade-right" data-aos-duration="1200">
+										<img src="{% static 'images/gallery/miriam4.webp' %}" alt="bg">
+								</div>
+						</div>
+						<div class="col-xl-6 col-lg-6 mb-30">
+								<div class="event-item-area" data-aos="fade-left" data-aos-duration="1200">
+									{% for i in events %}
+										<div class="event-item">
+												<div class="event-content">
+														<div class="event-post-meta">
+																<div class="event-badge">
+																		<span>Event</span>
+																</div>
+																<div class="event-date">
+																		<span>{{ i.event_date|date:"d m y" }}</span>
+																</div>
+														</div>
+														<h3 class="title"><a href="{% url 'event-details' i.slug %}">{{ i.title|safe }}</a></h3>
+														<p>{{ i.text|safe|truncatechars:100 }}.</p>
+												</div>
+										</div>
+									{% endfor %}
+								</div>
+						</div>
+				</div>
+		</div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		End Event
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Start Client
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="client-section client-section-two ptb-120 bg-overlay-black bg_img" data-background="{% static 'images/backgrounds/bg-7.png' %}">
+		<div class="container">
+				<div class="row">
+						<div class="col-xl-12">
+								<div class="section-header-wrapper">
+										<div class="section-header white" data-aos="fade-right" data-aos-duration="1200">
+												<h2 class="section-title">{% blocktranslate %}OUR <span></span> TESTIMONIALS{% endblocktranslate %}</h2>
+												<p>{% trans 'Energyfit Karate Brasov is the only Fudokan martial arts school in Brasov, a karate style that teaches modesty, focus and fighting for true human values. Our school has one of the most innovative and child friendly training programs you can find' %}.</p>
+										</div>
+										<div class="slider-nav-area" data-aos="fade-left" data-aos-duration="1200">
+												<div class="slider-prev">
+														<i class="fas fa-chevron-left"></i>
+												</div>
+												<div class="slider-next">
+														<i class="fas fa-chevron-right"></i>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				<div class="client-area">
+						<div class="row justify-content-center align-items-end mb-30-none">
+								<div class="col-xl-8 col-lg-8 col-md-6 mb-30">
+										<div class="client-slider" data-aos="fade-right" data-aos-duration="1200">
+												<div class="swiper-wrapper">
+														<div class="swiper-slide">
+																<div class="client-item">
+																		<div class="client-header">
+																				<div class="client-quote">
+																						<img src="{% static 'images/client/quote.png' %}" alt="client">
+																				</div>
+																				<div class="client-thumb">
+																						<img src="{% static 'images/client/client-1.png' %}" alt="client">
+																				</div>
+																		</div>
+																		<div class="client-content">
+																				<p>{% trans 'Energyfit Karate Brasov is the only Fudokan martial arts school in Brasov, a karate style that teaches modesty, focus and fighting for true human values. Our school has one of the most innovative and child friendly training programs you can find' %}
+																		</div>
+																		<div class="client-footer">
+																				<div class="client-footer-left">
+																						<h4 class="title"><a href="#0">Ioana Ioana</a></h4>
+																						<span class="sub-title">Women's Trainner</span>
+																				</div>
+																				<div class="client-footer-right">
+																						<span class="ratings">
+																								<i class="fas fa-star"></i>
+																								<i class="fas fa-star"></i>
+																								<i class="fas fa-star"></i>
+																								<i class="fas fa-star"></i>
+																								<i class="fas fa-star active"></i>
+																						</span>
+																				</div>
+																		</div>
+																</div>
+														</div>
+														<div class="swiper-slide">
+																<div class="client-item">
+																		<div class="client-header">
+																				<div class="client-quote">
+																						<img src="{% static 'images/client/quote.png' %}" alt="client">
+																				</div>
+																				<div class="client-thumb">
+																						<img src="{% static 'images/client/client-2.png' %}" alt="client">
+																				</div>
+																		</div>
+																		<div class="client-content">
+                                      <p>{% trans 'Energyfit Karate Brasov is the only Fudokan martial arts school in Brasov, a karate style that teaches modesty, focus and fighting for true human values. Our school has one of the most innovative and child friendly training programs you can find' %}
+
+																		</div>
+																		<div class="client-footer">
+																				<div class="client-footer-left">
+																						<h4 class="title"><a href="#0">Ion Ion</a></h4>
+																						<span class="sub-title">Fudokan Trainee</span>
+																				</div>
+																				<div class="client-footer-right">
+																						<span class="ratings">
+																								<i class="fas fa-star"></i>
+																								<i class="fas fa-star"></i>
+																								<i class="fas fa-star"></i>
+																								<i class="fas fa-star"></i>
+																								<i class="fas fa-star active"></i>
+																						</span>
+																				</div>
+																		</div>
+																</div>
+														</div>
+												</div>
+										</div>
+								</div>
+								<div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+										<div class="client-right-thumb" data-aos="fade-left" data-aos-duration="1200">
+												<img src="{% static 'images/logo/logo-energyfit-cerc.png' %}" alt="client">
+												<div class="client-thumb-overlay">
+														<h4 class="title"></h4>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+		</div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		End Client
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Start Plan
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="plan-section pt-120">
+		<div class="container">
+				<div class="row justify-content-center">
+						<div class="col-xl-6 col-lg-8 text-center">
+								<div class="section-header" data-aos="fade-up" data-aos-duration="1200">
+										<h2 class="section-title">{% blocktranslate %}OUR <span>MEMBERSHIP</span> PLAN{% endblocktranslate %}</h2>
+										<p>{% trans 'We are trying to fit every situation and every pocket' %}.</p>
+								</div>
+						</div>
+				</div>
+				<div class="row">
+						<div class="col-xl-12">
+						<nav class="plan-tab" data-aos="fade-up" data-aos-duration="1200">
+								<span class="monthly_tab_title">{% trans 'Beginner' %}</span>
+								<span class="plan-tab-switcher"></span>
+								<span class="annual_tab_title">{% trans 'Advanced' %}</span>
+						</nav>
+						</div>
+				</div>
+				<div class="plan-area change-subs-duration">
+						<div class="row justify-content-center mb-30-none">
+								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 mb-30">
+										<div class="plan-item" data-aos="zoom-in" data-aos-duration="1200">
+												<div class="plan-content">
+														<div class="plan-header">
+																<div class="plan-badge-area">
+																		<span class="plan-badge red">{% trans 'Per Session' %}</span>
+																</div>
+														</div>
+														<div class="plan-price-area">
+																<h2 class="price-title"><sup>RON</sup>35<sub>/{% trans 'session' %}</sub></h2>
+														</div>
+														<ul class="plan-list">
+                              <li>{% trans 'Monday and Wednesday every week' %}</li>
+                              <li>{% trans 'Saturday training 2 weeks before a competition' %}</li>
+                              <li>{% trans 'Students who represent the club at competitions receive a uniform with our logo' %}</li>
+														</ul>
+												</div>
+												<div class="plan-footer">
+														<a href="#0">
+																<h3 class="title">{% trans 'Enroll Now' %}</h3>
+																<div class="plan-btn"><i class="fas fa-angle-right"></i></div>
+														</a>
+												</div>
+												<div class="plan-overlay">
+                          <img src="{% static 'images/logo_cut.webp' %}" alt="element">
+												</div>
+										</div>
+								</div>
+								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 mb-30">
+										<div class="plan-item active" data-aos="zoom-in" data-aos-duration="1200">
+												<span class="plan-badge-top">{% trans 'Popular' %}</span>
+												<div class="plan-content">
+														<div class="plan-header">
+																<div class="plan-badge-area">
+																		<span class="plan-badge red">{% trans 'Monthly' %}</span>
+																</div>
+														</div>
+														<div class="plan-price-area">
+																<h2 class="price-title"><sup>RON</sup>200<sub>/{% trans 'month' %}</sub></h2>
+														</div>
+														<ul class="plan-list">
+																<li>{% trans 'Monday and Wednesday every week' %}</li>
+																<li>{% trans 'Saturday training included, 2 weeks before a competition' %}</li>
+																<li>{% trans 'Students who represent the club at competitions receive a uniform with our logo' %}</li>
+														</ul>
+												</div>
+												<div class="plan-footer">
+														<a href="#0">
+																<h3 class="title">{% trans 'Enroll Now' %}</h3>
+																<div class="plan-btn"><i class="fas fa-angle-right"></i></div>
+														</a>
+												</div>
+												<div class="plan-overlay">
+                          <img src="{% static 'images/logo_cut.webp' %}" alt="element">
+												</div>
+										</div>
+								</div>
+								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 mb-30">
+										<div class="plan-item" data-aos="zoom-in" data-aos-duration="1200">
+												<div class="plan-content">
+														<div class="plan-header">
+																<div class="plan-badge-area">
+																		<span class="plan-badge red">{% trans 'Half month' %}</span>
+																</div>
+														</div>
+														<div class="plan-price-area">
+																<h2 class="price-title"><sup>RON</sup>135<sub>/{% trans 'half-month' %}</sub></h2>
+														</div>
+														<ul class="plan-list">
+                              <li>{% trans 'Monday and Wednesday every week' %}</li>
+                              <li>{% trans 'Saturday training included, 2 weeks before a competition' %}</li>
+                              <li>{% trans 'Students who represent the club at competitions receive a uniform with our logo' %}</li>
+														</ul>
+												</div>
+												<div class="plan-footer">
+														<a href="#0">
+																<h3 class="title">{% trans 'Enroll Now' %}</h3>
+																<div class="plan-btn"><i class="fas fa-angle-right"></i></div>
+														</a>
+												</div>
+												<div class="plan-overlay">
+                          <img src="{% static 'images/logo_cut.webp' %}" alt="element">
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				<div class="plan-area">
+						<div class="row justify-content-center mb-30-none">
+								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 mb-30">
+										<div class="plan-item" data-aos="zoom-in" data-aos-duration="1200">
+												<div class="plan-content">
+														<div class="plan-header">
+																<div class="plan-badge-area">
+																		<span class="plan-badge red">{% trans 'Per Session' %}</span>
+																</div>
+														</div>
+														<div class="plan-price-area">
+																<h2 class="price-title"><sup>RON</sup>35<sub>/{% trans 'session' %}</sub></h2>
+														</div>
+														<ul class="plan-list">
+                              <li>{% trans 'Monday and Wednesday every week' %}</li>
+                              <li>{% trans 'Every Saturday training included' %}</li>
+                              <li>{% trans 'Students who represent the club at competitions receive a uniform with our logo' %}</li>
+														</ul>
+												</div>
+												<div class="plan-footer">
+														<a href="#0">
+																<h3 class="title">{% trans 'Enroll Now' %}</h3>
+																<div class="plan-btn"><i class="fas fa-angle-right"></i></div>
+														</a>
+												</div>
+												<div class="plan-overlay">
+                          <img src="{% static 'images/logo_cut.webp' %}" alt="element">
+												</div>
+										</div>
+								</div>
+								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 mb-30">
+										<div class="plan-item active" data-aos="zoom-in" data-aos-duration="1200">
+												<span class="plan-badge-top">{% trans 'Popular' %}</span>
+												<div class="plan-content">
+														<div class="plan-header">
+																<div class="plan-badge-area">
+																		<span class="plan-badge red">{% trans 'Monthly' %}</span>
+																</div>
+														</div>
+														<div class="plan-price-area">
+																<h2 class="price-title"><sup>RON</sup>250<sub>/{% trans 'month' %}</sub></h2>
+														</div>
+														<ul class="plan-list">
+                              <li>{% trans 'Monday and Wednesday every week' %}</li>
+                              <li>{% trans 'Every Saturday training included' %}</li>
+                              <li>{% trans 'Students who represent the club at competitions receive a uniform with our logo' %}</li>
+														</ul>
+												</div>
+												<div class="plan-footer">
+														<a href="#0">
+																<h3 class="title">{% trans 'Enroll Now' %}</h3>
+																<div class="plan-btn"><i class="fas fa-angle-right"></i></div>
+														</a>
+												</div>
+												<div class="plan-overlay">
+                          <img src="{% static 'images/logo2.png' %}" alt="element">
+												</div>
+										</div>
+								</div>
+								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 mb-30">
+										<div class="plan-item" data-aos="zoom-in" data-aos-duration="1200">
+												<div class="plan-content">
+														<div class="plan-header">
+																<div class="plan-badge-area">
+																		<span class="plan-badge red">{% trans 'Half month' %}</span>
+																</div>
+														</div>
+														<div class="plan-price-area">
+																<h2 class="price-title"><sup>RON</sup>135<sub>/{% trans 'month' %}</sub></h2>
+														</div>
+														<ul class="plan-list">
+                                <li>{% trans 'Monday and Wednesday every week' %}</li>
+                                <li>{% trans 'Every Saturday training included' %}</li>
+                                <li>{% trans 'Students who represent the club at competitions receive a uniform with our logo' %}</li>
+														</ul>
+												</div>
+												<div class="plan-footer">
+														<a href="#0">
+																<h3 class="title">GO ELITE</h3>
+																<div class="plan-btn"><i class="fas fa-angle-right"></i></div>
+														</a>
+												</div>
+												<div class="plan-overlay">
+														<img src="{% static 'images/logo2.png' %}" alt="element">
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+		</div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		End Plan
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Start Tutorial
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!-- <section class="tutorial-section ptb-120">
+		<div class="container-fluid p-0">
+				<div class="row justify-content-center">
+						<div class="col-xl-4 col-lg-8 col-md-6 text-center">
+								<div class="section-header">
+										<h2 class="section-title">{% blocktranslate %}<span>FUDOKAN</span> TUTORIALS{% endblocktranslate %}</h2>
+										<p>...</p>
+								</div>
+						</div>
+				</div>
+				<div class="row mb-30-none">
+						<div class="col-xl-12">
+								<div class="tutorial-slider">
+										<div class="swiper-wrapper">
+												<div class="swiper-slide">
+														<div class="tutorial-item">
+																<div class="tutorial-thumb">
+																		<img src="{% static 'images/tutorial/tutorial-1.png' %}" alt="tutorial">
+																		<div class="tutorial-overlay">
+																				<div class="tutorial-video">
+																						<a class="video-icon" data-rel="lightcase:myCollection" href="https://www.youtube.com/embed/HZkvujBp2Tk">
+																								<i class="fab fa-youtube"></i>
+																						</a>
+																				</div>
+																				<div class="tutorial-content">
+																						<h3 class="title">THE BEST BOXERS IN THEIR WEIGH
+																								TARGET CATEGORY</h3>
+																				</div>
+																		</div>
+																</div>
+														</div>
+												</div>
+												<div class="swiper-slide">
+														<div class="tutorial-item">
+																<div class="tutorial-thumb">
+																		<img src="{% static 'images/tutorial/tutorial-2.png' %}" alt="tutorial">
+																		<div class="tutorial-overlay">
+																				<div class="tutorial-video">
+																						<a class="video-icon" data-rel="lightcase:myCollection" href="https://www.youtube.com/embed/YDErI8Lphho">
+																								<i class="fab fa-youtube"></i>
+																						</a>
+																				</div>
+																				<div class="tutorial-content">
+																						<h3 class="title">THE BEST BOXERS IN THEIR WEIGH
+																								TARGET CATEGORY</h3>
+																				</div>
+																		</div>
+																</div>
+														</div>
+												</div>
+												<div class="swiper-slide">
+														<div class="tutorial-item">
+																<div class="tutorial-thumb">
+																		<img src="{% static 'images/tutorial/tutorial-3.png' %}" alt="tutorial">
+																		<div class="tutorial-overlay">
+																				<div class="tutorial-video">
+																						<a class="video-icon" data-rel="lightcase:myCollection" href="https://www.youtube.com/embed/YDErI8Lphho">
+																								<i class="fab fa-youtube"></i>
+																						</a>
+																				</div>
+																				<div class="tutorial-content">
+																						<h3 class="title">THE BEST BOXERS IN THEIR WEIGH
+																								TARGET CATEGORY</h3>
+																				</div>
+																		</div>
+																</div>
+														</div>
+												</div>
+												<div class="swiper-slide">
+														<div class="tutorial-item">
+																<div class="tutorial-thumb">
+																		<img src="{% static 'images/tutorial/tutorial-4.png' %}" alt="tutorial">
+																		<div class="tutorial-overlay">
+																				<div class="tutorial-video">
+																						<a class="video-icon" data-rel="lightcase:myCollection" href="https://www.youtube.com/embed/YDErI8Lphho">
+																								<i class="fab fa-youtube"></i>
+																						</a>
+																				</div>
+																				<div class="tutorial-content">
+																						<h3 class="title">THE BEST BOXERS IN THEIR WEIGH
+																								TARGET CATEGORY</h3>
+																				</div>
+																		</div>
+																</div>
+														</div>
+												</div>
+										</div>
+										<div class="custom-pagination"></div>
+										<div class="slider-nav-area">
+												<div class="slider-prev">
+														<i class="fas fa-chevron-left"></i>
+												</div>
+												<div class="slider-next">
+														<i class="fas fa-chevron-right"></i>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+		</div>
+</section> -->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		End Tutorial
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Start Subscribe
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+	{% include 'includes/newsletter.html' %}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		End Subscribe
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Start Blog
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+	<section class="blog-section blog-section-two ptb-120">
+			<div class="container">
+					<div class="row justify-content-center">
+							<div class="col-xl-7 text-center">
+									<div class="section-header" data-aos="fade-up" data-aos-duration="1200">
+											<h2 class="section-title">{% blocktranslate %}LATEST <span>NEWS</span> FROM ENERGYFIT KARATE BRASOV{% endblocktranslate %}</h2>
+											<p>....</p>
+									</div>
+							</div>
+					</div>
+					<div class="blog-area">
+							<div class="row justify-content-center mb-30-none">
+								{% for i in blogposts %}
+									<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+											<div class="blog-item" data-aos="zoom-in" data-aos-duration="1200">
+													<div class="blog-thumb">
+															<img src="{% static 'images/blog/blog-4.png' %}" alt="blog">
+															<div class="blog-date">
+																	<span>Feb 10, 2022</span>
+															</div>
+													</div>
+													<div class="blog-content">
+															<div class="blog-post-meta">
+																	<span class="user">By : ENERGYFIT KARATE BRASOV Joy</span>
+																	<span class="category"><a href="{% url 'blog' %}">Karate</a></span>
+															</div>
+															<h3 class="title"><a href="{% url 'blog-details' i.slug %}">THE UPCOMING WBC CHAMPION SHIPS 2022 IN FEB</a></h3>
+                              								<p>{% trans 'Energyfit Karate Brasov is the only Fudokan martial arts school in Brasov, a karate style that teaches modesty, focus and fighting for true human values. Our school has one of the most innovative and child friendly training programs you can find' %}
+													</div>
+											</div>
+									</div>
+								{% endfor %}
+							</div>
+					</div>
+			</div>
+	</section>
+  {% include 'services/addcategory.html' %}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		End Blog
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+{% endblock %}

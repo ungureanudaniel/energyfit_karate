@@ -1,0 +1,182 @@
+{% extends 'services/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="banner-section banner-section-two inner-banner-section bg-overlay-red bg_img" data-background="{% static 'images/backgrounds/training-crop.webp' %}">
+    <div class="section-logo-text">
+        <span class="title">ENERGYFIT</span>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-end mb-30-none">
+            <div class="col-xl-12 col-lg-12 text-center mb-30">
+                <div class="banner-content" data-aos="fade-up" data-aos-duration="1800">
+                    {% blocktranslate %}<h1 class='title'>ENROLL <span>NOW</span></h1>{% endblocktranslate %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="breadcrumb-area">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'Home' %}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{% trans 'Enroll' %}</li>
+        </ol>
+    </nav>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<a href="#" class="scrollToTop">
+    <img src="{% static 'images/element/arrow_up_icon.png' %}" style="width:80px;height:auto;color: red;" alt="element">
+    <div class="scrollToTop-icon">
+    </div>
+</a>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Account widget
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="account-widget-section account-widget-section-two account-widget-section--style account-widget-section--style-two pt-120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-12">
+                <div class="account-widget-form-area">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-10 col-lg-12 text-center">
+                            <div class="section-header">
+                                  {% blocktranslate %}<h2 class='section-title'>To <span>Apply</span> Write Us <span>Today!</span></h2>{% endblocktranslate %}
+                                <p>{% trans 'And we will reach back to you as soon as possible' %}.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="account-widget-form">
+                        <div class="row justify-content-center mb-20-none">
+                            <div class="col-xl-6 col-lg-6 form-group">
+                                <label>{% trans 'Enter Name' %}</label>
+                                <input type="text" class="form--control" placeholder="{% trans 'Type in your name' %}">
+                            </div>
+                            <div class="col-xl-6 col-lg-6 form-group">
+                                <label>{% trans 'Email Address' %}</label>
+                                <input type="email" class="form--control" placeholder="{% trans 'Type in your email' %}">
+                            </div>
+                            <div class="col-xl-6 col-lg-6 form-group">
+                                <label>{% trans 'Phone Number' %}</label>
+                                <input type="text" class="form--control" placeholder="{% trans 'Type in your phone number' %}">
+                            </div>
+                            <div class="col-xl-6 col-lg-6 form-group">
+                                <label>{% trans 'Select your desired class' %}</label>
+                                <div class="account-widget-select">
+                                    <select class="form--control">
+
+                                        <option value="1">?</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 form-group">
+                                <label>{% trans 'Write Message' %}</label>
+                                <textarea class="form--control" placeholder="{% trans 'Start typing your message here' %}"></textarea>
+                            </div>
+                            <div class="col-xl-12 form-group text-center">
+                                <button type="submit" class="btn--base mt-20">{% trans 'Get Enrolled Now' %} <i class="fas fa-arrow-right ml-2"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Account widget
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Statistics
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="statistics-section statistics-section-two ptb-120">
+    <div class="statistics-element-one my-paroller" data-paroller-factor="0.2" data-paroller-type="foreground" data-paroller-direction="vertical">
+        <img src="{% static 'images/element/element-1.png' %}" alt="element">
+    </div>
+    <div class="statistics-element-two my-paroller" data-paroller-factor="0.2" data-paroller-type="foreground" data-paroller-direction="vertical">
+        <img src="{% static 'images/element/element-2.png' %}" alt="element">
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12 text-center">
+                <div class="section-header">
+                    {% blocktranslate %}<h2 class="section-title">We can provide you one of the <span>Best Fudokan Training Programs in Europe.</span></h2>{% endblocktranslate %}
+                    <p>{% trans 'Learn to practice and master Fudokan martial arts together with a beautiful team that may become a second family! This Karate style is proven to enhance self defence abilities, focus on tasks, self-awareness, improves balance in life and relieves stress, all while you build up fitness and health' %}</p>
+                </div>
+            </div>
+        </div>
+        <div class="statistics-area">
+            <div class="row justify-content-center mb-30-none">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                    <div class="statistics-item">
+                        <div class="statistics-icon-area">
+                            <div class="statistics-icon">
+                                <img src="{% static 'images/icon/icon-44.png' %}" alt="icon">
+                            </div>
+                        </div>
+                        <div class="statistics-content">
+                            <div class="odo-area">
+                                <h3 class="odo-title odometer" data-odometer-final="7690">0</h3>
+                                <h3 class="title">+</h3>
+                            </div>
+                            <p>Hours on the Tatami</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                    <div class="statistics-item">
+                        <div class="statistics-icon-area">
+                            <div class="statistics-icon">
+                                <img src="{% static 'images/icon/icon-45.png' %}" alt="icon">
+                            </div>
+                        </div>
+                        <div class="statistics-content">
+                            <div class="odo-area">
+                                <h3 class="odo-title odometer" data-odometer-final="57">0</h3>
+                                <h3 class="title">+</h3>
+                            </div>
+                            <p>Events</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                    <div class="statistics-item">
+                        <div class="statistics-icon-area">
+                            <div class="statistics-icon">
+                                <img src="{% static 'images/icon/icon-46.png' %}" alt="icon">
+                            </div>
+                        </div>
+                        <div class="statistics-content">
+                            <div class="odo-area">
+                                <h3 class="odo-title odometer" data-odometer-final="29">0</h3>
+                                <h3 class="title">+</h3>
+                            </div>
+                            <p>Students Admission</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Statistics
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+{% endblock %}

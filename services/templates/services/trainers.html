@@ -1,0 +1,261 @@
+{% extends 'services/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="banner-section banner-section-two inner-banner-section bg-overlay-red bg_img" data-background="{% static 'images/backgrounds/bg-7.png' %}">
+    <div class="section-logo-text">
+        <span class="title">ENERGYFIT</span>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-end mb-30-none">
+            <div class="col-xl-12 col-lg-12 text-center mb-30">
+                <div class="banner-content" data-aos="fade-up" data-aos-duration="1800">
+                    <h1 class="title">{% trans 'Trainers' %}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="breadcrumb-area">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'Home' %}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{% trans 'Trainers' %}</li>
+        </ol>
+    </nav>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<a href="#" class="scrollToTop">
+    <img src="{% static 'images/element/arrow_up_icon.png' %}" style="width:80px;height:auto;color: red;" alt="element">
+    <div class="scrollToTop-icon">
+    </div>
+</a>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Trainer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="trainer-section trainer-section-two ptb-120 section--bg">
+		<div class="trainer-element-one">
+				<img src="{% static 'images/element/element-19.png' %}" alt="element">
+		</div>
+		<div class="trainer-element-two">
+				<img src="{% static 'images/element/element-20.png' %}" alt="element">
+		</div>
+		<div class="container">
+				<div class="row">
+						<div class="col-xl-12">
+								<div class="section-header-wrapper">
+										<div class="section-header white" data-aos="fade-right" data-aos-duration="1200">
+												<h2 class="section-title">{% blocktranslate %}OUR <span>SENSEIS</span>{% endblocktranslate %}</h2>
+												<p>{% trans 'Introduction...' %}.</p>
+										</div>
+								</div>
+						</div>
+				</div>
+				<div class="row justify-content-center mb-30" data-aos="fade-up" data-aos-duration="1200">
+						<div class="col-xl-12">
+								<div class="trainer-slider">
+										<div class="swiper-wrapper">
+                      {% for i in trainers %}
+												<div class="swiper-slide">
+														<div class="trainer-item">
+																<div class="trainer-thumb">
+																		<img src="{{ i.image.url }}" alt="trainer">
+																		<div class="trainer-overlay">
+																				<div class="trainer-content">
+																						<h3 class="title"><a href="{% url 'trainers-details' i.slug %}">{{ i.firstname }} {{ i.surname }}</a></h3>
+																						<span class="sub-title">{{ i.job }}</span>
+																				</div>
+																		</div>
+																</div>
+														</div>
+												</div>
+                        {% endfor %}
+										</div>
+										<div class="custom-pagination"></div>
+										<div class="slider-nav-area">
+												<div class="slider-prev">
+														<i class="fas fa-chevron-left"></i>
+												</div>
+												<div class="slider-next">
+														<i class="fas fa-chevron-right"></i>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+		</div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Trainer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Video
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="video-section bg-overlay-red bg_img" data-background="{% static 'images\backgrounds\catalin_karol2.webp' %}">
+    <div class="section-logo-text">
+        <span class="title text-uppercase">{% trans 'See our video' %}</span>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-12 text-center">
+                <div class="video-area">
+                    <div class="video-main">
+                        <div class="promo-video">
+                            <div class="waves-block">
+                                <div class="waves wave-1"></div>
+                                <div class="waves wave-2"></div>
+                                <div class="waves wave-3"></div>
+                            </div>
+                        </div>
+                        <a class="video-icon" data-rel="lightcase:myCollection" href="https://www.youtube.com/embed/HZkvujBp2Tk">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Video
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Statistics
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="statistics-section">
+    <div class="container">
+        <div class="statistics-area">
+            <div class="row justify-content-center mt-20-none mb-30-none">
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
+                  <div class="statistics-item">
+                      <div class="statistics-content">
+                          <div class="odo-area">
+                              <h3 class="odo-title odometer" data-odometer-final="60">0</h3>
+                              <h3 class="title">+</h3>
+                          </div>
+                          <p>{% trans 'Students' %}</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
+                  <div class="statistics-item">
+                      <div class="statistics-content">
+                          <div class="odo-area">
+                              <h3 class="odo-title odometer" data-odometer-final="12500">0</h3>
+                              <h3 class="title">+</h3>
+                          </div>
+                          <p>{% trans 'Competitions' %}</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
+                  <div class="statistics-item">
+                      <div class="statistics-content">
+                          <div class="odo-area">
+                              <h3 class="odo-title odometer" data-odometer-final="130">0</h3>
+                              <h3 class="title">+</h3>
+                          </div>
+                          <p>{% trans 'Competitions' %}</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
+                <div class="statistics-item">
+                    <div class="statistics-content">
+                        <div class="odo-area">
+                            <h3 class="odo-title odometer" data-odometer-final="3000">0</h3>
+                            <h3 class="title">+</h3>
+                        </div>
+                        <p>{% trans 'Medals' %}</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Statistics
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Overview
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="overview-section ptb-120">
+    <div class="container">
+        <div class="row justify-content-center mb-30-none">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                <div class="overview-item">
+                    <div class="overview-number">
+                        <span>01</span>
+                    </div>
+                    <div class="overview-icon-area">
+                        <div class="overview-icon">
+                            <img src="{% static 'images/icon/icon-41.png' %}" alt="icon">
+                        </div>
+                    </div>
+                    <div class="overview-content">
+                        <h3 class="title">{% trans 'OUR MISSION' %}</h3>
+                        <p>{% trans 'Energyfit Karate Brașov is a nonprofit community gym offering Fudokan martial arts classes for all ages focused on self-actualization, total body healing, and strength. Our goal is to help people tap into their potential, seeking balance and grace through movement, while establishing a strong foundation of integrity and self-discipline that will facilitate personal and professional success' %}.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                <div class="overview-item">
+                    <div class="overview-number">
+                        <span>02</span>
+                    </div>
+                    <div class="overview-icon-area">
+                        <div class="overview-icon">
+                            <img src="{% static 'images/icon/icon-39.png' %}" alt="icon">
+                        </div>
+                    </div>
+                    <div class="overview-content">
+                        <h3 class="title">{% trans 'OUR VISION' %}</h3>
+                        <p>{% trans 'At Energyfit Karate we envision a community where people of all ages, backgrounds, abilities, and genders feel safe, valued, and inspired to work towards building a better self, both physically and mentally' %}.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                <div class="overview-item">
+                    <div class="overview-number">
+                        <span>03</span>
+                    </div>
+                    <div class="overview-icon-area">
+                        <div class="overview-icon">
+                            <img src="{% static 'images/icon/icon-53.png' %}" alt="icon">
+                        </div>
+                    </div>
+                    <div class="overview-content">
+                        <h3 class="title">{% trans 'OUR HISTORY' %}</h3>
+                        <p>{% trans 'The first Energyfit Karate dojo opened its doors ...' %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Overview
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+{% endblock %}

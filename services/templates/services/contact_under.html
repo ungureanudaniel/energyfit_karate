@@ -1,0 +1,529 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+			<title>{% trans 'Energyfit' %}</title>
+ 			<link rel="shortcut icon" type="image/png" href="{% static 'images/logo2.png' %}">
+			<meta name="description" property="og:description" content="{% trans 'Una dintre cele mai bune scoli de karate din Brasov' %}">
+		 	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+		 	<meta name="keywords" content="martial arts, karate, arte martiale">
+		 	<meta name="author" content="Energyfit">
+		 	<meta property="og:type" content="website">
+		 	<meta property="og:url" content="https://energyfit.ro/">
+		 	<meta property="og:site_name" content="Energyfit">
+		 	<meta property="og:title" content="{% trans 'Energyfit | Un Sanctuar al Artelor Martiale" />
+		 	<meta property="og:description" content="Iconic protected area, in the heart of Romania.">
+		 	<meta property="og:image" content="https://energyfit.ro/static/images/logo2.png">
+		 	<meta property="og:image:alt" content="Logo">
+	 		<link rel="canonical" href="https://energyfit.ro/">
+	    <link rel="preconnect" href="https://fonts.googleapis.com">
+	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	    <!-- fontawesome css link -->
+	    <link rel="stylesheet" href="{% static 'css/fontawesome-all.min.css' %}">
+	    <!-- bootstrap css link -->
+	    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	    <!-- favicon -->
+	    <link rel="shortcut icon" href="{% static 'images/fav.png' %}" type="image/x-icon">
+	    <!-- swipper css link -->
+	    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+	    <!-- lightcase css links -->
+	    <link rel="stylesheet" href="{% static 'css/lightcase.css' %}">
+	    <!-- odometer css link -->
+	    <link rel="stylesheet" href="{% static 'css/odometer.css' %}">
+	    <!-- line-awesome-icon css -->
+	    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+	    <!-- line-awesome-icon css -->
+	    <link rel="stylesheet" href="{% static 'css/line-awesome.min.css' %}">
+	    <!-- animate.css' %} -->
+	    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+	    <!-- aos.css -->
+	    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+	    <!-- nice select css -->
+	    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+	    <!-- flipclock css -->
+	    <link rel="stylesheet" href="{% static 'css/flipclock.css' %}">
+	    <!-- main style css link -->
+	    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+			<!-- preloader style css link -->
+
+	</head>
+<body>
+
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Preloader
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div class="preloader">
+    <div class="loader">
+        <div class="loader-thumb">
+					<svg viewBox="-1500 -1500 3000 3000">
+						<style type="text/css">
+							<![CDATA[
+							svg {
+							  width: 30vmin;
+							  height: 30vmin;
+							  border-radius: 50%;
+							  background: white;
+							  animation: r 2s linear infinite;
+							}
+
+							@keyframes r {
+							  to {
+							    transform: rotate(1turn);
+							  }
+							}
+							path {
+							  d: path("M-1500 0A1500 1500 0 0 1 1500 0A375 375 0 0 1 750 0A1125 1125 0 0 0 -1500 0");
+							  animation: m 1s ease-in-out infinite alternate;
+							}
+
+							circle {
+							  r: 125;
+							  transform: translate(1125px);
+							  animation: s 1s ease-in-out infinite alternate;
+							  animation-name: s, x;
+								fill: white;
+
+							}
+							circle:nth-child(2) {
+							  fill: white;
+							}
+							circle:nth-child(3) {
+							  cx: -1500;
+							  animation-delay: -1s, 0s;
+								fill: black;
+
+							}
+
+							@keyframes m {
+							  to {
+							    d: path("M-1500 0A1500 1500 0 0 1 1500 0A1125 1125 0 0 1 -750 0A375 375 0 0 0 -1500 0");
+							  }
+							}
+							@keyframes s {
+							  to {
+							    r: 375;
+							  }
+							}
+							@keyframes x {
+							  to {
+							    transform: translate(375px);
+							  }
+							}
+							]]>
+						</style>
+					  <path></path>
+					  <circle></circle>
+					  <circle></circle>
+					</svg>
+        </div>
+    </div>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Preloader
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Header
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<header class="header-section header-section-two">
+    <div class="header">
+        <div class="header-bottom-area">
+            <div class="container-fluid">
+                <div class="header-menu-content">
+                    <nav class="navbar navbar-expand-xl p-0">
+                        <a class="site-logo site-title d-block d-xl-none" href="{% url 'underconstruction' %}"><img style="height:100px;width:auto;" src="{% static 'images/logo2.png' %}" alt="site-logo"></a>
+                        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="fas fa-bars"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav main-menu ml-auto mr-auto">
+                                <li><a href="{% url 'underconstruction' %}">{% trans 'HOME' %}</a></li>
+                                <li><a href="#">{% trans 'ABOUT US' %}</a></li>
+                                <li class="">
+                                    <a href="#">{% trans 'TRAINING' %}</a>
+                                </li>
+                                <li class="menu_has_children">
+                                    <a href="#0">{% trans 'EXPLORE' %}</a>
+                                    <ul class="sub-menu">
+																				<li><a href="#">{% trans 'GALLERY' %}</a></li>
+                                        <li><a href="#">{% trans 'EVENTS' %}</a></li>
+                                        <li><a href="#">{% trans 'PRICING PLAN' %}</a></li>
+                                        <li><a href="#">FAQ</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="site-logo site-title d-none d-xl-block" href="{% url 'underconstruction' %}"><img style="height:100px;width:auto;" src="{% static 'images/logo2.png' %}" alt="site-logo"></a></li>
+                                <li class="">
+                                    <a href="#0">{% trans 'MASTERS' %}</a>
+                                </li>
+                                <li class="">
+                                    <a href="#0">{% trans 'NEWS' %}</a>
+                                </li>
+																<li class="menu_has_children">
+																	{% get_available_languages as LANGUAGES %}
+																	{% get_language_info_list for LANGUAGES as languages %}
+																	{% get_language_info for LANGUAGE_CODE as lang %}
+
+                                    <a href="#0">{% trans 'LANGUAGE' %}</a>
+                                    <ul class="sub-menu">
+																			{% for language in languages %}
+																				<li><a value="{{ language.name_local }}" href="/{{ language.code }}/{{ request.get_full_path|slice:'4:'}}">{{ language.name_local }}</a></li>
+                                      {% endfor %}
+                                    </ul>
+                                </li>
+
+                                <li><a href="{% url 'contact' %}">{% trans 'CONTACT US' %}</a></li>
+																{% if user.is_authenticated %}
+																<li><a style="color:red;" href="{% url 'logout' %}">{% trans 'LOGOUT' %}</a></li>
+																{% endif %}
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Header
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="banner-section banner-section-two inner-banner-section bg-overlay-red bg_img" data-background="{% static 'images/backgrounds/catalin_karol2.webp' %}">
+    <div class="section-logo-text">
+        <span class="title">Energyfit Karate Brasov</span>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-end mb-30-none">
+            <div class="col-xl-12 col-lg-12 text-center mb-30">
+                <div class="banner-content" data-aos="fade-up" data-aos-duration="1800">
+                    {% blocktranslate %}<h1 class='title'>CONTACT <span>US</span></h1>{% endblocktranslate %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="breadcrumb-area">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">{% trans 'Home' %}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{% trans 'Contact Us' %}</li>
+        </ol>
+    </nav>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<a href="#" class="scrollToTop">
+    <img src="{% static 'images/element/arrow_up_icon.png' %}" style="width:80px;height:auto;color: red;" alt="element">
+    <div class="scrollToTop-icon">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+</a>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Contact-item
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="contact-item-section ptb-120">
+    <div class="contact-element-one my-paroller" data-paroller-factor="0.2" data-paroller-type="foreground" data-paroller-direction="vertical">
+        <img src="{% static 'images/logo2.png' %}" alt="element">
+    </div>
+    <div class="contact-element-two my-paroller" data-paroller-factor="0.2" data-paroller-type="foreground" data-paroller-direction="vertical">
+        <img src="{% static 'images/logo2.png' %}" alt="element">
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12 text-center">
+                <div class="section-header">
+                    {% blocktranslate %}<h2 class="section-title">Get More <span>Information</span></h2>{% endblocktranslate %}
+                    <p>{% trans 'By contacting us using one of the options below' %}.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mb-30-none">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                <div class="contact-item">
+                    <div class="contact-icon-area">
+                        <div class="contact-icon">
+                            <img src="{% static 'images/icon/icon-64.png' %}" alt="icon">
+                        </div>
+                    </div>
+                    <div class="contact-content">
+                        <h4 class="title">{% trans 'OFFICE ADDRESS' %}</h4>
+                        <p>Str. Avram Iancu Nr. 32, Cam. Nr. 1, Brașov <br> <a href="https://goo.gl/maps/eUpdbgLurJBWbRe1A" target="_blank">{% trans 'view on map' %}</a> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                <div class="contact-item">
+                    <div class="contact-icon-area">
+                        <div class="contact-icon">
+                            <img src="{% static 'images/icon/icon-65.png' %}" alt="icon">
+                        </div>
+                    </div>
+                    <div class="contact-content">
+                        <h4 class="title">{% trans 'TELEPHONE NUMBER' %}</h4>
+                        <p>+40 0755 931 959 <br> <a href="tel:11234567">{% trans 'call now' %}</a> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                <div class="contact-item">
+                    <div class="contact-icon-area">
+                        <div class="contact-icon">
+                            <img src="{% static 'images/icon/icon-66.png' %}" alt="icon">
+                        </div>
+                    </div>
+                    <div class="contact-content">
+											<h4 class="title">{% trans 'SEND MAIL' %}</h4>
+                        <p>contact@energyfit.ro <br> <a href="mailto:contact@energyfit.ro">{% trans 'send now' %}</a> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Contact-item
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Account widget
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="account-widget-section account-widget-section-two account-widget-section--style ptb-120">
+    <div class="container">
+        <div class="row justify-content-center align-items-center mb-60-none">
+            <div class="col-xl-6 col-lg-6 mb-60">
+                <div class="account-widget-left">
+                    <div class="section-header">
+                        {% blocktranslate %}<h2 class="section-title">A burning Question? Feel Free to get directly in <span>Contact</span> with Us!</h2>{% endblocktranslate %}
+                        <p>{% trans 'Using this form' %}. </p>
+                    </div>
+                    <div class="banner-widget">
+                        <div class="banner-widget-wrapper">
+                            <div class="banner-widget-left">
+                                <div class="banner-widget-thumb">
+                                    <img src="{% static 'images/backgrounds/catalin_karol1.webp' %}" alt="element">
+                                </div>
+                            </div>
+                            <div class="banner-widget-middle">
+                                <div class="banner-widget-content">
+                                    <p>{% trans 'Join over' %} <span>30</span> {% trans 'students' %}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-social-area">
+                        <span>{% trans 'FOLLOW US' %} -</span>
+                        <ul class="contact-social">
+                            <li><a href="#0"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#0"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#0"><i class="fab fa-google-plus-g"></i></a></li>
+                            <li><a href="#0"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 mb-60">
+                <div class="account-widget-form-area">
+                    <form class="account-widget-form">
+                        <div class="row justify-content-center mb-25-none">
+                            <div class="col-xl-12 form-group">
+                                <input type="text" class="form--control" placeholder="Your Name*">
+                            </div>
+                            <div class="col-xl-12 form-group">
+                                <input type="email" class="form--control" placeholder="Your Email*">
+                            </div>
+                            <div class="col-xl-12 form-group">
+                                <input type="text" class="form--control" placeholder="Your Phone*">
+                            </div>
+                            <div class="col-xl-12 form-group">
+                                <textarea class="form--control" placeholder="Your Message*"></textarea>
+                            </div>
+                            <div class="col-xl-12 form-group">
+                                <button type="submit" class="btn--base">Send Now <i class="fas fa-arrow-right ml-2"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Account widget
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Map
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!-- <section class="map-section ptb-120">
+    <div class="container">
+        <div class="row justify-content-center mb-5-none">
+            <div class="col-xl-12">
+                <div class="map-area">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3070.1899657893728!2d90.42380431666383!3d23.779746865573756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7499f257eab%3A0xe6b4b9eacea70f4a!2sManama+Tower!5e0!3m2!1sen!2sbd!4v1561542597668!5m2!1sen!2sbd" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Map
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Footer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+	<footer class="footer-section footer-section-two pt-120">
+	    <div class="footer-bg">
+	        <img src="{% static 'images/backgrounds/bg-4.png' %}" alt="bg">
+	    </div>
+	    <div class="container">
+	        <div class="row mb-30-none">
+	            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+	                <div class="footer-widget">
+	                    <div class="footer-logo">
+	                        <a class="site-logo site-title" href="{% url 'underconstruction' %}"><img style="height:100px;width:100px;" src="{% static 'images/logo2.png' %}" alt="site-logo"></a>
+	                    </div>
+	                    <p>{% trans 'Energyfit Karate Brasov is the only Fudokan martial arts school in Brasov, a karate style that teaches modesty, focus and fighting for true human values. Our school has one of the most innovative and child friendly training programs you can find' %}</p>
+	                    <ul class="footer-social">
+	                        <li><a href="#0"><i class="fab fa-facebook-f"></i></a></li>
+	                        <li><a href="#0"><i class="fab fa-twitter"></i></a></li>
+	                        <li><a href="#0"><i class="fab fa-google-plus-g"></i></a></li>
+	                        <li><a href="#0"><i class="fab fa-instagram"></i></a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	            <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
+	                <div class="footer-widget">
+	                    <h4 class="title">{% trans 'Opening Hours' %}</h4>
+	                    <ul class="footer-list">
+	                        <li>Monday : 11am-7pm</li>
+	                        <li>Tuesday-Friday : 11am-8pm</li>
+	                        <li>Saturday : 10am-6pm</li>
+	                        <li>Sunday : 11am-6pm</li>
+	                    </ul>
+	                </div>
+	            </div>
+	            <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
+	                <div class="footer-widget">
+	                    <h4 class="title">{% trans 'Contact us' %}</h4>
+	                    <ul class="footer-list">
+	                        <li>{% trans 'Strada ....' %}'</li>
+	                        <li>.....</li>
+	                        <li><span>Email :</span> contact@energyfit.ro</li>
+	                        <li><span>{% trans 'Telephone' %} :</span> </li>
+	                    </ul>
+	                </div>
+	            </div>
+	            <div class="col-xl-2 col-lg-2 col-md-6 mb-30">
+	                <div class="footer-widget">
+	                    <h4 class="title">{% trans 'Gallery' %}</h4>
+	                    <div class="footer-gallery-area">
+	                        <div class="footer-gallery-wrapper">
+	                            <div class="footer-gallery-thumb">
+	                                <img src="{% static 'images/gallery/gallery-small-1.png' %}" alt="gallery">
+	                                <div class="footer-gallery-overlay">
+	                                    <a href="#0"><i class="fab fa-instagram"></i></a>
+	                                </div>
+	                            </div>
+	                            <div class="footer-gallery-thumb">
+	                                <img src="{% static 'images/gallery/gallery-small-2.png' %}" alt="gallery">
+	                                <div class="footer-gallery-overlay">
+	                                    <a href="#0"><i class="fab fa-instagram"></i></a>
+	                                </div>
+	                            </div>
+	                            <div class="footer-gallery-thumb">
+	                                <img src="{% static 'images/gallery/gallery-small-2.png' %}" alt="gallery">
+	                                <div class="footer-gallery-overlay">
+	                                    <a href="#0"><i class="fab fa-instagram"></i></a>
+	                                </div>
+	                            </div>
+	                            <div class="footer-gallery-thumb">
+	                                <img src="{% static 'images/gallery/gallery-small-3.png' %}" alt="gallery">
+	                                <div class="footer-gallery-overlay">
+	                                    <a href="#0"><i class="fab fa-instagram"></i></a>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="copyright-wrapper">
+	        <div class="row justify-content-center">
+	            <div class="col-xl-12 text-center">
+	                <div class="copyright-area">
+										<p><a href="{% url 'unsubscribe' %}">&#x2022; {% trans 'Unsubscribe' %} &#x2022;</a></p>
+										<p>Copyright {% now "Y" %} Energyfit {% if user.is_authenticated %}Karate{% else%}<a href="{% url 'admin:index' %}">Karate</a>{% endif %} Brașov. {% trans 'Designed By' %} <a href="https:///ninjaweb.tech">NinjaWeb Tech</a></p>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</footer>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Footer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+
+
+	<!-- jquery -->
+	<script src="{% static 'js/jquery.js' %}"></script>
+	<!-- bootstrap js -->
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<!-- swipper js -->
+	<script src="{% static 'js/swiper.min.js' %}"></script>
+	<!-- lightcase js-->
+	<script src="{% static 'js/lightcase.js' %}"></script>
+	<!-- odometer js -->
+	<script src="{% static 'js/odometer.min.js' %}"></script>
+	<!-- viewport js -->
+	<script src="{% static 'js/viewport.jquery.js' %}"></script>
+	<!-- progress js -->
+	<script src="{% static 'js/circle-progress.min.js' %}"></script>
+	<!-- aos js file -->
+	<script src="{% static 'js/aos.js' %}"></script>
+	<!-- nice select js -->
+	<script src="{% static 'js/jquery.nice-select.js' %}"></script>
+	<!-- paroller js -->
+	<script src="{% static 'js/jquery.paroller.min.js' %}"></script>
+	<!-- flipclock js -->
+	<script src="{% static 'js/flipclock.min.js' %}"></script>
+	<!-- countdown js -->
+	<script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+	<!-- easypiechart js -->
+	<script src="{% static 'js/jquery.easypiechart.js' %}"></script>
+	<!-- isotope js -->
+	<script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+	<!-- preloader js -->
+	<script src="{% static 'js/preloader.js' %}"></script>
+	<!-- main -->
+	<script src="{% static 'js/main.js' %}"></script>
+
+
+	</body>
+</html>

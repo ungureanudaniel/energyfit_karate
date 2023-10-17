@@ -1,0 +1,482 @@
+{% extends 'services/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="banner-section banner-section-two inner-banner-section bg-overlay-red bg_img" data-background="{% static 'images/backgrounds/bg-7.png' %}">
+    <div class="section-logo-text">
+        <span class="title">ENERGYFIT</span>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-end mb-30-none">
+            <div class="col-xl-12 col-lg-12 text-center mb-30">
+                <div class="banner-content" data-aos="fade-up" data-aos-duration="1800">
+                    {% blocktranslate %}<h1 class='title'>ABOUT <span>US</span></h1>{% endblocktranslate %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="breadcrumb-area">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'Home' %}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{% trans 'About us' %}</li>
+        </ol>
+    </nav>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<a href="#" class="scrollToTop">
+    <img src="{% static 'images/element/arrow_up_icon.png' %}" style="width:80px;height:auto;color: red;" alt="element">
+    <div class="scrollToTop-icon">
+    </div>
+</a>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start About
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="about-section about-section--style ptb-120">
+    <div class="about-element-one my-paroller" data-paroller-factor="0.2" data-paroller-type="foreground" data-paroller-direction="vertical">
+        <!-- <img src="{% static 'images/element/element-1.png' %}" alt="element"> -->
+    </div>
+    <div class="about-element-two my-paroller" data-paroller-factor="0.2" data-paroller-type="foreground" data-paroller-direction="vertical">
+        <!-- <img src="{% static 'images/element/element-2.png' %}" alt="element"> -->
+    </div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center mb-30-none">
+            <div class="col-xl-7 col-lg-7 mb-30">
+                <div class="about-thumb">
+                    <img src="{% static 'images/trainer/catalin6-cut.webp' %}" alt="about">
+                    <div class="about-overlay-content">
+                        <img src="{% static 'images/icon/icon-22.png' %}" alt="icon">
+                        {% blocktranslate %}<h4 class="title">INTERNATIONAL FUDOKAN AWARDS</h4>{% endblocktranslate %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-5 col-lg-9 col-sm-10 col-xs-10 mb-30">
+                <div class="about-content-area">
+                    <div class="section-header">
+                          <h2 class="section-title">{% blocktranslate %}ABOUT <span>ENERGYFIT KARATE</span> BRASOV {% endblocktranslate %}</h2>
+                        <p>{% trans "EnergyFit Karate Brasov Sports Club was founded in 2017 by Petre Cătălin sensei (3 dan - fudokan). From 2014 until now the club has gone through several stages that have shaped this sports structure. EnergyFit started from the passion for martial arts of sensei Petre Cătălin who started this path since 2004 at C.S. Petrom Ploiești. Trained by the two sensei Apostol Liviu and Ileana, Cătălin developed a passion for this martial arts path since primary school, and in 2009 he consolidated this path through the Faculty of Physical Education and Sport at Transilvania University of Brașov. His curiosity for the academic and pedagogical environment continued in 2014 by pursuing master studies in the same university on a detailed specialization, Psychomotor Diagnosis and Prognosis - Research in Performance Sport. Cătălin's passion for karate was also noticed by the professors of Transylvania University who decided to give him the opportunity to teach the Combat and Self-Defense courses in the Faculty of Physical Education and Mountain Sports. Also in 2014, the sports club EnergyFit Karate Brașov was founded out of the desire to apply what was learnt at Transylvania University. Sensei Petre Cătălin strengthened the passion for karate with scientific training, the group of athletes allowed research through various scientific studies that later blossomed into competitive results and professionalism of students who go through the program applied in the club EnergyFit Karate Brașov. Currently the club is organizationally made up of the President, Vice President and Secretary and consists of:" %}</p>
+                        <ul class="about-list mt-4">
+                            <li>{% trans 'Over 50 athletes' %}</li>
+                            <li>{% trans 'Four groups' %}</li>
+                            <li>{% trans 'Two sensei - Petre Cătălin - 3 dan, Czoguly Karoly - 1 dan' %}</li>
+                            <li>{% trans 'Four Fudokan licensed referees' %}</li>
+                            <li>{% trans 'An official partner - Patronage of Family Doctors Brasov' %}</li>
+                            <li>{% trans 'Two media partners - Info1Tv, Radio Romania Brasov FM' %}</li>
+                            <li>{% trans 'A partnership with Johannes Honterus National College' %}</li>
+                        </ul>
+                        <p>{% trans 'We enjoy the support of over 1600 followers who we make proud every year with our intense competitive activity. From 6 medals in 2016 we manage to boast over 200 medals in 2023 of which half are international' %}.</p>
+                    </div>
+                    <div class="about-user-area">
+                        <div class="about-user-wrapper">
+                            <div class="about-user-thumb">
+                                <img src="{% static 'images/trainer/catalin_head2.jpg' %}" alt="user">
+                            </div>
+                            <div class="about-user-content">
+                                <h6 class="title">Cătălin Petre</h6>
+                                <span class="sub-title">{% trans 'Founder' %}</span>
+                            </div>
+                        </div>
+                        <div class="about-signature-wrapper">
+                            <img src="{% static 'images/signature-black.png' %}" alt="signature">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-item-area about-item-area-two pt-120">
+            <div class="row justify-content-center mb-30-none">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
+                    <div class="about-item">
+                        <div class="about-icon">
+                            <img src="{% static 'images/icon/icon-13.png' %}" alt="icon">
+                        </div>
+                        <div class="about-content">
+                            <h4 class="title">{% trans 'Initiation into Fudokan karate' %}</h4>
+                            <p>{% trans 'We initiate anyone into Fudokan starting at the age of 6. Each student learns by his own rythm' %}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
+                    <div class="about-item">
+                        <div class="about-icon">
+                            <img src="{% static 'images/icon/icon-22.png' %}" alt="icon">
+                        </div>
+                        <div class="about-content">
+                            <h4 class="title">{% trans 'Performance career guidance' %}</h4>
+                            <p>{% trans 'For those need professional counseling into Fudokan we are always here to help' %}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
+                    <div class="about-item">
+                        <div class="about-icon">
+                            <img style="color:black" src="{% static 'images/icon/icon-67-dark.png' %}" alt="icon">
+                        </div>
+                        <div class="about-content">
+                            <h4 class="title">{% trans 'Initiation into Kobudo' %}</h4>
+                            <p>{% trans 'Kobudo is a traditional specific weapon fighting style, useful for self-defence in different situations' %}</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
+                    <div class="about-item">
+                        <div class="about-icon">
+                            <img src="{% static 'images/icon/icon-11.png' %}" alt="icon">
+                        </div>
+                        <div class="about-content">
+                            <h4 class="title">{% trans 'General physical training' %}</h4>
+                            <p>{% trans 'If your wish is just to get fit, Fudokan also comprises that and we will help you to get strength, elasticity and endurance' %}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End About
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Video
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="video-section bg-overlay-red bg_img" data-background="{% static 'images/backgrounds/training-crop.webp' %}">
+    <div class="section-logo-text">
+        <span class="title">{% trans 'SEE OUR VIDEO' %}</span>
+    </div>
+    <div class="container">
+      <!-- <div style="width: 100%; height: 100%; float: none; clear: both; margin: 2px auto;">
+        <embed
+          src="https://www.youtube.com/embed/HZkvujBp2Tk?controls=0&autohide=1&autoplay=1"
+          wmode="transparent"
+          type="video/mp4"
+          width="100%" height="100%"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen
+          title="Keyboard Cat"
+        >
+      </div> -->
+        <div class="row justify-content-center">
+            <div class="col-xl-12 text-center">
+                <div class="video-area">
+                    <div class="video-main">
+                        <div class="promo-video">
+                            <div class="waves-block">
+                                <div class="waves wave-1"></div>
+                                <div class="waves wave-2"></div>
+                                <div class="waves wave-3"></div>
+                            </div>
+                        </div>
+
+                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/HZkvujBp2Tk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                        </iframe> -->
+                        <a class="video-icon" data-rel="lightcase:myCollection" href="https://www.youtube.com/embed/HZkvujBp2Tk">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Video
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Statistics
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="statistics-section">
+    <div class="container">
+        <div class="statistics-area">
+            <div class="row mt-20-none mb-30-none">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
+                    <div class="statistics-item">
+                        <div class="statistics-content">
+                            <div class="odo-area">
+                                <h3 class="odo-title odometer" data-odometer-final="60">0</h3>
+                                <h3 class="title">+</h3>
+                            </div>
+                            <p>{% trans 'Students' %}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
+                    <div class="statistics-item">
+                        <div class="statistics-content">
+                            <div class="odo-area">
+                                <h3 class="odo-title odometer" data-odometer-final="12500">0</h3>
+                                <h3 class="title">+</h3>
+                            </div>
+                            <p>{% trans 'Hours on the Tatami' %}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
+                    <div class="statistics-item">
+                        <div class="statistics-content">
+                            <div class="odo-area">
+                                <h3 class="odo-title odometer" data-odometer-final="130">0</h3>
+                                <h3 class="title">+</h3>
+                            </div>
+                            <p>{% trans 'Competitions' %}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
+                    <div class="statistics-item">
+                        <div class="statistics-content">
+                            <div class="odo-area">
+                                <h3 class="odo-title odometer" data-odometer-final="3000">0</h3>
+                                <h3 class="title">+</h3>
+                            </div>
+                            <p>{% trans 'Medals' %}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Statistics
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Feature
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="feature-section feature-section-two feature-section--style pt-120 pb-100">
+    <div class="feature-element">
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8 text-center">
+                <div class="section-header" data-aos="fade-up" data-aos-duration="1200">
+                    {% blocktranslate %}<h2 class="section-title">OUR <span></span> FEATURES</h2>{% endblocktranslate %}
+                    <p>{% trans 'Energyfit Karate Brasov is the only Fudokan martial arts school in Brasov, a karate style that teaches modesty, focus and fighting for true human values. Our school has one of the most innovative and child friendly training programs you can find' %}.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center mb-30-none">
+            <div class="col-xl-8 col-lg-8 mb-30">
+                <div class="feature-item-area">
+                    <div class="row justify-content-center mb-60-none">
+                        <div class="col-xl-6 col-lg-6 col-md-6 mb-60">
+                            <div class="feature-item" data-aos="zoom-in" data-aos-duration="1200">
+                                <div class="feature-icon-area">
+                                    <div class="feature-icon">
+                                        <img src="{% static 'images/icon/icon-29.png' %}" alt="icon">
+                                    </div>
+                                </div>
+                                <div class="feature-content">
+                                    <h4 class="title"><span>01.</span> {% trans 'FREE ADVICE' %}</h4>
+                                    <p>{% trans 'We will offer any info you need before deciding to join us' %}.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 mb-60">
+                            <div class="feature-item" data-aos="zoom-in" data-aos-duration="1200">
+                                <div class="feature-icon-area">
+                                    <div class="feature-icon">
+                                        <img src="{% static 'images/icon/icon-46.png' %}" alt="icon">
+                                    </div>
+                                </div>
+                                <div class="feature-content">
+                                    <h4 class="title"><span>02.</span> {% trans 'MODERN TEACHING' %}</h4>
+                                    <p>{% trans 'Innovative and child friendly training programs' %}.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 mb-60">
+                            <div class="feature-item" data-aos="zoom-in" data-aos-duration="1200">
+                                <div class="feature-icon-area">
+                                    <div class="feature-icon">
+                                        <img src="{% static 'images/icon/icon-31.png' %}" alt="icon">
+                                    </div>
+                                </div>
+                                <div class="feature-content">
+                                    <h4 class="title"><span>03.</span> {% trans 'BEST TRAINERS' %}</h4>
+                                    <p>{% trans 'Our teachers have high achievements and most important, patience and kindness' %}.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 mb-60">
+                            <div class="feature-item" data-aos="zoom-in" data-aos-duration="1200">
+                                <div class="feature-icon-area">
+                                    <div class="feature-icon">
+                                        <img src="{% static 'images/icon/icon-47.png' %}" alt="icon">
+                                    </div>
+                                </div>
+                                <div class="feature-content">
+                                    <h4 class="title"><span>04.</span> {% trans 'FLEXIBLE FEES' %}</h4>
+                                    <p>{% trans 'Our training fees plans are flexible to help anyone experience Fudokan' %}.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 mb-30">
+                <div class="feature-thumb-area" data-aos="fade-left" data-aos-duration="1200">
+                    <div class="feature-thumb">
+                        <img src="{% static 'images/backgrounds/catalin3.webp' %}" alt="element">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Feature
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Trainer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="trainer-section trainer-section-two ptb-120 section--bg">
+		<div class="trainer-element-one">
+				<img src="{% static 'images/element/element-19.png' %}" alt="element">
+		</div>
+		<div class="trainer-element-two">
+				<img src="{% static 'images/element/element-20.png' %}" alt="element">
+		</div>
+		<div class="container">
+				<div class="row">
+						<div class="col-xl-12">
+								<div class="section-header-wrapper">
+										<div class="section-header white" data-aos="fade-right" data-aos-duration="1200">
+												<h2 class="section-title">{% blocktranslate %}OUR <span>SENSEIS</span>{% endblocktranslate %}</h2>
+												<p>{% trans 'Introduction...' %}.</p>
+										</div>
+								</div>
+						</div>
+				</div>
+				<div class="row justify-content-center mb-30" data-aos="fade-up" data-aos-duration="1200">
+						<div class="col-xl-12">
+								<div class="trainer-slider">
+										<div class="swiper-wrapper">
+                      {% for i in trainers %}
+												<div class="swiper-slide">
+														<div class="trainer-item">
+																<div class="trainer-thumb">
+																		<img src="{{ i.image.url }}" alt="trainer">
+																		<div class="trainer-overlay">
+																				<div class="trainer-content">
+																						<h3 class="title"><a href="{% url 'trainers-details' i.slug %}">{{ i.firstname }} {{ i.surname }}</a></h3>
+																						<span class="sub-title">{{ i.job }}</span>
+																				</div>
+																		</div>
+																</div>
+														</div>
+												</div>
+                        {% endfor %}
+										</div>
+										<div class="custom-pagination"></div>
+										<div class="slider-nav-area">
+												<div class="slider-prev">
+														<i class="fas fa-chevron-left"></i>
+												</div>
+												<div class="slider-next">
+														<i class="fas fa-chevron-right"></i>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+		</div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Trainer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Client
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="client-section ptb-120">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="section-header-wrapper">
+                    <div class="section-header" data-aos="fade-right" data-aos-duration="1200">
+                        <h2 class="section-title">{% blocktranslate %}OUR <span></span> TESTIMONIALS{% endblocktranslate %}</h2>
+                        <p>{% trans 'Energyfit Karate Brasov is the only Fudokan martial arts school in Brasov, a karate style that teaches modesty, focus and fighting for true human values. Our school has one of the most innovative and child friendly training programs you can find' %}.</p>
+                    </div>
+                    <div class="slider-nav-area" data-aos="fade-left" data-aos-duration="1200">
+                        <div class="slider-prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                        <div class="slider-next">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="client-area">
+            <div class="row justify-content-center">
+                <div class="col-xl-12 col-lg-12">
+                    <div class="client-slider-two" data-aos="fade-up" data-aos-duration="1200">
+                        <div class="swiper-wrapper">
+                          {% for t in testimonials %}
+                            <div class="swiper-slide">
+                                <div class="client-item">
+                                    <div class="client-header">
+                                        <div class="client-quote">
+                                            <img src="{% static 'images/client/quote.png' %}" alt="client">
+                                        </div>
+                                        <div class="client-thumb">
+                                            <!-- <img src="{% static 'images/client/client-1.png' %}" alt="client"> -->
+                                        </div>
+                                    </div>
+                                    <div class="client-content">
+                                        <p>{{ t.text|safe }}</p>
+                                    </div>
+                                    <div class="client-footer">
+                                        <div class="client-footer-left">
+                                            <h4 class="title"><a href="#0">{{ t.fname|capfirst }} {{ t.lname|capfirst }}</a></h4>
+                                            <!-- <span class="sub-title">Role</span> -->
+                                        </div>
+                                        <div class="client-footer-right">
+                                            <span class="ratings">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star active"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Client
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+{% endblock %}

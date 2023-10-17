@@ -1,0 +1,93 @@
+{% extends 'services/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<a href="#" class="scrollToTop">
+    <img src="{% static 'images/element/arrow_up_icon.png' %}" style="width:80px;height:auto;color: red;" alt="element">
+    <div class="scrollToTop-icon">
+    </div>
+</a>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="banner-section banner-section-two inner-banner-section bg-overlay-red bg_img" data-background="{% static 'images/backgrounds/bg-7.png' %}">
+    <div class="section-logo-text">
+        <span class="title">ENERGYFIT</span>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-end mb-30-none">
+            <div class="col-xl-12 col-lg-12 text-center mb-30">
+                <div class="banner-content" data-aos="fade-up" data-aos-duration="1800">
+                    {% blocktranslate %}<h1 class='title'>OUR PRESENCE IN THE <span>MEDIA</span></h1>{% endblocktranslate %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="breadcrumb-area">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'Home' %}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{% trans 'Media' %}</li>
+        </ol>
+    </nav>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Event
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="event-section event-section-two ptb-120">
+    <div class="container">
+        <div class="row justify-content-center mb-60-none">
+            {% for i in media %}
+            <div class="col-xl-6 col-lg-6 mb-60">
+                <div class="event-item">
+                    <div class="event-thumb">
+                        <img src="{{ i.thumbnail.url }}" alt="event">
+                    </div>
+                    <div class="event-content">
+                        <div class="event-meta-area">
+                            <div class="event-post-meta">
+                            </div>
+                            <div class="event-badge">
+                                <h3 class="title"><span>{{ i.date|date:"d - M - y" }}</span> <span class="month">{{ i.event_date|date:"d" }}</span></h3>
+                            </div>
+                        </div>
+                        <h3 class="title"><a target="_blank" href="{{ i.link }}">{{ i.name|safe }}</a></h3>
+                        <p>{{ i.text|safe }}</p>
+                        <div class="event-btn">
+                            <a target="_blank" href="{{ i.link }}">{% trans 'Read More' %} <i class="fas fa-arrow-right ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- <nav>
+            <ul class="pagination justify-content-center">
+                <li class="page-item prev">
+                    <a class="page-link" href="#" rel="prev" aria-label="Prev &raquo;">PREV</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">01</a></li>
+                <li class="page-item active" aria-current="page"><span class="page-link">02</span></li>
+                <li class="page-item"><a class="page-link" href="#">03</a></li>
+                <li class="page-item"><a class="page-link" href="#">04</a></li>
+                <li class="page-item"><a class="page-link" href="#">05</a></li>
+                <li class="page-item next">
+                    <a class="page-link" href="#" rel="next" aria-label="Next &raquo;">NEXT</a>
+                </li>
+            </ul>
+        </nav> -->
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Event
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+{% endblock %}
