@@ -268,12 +268,17 @@ class Event(models.Model):
     This class creates database tables for each event of
      Energyfit Karate Brasov
     """
+    CATEG_CHOICES = (
+            (_('past'), _('past')),
+            (_('future'), _('future')),
+        )
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     organizer = models.CharField(max_length=200)
     image = ResizedImageField(size=[640,None], upload_to='event_images',)
     title = models.CharField(max_length=100)
     location = models.CharField(max_length=200)
     text = RichTextField(max_length=1000)
+    categ = models.CharField(choices=CATEG_CHOICES, max_length=50)
     event_date = models.DateTimeField()
     timestamp = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField()

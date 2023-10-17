@@ -13,19 +13,19 @@ class TestimonialAdmin(admin.ModelAdmin):
     fields = ['fname', 'lname', 'email', 'text', 'status']
     list_display = ['fname', 'lname', 'status']
 class ServiceCategoryAdmin(admin.ModelAdmin):
-    fields = ['rank', 'name', 'name_ro', 'name_de', 'image', 'slug']
+    fields = ['rank', 'name', 'name_ro', 'image', 'slug']
     prepopulated_fields = {"slug": ("name",)}
 class ServiceAdmin(admin.ModelAdmin):
-    fields = ['name', 'name_ro', 'name_de', 'image', 'text', 'text_ro', 'text_de', 'categ', 'featured', 'slug']
+    fields = ['name', 'name_ro', 'image', 'text', 'text_ro', 'categ', 'featured', 'slug']
     prepopulated_fields = {"slug": ("name",)}
 class TeamRoleAdmin(admin.ModelAdmin):
-    fields = ['title', 'title_ro', 'title_de', 'slug']
+    fields = ['title', 'title_ro', 'slug']
     prepopulated_fields = {"slug": ("title",)}
 class TrainerAdmin(admin.ModelAdmin):
-    fields = ['role', 'firstname', 'surname', 'image', 'job', 'job_ro', 'job_de', 'intro', 'intro_ro', 'intro_de', 'text', 'text_ro', 'text_de', 'experience', 'experience_ro', 'experience_de', 'skill1', 'skill1_ro', 'skill1_de', 'skill1_descr', 'skill1_descr_ro', 'skill1_descr_de', 'skill_level1', 'skill2', 'skill2_ro', 'skill2_de', 'skill2_descr', 'skill2_descr_ro', 'skill2_descr_de', 'skill_level2', 'skill3', 'skill3_ro', 'skill3_de', 'skill3_descr', 'skill3_descr_ro', 'skill3_descr_de', 'skill_level3', 'nr_students', 'training_hours', 'competitions', 'email', 'phone', 'slug']
+    fields = ['role', 'firstname', 'surname', 'image', 'job', 'job_ro', 'intro', 'intro_ro', 'text', 'text_ro', 'text_de', 'experience', 'experience_ro', 'experience_de', 'skill1', 'skill1_ro', 'skill1_de', 'skill1_descr', 'skill1_descr_ro', 'skill1_descr_de', 'skill_level1', 'skill2', 'skill2_ro', 'skill2_de', 'skill2_descr', 'skill2_descr_ro', 'skill2_descr_de', 'skill_level2', 'skill3', 'skill3_ro', 'skill3_de', 'skill3_descr', 'skill3_descr_ro', 'skill3_descr_de', 'skill_level3', 'nr_students', 'training_hours', 'competitions', 'email', 'phone', 'slug']
     prepopulated_fields = {"slug": ("firstname",)}
 class TeachingAdmin(admin.ModelAdmin):
-    fields = ['title', 'title_ro', 'title_de', 'image', 'icon','text', 'text_ro', 'text_de', 'active', 'slug']
+    fields = ['title', 'title_ro', 'image', 'icon','text', 'text_ro', 'active', 'slug']
     prepopulated_fields = {"slug": ("title",)}
 # class AboutAdmin(admin.ModelAdmin):
 #     fields = ['intro_text_1', 'intro_text_1_ro', 'intro_text_1_de','intro_list_1', 'intro_list_1_ro',\
@@ -48,17 +48,17 @@ class TeachingAdmin(admin.ModelAdmin):
 #             'counter3', 'counter_fact3_ro', 'counter_fact3_de', 'counter4', 'counter_fact4',\
 #             'counter_fact4_ro', 'counter_fact4_de']
 class FAQAdmin(admin.ModelAdmin):
-    fields = ['question', 'question_ro', 'question_de', 'main_explanation', 'main_explanation_ro', 'main_explanation_de', 'subtitle', 'subtitle_ro', 'subtitle_de', 'second_text', 'second_text_ro', 'second_text_de', 'image1', 'image2', 'image3', 'image4', 'slug']
+    fields = ['question', 'question_ro', 'main_explanation', 'main_explanation_ro', 'subtitle', 'subtitle_ro', 'second_text', 'second_text_ro', 'image1', 'image2', 'image3', 'image4', 'slug']
     prepopulated_fields = {"slug": ("question",)}
 class GalleryAdmin(admin.ModelAdmin):
-    fields = ['name', 'name_ro', 'name_de', 'categ','image', 'text', 'text_ro', 'text_de', 'featured', 'slug']
+    fields = ['name', 'name_ro', 'categ','image', 'text', 'text_ro', 'featured', 'slug']
     list_display = ['name',]
     prepopulated_fields = {"slug": ("name",)}
 class NewsAdmin(admin.ModelAdmin):
-    fields = ['author', 'title','title_ro', 'title_de', 'image', 'text','text_ro','text_de','slug']
+    fields = ['author', 'title','title_ro', 'image', 'text','text_ro','slug']
     prepopulated_fields = {"slug": ("title",)}
 class EventAdmin(admin.ModelAdmin):
-    fields = ['author', 'title','title_ro', 'title_de', 'event_date', 'organizer', 'location', 'image', 'text','text_ro','text_de','slug']
+    fields = ['author', 'categ', 'title','title_ro', 'event_date', 'organizer', 'location', 'image', 'text','text_ro','slug']
     prepopulated_fields = {"slug": ("title",)}
 admin.site.register(ServiceCategory, ServiceCategoryAdmin)
 admin.site.register(Media, MediaAdmin)

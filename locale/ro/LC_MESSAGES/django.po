@@ -384,7 +384,7 @@ msgstr "vezi pe hartă"
 
 #: services/templates/services/contact.html:172
 msgid "SEND MAIL"
-msgstr "SCRIEȚI UN EMAIL"
+msgstr "SCRIE UN EMAIL"
 
 #: services/templates/services/contact.html:172
 msgid "send now"
@@ -392,7 +392,7 @@ msgstr "trimite"
 
 #: services/templates/services/contact.html:172
 msgid "<h2 class='section-title'>A burning Question? Feel Free to get directly in <span>Contact</span> with Us!</h2>"
-msgstr "<h2 class='section-title'>O întrebare arzătoare? Nu ezitați să luați rapid <span>Legătura</span> cu noi!</h2>"
+msgstr "<h2 class='section-title'>O întrebare arzătoare? Nu ezita să iei rapid <span>Legătura</span> cu noi!</h2>"
 
 #: services/templates/services/contact.html:172
 msgid "Using this form"
@@ -404,7 +404,7 @@ msgstr "CONSILIERE GRATUITĂ"
 
 #: services/templates/services/about.html:172
 msgid "We will offer any info you need before deciding to join us"
-msgstr "Vă vom oferi orice informație de care aveți nevoie înainte de a decide să vă alăturați"
+msgstr "Îți vom oferi orice informație de care ai nevoie înainte de a decide să te alături"
 
 #: services/templates/services/about.html:172
 msgid "MODERN TEACHING"
@@ -432,18 +432,18 @@ msgstr "Planurile noastre de tarifare sunt flexibile pentru a ajuta pe oricine s
 
 #: services/templates/services/contact.html:130
 msgid "FOLLOW US"
-msgstr "URMĂRIȚI-NE"
+msgstr "URMĂREȘTE-NE"
 
 #: services/templates/services/contact.html:134
 msgid "A burning Question? Feel Free to get directly in <span>Contact</span> with Us!"
-msgstr "Aveți o întrebare arzătoare? Puteți intra în <span>Contact</span> cu Noi!"
+msgstr "Ai o întrebare arzătoare? Poți intra în <span>Contact</span>direct cu Noi!"
 
 #: services/templates/services/contact.html:77
 msgid "<h2 class='section-title'>Get More <span>Information</span></h2>"
 msgstr "<h2 class='section-title'>Obțineți mai multe <span>Informații</span></h2>"
 #: services/templates/services/contact.html:172
 msgid "Join over"
-msgstr "Alăturați-vă celor peste"
+msgstr "Alătură-te celor peste"
 
 #: services/templates/services/training.html:172
 msgid "Send"
@@ -537,7 +537,7 @@ msgstr "NUMĂR DE TELEFON"
 
 #: services/templates/services/contact.html:418
 msgid "call now"
-msgstr "sunați acum"
+msgstr "sună acum"
 
 #: services/templates/services/contact.html:418
 msgid "By contacting us using one of the options below"

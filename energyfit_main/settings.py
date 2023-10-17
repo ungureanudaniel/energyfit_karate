@@ -24,7 +24,7 @@ if os.getenv('ALLOWED_HOSTS'):
 
 DEVELOPMENT = os.getenv("DEVELOPMENT")=='True'
 # Application definition
-
+SITE_ID=1
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
