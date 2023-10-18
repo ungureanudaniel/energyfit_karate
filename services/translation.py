@@ -8,7 +8,7 @@ class ServiceCategoryTranslationOptions(TranslationOptions):
 class TrainingScheduleTranslationOptions(TranslationOptions):
     fields = ('training1', 'training2', 'training3',)
 class WeekDaysTranslationOptions(TranslationOptions):
-    fields = ('name', 'slug',)
+    fields = ('name',)
 class MediaTranslationOptions(TranslationOptions):
     fields = ('name',)
 class TrainerTranslationOptions(TranslationOptions):

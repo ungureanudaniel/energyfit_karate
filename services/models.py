@@ -270,16 +270,12 @@ class WeekDays(models.Model):
      Energyfit Karate Brasov
     """
     name = models.CharField(max_length=9)
-    slug = models.SlugField()
     
     class Meta:
         verbose_name = 'Week Days'
         verbose_name_plural = "Week Days"
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.name)
-        super().save(*args, **kwargs)
     def __str__(self):
-        return '{}'.format(self.slug)
+        return '{}'.format(self.name)
 #================training program model=====================================
 class TrainingSchedule(models.Model):
     """

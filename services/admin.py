@@ -6,21 +6,21 @@ class SubscriberAdmin(admin.ModelAdmin):
     fields = ['email', 'conf_num', 'confirmed']
     list_display = ['email', 'conf_num', 'confirmed']
 class MediaAdmin(admin.ModelAdmin):
-    fields = ['name', 'name_ro', 'link', 'date', 'thumbnail', 'slug',]
+    fields = ['name', 'name_ro', 'link', 'date', 'thumbnail', ]
     list_display = ['link', 'date', 'slug',]
-    prepopulated_fields = {"slug": ("name",)}
+    prepopulated_fields = {"slug": ("name",),}
 class TestimonialAdmin(admin.ModelAdmin):
     fields = ['fname', 'lname', 'email', 'text', 'status']
     list_display = ['fname', 'lname', 'status']
 class ServiceCategoryAdmin(admin.ModelAdmin):
     fields = ['rank', 'name', 'name_ro', 'image', 'slug']
-    prepopulated_fields = {"slug": ("name",)}
+    prepopulated_fields = {"slug": ("name",),}
 class ServiceAdmin(admin.ModelAdmin):
-    fields = ['name', 'name_ro', 'image', 'text', 'text_ro', 'categ', 'featured', 'slug']
-    prepopulated_fields = {"slug": ("name",)}
+    fields = ['name', 'name_ro', 'image', 'text', 'text_ro', 'categ', 'featured', 'slug',]
+    prepopulated_fields = {"slug": ("name",), }
 class TeamRoleAdmin(admin.ModelAdmin):
-    fields = ['title', 'title_ro', 'slug']
-    prepopulated_fields = {"slug": ("title",)}
+    fields = ['title', 'title_ro', 'slug',]
+    prepopulated_fields = {"slug": ("title",),}
 class TrainerAdmin(admin.ModelAdmin):
     fields = ['role', 'firstname', 'surname', 'image', 'job', 'job_ro', 'intro', 'intro_ro',\
               'text', 'text_ro', 'experience', 'experience_ro', 'skill1', 'skill1_ro', 'skill1_descr',\
@@ -29,15 +29,14 @@ class TrainerAdmin(admin.ModelAdmin):
                         'nr_students', 'training_hours', 'competitions', 'email', 'phone', 'slug']
     prepopulated_fields = {"slug": ("firstname",)}
 class TeachingAdmin(admin.ModelAdmin):
-    fields = ['title', 'title_ro', 'image', 'icon','text', 'text_ro', 'active', 'slug']
-    prepopulated_fields = {"slug": ("title",)}
+    fields = ['title', 'title_ro', 'image', 'icon','text', 'text_ro', 'active', 'slug',]
+    prepopulated_fields = {"slug": ("title",),}
 class TrainingScheduleAdmin(admin.ModelAdmin):
     fields = ['day', 'training1', 'training1_ro', 'starting_time1', 'ending_time1','training2', 'training2_ro',
               'starting_time2', 'ending_time2','training3','training3_ro','starting_time3', 'ending_time3',]
     list_display = ['day', ]
 class WeekDaysAdmin(admin.ModelAdmin):
-    fields = ['name', "name_ro",'slug']
-    prepopulated_fields = {"slug": ("name",)}
+    fields = ['name', "name_ro",]
 # class AboutAdmin(admin.ModelAdmin):
 #     fields = ['intro_text_1', 'intro_text_1_ro', 'intro_text_1_de','intro_list_1', 'intro_list_1_ro',\
 #             'intro_list_1_de', 'intro_list_2','intro_list_2_ro', 'intro_list_2_de','intro_list_3',\
