@@ -22,7 +22,11 @@ class TeamRoleAdmin(admin.ModelAdmin):
     fields = ['title', 'title_ro', 'slug']
     prepopulated_fields = {"slug": ("title",)}
 class TrainerAdmin(admin.ModelAdmin):
-    fields = ['role', 'firstname', 'surname', 'image', 'job', 'job_ro', 'intro', 'intro_ro', 'text', 'text_ro', 'text_de', 'experience', 'experience_ro', 'experience_de', 'skill1', 'skill1_ro', 'skill1_de', 'skill1_descr', 'skill1_descr_ro', 'skill1_descr_de', 'skill_level1', 'skill2', 'skill2_ro', 'skill2_de', 'skill2_descr', 'skill2_descr_ro', 'skill2_descr_de', 'skill_level2', 'skill3', 'skill3_ro', 'skill3_de', 'skill3_descr', 'skill3_descr_ro', 'skill3_descr_de', 'skill_level3', 'nr_students', 'training_hours', 'competitions', 'email', 'phone', 'slug']
+    fields = ['role', 'firstname', 'surname', 'image', 'job', 'job_ro', 'intro', 'intro_ro',\
+              'text', 'text_ro', 'experience', 'experience_ro', 'skill1', 'skill1_ro', 'skill1_descr',\
+                'skill1_descr_ro', 'skill1_level', 'skill2', 'skill2_ro', 'skill2_descr', 'skill2_descr_ro',\
+                    'skill2_level', 'skill3', 'skill3_ro', 'skill3_descr', 'skill3_descr_ro', 'skill3_level',\
+                        'nr_students', 'training_hours', 'competitions', 'email', 'phone', 'slug']
     prepopulated_fields = {"slug": ("firstname",)}
 class TeachingAdmin(admin.ModelAdmin):
     fields = ['title', 'title_ro', 'image', 'icon','text', 'text_ro', 'active', 'slug']
