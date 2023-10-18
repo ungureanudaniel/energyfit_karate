@@ -4,7 +4,7 @@ from django.views.generic.base import TemplateView
 from .views import home, apply_view, underconstruction, contacts_view, subscription_conf_view,\
 unsubscribe, about_view, TrainersDetailView, trainers_view, training_view,\
 events_view, EventDetailView, blog_view, BlogDetailView, gallery, news_view, NewsDetailView,\
-pricing_view, faq_view, coming_soon, media_view
+pricing_view, faq_view, coming_soon, media_view, program_view
 #, gallery, add_testimonial, team, history, massmedia,\
  # contacts_view, page_not_found, coming_soon,\
  #, video_view, gallery
@@ -30,6 +30,7 @@ if settings.DEVELOPMENT == True:
         path('trainer-details/<slug:slug>/', TrainersDetailView.as_view(), name='trainer-details'),
         path("trainers", trainers_view, name="trainers"),
         path("training", training_view, name="training"),
+        path("training-schedule", program_view, name="training-schedule"),
         path('events', events_view, name="events"),
         path('event-details/<slug:slug>', EventDetailView.as_view(), name="event-details"),
         path('blogposts', blog_view, name="events"),
@@ -66,6 +67,7 @@ else:
         path("trainers", trainers_view, name="trainers"),
         path('trainers-details/<slug:slug>/', TrainersDetailView.as_view(), name='trainers-details'),
         path("training", training_view, name="training"),
+        path("training-schedule", program_view, name="training-schedule"),
         path('mass-media', media_view, name="media"),
         path('contact', contacts_view, name="contact"),
         path('events', events_view, name="events"),

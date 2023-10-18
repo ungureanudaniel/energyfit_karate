@@ -74,6 +74,7 @@ class Media(models.Model):
 
 #     def __str__(self):
 #         return self.intro_text_1
+
 #================subscribers model=====================================
 class Subscriber(models.Model):
     email = models.EmailField(max_length=200)
@@ -262,6 +263,45 @@ class Contact(models.Model):
         verbose_name_plural = "Contacts"
     def __str__(self):
         return '{}'.format(self.email)
+#================contact model=====================================
+class WeekDays(models.Model):
+    """
+    This class creates database tables for each contact message send from contact page of
+     Energyfit Karate Brasov
+    """
+    name = models.CharField(max_length=9)
+    slug = models.SlugField()
+    
+    class Meta:
+        verbose_name = 'Week Days'
+        verbose_name_plural = "Week Days"
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super().save(*args, **kwargs)
+    def __str__(self):
+        return '{}'.format(self.slug)
+#================training program model=====================================
+class TrainingSchedule(models.Model):
+    """
+    This class creates database tables for each training schedule program of
+     Energyfit Karate Brasov
+    """
+    day = models.ForeignKey(WeekDays, on_delete=models.CASCADE)
+    # day = models.CharField(max_length=100)
+    training1 = models.CharField(max_length=100, blank=True, null=True)
+    training2 = models.CharField(max_length=100, blank=True, null=True)
+    training3 = models.CharField(max_length=100, blank=True, null=True)
+    starting_time1 = models.TimeField(blank=True, null=True)
+    ending_time1 = models.TimeField(blank=True, null=True)
+    starting_time2 = models.TimeField(blank=True, null=True)
+    ending_time2 = models.TimeField(blank=True, null=True)
+    starting_time3 = models.TimeField(blank=True, null=True)
+    ending_time3 = models.TimeField(blank=True, null=True)
+    class Meta:
+        verbose_name = _('Training Schedule')
+        verbose_name_plural = _('Training Schedule')
+    def __str__(self):
+        return '{}'.format(self.day)
 #================event model=====================================
 class Event(models.Model):
     """

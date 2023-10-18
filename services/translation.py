@@ -1,10 +1,14 @@
 from modeltranslation.translator import translator, TranslationOptions
 from .models import ServiceCategory, Service, Trainer, TeamRole,\
-FAQ, Gallery, News, BlogPost, Event, Teaching, Media
+FAQ, Gallery, News, BlogPost, Event, Teaching, Media, TrainingSchedule, WeekDays
 
 
 class ServiceCategoryTranslationOptions(TranslationOptions):
     fields = ('name',)
+class TrainingScheduleTranslationOptions(TranslationOptions):
+    fields = ('training1', 'training2', 'training3',)
+class WeekDaysTranslationOptions(TranslationOptions):
+    fields = ('name', 'slug',)
 class MediaTranslationOptions(TranslationOptions):
     fields = ('name',)
 class TrainerTranslationOptions(TranslationOptions):
@@ -43,3 +47,6 @@ translator.register(News, NewsTranslationOptions)
 translator.register(BlogPost, BlogPostTranslationOptions)
 translator.register(Event, EventTranslationOptions)
 translator.register(Media, MediaTranslationOptions)
+translator.register(TrainingSchedule, TrainingScheduleTranslationOptions)
+translator.register(WeekDays, WeekDaysTranslationOptions)
+

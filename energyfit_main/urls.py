@@ -27,6 +27,7 @@ urlpatterns = [
 urlpatterns += i18n_patterns(
     path('users/', include('users.urls')),
     path('', include('services.urls')),
+    path('calendar/', include('energyfit_calendar.urls')),
     # path('blog', include('blog.urls')),
     path('captcha/', include('captcha.urls')),
 )

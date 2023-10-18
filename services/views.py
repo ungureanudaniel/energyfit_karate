@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.core.mail import send_mail
 from django.contrib.auth import authenticate, login
 from .models import Testimonial, Trainer, ServiceCategory, Service, Contact, Subscriber, TeamRole,\
-FAQ, Event, BlogPost, Gallery, News, Teaching, Media
+FAQ, Event, BlogPost, Gallery, News, Teaching, Media, TrainingSchedule, WeekDays
 from .forms import CaptchaForm, ContactForm
 # , GalleryForm
 from django.utils.text import slugify
@@ -158,6 +158,15 @@ def apply_view(request):
 
     context = {
 
+    }
+    return render(request, template, context)
+#=========================training program page================================
+def program_view(request):
+    template = 'services/training-program.html'
+
+    context = {
+        "trainingschedule": TrainingSchedule.objects.all(),
+        "weekdays": WeekDays.objects.all()
     }
     return render(request, template, context)
 #=========================media page================================

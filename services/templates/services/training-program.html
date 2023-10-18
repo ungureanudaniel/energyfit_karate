@@ -1,0 +1,108 @@
+{% extends 'services/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="banner-section banner-section-two inner-banner-section bg-overlay-red bg_img" data-background="{% static 'images/backgrounds/training-crop.webp' %}">
+    <div class="section-logo-text">
+        <span class="title">ENERGYFIT</span>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-end mb-30-none">
+            <div class="col-xl-12 col-lg-12 text-center mb-30">
+                <div class="banner-content" data-aos="fade-up" data-aos-duration="1800">
+                    {% blocktranslate %}<h1 class='title'>TRAINING <span>PROGRAM</span></h1>{% endblocktranslate %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="breadcrumb-area">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'Home' %}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{% trans 'Training Program' %}</li>
+        </ol>
+    </nav>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<a href="#" class="scrollToTop">
+    <img src="{% static 'images/element/arrow_up_icon.png' %}" style="width:80px;height:auto;color: red;" alt="element">
+    <div class="scrollToTop-icon">
+    </div>
+</a>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<section class="schedule-section ptb-120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-8 text-center">
+                <div class="section-header aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200">
+                    <h2 class="section-title">{% blocktranslate %}OUR <span>TRAINING</span> SCHEDULE</h2>{% endblocktranslate %}
+                    <p>{% trans 'Below you can the weekly training schedule' %}</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200">
+            <div class="col-xl-12">
+                <div class="schedule-area table-responsive">
+                    <table class="custom-table bg-overlay-black bg_img" data-background="{% static 'images/backgrounds/bg-7.png' %}" style="background-image: url(&quot;assets/images/bg/bg-11.png&quot;);">
+                        <thead>
+                            <tr>
+                                <th>Routine</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for i in trainingschedule %}
+                            <tr>
+                                <td>{{ i.day|safe|capfirst }}</td>
+                                <td class="blank-data"></td>
+                                <td>{{ i.training1 }} <span>{{ i.starting_time1 }} - {{ i.ending_time1 }}</span></td>
+                                <td class="blank-data"></td>
+                                <td>{{ i.training2 }} <span>{{ i.starting_time2 }} - {{ i.ending_time2 }}</span></td>
+                                <td class="blank-data"></td>
+                                <td>{{ i.training3 }} <span>{{ i.starting_time3 }} - {{ i.ending_time3 }}</span></td>
+                            </tr>
+                            {% endfor %}
+                            <!--<tr>
+                                <td>Wednesday</td>
+                                <td>Cycling <span>10 am - 11 am</span></td>
+                                <td>Cycling <span>10 am - 11 am</span></td>
+                                <td>Cycling <span>10 am - 11 am</span></td>
+                                <td class="blank-data"></td>
+                                <td>Cycling <span>10 am - 11 am</span></td>
+                            </tr>
+                            <tr>
+                                <td>Thursday</td>
+                                <td>Cycling <span>10 am - 11 am</span></td>
+                                <td class="blank-data"></td>
+                                <td>Cycling <span>10 am - 11 am</span></td>
+                                <td class="blank-data"></td>
+                                <td>Cycling <span>10 am - 11 am</span></td>
+                            </tr>
+                            <tr>
+                                <td>Friday</td>
+                                <td class="blank-data"><div class="dot"></div></td>
+                                <td>Cycling <span>10 am - 11 am</span></td>
+                                <td class="blank-data"></td>
+                                <td>Cycling <span>10 am - 11 am</span></td>
+                                <td class="blank-data"><div class="dot"></div></td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

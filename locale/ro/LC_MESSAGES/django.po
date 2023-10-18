@@ -987,3 +987,35 @@ msgstr "Studenți"
 #: services/templates/services/trainers.html:162
 msgid "At Energyfit Karate we envision a community where people of all ages, backgrounds, abilities, and genders feel safe, valued, and inspired to work towards building a better self, both physically and mentally"
 msgstr "La Energyfit Karate ne imaginăm o comunitate în care oamenii de toate vârstele, mediile, abilitățile și genurile se simt în siguranță, apreciați și inspirați să lucreze pentru a construi un sine mai bun, atât fizic cât și mental"
+
+#: energyfit_calendar/templates/energyfit_calendar/calendar.html:162
+msgid "OUR <span>EVENTS</span> CALENDAR</h2>"
+msgstr "CALENDARUL <span>EVENIMENTELOR</span> NOASTRE</h2>"
+
+#: energyfit_calendar/templates/energyfit_calendar/calendar.html:162
+msgid "Below you can find the events we are involved in"
+msgstr "Mai jos puteți afla informații despre evenimentele la care vom participa"
+
+#: energyfit_calendar/templates/energyfit_calendar/calendar.html:162
+msgid "<h1 class='title'>EVENTS<span> CALENDAR</span></h1>"
+msgstr "<h1 class='title'>CALENDARUL<span> EVENIMENTELOR</span></h1>"
+
+#: energyfit_calendar/templates/energyfit_calendar/calendar.html:162
+msgid "Events Calendar"
+msgstr "Calendarul Evenimentelor"
+
+#: services/templates/services/training-program.html:162
+msgid "<h1 class='title'>TRAINING <span>PROGRAM</span></h1>"
+msgstr "<h1 class='title'>PROGRAMUL <span>ANTRENAMENTELOR</span></h1>"
+
+#: services/templates/services/training-program.html:162
+msgid "Training Program"
+msgstr "Programul Antrenamentelor"
+
+#: services/templates/services/training-program.html:162
+msgid "OUR <span>TRAINING</span> SCHEDULE</h2>"
+msgstr "PROGRAMUL <span>ANTRENAMENTELOR</span> NOASTRE</h2>"
+
+#: services/templates/services/training-program.html:162
+msgid "Below you can the weekly training schedule"
+msgstr "Mai jos puteți vedea programul săptămânal de antrenament"

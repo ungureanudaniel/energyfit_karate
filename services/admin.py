@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import ServiceCategory, Testimonial, Contact, Service, Trainer, Subscriber,\
-TeamRole, FAQ, Gallery, News, BlogPost, Event, Teaching, Media
+TeamRole, FAQ, Gallery, News, BlogPost, Event, Teaching, Media, TrainingSchedule, WeekDays
 
 class SubscriberAdmin(admin.ModelAdmin):
     fields = ['email', 'conf_num', 'confirmed']
@@ -31,6 +31,15 @@ class TrainerAdmin(admin.ModelAdmin):
 class TeachingAdmin(admin.ModelAdmin):
     fields = ['title', 'title_ro', 'image', 'icon','text', 'text_ro', 'active', 'slug']
     prepopulated_fields = {"slug": ("title",)}
+class TrainingScheduleAdmin(admin.ModelAdmin):
+    fields = ['day', 'training1', 'training1_ro', 'training2', 'training2_ro','training3',\
+              'training3_ro','starting_time1', 'ending_time1','starting_time2', 'ending_time2',\
+                'starting_time3', 'ending_time3',]
+    list_display = ['day', ]
+class WeekDaysAdmin(admin.ModelAdmin):
+    fields = ['name', "name_ro",'slug']
+    readonly_fields = ['name', 'name_ro']
+    prepopulated_fields = {"slug": ("name",)}
 # class AboutAdmin(admin.ModelAdmin):
 #     fields = ['intro_text_1', 'intro_text_1_ro', 'intro_text_1_de','intro_list_1', 'intro_list_1_ro',\
 #             'intro_list_1_de', 'intro_list_2','intro_list_2_ro', 'intro_list_2_de','intro_list_3',\
@@ -77,4 +86,7 @@ admin.site.register(Gallery, GalleryAdmin)
 admin.site.register(News, NewsAdmin)
 admin.site.register(Event, EventAdmin)
 admin.site.register(Teaching, TeachingAdmin)
+admin.site.register(TrainingSchedule, TrainingScheduleAdmin)
+admin.site.register(WeekDays, WeekDaysAdmin)
+
 
