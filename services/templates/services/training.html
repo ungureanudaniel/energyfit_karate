@@ -194,7 +194,7 @@
                 </div>
             </div>
             <div class="col-xl-6 col-lg-6 mb-30" data-aos="fade-left" data-aos-duration="1200">
-                <div class="account-widget-form-area bg_img" data-background="{% static 'images/backgrounds/bg-16.png' %}">
+                <div class="account-widget-form-area bg_img" data-background="{% static 'images/backgrounds/bg-7.png' %}">
                     <form class="account-widget-form">
                         <div class="row justify-content-center mb-20-none">
                             <div class="col-xl-12 form-group">
@@ -211,7 +211,7 @@
                                     <select class="form--control">
                                       <option value="1">{% trans 'Choose' %}</option>
                                       {% for t in servicecats %}
-                                      <option name="training_type" value="{{ t.id }}">{{ t.name }}</option>
+                                      <option name="training_type" value="{{ t.slug }}">{{ t.name }}</option>
                                       {% endfor %}
                                     </select>
                                 </div>
