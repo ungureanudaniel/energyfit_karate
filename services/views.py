@@ -157,7 +157,7 @@ def apply_view(request):
     template = 'services/apply.html'
 
     context = {
-
+        'servicecats': ServiceCategory.objects.all().order_by('rank')
     }
     return render(request, template, context)
 #=========================training program page================================
@@ -175,6 +175,14 @@ def media_view(request):
 
     context = {
         "media": Media.objects.all()
+
+    }
+    return render(request, template, context)
+#=========================donate page================================
+def donate_view(request):
+    template = 'services/donate.html'
+
+    context = {
 
     }
     return render(request, template, context)

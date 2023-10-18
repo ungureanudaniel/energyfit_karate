@@ -32,7 +32,7 @@ class TeachingAdmin(admin.ModelAdmin):
     fields = ['title', 'title_ro', 'image', 'icon','text', 'text_ro', 'active', 'slug']
     prepopulated_fields = {"slug": ("title",)}
 class TrainingScheduleAdmin(admin.ModelAdmin):
-    fields = ['day', 'training1', 'training1_ro', 'starting_time1', 'ending_time1','training2', 'training2_ro',â
+    fields = ['day', 'training1', 'training1_ro', 'starting_time1', 'ending_time1','training2', 'training2_ro',
               'starting_time2', 'ending_time2','training3','training3_ro','starting_time3', 'ending_time3',]
     list_display = ['day', ]
 class WeekDaysAdmin(admin.ModelAdmin):

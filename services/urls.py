@@ -4,7 +4,7 @@ from django.views.generic.base import TemplateView
 from .views import home, apply_view, underconstruction, contacts_view, subscription_conf_view,\
 unsubscribe, about_view, TrainersDetailView, trainers_view, training_view,\
 events_view, EventDetailView, blog_view, BlogDetailView, gallery, news_view, NewsDetailView,\
-pricing_view, faq_view, coming_soon, media_view, program_view
+pricing_view, faq_view, coming_soon, media_view, program_view, donate_view
 #, gallery, add_testimonial, team, history, massmedia,\
  # contacts_view, page_not_found, coming_soon,\
  #, video_view, gallery
@@ -42,6 +42,8 @@ if settings.DEVELOPMENT == True:
         path('frequently-asked-questions', faq_view, name="faqs"),
         path('mass-media', media_view, name="media"),
         path('contact', contacts_view, name="contact"),
+        path('support-us', donate_view, name="donate"),
+
         # path('videos', video_view, name="video"),
         path('coming-soon', coming_soon, name="coming-soon"),
         # path('scraped-data', scraped_data, name="scraped_data"),
@@ -79,6 +81,8 @@ else:
         path('news-details/<slug:slug>', NewsDetailView.as_view(), name="news-details"),
         path('pricing-plan', pricing_view, name="pricing"),
         path('frequently-asked-questions', faq_view, name="faqs"),
+        path('support-us', donate_view, name="donate"),
+
         # path('videos', video_view, name="video"),
         path('coming-soon', coming_soon, name="coming-soon"),
         # path('scraped-data', scraped_data, name="scraped_data"),

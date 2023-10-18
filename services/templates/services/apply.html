@@ -77,9 +77,9 @@
                                 <label>{% trans 'Select your desired class' %}</label>
                                 <div class="account-widget-select">
                                     <select class="form--control">
-
-                                        <option value="1">?</option>
-
+                                        {% for i in servicecats %}
+                                        <option value="1">{{ i.name|capfirst }}</option>
+                                        {% endfor %}
                                     </select>
                                 </div>
                             </div>
