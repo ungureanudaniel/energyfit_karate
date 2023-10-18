@@ -3,7 +3,7 @@ from django.core.mail import send_mail
 from django.contrib.auth import authenticate, login
 from .models import Testimonial, Trainer, ServiceCategory, Service, Contact, Subscriber, TeamRole,\
 FAQ, Event, BlogPost, Gallery, News, Teaching, Media, TrainingSchedule, WeekDays
-from .forms import CaptchaForm, ContactForm
+from .forms import CaptchaForm, ContactForm, TestimonialForm
 # , GalleryForm
 from django.utils.text import slugify
 from django.contrib import messages
@@ -104,8 +104,9 @@ def home(request):
     context = {
         "serv_cats": ServiceCategory.objects.all().order_by('rank'),
         "trainers": Trainer.objects.filter(role=1),
-        "events": Event.objects.all().order_by('event_date'),
+        "events": Event.objects.all().order_by('-event_date')[:3],
         'teachings': Teaching.objects.filter(active=True),
+        "testimonials": Testimonial.objects.all()
     }
     return render(request, template, context)
 #--------------------------------------------------------------subscription_conf
@@ -158,6 +159,30 @@ def apply_view(request):
 
     context = {
         'servicecats': ServiceCategory.objects.all().order_by('rank')
+    }
+    return render(request, template, context)
+#=========================results page================================
+def results_view(request):
+    template = 'services/results.html'
+
+    context = {
+        'servicecats': ServiceCategory.objects.all().order_by('rank')
+    }
+    return render(request, template, context)
+#=========================add testimonial page================================
+def add_testimonial_view(request):
+    template = "services/add_testimonial.html"
+    form = TestimonialForm(request.POST or None)
+    if request.method == "POST":
+        if form.is_valid():
+            new_review = form.save(commit=False)
+            new_review.status = False
+            new_review.save()
+            return render(request, "services/home.html", {})
+            
+    context = {
+        "form": form,
+        "captcha_form": CaptchaForm()
     }
     return render(request, template, context)
 #=========================training program page================================

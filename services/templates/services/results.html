@@ -1,0 +1,92 @@
+{% extends 'services/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="banner-section banner-section-two inner-banner-section bg-overlay-red bg_img" data-background="{% static 'images/backgrounds/bg-7.png' %}">
+    <div class="section-logo-text">
+        <span class="title">ENERGYFIT</span>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-end mb-30-none">
+            <div class="col-xl-12 col-lg-12 text-center mb-30">
+                <div class="banner-content" data-aos="fade-up" data-aos-duration="1800">
+                    {% blocktranslate %}<h1 class='title'>ABOUT <span>US</span></h1>{% endblocktranslate %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="breadcrumb-area">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'Home' %}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{% trans 'About us' %}</li>
+        </ol>
+    </nav>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<a href="#" class="scrollToTop">
+    <img src="{% static 'images/element/arrow_up_icon.png' %}" style="width:80px;height:auto;color: red;" alt="element">
+    <div class="scrollToTop-icon">
+    </div>
+</a>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Start Training
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="training-section training-section-two ptb-120">
+    <div class="training-element-one" data-aos="fade-right" data-aos-duration="1200">
+            <img src="{% static 'images/element/element-17.png' %}" alt="element">
+    </div>
+    <div class="training-element-two" data-aos="fade-left" data-aos-duration="1200">
+            <img src="{% static 'images/element/element-18.png' %}" alt="element">
+    </div>
+    <div class="container">
+            <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-8 text-center">
+                            <div class="section-header" data-aos="fade-up" data-aos-duration="1200">
+                                    <h2 class="section-title">{% blocktranslate %}MORE ABOUT WHAT<span> YOU</span> WILL LEARN HERE{% endblocktranslate %}</h2>
+                                    <p></p>
+                            </div>
+                    </div>
+            </div>
+            <div class="row justify-content-center mb-30-none" data-aos="fade-up" data-aos-duration="1200">
+                {% for i in results %}	
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xxs-6 mb-30">
+                    <div class="training-item text-center" data-aos="zoom-in" data-aos-duration="1200">
+                                    <div class="training-icon">
+                                            <img src="{{ i.icon.url }}" alt="icon">
+                                    </div>
+                                    <div class="training-content">
+                                            <h4 class="title"><a href="#">{{ i.title }}</a></h4>
+                                    </div>
+                                    <div class="training-overlay bg-overlay-base bg_img" data-background="{{ i.image.url }}">
+                                            <div class="training-overlay-content">
+                                                    <div class="training-overlay-icon">
+                                                            <a href="#"><i class="fas fa-arrow-right"></i></a>
+                                                    </div>
+                                                    <h4 class="title"><a href="#">{{ i.text }}</a></h4>
+                                            </div>
+                                    </div>
+                        </div>
+                </div>
+                {% endfor %}
+            </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Training
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+{% endblock %}

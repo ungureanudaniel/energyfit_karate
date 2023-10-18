@@ -80,8 +80,27 @@ msgstr "<h1 class=\"title\">ÎNSCRIE-TE <span>ACUM</span></h1>"
 
 #: services/templates/services/apply.html:26
 msgid "Enroll"
-msgstr "Înscriete"
+msgstr "Înscrie-te"
 
+#: services/templates/services/apply.html:26
+msgid "First name..."
+msgstr "Prenume..."
+#: services/templates/services/apply.html:26
+msgid "Please write the captcha text below to show you are human"
+msgstr "Scrie textul de mai jos în căsuța destinată pentru a arăta că ești uman"
+
+#: services/templates/services/apply.html:26
+msgid "Last name..."
+msgstr "Nume de familie..."
+#: services/templates/services/apply.html:26
+msgid "Save"
+msgstr "Salvează"
+#: services/templates/services/apply.html:26
+msgid "Add testimonial"
+msgstr "Adaugă un review"
+#: services/templates/services/apply.html:26
+msgid "<h1 class='title'>ADD <span>TESTIMONIAL</span></h1>"
+msgstr "<h1 class='title'>ADAUGĂ UN <span>REVIEW</span></h1>"
 #: services/templates/services/training.html:26
 msgid "Energyfit Karate Brașov offers the commitment to take you to your goals"
 msgstr "Energyfit Karate Brașov îți promite angajamentul de a te ghida către țelurile tale"
@@ -113,6 +132,10 @@ msgstr "Prețuri pentru fiecare buzunar"
 #: services/templates/services/training.html:26
 msgid "Professional Trainers"
 msgstr "Antrenori profesioniști"
+
+#: services/templates/services/training.html:26
+msgid "Donate"
+msgstr "Donează"
 
 #: services/templates/services/training.html:26
 msgid "Pictures of our day to day Fudokan martial arts training and events"
@@ -737,7 +760,7 @@ msgstr "SENSEII <span>NOȘTRI</span>"
 
 #: services/templates/services/home.html:552
 msgid "More"
-msgstr "Mehr"
+msgstr "Mai mult"
 
 #: services/templates/services/home.html:553
 msgid "Sensei Catalin Petre is the creator of this school and he teaches with the help of Sensei Karol"
@@ -807,6 +830,10 @@ msgstr "Începători"
 #: services/templates/services/about.html:853
 msgid "EnergyFit Karate Brasov Sports Club was founded in 2017 by Petre Cătălin sensei (3 dan - fudokan). From 2014 until now the club has gone through several stages that have shaped this sports structure. EnergyFit started from the passion for martial arts of sensei Petre Cătălin who started this path since 2004 at C.S. Petrom Ploiești. Trained by the two sensei Apostol Liviu and Ileana, Cătălin developed a passion for this martial arts path since primary school, and in 2009 he consolidated this path through the Faculty of Physical Education and Sport at Transilvania University of Brașov. His curiosity for the academic and pedagogical environment continued in 2014 by pursuing master studies in the same university on a detailed specialization, Psychomotor Diagnosis and Prognosis - Research in Performance Sport. Cătălin's passion for karate was also noticed by the professors of Transylvania University who decided to give him the opportunity to teach the Combat and Self-Defense courses in the Faculty of Physical Education and Mountain Sports. Also in 2014, the sports club EnergyFit Karate Brașov was founded out of the desire to apply what was learnt at Transylvania University. Sensei Petre Cătălin strengthened the passion for karate with scientific training, the group of athletes allowed research through various scientific studies that later blossomed into competitive results and professionalism of students who go through the program applied in the club EnergyFit Karate Brașov. Currently the club is organizationally made up of the President, Vice President and Secretary and consists of:"
 msgstr "Clubul Sportiv EnergyFit Karate Braşov a fost înfiinţat în anul 2017 de sensei Petre Cătălin (3 dan - fudokan). Din 2014 până în prezent clubul a trecut prin mai multe etape care au conturat această structură sportivă. EnergyFit a început din pasiunea pentru arte marţiale a senseiului Petre Cătălin care a început această cale încă din anul 2004 la C.S. Petrom Ploieşti. Antrenat de cei doi sensei Apostol Liviu şi Ileana, Cătălin a dezvoltat o pasiune pentru această cale a artelor marţiale încă din băncile şcolii primare, urmând ca în anul 2009 să consolideze această cale prin intermediul Facultăţii de Educaţie Fizică şi Sport în cadrul Universităţii Transilvania din Braşov. Curiozitatea pentru mediul academic şi pedagogic a continuat în 2014 prin urmărea studiilor de master în aceeaşi universitate pe o specializare detaliată, Diagnoză şi Prognoză Psihomotrica - Cercetare în Sportul de Performanţă. Pasiunea pentru karate a lui Cătălin a fost observată şi de profesorii din Universitatea Transilvania care au decis să îi dea ocazia acestuia să predea cursurile de Combat şi Autoapărare din cadrul Facultăţii de Educaţie Fizică şi Sporturi Montane. Tot în anul 2014 se înfiinţează clubul sportiv EnergyFit Karate Braşov din dorinţa de a aplica cele învăţate în băncile Universităţii Transilvania. Sensei Petre Cătălin a consolidat pasiunea pentru karate cu antrenamentul ştiinţific, grupa de sportivi a permis cercetarea prin diferite studii ştiinţifice care mai târziu au înflorit prin rezultate competiţionale şi profesionalismul elevilor care trec prin programul aplicat în clubul EnergyFit Karate Braşov. În prezent clubul este alcătuit la nivel organizaţional de preşedinte, vicepreşedinte şi secretar şi este format din:"
+
+#: services/templates/services/about.html:853
+msgid "Results"
+msgstr "Rezultate"
 
 #: services/templates/services/about.html:853
 msgid "Over 50 athletes"

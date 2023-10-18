@@ -11,7 +11,7 @@ class MediaAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",),}
 class TestimonialAdmin(admin.ModelAdmin):
     fields = ['fname', 'lname', 'email', 'text', 'status']
-    list_display = ['fname', 'lname', 'status']
+    list_display = ['fname', 'lname', 'status', 'timestamp']
 class ServiceCategoryAdmin(admin.ModelAdmin):
     fields = ['rank', 'name', 'name_ro', 'image', 'slug']
     prepopulated_fields = {"slug": ("name",),}

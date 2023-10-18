@@ -93,14 +93,29 @@ class Testimonial(models.Model):
     fname = models.CharField(max_length=30)
     lname = models.CharField(max_length=30)
     email = models.EmailField(max_length=254)
-    # thumbnail = ResizedImageField(size=[640,None], upload_to='testimonial_images',)
-    text = RichTextField(max_length=400)
+    text = models.TextField(max_length=500)
     status = models.BooleanField(default="False")
+    timestamp = models.DateTimeField(auto_now_add=True)
     class Meta:
         verbose_name = 'Testimonial'
         verbose_name_plural = "Testimonials"
     def __str__(self):
         return self.email
+#================results model=====================================
+class Results(models.Model):
+    """
+    This class creates database tables for each result of
+     Energyfit Karate Brasov
+    """
+    title = models.CharField(max_length=30)
+    icon = ResizedImageField(size=[640,None], upload_to='results_icons',)
+    details = models.TextField(max_length=500)
+    date = models.DateTimeField()
+    class Meta:
+        verbose_name = 'Results'
+        verbose_name_plural = "Results"
+    def __str__(self):
+        return self.title
 #================Attraction category models=====================================
 class ServiceCategory(models.Model):
     """

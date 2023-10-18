@@ -33,19 +33,7 @@ class GallerySitemap(Sitemap):
 
     def location(self,obj):
         return '/%s' % (obj.slug)
-# class BlogSitemap(Sitemap):
-#     changefreq = "weekly"
-#     priority = 0.8
-#     protocol = 'http'
-#
-#     def items(self):
-#         return BlogPost.objects.all()
-#
-#     def lastmod(self, obj):
-#         return obj.created_date
-#
-#     def location(self,obj):
-#         return '/%s' % (obj.slug)
+
 class TestimonialSitemap(Sitemap):
     changefreq = "weekly"
     priority = 0.8
@@ -60,7 +48,7 @@ class StaticViewSitemap(Sitemap):
     changefreq = 'monthly'
 
     def items(self):
-        return ['home']
+        return ['home', 'training',]
 
     def location(self, item):
         return reverse(item)
