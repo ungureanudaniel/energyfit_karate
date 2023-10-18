@@ -130,6 +130,10 @@ msgid "Prices for Every Pocket"
 msgstr "Prețuri pentru fiecare buzunar"
 
 #: services/templates/services/training.html:26
+msgid "Our trainers are armed with patiences and kindness, two ingredientes that make students feel part of a family"
+msgstr "Antrenorii noștri sunt înarmați cu răbdare și blândețe, două ingrediente care fac studenții să se simtă parte dintr-o familie"
+
+#: services/templates/services/training.html:26
 msgid "Professional Trainers"
 msgstr "Antrenori profesioniști"
 
