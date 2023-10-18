@@ -210,8 +210,8 @@
                                 <div class="account-widget-select">
                                     <select class="form--control">
                                       <option value="1">{% trans 'Choose' %}</option>
-                                      {% for t in t_programs %}
-                                      <option name="training_type" value="{{ t.slug }}">{{ t.title }}</option>
+                                      {% for t in servicecats %}
+                                      <option name="training_type" value="{{ t.id }}">{{ t.name }}</option>
                                       {% endfor %}
                                     </select>
                                 </div>

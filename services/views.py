@@ -220,7 +220,8 @@ def training_view(request):
     context = {
         'services': ServiceCategory.objects.all(),
         'faqs': FAQ.objects.all(),
-        "teachings": Service.objects.all()
+        "teachings": Service.objects.all(),
+        "servicecats": ServiceCategory.objects.all().order_by("rank")
     }
     return render(request, template, context)
 #======================== training detail page================================
