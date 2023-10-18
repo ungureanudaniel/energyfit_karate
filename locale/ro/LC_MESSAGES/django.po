@@ -283,6 +283,10 @@ msgstr ""
 msgid "Monday"
 msgstr "Luni"
 
+#: services/templates/services/base.html:11
+msgid "Contact Program"
+msgstr "Program de Contact"
+
 #: services/templates/services/underconstruction.html:11
 msgid "Wednesday"
 msgstr "Miercuri"
