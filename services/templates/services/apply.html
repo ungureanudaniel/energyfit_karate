@@ -5,7 +5,7 @@
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Start Banner
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<section class="banner-section banner-section-two inner-banner-section bg-overlay-red bg_img" data-background="{% static 'images/backgrounds/training-crop.webp' %}">
+<section class="banner-section banner-section-two inner-banner-section bg-overlay-red bg_img" data-background="{% static 'images/backgrounds/bg-7.png' %}">
     <div class="section-logo-text">
         <span class="title">ENERGYFIT</span>
     </div>
@@ -105,69 +105,51 @@
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Start Statistics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<section class="statistics-section statistics-section-two ptb-120">
-    <div class="statistics-element-one my-paroller" data-paroller-factor="0.2" data-paroller-type="foreground" data-paroller-direction="vertical">
-        <img src="{% static 'images/element/element-1.png' %}" alt="element">
-    </div>
-    <div class="statistics-element-two my-paroller" data-paroller-factor="0.2" data-paroller-type="foreground" data-paroller-direction="vertical">
-        <img src="{% static 'images/element/element-2.png' %}" alt="element">
-    </div>
+<section class="statistics-section mt-5">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-xl-10 col-lg-12 text-center">
-                <div class="section-header">
-                    {% blocktranslate %}<h2 class="section-title">We can provide you one of the <span>Best Fudokan Training Programs in Europe.</span></h2>{% endblocktranslate %}
-                    <p>{% trans 'Learn to practice and master Fudokan martial arts together with a beautiful team that may become a second family! This Karate style is proven to enhance self defence abilities, focus on tasks, self-awareness, improves balance in life and relieves stress, all while you build up fitness and health' %}</p>
-                </div>
-            </div>
-        </div>
         <div class="statistics-area">
-            <div class="row justify-content-center mb-30-none">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+            <div class="row mt-20-none mb-30-none">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
                     <div class="statistics-item">
-                        <div class="statistics-icon-area">
-                            <div class="statistics-icon">
-                                <img src="{% static 'images/icon/icon-44.png' %}" alt="icon">
-                            </div>
-                        </div>
                         <div class="statistics-content">
                             <div class="odo-area">
-                                <h3 class="odo-title odometer" data-odometer-final="7690">0</h3>
+                                <h3 class="odo-title odometer" data-odometer-final="60">0</h3>
                                 <h3 class="title">+</h3>
                             </div>
-                            <p>Hours on the Tatami</p>
+                            <p>{% trans 'Students' %}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
                     <div class="statistics-item">
-                        <div class="statistics-icon-area">
-                            <div class="statistics-icon">
-                                <img src="{% static 'images/icon/icon-45.png' %}" alt="icon">
-                            </div>
-                        </div>
                         <div class="statistics-content">
                             <div class="odo-area">
-                                <h3 class="odo-title odometer" data-odometer-final="57">0</h3>
+                                <h3 class="odo-title odometer" data-odometer-final="12500">0</h3>
                                 <h3 class="title">+</h3>
                             </div>
-                            <p>Events</p>
+                            <p>{% trans 'Hours on the Tatami' %}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
                     <div class="statistics-item">
-                        <div class="statistics-icon-area">
-                            <div class="statistics-icon">
-                                <img src="{% static 'images/icon/icon-46.png' %}" alt="icon">
-                            </div>
-                        </div>
                         <div class="statistics-content">
                             <div class="odo-area">
-                                <h3 class="odo-title odometer" data-odometer-final="29">0</h3>
+                                <h3 class="odo-title odometer" data-odometer-final="130">0</h3>
                                 <h3 class="title">+</h3>
                             </div>
-                            <p>Students Admission</p>
+                            <p>{% trans 'Competitions' %}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mb-30">
+                    <div class="statistics-item">
+                        <div class="statistics-content">
+                            <div class="odo-area">
+                                <h3 class="odo-title odometer" data-odometer-final="3000">0</h3>
+                                <h3 class="title">+</h3>
+                            </div>
+                            <p>{% trans 'Medals' %}</p>
                         </div>
                     </div>
                 </div>

@@ -266,8 +266,8 @@ msgid "Get Enrolled Now"
 msgstr "Înscrieți-vă acum"
 
 #: services/templates/services/apply.html:122
-msgid "<h2 class='section-title'>We can provide you one of the <span>Best Fudokan Training Programs in Europe.</span></h2>"
-msgstr "<h2 class='section-title'>Vă putem oferi unul dintre <span>Cele mai bune programe de formare Fudokan din Europa.</span></h2>"
+msgid "<h2 class='section-title'>We can provide you one of the <span>Best Fudokan Training Programs in Romania.</span></h2></span></h2>"
+msgstr "<h2 class='section-title'>Vă putem oferi unul dintre <span>Cele mai bune programe de formare Fudokan din România.</span></h2>"
 
 #: services/templates/services/apply.html:123
 msgid "Learn to practice and master Fudokan martial arts together with a beautiful team that may become a second family! This Karate style is proven to enhance self defence abilities, focus on tasks, self awareness, improves balance in life and relieves stress, all while you build up fitness and health"
