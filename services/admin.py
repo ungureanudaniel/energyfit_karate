@@ -38,7 +38,6 @@ class TrainingScheduleAdmin(admin.ModelAdmin):
     list_display = ['day', ]
 class WeekDaysAdmin(admin.ModelAdmin):
     fields = ['name', "name_ro",'slug']
-    readonly_fields = ['name', 'name_ro']
     prepopulated_fields = {"slug": ("name",)}
 # class AboutAdmin(admin.ModelAdmin):
 #     fields = ['intro_text_1', 'intro_text_1_ro', 'intro_text_1_de','intro_list_1', 'intro_list_1_ro',\
