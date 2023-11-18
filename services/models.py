@@ -6,7 +6,7 @@ from ckeditor.fields import RichTextField
 from django.utils.translation import gettext_lazy as _
 import os
 from django.contrib.auth.models import User
-
+from django.utils import timezone
 #================subscribers model=====================================
 class FAQ(models.Model):
     question = models.CharField(max_length=100)
@@ -272,7 +272,7 @@ class Contact(models.Model):
     email = models.EmailField(max_length=254)
     subject = models.CharField(max_length=50)
     text = models.TextField(max_length=300)
-    timestamp = models.DateTimeField(auto_now_add=True)
+    timestamp = models.DateTimeField(default=timezone.now())
     class Meta:
         verbose_name = 'Contact'
         verbose_name_plural = "Contacts"

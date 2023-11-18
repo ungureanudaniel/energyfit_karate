@@ -424,6 +424,9 @@ msgstr "SCRIE UN EMAIL"
 #: services/templates/services/contact.html:172
 msgid "send now"
 msgstr "trimite"
+#: services/templates/services/contact.html:172
+msgid "Unfortunatelly your message encoutered an error, {messageform.cleaned_data.get('author')}, and as a consequence sending has failed! Please write us an email directly at contact@energyfit.ro or call us at the phone numbers on this website."
+msgstr "Din păcate mesajul tău {messageform.cleaned_data.get('author')} a generat o eroare și în consecință trimiterea a eșuat! Te rugăm trimite un email la contact@energyfit.ro sau apelează-ne la numerele de telefon de pe site."
 
 #: services/templates/services/contact.html:172
 msgid "<h2 class='section-title'>A burning Question? Feel Free to get directly in <span>Contact</span> with Us!</h2>"
@@ -720,14 +723,14 @@ msgstr "DEVINO UN TU MAI BUN"
 #: services/templates/services/home.html:351
 #, python-format
 msgid "You will become stronger, faster, more focused, more motivated to reach your goals and we are committed to take you there"
-msgstr "Vei deveni mai puternic, mai rapid, mai concentrat, mai motivat să îți atingegi obiectivele, iar noi ne angajăm să te ducem acolo"
+msgstr "Vei deveni mai puternic, mai rapid, mai concentrat, mai motivat să îți atingi obiectivele, iar noi ne angajăm să te ducem acolo"
 
 #: services/templates/services/home.html:353
 msgid "Join Now"
 msgstr "Alăturăte acum"
 
 #: services/templates/services/home.html:379
-msgid "MORE ABOUT WHAT<span> YOU</span> WILL LEARN HERE"
+msgid "MORE ABOUT WHAT <span>YOU</span> WILL LEARN HERE"
 msgstr "MAI MULTE DESPRE CE <span> VEI</span> ÎNVĂȚA AICI"
 
 #: services/templates/services/home.html:379
@@ -759,15 +762,15 @@ msgid "We are sorry, but the page you are looking for is temporarily unavailable
 msgstr "Ne cerem scuze, dar pagina pe care o cauți este temporar indisponibilă. Încearcă din nou mai târziu"
 
 #: services/templates/services/home.html:552
-msgid "OUR <span>SENSEIS</span>"
-msgstr "SENSEII <span>NOȘTRI</span>"
+msgid "OUR <span>TRAINERS</span>"
+msgstr "ANTRENORII <span>NOȘTRI</span>"
 
 #: services/templates/services/home.html:552
 msgid "More"
 msgstr "Mai mult"
 
 #: services/templates/services/home.html:553
-msgid "Sensei Catalin Petre is the creator of this school and he teaches with the help of Sensei Karol"
+msgid "Sensei Cătălin Petre is the creator of this school and he teaches with the help of Sensei Karol"
 msgstr "Sensei Cătălin Petre este creatorul acestei școli și predă cu ajutorul lui Sensei Karol"
 
 #: services/templates/services/home.html:611
@@ -838,7 +841,15 @@ msgstr "Clubul Sportiv EnergyFit Karate Braşov a fost înfiinţat în anul 2017
 #: services/templates/services/about.html:853
 msgid "Results"
 msgstr "Rezultate"
-
+#: services/templates/services/about.html:853
+msgid "<h2 class='section-title'>FEATURES<span></span> AT ENERGYFIT KARATE BRASOV</h2>"
+msgstr "<h2 class='section-title'>AVANTAJE LA <span></span> ENERGYFIT KARATE BRASOV</h2>"
+#: services/templates/services/training.html:853
+msgid "Please fill in the captcha field below, to show you are human"
+msgstr "Te rugăm rezolvă captcha de mai jos, pentru a demonstra că esti uman"
+#: services/templates/services/training.html:853
+msgid "f'Thank you for writing us {message_author}! We will answer as soon as possible.'"
+msgstr "f'Mulţumim pentru mesaj {message_author}! Vom răspunde cât putem de repede.'"
 #: services/templates/services/about.html:853
 msgid "Over 50 athletes"
 msgstr "Peste 50 de sportivi"
@@ -853,7 +864,7 @@ msgid "Four Fudokan licensed referees"
 msgstr "Patru arbitrii licenţiaţi Fudokan"
 #: services/templates/services/about.html:853
 msgid "An official partner - Patronage of Family Doctors Brasov"
-msgstr "Un partener oficial - Patronatul Medicilor de familie Braşov"
+msgstr "Un partener oficial - Patronatul Medicilor de Familie Braşov"
 #: services/templates/services/about.html:853
 msgid "Two media partners - Info1Tv, Radio Romania Brasov FM"
 msgstr "Doi parteneri media - Info1Tv, Radio România Braşov FM"
@@ -999,8 +1010,11 @@ msgid "Failed! Please make sure your info is correct!"
 msgstr "A eșuat! Vă rugăm să vă asigurați că informațiile dvs. sunt corecte!"
 
 #: services/views.py:175
-msgid "Failed! Please fill in the captcha field again!"
-msgstr "A eșuat! Vă rugăm să completați din nou câmpul captcha!"
+msgid "Failed. Captcha error! Please fill in the captcha field again."
+msgstr "Rezolvare captcha eșuată! Vă rugăm să completați din nou câmpul captcha!"
+#: services/views.py:175
+msgid "Critical error! Forward this error to the page developer: {e}"
+msgstr "Eroare critica! Transmiteti aceasta eroare catre administrator: {e}"
 
 #: services/views.py:197
 #, python-brace-format

@@ -211,42 +211,71 @@ def donate_view(request):
 
     }
     return render(request, template, context)
+#=========================message redirect page================================
+def message_redirect_view(request):
+    template = 'services/message_redirect.html'
+   
+    context = {
+
+    }
+    return render(request, template, context)
 #=========================training page================================
 def training_view(request):
     template = 'services/training.html'
+
     if request.method == "POST":
         form = CaptchaForm(request.POST)
-        try:
-                if form.is_valid():
-                    message_phone = request.GET.get("phone")
-                    message_author = request.GET.get("name")
-                    sender_email = request.GET.get("email")
-                    message = request.GET.get("message")
-                    training_type = request.GET.get("training_type")
-                    message_subject = f"Registration for {training_type}"
+        messageform = ContactForm(request.POST or None)
+        if form.is_valid():
+            print(f"captcha form is valid!")
+            if messageform.is_valid():
+                try:
+                    print(f"message form is valid!{messageform}")
+                    message_author = messageform.cleaned_data.get('author')
+                    sender_email = messageform.cleaned_data.get('email')
+                    message = messageform.cleaned_data.get('text')
+                    new_message = messageform.save(commit=False)
+                    new_message.subject = f"Registration for {request.GET['training_type']}"
+                    new_message.timestamp = datetime.datetime.now()
+                    new_message.save()
+                        # message_phone = request.GET.get("phone")
+                        # message_author = request.GET.get("name")
+                        # sender_email = request.GET.get("email")
+                        # message = request.GET.get("message")
+                        # training_type = request.GET.get("training_type")
+                        # message_subject = f"Registration for {training_type}"
+                        # new_message = Contact(message_author, message_phone, sender_email, message_subject, message, timestamp=timezone.now())
                     #=======send email=======
-                    new_message = Contact(message_author, message_phone, sender_email, message_subject, message, timestamp=timezone.now())
-
+                    message = str(new_message.text)
+                    sender_email = new_message.email
                     send_mail("", message, sender_email, ['contact@energyfit.ro'], fail_silently=False)
-                    messages.success(request, _(f'Thank you for writing us {message_author}! We will answer as soon as possible.'))
-                    return redirect('/')
+                    messages.success(request, _(f"Thank you for writing us {new_message.GET['author']}! We will answer as soon as possible."))
+                    return redirect('http://127.0.0.1:8000/message-status')
                     # except Exception as e:
                     #     messages.warning(request, f'Error: {e}!')
                     #     return render(request, 'services/invalid_header.html',{})
                     # return HttpResponseRedirect('/contact')
-                else:
-                    messages.warning(request, _("Failed! Please fill in the captcha field again!"))
-                    return redirect('/contact')
-        except Exception as e:
-            messages.warning(request, _(f"Forward this error to the page developer: {e}"))
-            return redirect('/contact')
+                except Exception as e:
+                    messages.warning(request, _(f"Error! {e}"))
+                    return redirect('http://127.0.0.1:8000/contact')
+            else:
+                messages.warning(request, _(f"Unfortunatelly your message encoutered an error, {messageform.cleaned_data.get('author')}, and as a consequence sending has failed! Please write us an email directly at contact@energyfit.ro or call us at the phone numbers on this website."))
+                return redirect('http://127.0.0.1:8000/contact')
+                    
+        else:
+            messages.warning(request, _("Failed. Captcha error! Please fill in the captcha field again."))
+            return redirect('http://127.0.0.1:8000/contact')
     else:
-        form = CaptchaForm()
+        messageform = ContactForm(request.POST or None)
+        form = CaptchaForm(request.POST)
     context = {
         'services': ServiceCategory.objects.all(),
         'faqs': FAQ.objects.all(),
         "teachings": Service.objects.all(),
-        "servicecats": ServiceCategory.objects.all().order_by("rank")
+        "servicecats": ServiceCategory.objects.all().order_by("rank"),
+        "form": form,
+        "messageform": messageform,
+
     }
     return render(request, template, context)
 #======================== training detail page================================
@@ -354,45 +383,41 @@ def massmedia(request):
     return render(request, template, {})
 #==========contact======================================================
 def contacts_view(request):
-    if settings.DEVELOPMENT == True:
-        template_name = 'services/contact_under.html'
-    else:
-        template_name = 'services/contact.html'
+    template_name = 'services/contact.html'
 
     if request.method == "POST":
-        message_form = ContactForm(request.POST or None)
+        messageform = ContactForm(request.POST or None)
         form = CaptchaForm(request.POST)
         try:
             if form.is_valid():
-                if message_form.is_valid():
-                    message_phone = message_form.cleaned_data.get('phone')
-                    message_author = message_form.cleaned_data.get('author')
-                    sender_email = message_form.cleaned_data.get('email')
-                    message = message_form.cleaned_data.get('message')
+                if messageform.is_valid():
+                    message_author = messageform.cleaned_data.get('author')
+                    sender_email = messageform.cleaned_data.get('email')
+                    message = messageform.cleaned_data.get('message')
                     #=======send email=======
-                    new_message = message_form.save(commit=False)
+                    new_message = messageform.save(commit=False)
                     new_message.timestamp = datetime.datetime.now()
                     new_message.save()
                     send_mail("", message, sender_email, ['contact@energyfit.ro'], fail_silently=False)
                     messages.success(request, _(f'Thank you for writing us {message_author}! We will answer as soon as possible.'))
-                    return redirect('/contact')
+                    return redirect('http://127.0.0.1:8000/en/message-status/')
                     # except Exception as e:
                     #     messages.warning(request, f'Error: {e}!')
                     #     return render(request, 'services/invalid_header.html',{})
                     # return HttpResponseRedirect('/contact')
                 else:
-                    messages.warning(request, _("Failed! Please make sure your info is correct!"))
-                    return redirect('/contact')
+                    messages.warning(request, _(f'Unfortunatelly your message encoutered an error, {new_message.author} and sending failed! Please write us an email directly at contact@energyfit.ro or call us at the phone numbers on this website.'))
+                    return redirect('http://127.0.0.1:8000/message-status')
             else:
-                messages.warning(request, _("Failed! Please fill in the captcha field again!"))
-                return redirect('/contact')
+                messages.warning(request, _("Failed. Captcha error! Please fill in the captcha field again."))
+                return redirect('http://127.0.0.1:8000/message-status')
         except Exception as e:
-            messages.warning(request, _(f"Forward this error to the page developer: {e}"))
-            return redirect('/contact')
+            messages.warning(request, _(f"Critical error! Forward this error to the page developer: {e}"))
+            return redirect('http://127.0.0.1:8000/message-status')
     else:
-        message_form = ContactForm()
-        form = CaptchaForm()
-    return render(request, template_name, {'message_form':message_form, 'form': form})
+        messageform = ContactForm(request.POST or None)
+        form = CaptchaForm(request.POST)
+    return render(request, template_name, {'messageform':messageform, 'form': form,"servicecats": ServiceCategory.objects.all().order_by("rank"),})
 #========================add testimonial page================================
 def add_testimonial(request):
     template = 'services/add_testimonial.html'

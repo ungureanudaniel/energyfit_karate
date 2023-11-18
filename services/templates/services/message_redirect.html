@@ -1,0 +1,57 @@
+{% extends 'services/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="banner-section banner-section-two inner-banner-section bg-overlay-red bg_img" data-background="{% static 'images/backgrounds/catalin_karol2.webp' %}">
+	
+    <div class="section-logo-text">
+        <span class="title">ENERGYFIT</span>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-end mb-30-none">
+            <div class="col-xl-12 col-lg-12 text-center mb-30">
+                <div class="banner-content" data-aos="fade-up" data-aos-duration="1800">
+                    <h1 class="title"><span></span></h1>
+										<!-- <p>{% trans 'Your message has been successfully sent to our email inbox' %}</p>
+										<p>{% trans 'We will reach back soon!' %}</p> -->
+                                        {% if messages %}
+                                        <div id="error-section" class="pb-3 col-12 justify-content-center" style="justify-content:center">
+                                            {% include 'includes/messages.html' %}
+                                        </div>
+                                        {% else %}
+                                        <div id="error-section" class="pb-5 col-12 justify-content-center" style="justify-content:center">
+                                        </div>
+                                        {% endif %}
+										<div class="banner-btn">
+												<a href="{% url 'apply' %}" class="btn--base">{% trans 'Enroll Now' %} <i class="fas fa-arrow-right ml-2"></i></a>
+												<a href="{% url 'home' %}" class="btn--base active">{% trans 'Home' %} <i class="fas fa-arrow-right ml-2"></i></a>
+										</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<a href="#" class="scrollToTop">
+    <img src="{% static 'images/element/arrow_up_icon.png' %}" style="width:80px;height:auto;color: red;" alt="element">
+    <div class="scrollToTop-icon">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+</a>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+{% endblock %}

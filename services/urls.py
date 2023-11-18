@@ -5,7 +5,7 @@ from .views import home, apply_view, underconstruction, contacts_view, subscript
 unsubscribe, about_view, TrainersDetailView, trainers_view, training_view,\
 events_view, EventDetailView, blog_view, BlogDetailView, gallery, news_view, NewsDetailView,\
 pricing_view, faq_view, coming_soon, media_view, program_view, donate_view, add_testimonial_view,\
-results_view
+results_view, message_redirect_view
 #, gallery, add_testimonial, team, history, massmedia,\
  # contacts_view, page_not_found, coming_soon,\
  #, video_view, gallery
@@ -62,6 +62,7 @@ else:
         path('support-us/', donate_view, name="donate"),
         path('add-testimonial/', add_testimonial_view, name="add_review"),
         path('add-testimonial/', results_view, name="add_review"),
+        path('message-status/', message_redirect_view, name="message-status"),
 
         # path('videos', video_view, name="video"),
         path('coming-soon', coming_soon, name="coming-soon"),

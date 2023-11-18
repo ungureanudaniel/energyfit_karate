@@ -270,7 +270,7 @@
         <div class="row justify-content-center">
             <div class="col-xl-6 col-lg-8 text-center">
                 <div class="section-header" data-aos="fade-up" data-aos-duration="1200">
-                    {% blocktranslate %}<h2 class="section-title">OUR <span></span> FEATURES</h2>{% endblocktranslate %}
+                    {% blocktranslate %}<h2 class='section-title'>FEATURES<span></span> AT ENERGYFIT KARATE BRASOV</h2>{% endblocktranslate %}
                     <p>{% trans 'Energyfit Karate Brasov is the only Fudokan martial arts school in Brasov, a karate style that teaches modesty, focus and fighting for true human values. Our school has one of the most innovative and child friendly training programs you can find' %}.</p>
                 </div>
             </div>
@@ -364,8 +364,9 @@
 						<div class="col-xl-12">
 								<div class="section-header-wrapper">
 										<div class="section-header white" data-aos="fade-right" data-aos-duration="1200">
-												<h2 class="section-title">{% blocktranslate %}OUR <span>SENSEIS</span>{% endblocktranslate %}</h2>
-												<p>{% trans 'Introduction...' %}.</p>
+												<h2 class="section-title">{% blocktranslate %}OUR <span>TRAINERS</span>{% endblocktranslate %}</h2>
+                                                <p>{% trans 'Our trainers are armed with patiences and kindness, two ingredientes that make students feel part of a family' %}.</p>
+
 										</div>
 								</div>
 						</div>
@@ -410,73 +411,10 @@
 
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Start Client
+		Start Testimonials
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<section class="client-section ptb-120">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="section-header-wrapper">
-                    <div class="section-header" data-aos="fade-right" data-aos-duration="1200">
-                        <h2 class="section-title">{% blocktranslate %}OUR <span></span> TESTIMONIALS{% endblocktranslate %}</h2>
-                        <p>{% trans 'Energyfit Karate Brasov is the only Fudokan martial arts school in Brasov, a karate style that teaches modesty, focus and fighting for true human values. Our school has one of the most innovative and child friendly training programs you can find' %}.</p>
-                    </div>
-                    <div class="slider-nav-area" data-aos="fade-left" data-aos-duration="1200">
-                        <div class="slider-prev">
-                            <i class="fas fa-chevron-left"></i>
-                        </div>
-                        <div class="slider-next">
-                            <i class="fas fa-chevron-right"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="client-area">
-            <div class="row justify-content-center">
-                <div class="col-xl-12 col-lg-12">
-                    <div class="client-slider-two" data-aos="fade-up" data-aos-duration="1200">
-                        <div class="swiper-wrapper">
-                          {% for t in testimonials %}
-                            <div class="swiper-slide">
-                                <div class="client-item">
-                                    <div class="client-header">
-                                        <div class="client-quote">
-                                            <img src="{% static 'images/client/quote.png' %}" alt="client">
-                                        </div>
-                                        <div class="client-thumb">
-                                            <!-- <img src="{% static 'images/client/client-1.png' %}" alt="client"> -->
-                                        </div>
-                                    </div>
-                                    <div class="client-content">
-                                        <p>{{ t.text|safe }}</p>
-                                    </div>
-                                    <div class="client-footer">
-                                        <div class="client-footer-left">
-                                            <h4 class="title"><a href="#0">{{ t.fname|capfirst }} {{ t.lname|capfirst }}</a></h4>
-                                            <!-- <span class="sub-title">Role</span> -->
-                                        </div>
-                                        <div class="client-footer-right">
-                                            <span class="ratings">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star active"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+{% include 'includes/testimonials.html' %}
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    End Client
+		End Testimonials
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 {% endblock %}

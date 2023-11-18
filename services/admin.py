@@ -70,6 +70,9 @@ class NewsAdmin(admin.ModelAdmin):
 class EventAdmin(admin.ModelAdmin):
     fields = ['author', 'categ', 'title','title_ro', 'event_date', 'organizer', 'location', 'image', 'text','text_ro','slug']
     prepopulated_fields = {"slug": ("title",)}
+class ContactAdmin(admin.ModelAdmin):
+    fields = ['author', 'phone', 'email','subject', 'timestamp']
+    list_display = ['author','phone', 'email',]
 admin.site.register(ServiceCategory, ServiceCategoryAdmin)
 admin.site.register(Media, MediaAdmin)
 admin.site.register(Service, ServiceAdmin)
@@ -85,5 +88,7 @@ admin.site.register(Event, EventAdmin)
 admin.site.register(Teaching, TeachingAdmin)
 admin.site.register(TrainingSchedule, TrainingScheduleAdmin)
 admin.site.register(WeekDays, WeekDaysAdmin)
+admin.site.register(Contact, ContactAdmin)
+
 
 
