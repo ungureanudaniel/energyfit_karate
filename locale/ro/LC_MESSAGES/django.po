@@ -857,8 +857,8 @@ msgstr "Peste 50 de sportivi"
 msgid "Four groups"
 msgstr "Doi sensei - Petre Cătălin - 3 dan, Czoguly Karoly - 1 dan"
 #: services/templates/services/about.html:853
-msgid "Two sensei - Petre Cătălin - 3 dan, Czoguly Karoly - 1 dan"
-msgstr "Doi sensei - Petre Cătălin - 3 dan, Czoguly Karoly - 1 dan"
+msgid "Two trainers - Sensei Petre Cătălin - 3 dan, Czoguly Karoly - 1 dan"
+msgstr "Doi antrenori - Sensei Petre Cătălin - 3 dan, Czoguly Karoly - 1 dan"
 #: services/templates/services/about.html:853
 msgid "Four Fudokan licensed referees"
 msgstr "Patru arbitrii licenţiaţi Fudokan"
