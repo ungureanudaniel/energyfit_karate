@@ -516,7 +516,9 @@ def terms_view(request):
 def events_view(request):
     template = 'services/event.html'
     context = {
-        'events': Event.objects.all().order_by("event_date"),
+        'past_events': Event.objects.filter(event_date__lt=timezone.now()),
+        'future_events': Event.objects.filter(event_date__gt=timezone.now()),
+
     }
     return render(request, template, context)
 

@@ -64,8 +64,25 @@
             </div>
             
             <div class="grid">
-                {% for i in events %}
-                <div class="grid-item {{ i.categ }}">
+                {% for i in past_events %}
+                <div class="grid-item past">
+                    <div class="gallery-item">
+                        <div class="gallery-thumb">
+                            <img src="{{ i.image.url }}" alt="{{ i.title }}">
+                            <div class="gallery-overlay">
+                                <div class="gallery-content">
+                                    <h4 class="title">{{ i.text|safe }}</h4>
+                                    <div class="gallery-icon">
+                                        <a class="img-popup" data-rel="lightcase:myCollection" href="{{ i.image.url }}"><img src="#" alt="gallery"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                {% for i in future_events %}
+                <div class="grid-item future">
                     <div class="gallery-item">
                         <div class="gallery-thumb">
                             <img src="{{ i.image.url }}" alt="{{ i.title }}">

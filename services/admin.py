@@ -68,7 +68,7 @@ class NewsAdmin(admin.ModelAdmin):
     fields = ['author', 'title','title_ro', 'image', 'text','text_ro','slug']
     prepopulated_fields = {"slug": ("title",)}
 class EventAdmin(admin.ModelAdmin):
-    fields = ['author', 'categ', 'title','title_ro', 'event_date', 'organizer', 'location', 'image', 'text','text_ro','slug']
+    fields = ['author', 'title','title_ro', 'event_date', 'organizer', 'location', 'image', 'text','text_ro','slug']
     prepopulated_fields = {"slug": ("title",)}
 class ContactAdmin(admin.ModelAdmin):
     fields = ['author', 'phone', 'email','subject', 'timestamp']
