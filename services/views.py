@@ -172,14 +172,17 @@ def results_view(request):
 #=========================add testimonial page================================
 def add_testimonial_view(request):
     template = "services/add_testimonial.html"
-    form = TestimonialForm(request.POST or None)
+    
     if request.method == "POST":
+        form = TestimonialForm(request.POST or None)
         if form.is_valid():
             new_review = form.save(commit=False)
             new_review.status = False
             new_review.save()
-            return render(request, "services/home.html", {})
-            
+            send_mail("New review on website for energyfit", "Dear website admin, \nYou have received a new review in inbox, waiting to be verified and approved. To approve it please login to the website admin area, by clicking this link: 'https://www.energyfit.ro/admin/services/testimonial/' and check the 'status' box to approve the review.", 'contact@energyfit.ro', ['contact@energyfit.ro'], fail_silently=False)
+            return redirect("home")
+    else:
+        form = TestimonialForm()
     context = {
         "form": form,
         "captcha_form": CaptchaForm()
@@ -424,22 +427,7 @@ def contacts_view(request):
         messageform = ContactForm(request.POST or None)
         form = CaptchaForm(request.POST)
     return render(request, template_name, {'messageform':messageform, 'form': form,"servicecats": ServiceCategory.objects.all().order_by("rank"),})
-#========================add testimonial page================================
-def add_testimonial(request):
-    template = 'services/add_testimonial.html'
-    if request.method=="POST":
-        try:
-            fname = request.POST.get('first-name')
-            lname = request.POST.get('last-name')
-            email = request.POST.get('email')
-            image = request.POST.get('image')
-            text = request.POST.get('text')
 
-
-            password = request.POST.get('signin-password')
-        except Exception as e:
-            messages.warning(request, _(f"Warning! {e}"))
-    return render(request, template, {})
 #======================== faq page================================
 def faq_view(request):
     template = 'services/faq.html'
