@@ -250,21 +250,21 @@ def training_view(request):
                     sender_email = new_message.email
                     send_mail("", message, sender_email, ['contact@energyfit.ro'], fail_silently=False)
                     messages.success(request, _(f"Thank you for writing us {new_message.GET['author']}! We will answer as soon as possible."))
-                    return redirect('http://127.0.0.1:8000/message-status')
+                    return redirect('home')
                     # except Exception as e:
                     #     messages.warning(request, f'Error: {e}!')
                     #     return render(request, 'services/invalid_header.html',{})
                     # return HttpResponseRedirect('/contact')
                 except Exception as e:
                     messages.warning(request, _(f"Error! {e}"))
-                    return redirect('http://127.0.0.1:8000/contact')
+                    return redirect('contact')
             else:
                 messages.warning(request, _(f"Unfortunatelly your message encoutered an error, {messageform.cleaned_data.get('author')}, and as a consequence sending has failed! Please write us an email directly at contact@energyfit.ro or call us at the phone numbers on this website."))
-                return redirect('http://127.0.0.1:8000/contact')
+                return redirect('contact')
                     
         else:
             messages.warning(request, _("Failed. Captcha error! Please fill in the captcha field again."))
-            return redirect('http://127.0.0.1:8000/contact')
+            return redirect('contact')
     else:
         messageform = ContactForm(request.POST or None)
         form = CaptchaForm(request.POST)

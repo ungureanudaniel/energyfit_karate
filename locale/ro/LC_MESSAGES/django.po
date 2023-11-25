@@ -887,7 +887,9 @@ msgstr "Iniţiere în Kobudo"
 #: services/templates/services/about.html:853
 msgid "Initiation into Fudokan karate"
 msgstr "Iniţiere în karate Fudokan"
-
+#: services/templates/services/about.html:853
+msgid "Performance career guidance"
+msgstr "Îndrumare în cariera de performanță"
 #: services/templates/services/about.html:853
 msgid "We initiate anyone into Fudokan starting at the age of 6. Each student learns by his own rythm"
 msgstr "Noi inițiem pe oricine în Fudokan începând cu vârsta de 6 ani. Fiecare elev învață după propriul ritm"
