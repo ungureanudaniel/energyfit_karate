@@ -106,7 +106,7 @@ def home(request):
         "trainers": Trainer.objects.filter(role=1),
         "events": Event.objects.all().order_by('-event_date')[:3],
         'teachings': Teaching.objects.filter(active=True),
-        "testimonials": Testimonial.objects.all()
+        "testimonials": Testimonial.objects.filter(status=True)
     }
     return render(request, template, context)
 #--------------------------------------------------------------subscription_conf
