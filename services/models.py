@@ -270,15 +270,15 @@ class Contact(models.Model):
     author = models.CharField(max_length=200)
     phone = models.CharField(max_length=30)
     email = models.EmailField(max_length=254)
-    subject = models.CharField(max_length=50)
+    subject = models.CharField(max_length=50, default="No subject")
     text = models.TextField(max_length=300)
     timestamp = models.DateTimeField(default=timezone.now())
     class Meta:
-        verbose_name = 'Contact'
-        verbose_name_plural = "Contacts"
+        verbose_name = 'Messages'
+        verbose_name_plural = "Messages"
     def __str__(self):
         return '{}'.format(self.email)
-#================contact model=====================================
+#================weekdays model=====================================
 class WeekDays(models.Model):
     """
     This class creates database tables for each contact message send from contact page of
