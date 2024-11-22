@@ -24,6 +24,13 @@ class FAQ(models.Model):
         super().save(*args, **kwargs)
     def __str__(self):
         return self.slug
+#================donation request model=====================================
+class DonationRequest(models.Model):
+    email = models.EmailField(max_length=100)
+    phone =  models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.email
 #=================media model===================================
 class Media(models.Model):
     name = models.CharField(max_length=100)

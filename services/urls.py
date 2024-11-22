@@ -5,7 +5,7 @@ from .views import home, apply_view, underconstruction, contacts_view, subscript
 unsubscribe, about_view, TrainersDetailView, trainers_view, training_view,\
 events_view, EventDetailView, blog_view, BlogDetailView, gallery, news_view, NewsDetailView,\
 pricing_view, faq_view, coming_soon, media_view, program_view, donate_view, add_testimonial_view,\
-results_view, message_redirect_view
+results_view, message_redirect_view, donate_view
 #, gallery, add_testimonial, team, history, massmedia,\
  # contacts_view, page_not_found, coming_soon,\
  #, video_view, gallery
@@ -28,6 +28,8 @@ if settings.DEVELOPMENT == True:
         path('unsubscribe', unsubscribe, name='unsubscribe'),
         path('contact', contacts_view, name="contact"),
         path('coming-soon', coming_soon, name="coming-soon"),
+        path('donate', donate_view, name="donate"),
+
         ]
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

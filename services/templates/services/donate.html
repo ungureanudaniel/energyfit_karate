@@ -1,0 +1,99 @@
+{% extends 'services/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="banner-section banner-section-two inner-banner-section bg-overlay-red bg_img" data-background="{% static 'images/backgrounds/training-crop.webp' %}">
+    <div class="section-logo-text">
+        <span class="title">ENERGYFIT</span>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-end mb-30-none">
+            <div class="col-xl-12 col-lg-12 text-center mb-30">
+                <div class="banner-content" data-aos="fade-up" data-aos-duration="1800">
+                    {% blocktranslate %}<h1 class='title'>SUPPORT <span>US</span></h1>{% endblocktranslate %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="breadcrumb-area">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'Home' %}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{% trans 'Donate' %}</li>
+        </ol>
+    </nav>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start Donate Section -->
+<section class="donate-section ptb-120" id="donate">
+    <div class="container">
+        <div class="donate-area">
+            <h2 class="text-center">{% trans 'MAKE A DONATION' %}</h2>
+            <p class="text-center">{% trans 'Your donation will help us provide better equipment for our student athletes, support their transportation to competitions, and cover other essential needs to foster their growth and success.' %}</p>
+            
+            {% if messages %}
+    					<div id="error-section" class="pb-3 col-12 justify-content-center" style="justify-content:center">
+    						{% include 'includes/messages.html' %}
+    					</div>
+    					{% else %}
+    					<div id="error-section" class="pb-5 col-12 justify-content-center" style="justify-content:center">
+    					</div>
+    					{% endif %}
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-6 col-md-8">
+                    <div class="donate-content">
+                        <div class="donate-form">
+                            <form action="{% url 'donate' %}" method="post">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label for="email">{% trans 'Your Email Address' %}:</label>
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="{% trans 'Enter your email' %}" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">{% trans 'Your Phone Number' %}:</label>
+                                    <input type="tel" name="phone" id="phone" class="form-control" placeholder="{% trans 'Enter your phone number' %}" required>
+                                </div>
+                                <button type="submit" class="btn--base">{% trans 'Submit Details and we will Contact You' %}</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Information Section -->
+            <div class="donation-info mt-5">
+                <h3 class="text-center">{% trans 'SUPPORTING FUDOKAN KARATE' %}</h3>
+                <p class="text-center">
+                    {% trans 'Your donations are processed and managed by our official association, ensuring that funds are used to support our training programs, competitions, and student scholarships.' %}
+                </p>
+                <div class="text-center">
+                    <h4>{% trans 'Club Details' %}</h4>
+                    <p><strong>{% trans 'Fiscal Registration Code (C.I.F.):' %}</strong> 39182145</p>
+                    <p><strong>{% trans 'Bank Account (Banca Transilvania):' %}</strong></p>
+                    <p>{% trans 'ASOCIAŢIA C S ENERGYFYT KARATE BRAŞOV' %}</p>
+                    <p><strong>{% trans 'IBAN RON:' %}</strong> RO26BTRLRONCRT0437303901</p>
+                    <p><strong>{% trans 'IBAN EURO:' %}</strong> RO46BTRLEURCRT0437303902</p>
+                    <p><strong>{% trans 'Swift:' %}</strong> BTRLRO22</p>
+
+                    <h4>{% trans 'Legal Information' %}</h4>
+                    <p><strong>{% trans 'Sport Identity Certificate No:' %}</strong> 0082091</p>
+                    <p><strong>{% trans 'Registration No in the Sports Register:' %}</strong> BV/A2/00371/2021</p>
+                    <p><strong>{% trans 'Operating Authorization No:' %}</strong> 403 from 11.10.2021</p>
+                    <p>{% trans 'In accordance with Law No. 69/2000 regarding Physical Education and Sport, with subsequent amendments and completions;' %}</p>
+                    <p>{% trans 'Based on Government Decision No. 884/2001 for approval of the Regulation for the implementation of the provisions of Law No. 69/2000;' %}</p>
+                    <p>{% trans 'Based on Government Decision No. 11/2013 regarding the establishment, organization, and functioning of the Ministry of Youth and Sports, with amendments and completions;' %}</p>
+
+                    <a href="{% static 'documents/CONTRACT SPONSORIZARE_karate.pdf' %}" class="btn--base" download>{% trans 'Download Sponsorship Contract' %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ End Donate Section -->
+{% endblock %}

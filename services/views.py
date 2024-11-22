@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.core.mail import send_mail
 from django.contrib.auth import authenticate, login
 from .models import Testimonial, Trainer, ServiceCategory, Service, Contact, Subscriber, TeamRole,\
-FAQ, Event, BlogPost, Gallery, News, Teaching, Media, TrainingSchedule, WeekDays
+FAQ, Event, BlogPost, Gallery, News, Teaching, Media, TrainingSchedule, WeekDays, DonationRequest
 from .forms import CaptchaForm, ContactForm, TestimonialForm
 # , GalleryForm
 from django.utils.text import slugify
@@ -20,6 +20,9 @@ from hitcount.views import HitCountDetailView
 from django.utils import timezone
 from django.views.decorators.gzip import gzip_page
 from django.utils.translation import gettext_lazy as _
+from django.views.decorators.csrf import csrf_exempt
+import json
+
 User = get_user_model()
 try:
     from typing import Literal
@@ -341,6 +344,47 @@ def pricing_view(request):
         
     }
     return render(request, template, context)
+#========================pricing plan page================================
+@csrf_exempt
+def process_donation_request(request):
+    """
+    Process the donor's contact information and send an email notification to the club admin.
+    """
+    template = 'services/donate.html'
+    form = CaptchaForm(request.POST)
+    if request.method == "POST":
+        if form.is_valid():
+            try:
+                # Parse JSON data from the POST request
+                email = request.get("email")
+                phone_number = request.get("phone")
+
+                # Validate the data
+                if email and phone_number:
+                    new_donation = DonationRequest(email=email, phone=phone_number)
+                    new_donation.save()
+
+                # Send an email to the club admin
+                admin_email = "contact@energyfit.ro"
+                subject = "Cineva doreste sa doneze!"
+                message = (
+                    f"A potential donor has submitted their contact details:\n\n"
+                    f"Email: {email}\n"
+                    f"Phone Number: {phone_number}\n\n"
+                    f"Please reach out to them for more details about their donation."
+                )
+
+                # Use EmailMessage to send the email
+                email_message = send_mail(subject, message, email, ['contact@energyfit.ro'], fail_silently=False)
+                email_message.send()
+                messages.success(request, _(f"Thank you for wishing to support us! We will come back to you as soon as possible."))
+                return render(request, 'donate', {"messages":messages})
+
+            except Exception as e:
+                return redirect('donate')
+
+    # If not POST, return a bad request response
+    return redirect('donate')
 #========================about page================================
 def about_view(request):
     template = 'services/about.html'

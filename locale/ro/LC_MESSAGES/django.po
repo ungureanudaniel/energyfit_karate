@@ -145,10 +145,100 @@ msgstr "Antrenorii noștri sunt înarmați cu răbdare și blândețe, două ing
 msgid "Professional Trainers"
 msgstr "Antrenori profesioniști"
 
-#: services/templates/services/training.html:26
+#: services/templates/services/donate.html:26
 msgid "Donate"
 msgstr "Donează"
+#: services/templates/services/donate.html:8
+msgid "Your donation will help us provide better equipment for our student athletes, support their transportation to competitions, and cover other essential needs to foster their growth and success."
+msgstr "Donația ta ne va ajuta să oferim echipamente mai bune sportivilor noștri copii, să sprijinim transportul lor la competiții și să acoperim alte nevoi esențiale pentru dezvoltarea și succesul lor."
 
+#: services/templates/services/donate.html:13
+msgid "Your Email Address"
+msgstr "Adresa ta de email"
+
+#: services/templates/services/donate.html:14
+msgid "Enter your email"
+msgstr "Introdu adresa ta de email"
+
+#: services/templates/services/donate.html:17
+msgid "Your Phone Number"
+msgstr "Numărul tău de telefon"
+
+#: services/templates/services/donate.html:18
+msgid "Enter your phone number"
+msgstr "Introdu numărul tău de telefon"
+
+#: services/templates/services/donate.html:21
+msgid "Submit Details"
+msgstr "Trimiteți Detaliile și vă vom Contacta"
+
+#: services/templates/services/donate.html:26
+msgid "SUPPORTING FUDOKAN KARATE"
+msgstr "SPRIJININD FUDOKAN KARATE"
+
+#: services/templates/services/donate.html:27
+msgid "Your support helps us ensure that all children have access to high-quality training equipment and opportunities to participate in competitions."
+msgstr "Sprijinul tău ne ajută să asigurăm accesul tuturor copiilor la echipamente de antrenament de înaltă calitate și oportunități de a participa la competiții."
+
+#: services/templates/services/donate.html:30
+msgid "Club Details"
+msgstr "Detalii Club"
+
+#: services/templates/services/donate.html:31
+msgid "Fiscal Registration Code (C.I.F.):"
+msgstr "Cod de Înregistrare Fiscală (C.I.F.):"
+
+#: services/templates/services/donate.html:33
+msgid "Bank Account (Banca Transilvania):"
+msgstr "Cont Bancar (Banca Transilvania):"
+
+#: services/templates/services/donate.html:34
+msgid "ASOCIAŢIA C S ENERGYFYT KARATE BRAŞOV"
+msgstr "ASOCIAŢIA C S ENERGYFYT KARATE BRAŞOV"
+
+#: services/templates/services/donate.html:35
+msgid "IBAN RON:"
+msgstr "IBAN RON:"
+
+#: services/templates/services/donate.html:36
+msgid "IBAN EURO:"
+msgstr "IBAN EURO:"
+
+#: services/templates/services/donate.html:37
+msgid "Swift:"
+msgstr "Swift:"
+
+#: services/templates/services/donate.html:39
+msgid "Legal Information"
+msgstr "Informații Legale"
+
+#: services/templates/services/donate.html:40
+msgid "Sport Identity Certificate No:"
+msgstr "Certificat de Identitate Sportivă Nr.:"
+
+#: services/templates/services/donate.html:41
+msgid "Registration No in the Sports Register:"
+msgstr "Nr. de Înregistrare în Registrul Sportiv:"
+
+#: services/templates/services/donate.html:42
+msgid "Operating Authorization No:"
+msgstr "Autorizație de Funcționare Nr.:"
+
+#: services/templates/services/donate.html:43
+msgid "In accordance with Law No. 69/2000 regarding Physical Education and Sport, with subsequent amendments and completions;"
+msgstr "În conformitate cu Legea Nr. 69/2000 privind Educația Fizică și Sportul, cu modificările și completările ulterioare;"
+
+#: services/templates/services/donate.html:44
+msgid "Based on Government Decision No. 884/2001 for approval of the Regulation for the implementation of the provisions of Law No. 69/2000;"
+msgstr "Pe baza Hotărârii de Guvern Nr. 884/2001 pentru aprobarea Regulamentului de punere în aplicare a dispozițiilor Legii Nr. 69/2000;"
+
+#: services/templates/services/donate.html:45
+msgid "Based on Government Decision No. 11/2013 regarding the establishment, organization, and functioning of the Ministry of Youth and Sports, with amendments and completions;"
+msgstr "Pe baza Hotărârii de Guvern Nr. 11/2013 privind înființarea, organizarea și funcționarea Ministerului Tineretului și Sportului, cu modificările și completările ulterioare;"
+
+#: services/templates/services/donate.html:46
+msgid "Download Sponsorship Contract"
+msgstr "Descarcă Contractul de Sponsorizare"
 #: services/templates/services/training.html:26
 msgid "Pictures of our day to day Fudokan martial arts training and events"
 msgstr "Imagini de la competiții și antrenamentele de zi cu zi în arte marțiale Fudokan"
@@ -1078,6 +1168,10 @@ msgstr "Programul Antrenamentelor"
 #: services/templates/services/training-program.html:162
 msgid "OUR <span>TRAINING</span> SCHEDULE</h2>"
 msgstr "PROGRAMUL <span>ANTRENAMENTELOR</span> NOASTRE</h2>"
+#: services/templates/services/training-program.html:162
+msgid "<h1 class='title'>SUPPORT <span>US</span></h1>"
+msgstr "<h1 class='title'>DONATI <span></span></h1>"
+
 
 #: services/templates/services/training-program.html:162
 msgid "Below you can the weekly training schedule"
