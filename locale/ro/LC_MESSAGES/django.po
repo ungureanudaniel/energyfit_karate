@@ -24,6 +24,14 @@ msgstr ""
 msgid "Română"
 msgstr ""
 
+#: energyfit_main/settings.py:155
+msgid "ABOUT ME"
+msgstr "DESPRE MINE"
+
+#: energyfit_main/settings.py:155
+msgid "Hours of training"
+msgstr "Ore de antrenament"
+
 #: energyfit_main/settings.py:156
 msgid "English"
 msgstr "Engleză"
@@ -1027,12 +1035,12 @@ msgstr "Avertizare! {e}"
 msgid "See our video"
 msgstr "Vezi video"
 
-#: services/templates/services/trainers.html:162
-msgid "Hours Training"
-msgstr "Ore de antrenament"
+#: services/templates/services/trainers-details.html:162
+msgid "Competitions"
+msgstr "Competiții"
 
 #: services/templates/services/trainers.html:162
-msgid "Competitions"
+msgid "Hours Training"
 msgstr "Ore de antrenament"
 
 #: services/templates/services/trainers.html:162

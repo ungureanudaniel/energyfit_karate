@@ -45,6 +45,11 @@
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Start Blog
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+{% if user.is_authenticated %}
+        <div class="add-content">
+            <a class="" target="_blank" href="{% url 'admin:index' %}services/news"><i class="fas fa-plus-circle" style="font-size:80px"></i></a>
+        </div>
+        {% endif %}
 <section class="blog-section blog-classic ptb-120">
     <div class="container">
         <div class="row justify-content-center mb-30-none">
